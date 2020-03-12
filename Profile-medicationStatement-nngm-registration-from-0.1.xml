@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/MedicationStatement/nNGM" />
+  <version value="0.1" />
+  <name value="MedicationStatementNngm" />
+  <title value="nNGM: Profil - MedicationStatement - Medikamentöse Therapie" />
+  <status value="active" />
+  <experimental value="true" />
+  <description value="Usage of tyrosine kinase inhibitors" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="MedicationStatement" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/MedicationStatement" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="MedicationStatement.status">
+      <path value="MedicationStatement.status" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.category">
+      <path value="MedicationStatement.category" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.category.coding">
+      <path value="MedicationStatement.category.coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.category.coding.system">
+      <path value="MedicationStatement.category.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.category.coding.code">
+      <path value="MedicationStatement.category.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x]">
+      <path value="MedicationStatement.medication[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/alk-tki" />
+      </binding>
+    </element>
+    <element id="MedicationStatement.medication[x].coding">
+      <path value="MedicationStatement.medication[x].coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.medication[x].text">
+      <path value="MedicationStatement.medication[x].text" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.subject">
+      <path value="MedicationStatement.subject" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+        <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.subject.reference">
+      <path value="MedicationStatement.subject.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.context">
+      <path value="MedicationStatement.context" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="MedicationStatement.context.reference">
+      <path value="MedicationStatement.context.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

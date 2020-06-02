@@ -1,0 +1,630 @@
+/// version = 0.1
+/// title = "nNGM: Mapping Basisangaben"
+
+map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_Basisangaben" = nNGM_Mapping_Basisangaben
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
+uses "http://hl7.org/fhir/StructureDefinition/Practitioner" as target
+uses "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" as target
+uses "http://hl7.org/fhir/StructureDefinition/ProcedureRequest" as target
+uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
+uses "http://hl7.org/fhir/StructureDefinition/Coverage" as target
+uses "http://hl7.org/fhir/StructureDefinition/Condition" as target
+uses "http://hl7.org/fhir/StructureDefinition/Consent" as target
+
+group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
+{
+    src -> bundle.id = uuid();
+    src -> bundle.type = 'collection';
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Patient') as patient 
+           then TransformPatient(src, patient), TransformPatientPostHandler(src, patient, bundle);
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Practitioner') as practitioner 
+           then TransformPractitioner(src, practitioner);
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Organization') as organization 
+           then TransformOrganization(src, organization);
+}
+
+group TransformPatientPostHandler(source src: CTS_Transport, source patient: Patient, target bundle: Bundle)
+{
+    src -> bundle.entry as entry, 
+           entry.resource = create('Coverage') as coverage 
+           then TransformCoverage(src, patient, coverage);
+
+    src where "operations.data.where($this.itemid = 'id_1600').exists()" -> bundle.entry as entry, 
+                                                                            entry.resource  = create('EpisodeOfCare') as episodeOfCare 
+                                                                            then TransformEpisodeOfCare(src, patient, episodeOfCare),
+                                                                            TransformEpisodeOfCarePostHandler(src, patient, bundle, episodeOfCare);   
+
+    /*
+    src.operations as operations, operations.data as data then
+    {
+        // Teil 1a: Molekularpathologische Diagnostik im nNGM
+        data.values as valuesPermit where "blockindex = 6 and groupindex = 0 and itemid = 'id_2440'" then
+        {
+            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 6 and groupindex = 0 and itemid = 'id_2441'" then
+            {
+                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsent1a(src, consent);
+            };
+        };
+
+        // Teil 1b: Überregionale Beratung und Studiensuche im nNGM
+        data.values as valuesPermit where "blockindex = 6 and groupindex = 0 and itemid = 'id_2446'" then
+        {
+            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 30 and groupindex = 0 and itemid = 'id_2447'" then
+            {
+                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsent1b(src, consent);
+            };
+        };
+
+        // Teil 2: Forschung im nNGM
+        data.values as valuesPermit where "blockindex = 31 and groupindex = 0 and itemid = 'id_2449'" then
+        {
+            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 7 and groupindex = 0 and itemid = 'id_2450'" then
+            {
+                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsent2(src, consent);
+            };
+        };
+
+        // Teilnahmeerklärung
+        data.values as valuesPermit where "blockindex = 8 and groupindex = 0 and itemid = 'id_2392'" then
+        {
+            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 8 and groupindex = 0 and itemid = 'id_2393'" then
+            {
+                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsentTeilnahmeerklaerung(src, consent);
+            };
+        };
+
+        // Datenschutzerklärung
+        data.values as valuesPermit where "blockindex = 8 and groupindex = 0 and itemid = 'id_2389'" then
+        {
+            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 8 and groupindex = 0 and itemid = 'id_2390'" then
+            {
+                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsentDatenschutzerklaerung(src, consent);
+            };
+        };
+
+    };
+    */
+}
+
+group TransformEpisodeOfCarePostHandler(source src: CTS_Transport, source patient: Patient, target bundle: Bundle, target context: EpisodeOfCare)
+{
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('ProcedureRequest') as procedureRequest 
+           then TransformProcedureRequestTestung(src, patient, context, procedureRequest);
+
+    /*
+    src -> bundle.entry as entry, 
+           entry.resource = create('Condition') as condition 
+           then TransformCondition(src, patient, context, condition);      
+    */
+
+    src where "operations.data.where($this.itemid = 'id_1133').exists()" -> bundle.entry as entry, 
+                                                                            entry.resource = create('Observation') as koerpergroesseObservation 
+                                                                            then TransformObservationKoerpergroesse(src, patient, context, koerpergroesseObservation);
+
+    src where "operations.data.where($this.itemid = 'id_1132').exists()" -> bundle.entry as entry, 
+                                                                            entry.resource = create('Observation') as koerpergewichtObservation 
+                                                                            then TransformObservationKoerpergewicht(src, patient, context, koerpergewichtObservation);
+
+    src where "operations.data.where($this.itemid = 'id_2290').exists()" -> bundle.entry as entry, 
+                                                                            entry.resource  = create('Observation') as ecogObservation 
+                                                                            then TransformObservationECOG(src, patient, context, ecogObservation);
+
+    src where "operations.data.where($this.itemid = 'id_2292').exists()" -> bundle.entry as entry, 
+                                                                            entry.resource = create('Observation') as raucherstatusObservation 
+                                                                            then TransformObservationRaucherstatus(src, patient, context, raucherstatusObservation);
+}
+
+
+/* ------------------------------ Patient ---------------------------- */
+
+group TransformPatient(source src: CTS_Transport, target tgt: Patient)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient';
+
+    src.patid as patid -> tgt.identifier = id('http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier', patid);
+
+    src.operations as operations, operations.data as data then
+    {
+        // Geschlecht
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1131'" then
+        {
+            values.value as originalGender -> tgt.gender = translate(originalGender, 'http://uk-koeln.de/fhir/ConceptMap/nngm/Geschlecht', 'code') as translateGender then 
+            {
+                translateGender where "$this = 'other'" then
+                {
+                    translateGender -> translateGender.extension as otherAmtlich,
+                    otherAmtlich.url = 'http://fhir.de/StructureDefinition/gender-amtlich-de/0.2',
+                    otherAmtlich.value = c('http://fhir.de/CodeSystem/gender-amtlich-de', 'D', 'divers');
+                };
+            };
+        };
+
+        // Nachname
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1125'" then
+        {
+             values.value as family -> tgt.name as tgtName collate, tgtName.family = family;
+        };
+
+        // Vorname
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1124'" then
+        {
+             values.value as given -> tgt.name as tgtName collate, tgtName.given = given;
+        };
+
+        // Geburtsdatum
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1126'" then 
+        {
+            values.value as birthDate -> tgt.birthDate = dateOp(birthDate);
+        };
+
+        // Straße
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1127'" then 
+        {
+            values.value as street -> tgt.address as address collate, address.line = street;
+        };
+
+        // PLZ
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1128'" then 
+        {
+            values.value as postalCode -> tgt.address as address collate, address.postalCode = postalCode;
+        };
+
+        // Wohnort
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1129'" then 
+        {
+            values.value as city -> tgt.address as address collate, address.city = city;
+        };
+
+        // Land
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1280'" then 
+        {
+            values.value as country -> tgt.address as address collate, address.country = country;
+        };
+
+    };
+}
+
+/* ------------------------------ Organization ---------------------------- */
+
+group TransformOrganization(source src: CTS_Transport, target tgt: Organization)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site';
+
+    src.operations as operations, operations.data as data then
+    {
+        // Netzwerkzentrum
+        // For now we create create Organization resources, need to be updated once the SMS provides them through a facade (-> use Logical References with Organization identifier)
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_2435'" then
+        {
+            values.value as name -> tgt.name = name;
+        };
+    };
+}
+
+/* ------------------------------ Practitioner ---------------------------- */
+
+group TransformPractitioner(source src: CTS_Transport, target tgt: Practitioner)
+{
+    src -> tgt.id = uuid();
+    // src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM'; // SMS Information is needed to fullfill all mandatory elements
+
+    src.operations as operations, operations.data as data then
+    {
+        // Netzwerkpartnernummer
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_2326'" then
+        {
+            values.value as netzwerkpartnernummer -> tgt.identifier = id('http://uk-koeln.de/NamingSystem/nNGM/netzwerkpartnernummer', netzwerkpartnernummer);
+        };
+    };
+}
+
+/* ------------------------------ EpisodeOfCare ---------------------------- */
+
+group TransformEpisodeOfCare(source src: CTS_Transport, source patient: Patient, target tgt: EpisodeOfCare)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM';
+
+    src -> tgt.status = 'active';
+
+    src.operations as operations, operations.data as data then
+    {
+        // Fall-ID
+        data.values as values where "blockindex = 9 and groupindex = 0 and itemid = 'id_1600'" then
+        {
+            values.value as fallID -> tgt.identifier = id('http://uk-koeln.de/fhir/NamingSystem/nNGM/fallnummer', fallID);
+        };
+
+        // Abrechnungsinformation
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1333'" then
+        {
+            values.value as tarifform -> tgt.extension as abrechnungsinformation,
+            abrechnungsinformation.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation',
+            abrechnungsinformation.value = translate(tarifform, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/Abrechnungsinformation', 'CodeableConcept');
+        };
+    };
+
+    patient.id as patientId -> tgt.patient = create('Reference') as beneficiary, 
+    						   beneficiary.reference = evaluate(patientId, '\'Patient/\' + $this');
+    src -> tgt.period = create('Period') as period, period.start = evaluate(period, 'now()');
+}
+
+/* ------------------------------ ProcedureRequest ---------------------------- */
+
+group TransformProcedureRequestTestung(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: ProcedureRequest)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ProcedureRequest/nNGM/testung';
+
+    src -> tgt.status = 'active';
+    src -> tgt.intent = 'proposal';
+    src -> tgt.code = cc('http://uk-koeln.de/fhir/CodeSystem/nngm/procedures', 'anforderung', 'Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung, sofern ausreichend Tumormaterial vorhanden ist, umfasst alle therapeutisch relevanten Marker sowie Marker aus aktuellen klinischen Studien.');
+    
+    /*
+    src -> tgt.requester = create('BackboneElement') as requester then
+    {
+        requester -> requester.agent = create('Reference') as agent, 
+    								   agent.reference = evaluate(practitioner, '\'Practitioner/\' + $this');
+    }
+    src -> tgt.performer = create('Reference') as performer,
+                           performer.reference = evaluate(performer, '\'Practitioner/\' + $this');
+    */
+
+    src.operations as operations, operations.data as data then
+    {
+        // Anforderungsdatum
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1571'" then
+        {
+            values.value as anforderungsdatum -> tgt.authoredOn = dateOp(anforderungsdatum);
+        };
+
+        // Aufenhaltsart
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1576'" then
+        {
+            values.value as aufenhaltsart -> tgt.context as context, context.extension as aufenhaltsartExtension, aufenhaltsartExtension.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart', aufenhaltsartExtension.value = translate(aufenhaltsart, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/Aufenthaltsart', 'CodeableConcept');
+        };
+    };
+
+    patient.id as patientId -> tgt.subject = create('Reference') as subject, 
+    										 subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+    
+    context.id as contextId -> tgt.context = create('Reference') as context, 
+    									   context.reference = evaluate(contextId, '\'EpisodeOfCare/\' + $this');
+}
+
+group TransformProcedureRequestTumorboard(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, source practitioner: Practitioner, target tgt: ProcedureRequest)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ProcedureRequest/nNGM/tumorboard';
+
+    src -> tgt.status = 'active';
+    src -> tgt.intent = 'proposal';
+
+    src -> tgt.code = cc('http://uk-koeln.de/fhir/CodeSystem/nngm/procedures', 'tumorboard', 'Tumorboard');
+
+    src.operations as operations, operations.data as data then
+    {
+
+		/*
+        // Ich wünsche eine Vorstellung des Falls im Tumorboard des nNGM (Zentrum der Anforderung)
+        data.values as values where "blockindex = 9 and groupindex = 0 and itemid = 'id_2296'" then
+        {
+
+        };
+        */
+
+        // Ich möchte am Tumorboard perönlich oder per Telefonkonferenz teilnehmen
+        data.values as values where "blockindex = 9 and groupindex = 0 and itemid = 'id_2297'" then
+        {
+            values.value as persoenlicheTeilnahme where "$this ='yes'" -> tgt.requester = create('BackboneElement') as requester,
+            requester.extension as persoenlicheTeilnahmeExtension,
+            persoenlicheTeilnahmeExtension.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/persoenlicheTeilnahme',
+            persoenlicheTeilnahmeExtension.value = true;      
+        };
+
+		/*
+        // E-Mail Adresse des Anforderes (Behandler) für die Einladung
+        data.values as values where "blockindex = 9 and groupindex = 0 and itemid = 'id_2298'" then
+        {
+
+        };
+        */
+    };
+
+}
+
+/* ------------------------------ Coverage ---------------------------- */
+
+group TransformCoverage(source src: CTS_Transport, source patient: Patient, target tgt: Coverage)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM';
+
+    src -> tgt.status = 'active';
+    
+    src.operations as operations, operations.data as data then
+    {
+        // Krankenkasse Typ
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1269'" then 
+        {
+            values.value as insuranceType -> tgt.type = translate(insuranceType, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/krankenkasse-typ', 'CodeableConcept') as translateInsuranceType then
+            {
+                translateInsuranceType where "$this.children().code = 'GKV'" then 
+                {
+                    // Versicherungsnummer (GKV)
+                    src.operations as operations, operations.data as data, data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1268'" then
+                    {
+                        values.value as gkv -> tgt.identifier as identifier,
+                        identifier.type = cc('http://fhir.de/CodeSystem/identifier-type-de-basis', 'GKV', 'Gesetzliche Krankenversicherung'),
+                        identifier.system = 'http://fhir.de/NamingSystem/gkv/kvid-10',
+                        identifier.value = gkv;
+                    };
+
+                    // Gesetzliche Krankenkasse (ohne Kooperationsvereinbarung / mit Kooperationsvereinbarung)
+                    src.operations as operations, operations.data as data, data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2459'" then 
+                    {
+                        values.value as payor -> tgt.payor as tgtPayor, tgtPayor.display = payor;
+                    };
+                };
+
+                translateInsuranceType where "$this.children().code = 'PKV'" then 
+                {
+                    // Versicherungsnummer (PKV)
+                    src.operations as operations, operations.data as data, data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1268'" then
+                    {
+                        values.value as pkv -> tgt.identifier as identifier,
+                        identifier.type = cc('http://fhir.de/CodeSystem/identifier-type-de-basis', 'PKV', 'Private Krankenversicherung'),
+                        identifier.value = pkv;
+
+                    };
+
+                    // Private Krankenkasse (ohne Kooperationsvereinbarung / mit Kooperationsvereinbarung)
+                    src.operations as operations, operations.data as data, data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2459'" then 
+                    {
+                        values.value as payor -> tgt.payor as tgtPayor, tgtPayor.display = payor;
+                        values.value as payor -> tgt.identifier as identifier collate, identifier.assigner = create('BackboneElement') as assigner, assigner.display = payor;
+                    };
+
+                    // PKV Tarif
+                    src.operations as operations, operations.data as data, data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1270'" then
+                    {
+                        values.value as tarifform -> tgt.extension as tgtPkvTarifform,
+                        tgtPkvTarifform.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform',
+                        tgtPkvTarifform.value = translate(tarifform, 'http://uk-koeln.de/fhir/ConceptMap/nngm/pkv-tarifform', 'CodeableConcept');
+                    };
+
+                };
+            };
+        };
+
+        patient.id as patientId -> tgt.beneficiary = create('Reference') as beneficiary, 
+        										     beneficiary.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    };
+}
+
+group TransformPKVIdentifier(source src: CTS_Transport, source payor: Reference, target tgt: Coverage)
+{
+    src.operations as operations, operations.data as data then
+    {
+        // Versicherungsnummer (PKV)
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1268'" then
+        {
+            values.value as pkv -> tgt.identifier as identifier, 
+                                   identifier.value = pkv,
+                                   identifier.type = cc('http://fhir.de/CodeSystem/identifier-type-de-basis', 'PKV', 'PKV');
+
+            payor.display as payor -> tgt.identifier as identifier, identifier.assigner as assigner, assigner.display = payor;
+        };
+    };
+}
+
+/* ------------------------------ Observation ---------------------------- */
+
+group TransformObservationKoerpergroesse(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: Observation)
+{
+    src log "'test'" -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergroesse';
+
+    src -> tgt.status = 'final';
+    src -> tgt.category = cc('http://hl7.org/fhir/observation-category', 'vital-signs', 'Vital Signs');
+    src -> tgt.code = cc('http://loinc.org', '8302-2');
+
+    src.operations as operations, operations.data as data then
+    {
+        // Körpergröße
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1133'" then
+        {
+            values.value as groesse -> tgt.value = create('Quantity') as value collate, value.value = groesse;
+            src -> tgt.value as value collate, value.unit = 'cm';
+            src -> tgt.value as value collate, value.code = 'cm';
+            src -> tgt.value as value collate, value.system = 'http://unitsofmeasure.org';
+        };
+    };
+
+    patient.id as patientId -> tgt.subject = create('Reference') as subject, 
+    										 subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    context.id as contextId -> tgt.context = create('Reference') as context, 
+    									   context.reference = evaluate(contextId, '\'EpisodeOfCare/\' + $this');
+}
+
+group TransformObservationKoerpergewicht(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht';
+
+    src -> tgt.status = 'final';
+    src -> tgt.category = cc('http://hl7.org/fhir/observation-category', 'vital-signs', 'Vital Signs');
+    src -> tgt.code = cc('http://loinc.org', '29463-7');
+
+    src.operations as operations, operations.data as data then
+    {
+        // Körpergewicht
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1132'" then
+        {
+            values.value as gewicht -> tgt.value = create('Quantity') as value collate, value.value = gewicht;
+            src -> tgt.value as value collate, value.unit = 'kg';
+            src -> tgt.value as value collate, value.code = 'kg';
+            src -> tgt.value as value collate, value.system = 'http://unitsofmeasure.org';
+        };
+    };
+
+    patient.id as patientId -> tgt.subject = create('Reference') as subject, 
+    										 subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    context.id as contextId -> tgt.context = create('Reference') as context, 
+    									   context.reference = evaluate(contextId, '\'EpisodeOfCare/\' + $this');
+}
+
+group TransformObservationECOG(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog';
+
+    src -> tgt.status = 'final';
+    src -> tgt.category = cc('http://hl7.org/fhir/observation-category', 'survey', 'Survey');
+    src -> tgt.code = cc('http://loinc.org', '89247-1');
+
+    src.operations as operations, operations.data as data then
+    {
+        // ECOG
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_2290'" then
+        {
+            values.value as ecog -> tgt.value = translate(ecog, 'http://uk-koeln.de/fhir/ConceptMap/nngm/ecog', 'CodeableConcept');
+        };
+    };
+
+    patient.id as patientId -> tgt.subject = create('Reference') as subject, 
+    										 subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    context.id as contextId -> tgt.context = create('Reference') as context, 
+    									   context.reference = evaluate(contextId, '\'EpisodeOfCare/\' + $this');
+}
+
+group TransformObservationRaucherstatus(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus';
+
+    src -> tgt.status = 'final';
+    src -> tgt.category = cc('http://hl7.org/fhir/observation-category', 'social-history', 'Social History');
+    src -> tgt.code = cc('http://loinc.org', '72166-2');
+
+    src.operations as operations, operations.data as data then
+    {
+        // Rauchertyp
+        data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_2292'" then
+        {
+            values.value as raucherTyp -> tgt.value = translate(raucherTyp, 'http://uk-koeln.de/fhir/ConceptMap/nngm/raucherstatus', 'CodeableConcept');
+        };
+
+        // Nichtraucher seit
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_2293'" then
+        {
+            values.value as nichtraucherSeit -> tgt.component = create('BackboneElement') as component,
+            component.code = cc('http://loinc.org', '63630-8'),
+            component.valueDateTime = nichtraucherSeit;
+        };
+
+        // Packungen pro Jahr
+        data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_2294'" then
+        {
+            values.value as packungenProJahr -> tgt.component = create('BackboneElement') as component,
+            component.code = cc('http://loinc.org', '8664-5'),
+            component.value = create('Quantity') as quantity,
+            quantity.value = packungenProJahr,
+            quantity.unit = '{Pck}/a',
+            quantity.code = '{Pck}/a',
+            quantity.system = 'http://unitsofmeasure.org';
+        };
+    };
+
+    patient.id as patientId -> tgt.subject = create('Reference') as subject, 
+    										 subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    context.id as contextId -> tgt.context = create('Reference') as context, 
+    									   context.reference = evaluate(contextId, '\'EpisodeOfCare/\' + $this');
+}
+
+/* ------------------------------ Consent ---------------------------- */
+group TransformConsent(source valuesSignatureDate: BackboneElement, source valuesPermit: BackboneElement, source patient: Patient, target tgt: Consent)
+{
+    valuesSignatureDate -> tgt.id = uuid();
+    valuesSignatureDate -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM';
+
+    valuesSignatureDate.value -> tgt.dateTime;
+
+    patient.id as patientId -> tgt.patient = create('Reference') as patient, 
+    										 patient.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    valuesPermit.value as unterschrieben -> tgt.except = create('BackboneElement') as except then
+    {
+        unterschrieben where "$this ='yes'" then
+        {
+            valuesPermit -> except.type = 'permit';
+        };
+
+        unterschrieben where "$this ='no'" then
+        {
+            valuesPermit -> except.type = 'deny';
+        };
+
+    };
+}
+
+group TransformConsent1a(source src: CTS_Transport, target tgt: Consent)
+{
+    src -> tgt.policy = create('BackboneElement') as policy, 
+    policy.authority = 'https://ngm-cancer.com/',
+    policy.uri = 'https://www.nngm.de/wp-content/uploads/2019/09/Einwilligungserklärung-PDF_Teil-1a.pdf';
+}
+
+group TransformConsent1b(source src: CTS_Transport, target tgt: Consent)
+{
+    src -> tgt.policy = create('BackboneElement') as policy, 
+    policy.authority = 'https://ngm-cancer.com/',
+    policy.uri = 'https://www.nngm.de/wp-content/uploads/2019/09/Einwilligungserklärung-PDF_Teil-1b.pdf';
+}
+
+group TransformConsent2(source src: CTS_Transport, target tgt: Consent)
+{
+    src -> tgt.policy = create('BackboneElement') as policy,
+    policy.authority = 'https://ngm-cancer.com/',
+    policy.uri = 'https://www.nngm.de/wp-content/uploads/2019/09/Einwilligungserklärung-PDF_Teil-2.pdf';
+}
+
+group TransformConsentTeilnahmeerklaerung(source src: CTS_Transport, target tgt: Consent)
+{
+    src -> tgt.policy = create('BackboneElement') as policy,
+    policy.authority = 'https://ngm-cancer.com/',
+    policy.uri = 'https://www.nngm.de/wp-content/uploads/2019/02/nNGM_Teilnahmeerklärung.pdf';
+}
+
+group TransformConsentDatenschutzerklaerung(source src: CTS_Transport, target tgt: Consent)
+{
+    src -> tgt.policy = create('BackboneElement') as policy,
+    policy.authority = 'https://ngm-cancer.com/',
+    policy.uri = 'https://www.nngm.de/wp-content/uploads/2019/02/nNGM_Teilnahmeerklärung.pdf';
+}
+
+/* ------------------------------ Condition ---------------------------- */
+
+group TransformCondition(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: Condition)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Condition/nNGM';
+    src -> tgt.verificationStatus = 'confirmed';
+}

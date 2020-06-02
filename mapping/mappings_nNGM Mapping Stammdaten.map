@@ -1,0 +1,242 @@
+/// version = 0.1
+/// title = "nNGM: Mapping - Stammdaten"
+
+map "http://uk-koeln.de/fhir/StructureMap/nNGM_StammdatenMap" = nNGM_Mapping_Stammdaten
+
+/* ------------------------------ ToDo ---------------------------- */
+
+// Rules below Coverage.type are not evaluated
+// evaluate function is missing
+// code('string') is creating invalid StructureMap
+
+/* ---------------------------------------------------------------- */
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
+uses "http://hl7.org/fhir/StructureDefinition/Coverage" as target
+uses "http://hl7.org/fhir/StructureDefinition/Condition" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as target
+
+group TransformBundle(source src: CTS_Transport, target tgt: Bundle)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.entry as entry, entry.resource = create('Patient') as patient then TransformPatient(src, patient), PostHandlerPatientTransform(src, patient, tgt);
+}
+
+/* ------------------------------ Patient ---------------------------- */
+
+group TransformPatient(source src: CTS_Transport, target tgt: Patient)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM';
+
+    src.patid as patid -> tgt.identifier = id('http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier', patid);
+    
+    // FML only allows to select intermediate children, see Gforge #21641
+    src.operations as operations, operations.data as data then
+    {
+        // Geschlecht
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1131'" then
+        {
+            values.value as originalGender -> tgt.gender = translate(originalGender, 'http://uk-koeln.de/fhir/ConceptMap/nngm/Geschlecht', 'code') as translateGender then 
+            {
+                translateGender where "$this = 'other'" then
+                {
+                    translateGender -> translateGender.extension as otherAmtlich,
+                    otherAmtlich.url = 'http://fhir.de/StructureDefinition/gender-amtlich-de/0.2',
+                    otherAmtlich.value = c('http://fhir.de/CodeSystem/gender-amtlich-de', 'D', 'divers');
+                };
+            };
+        };
+
+        // Nachname
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1125'" then
+        {
+             values.value as family -> tgt.name as tgtName collate, tgtName.family = family;
+        };
+
+        // Vorname
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1124'" then
+        {
+             values.value as given -> tgt.name as tgtName collate, tgtName.given = given;
+        };
+
+        // Geburtsdatum
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1126'" then 
+        {
+            values.value as birthDate -> tgt.birthDate = dateOp(birthDate);
+        };
+
+        // Straße
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1127'" then 
+        {
+            values.value as address -> tgt.address as address collate, address.line = address;
+        };
+
+        // PLZ
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1128'" then 
+        {
+            values.value as postalCode -> tgt.address as address collate, address.postalCode = postalCode;
+        };
+
+        // Wohnort
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1129'" then 
+        {
+            values.value as city -> tgt.address as address collate, address.city = city;
+        };
+
+        // Land
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_1280'" then 
+        {
+            values.value as country -> tgt.address as address collate, address.country = country;
+        };
+
+    };
+}
+
+/* ------------------------------ Coverage ---------------------------- */
+
+group PostHandlerPatientTransform(source src: CTS_Transport, source patient: Patient, target tgt: Bundle)
+{
+    src -> tgt.entry as entry, entry.resource = create('Coverage') as coverage then TransformCoverage(src, patient, coverage);
+    src -> tgt.entry as entry, entry.resource = create('Condition') as condition then TransformCondition(src, patient, condition);
+    src -> tgt.entry as entry, entry.resource = create('Observation') as vitalstatus then TransformVitalStatus(src, patient, vitalstatus);
+}
+
+group TransformCoverage(source src: CTS_Transport, source patient: Patient, target tgt: Coverage)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM';
+
+    src -> tgt.status = 'active';
+    
+    src.operations as operations, operations.data as data then
+    {
+        // Krankenkasse Typ
+        data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1269'" then 
+        {
+            values.value as insuranceType -> tgt.type = translate(insuranceType, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/krankenkasse-typ', 'CodeableConcept') as translateInsuranceType then
+            {
+                translateInsuranceType where "$this.children().code = 'GKV'" then 
+                {
+                    // Versicherungsnummer (GKV)
+                    data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1268'" then
+                    {
+                        values.value as gkv -> tgt.identifier as identifier,
+                        identifier.system = 'http://fhir.de/NamingSystem/gkv/kvid-10',
+                        identifier.value = gkv;
+                    };
+
+                    // Gesetzliche Krankenkasse (mit Kooperationsvereinbarung)
+                    data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1267'" then 
+                    {
+                        values.value as payor -> tgt.payor as tgtPayor, tgtPayor.display = payor;
+                    };
+
+                    // Gesetzliche Krankenkasse (ohne Kooperationsvereinbarung)
+                    data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1271'" then 
+                    {
+                        values.value as payor -> tgt.payor as tgtPayor, tgtPayor.display = payor;
+                    };
+                };
+
+                translateInsuranceType where "$this.children().code = 'PKV'" then 
+                {
+                    // Private Krankenkasse (mit Kooperationsvereinbarung)
+                    data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1272'" then 
+                    {
+                        values.value as payor -> tgt.payor as tgtPayor, tgtPayor.display = payor then TransformPKVIdentifier(src, tgtPayor, tgt);
+                    };
+
+                    // Private Krankenkasse (ohne Kooperationsvereinbarung)
+                    data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1567'" then 
+                    {
+                        values.value as payor -> tgt.payor as tgtPayor, tgtPayor.display = payor then TransformPKVIdentifier(src, tgtPayor, tgt);
+                    };
+
+                    // PKV Tarif
+                    data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1270'" then
+                    {
+                        values.value as tarifform -> tgt.extension as tgtPkvTarifform,
+                        tgtPkvTarifform.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform/0.1',
+                        tgtPkvTarifform.value = translate(tarifform, 'http://uk-koeln.de/fhir/ConceptMap/nngm/pkv-tarifform', 'CodeableConcept');
+                    };
+
+                };
+            };
+        };
+
+        // patient.id as patientId -> tgt.beneficiary = create('Reference') as beneficiary, beneficiary.reference = evaluate(patientId, ''Patient/' + $this");
+
+    };
+}
+
+group TransformPKVIdentifier(source src: CTS_Transport, source payor: Reference, target tgt: Coverage)
+{
+    src.operations as operations, operations.data as data then
+    {
+        // Versicherungsnummer (PKV)
+        data.values as values where "blockindex = 6 and groupindex = 0 and itemid = 'id_1268'" then
+        {
+            values.value as pkv -> tgt.identifier as identifier, identifier.value = pkv;
+            payor.display as payor -> tgt.identifier as identifier, identifier.assigner as assigner, assigner.display = payor;
+        };
+    };
+}
+
+/* ------------------------------ Condition ------------------------------ */
+
+group TransformCondition(source src: CTS_Transport, source patient: Patient, target tgt: Condition)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Condition/nNGM';
+
+    src -> tgt.clinicalStatus = 'active';
+    src -> tgt.verificationStatus = 'confirmed';
+
+    // patient.id as patientId -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patientId, "'Patient/' + $this");
+
+    src -> tgt.code as code, code.extension as dataAbsentReason, dataAbsentReason.url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason', dataAbsentReason.value = code('unknown');
+    src -> tgt.context as context, context.extension as dataAbsentReason, dataAbsentReason.url = 'http://hl7.org/fhir/StructureDefinition/data-absent-reason', dataAbsentReason.value = code('unknown');
+
+    src.operations as operations, operations.data as data then
+    {
+        // Erstdiagnose
+        data.values as values where "blockindex = 7 and groupindex = 4 and itemid = 'id_1297'" then 
+        {
+            values.value as firstDiagnosis -> tgt.onsetDateTime = dateOp(firstDiagnosis);
+        };
+    };
+
+}
+
+/* ------------------------------ Observation ---------------------------- */
+
+group TransformVitalStatus(source src: CTS_Transport, source patient: Patient, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/cancer-base/vitalstatus';
+
+
+    src -> tgt.status = 'final';
+    src -> tgt.category = 'vital-signs';
+    // src -> tgt.code = cc('http://loinc.org ', '31210-8');
+
+    // patient.id as patientId -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    src.operations as operations, operations.data as data then
+    {
+        // Letzter Kontakt
+        data.values as values where "blockindex = 7 and groupindex = 4 and itemid = 'id_803'" then 
+        {
+            values.value as lastContact -> tgt.effectiveDateTime = dateOp(lastContact);
+        };
+
+        // Status
+        data.values as values where "blockindex = 7 and groupindex = 4 and itemid = 'id_1139'" then 
+        {
+            values.value as followUpStatus -> tgt.value = translate(followUpStatus, 'http://uk-koeln.de/fhir/ConceptMap/nngm/FollowUpStatus', 'CodeableConcept');
+        };
+    };
+}

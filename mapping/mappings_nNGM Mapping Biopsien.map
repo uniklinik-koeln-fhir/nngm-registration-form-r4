@@ -1,0 +1,120 @@
+/// version = 0.1
+/// title = "nNGM: Mapping Biopsien"
+
+map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_Biopsien" = nNGM_Mapping_Biopsien
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+
+/* ------------------------------ ToDo ---------------------------- */
+
+/* 
+   Source Data:
+   - We don't currently know the correct ids Specimen.identifier (biopsieID)
+   - ConceptMap for 'histologie' is incomplete
+   - 'Anschrift der Organisationseinheit' is displayed in the wrong form
+   - 'Kontaktdaten des Einsenders' are missing
+*/
+
+/* 
+   Mapping Engine:
+   - evaluate function is missing
+*/
+
+/* ---------------------------------------------------------------- */
+
+group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
+{
+    src -> bundle.id = uuid();
+
+    src.operations as operations, operations.data as data then
+    {
+        // Diagnostik Typ --> Repeating block
+        data.values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_1368'" then
+        {
+            data.repeatindex as repeatindex then
+            {
+                operations.data as data, data.values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_1351' and repeatindex = %ssss" then 
+                {
+                    src -> bundle.entry as entry, entry.resource = create('Specimen') as specimen then TransformSpecimen(src, values, specimen);
+                };
+            }
+        ;
+    };
+
+    src -> bundle.entry as entry, entry.resource = create('Observation') as specimen then TransformObservationHistologie(src, specimen);
+};
+}
+
+/* ------------------------------ Specimen ---------------------------- */
+group TransformSpecimen(source src: CTS_Transport, source values: BackboneElement, target tgt: Specimen)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM';
+    
+    // Diagnostik Typ
+    values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_1368'" then
+    {
+        values.value as diagnostikTyp -> tgt.type = translate(diagnostikTyp, 'http://uk-koeln.de/fhir/ConceptMap/nngm/diagnostikTyp', 'CodeableConcept');
+    };
+
+    // Entnahmedatum Gewebediagnostik
+    values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_1551'" then
+    {
+        values.value as entnahmedatum -> tgt.collection as collection collate, collection.collected = dateOp(entnahmedatum);
+    };
+
+    // Entnahmedatum Blutdiagnostik
+    values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_2316'" then
+    {
+        values.value as entnahmedatum -> tgt.collection as collection collate, collection.collected = dateOp(entnahmedatum);
+    };
+
+    // Materialentnahme erfolgte Gewebediagnostik
+    values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_1589'" then
+    {
+        values.value as materialentnahmeErfolgte -> tgt.collection as collection collate, collection.extension as aufenthaltsart,
+        aufenthaltsart.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart',
+        aufenthaltsart.value = translate(materialentnahmeErfolgte, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/Aufenthaltsart', 'CodeableConcept');
+    };
+
+    // Materialentnahme erfolgte Blutdiagnostik
+    values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_1589'" then
+    {
+        values.value as materialentnahmeErfolgte -> tgt.collection as collection collate, collection.extension as aufenthaltsart,
+        aufenthaltsart.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart',
+        aufenthaltsart.value = translate(materialentnahmeErfolgte, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/Aufenthaltsart', 'CodeableConcept');
+    };
+
+    // Zu untersuchendes Tumormaterial (Biopsie ID) Gewebediagnostik
+    values as values where "blockindex = 4 and groupindex = 1 and itemid = ''" then
+    {
+        values.value as biopsieID -> tgt.identifier = create('Identifier') as identifier, 
+        identifier.system = 'http://uk-koeln.de/NamingSystem/nNGM/biopsieID',
+        identifier.value = biopsieID;
+    };
+}
+
+/* ------------------------------ Observation ---------------------------- */
+
+group TransformObservationHistologie(source src: CTS_Transport, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie';
+
+    src -> tgt.status = 'final';
+    src -> tgt.code = cc('http://loinc.org', '59847-4');
+
+    src.operations as operations, operations.data as data then
+    {
+        // Histologie
+        data.values as values where "blockindex = 4 and groupindex = 1 and itemid = 'id_836'" then
+        {
+            values.value as histologie -> tgt.value = translate(histologie, 'http://uk-koeln.de/fhir/ConceptMap/nngm/histologie', 'CodeableConcept');
+        };
+    };
+
+    // patient.id as patientId -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patientId, '\'Patient/\' + $this\');
+    // episodeOfCare.id as episodeOfCareId -> tgt.context = create('Reference') as context, context.reference = evaluate(episodeOfCareId, '\'Patient/\' + $this\');
+}

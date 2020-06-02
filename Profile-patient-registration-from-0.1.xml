@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+  <version value="0.2" />
+  <name value="PatientNngm" />
+  <title value="nNGM: Profil - Patient" />
+  <status value="active" />
+  <experimental value="true" />
+  <publisher value="Universitätsklinikum Köln" />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Patient" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Patient.identifier">
+      <path value="Patient.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.identifier:Patientenliste-Pseudonym">
+      <path value="Patient.identifier" />
+      <sliceName value="Patientenliste-Pseudonym" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:Patientenliste-Pseudonym.system">
+      <path value="Patient.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.identifier:Patientenliste-Pseudonym.value">
+      <path value="Patient.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name">
+      <path value="Patient.name" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.family.extension">
+      <path value="Patient.name.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.name.family.extension:namenszusatz">
+      <path value="Patient.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/humanname-namenszusatz" />
+      </type>
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender">
+      <path value="Patient.gender" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender.extension">
+      <path value="Patient.gender.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.gender.extension:other-amtlich">
+      <path value="Patient.gender.extension" />
+      <sliceName value="other-amtlich" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/gender-amtlich-de" />
+      </type>
+      <mustSupport value="false" />
+    </element>
+    <element id="Patient.gender.extension:other-amtlich.value[x]">
+      <path value="Patient.gender.extension.value[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.gender.extension:other-amtlich.value[x].system">
+      <path value="Patient.gender.extension.value[x].system" />
+      <min value="1" />
+    </element>
+    <element id="Patient.gender.extension:other-amtlich.value[x].code">
+      <path value="Patient.gender.extension.value[x].code" />
+      <min value="1" />
+    </element>
+    <element id="Patient.birthDate">
+      <path value="Patient.birthDate" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address">
+      <path value="Patient.address" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.line">
+      <path value="Patient.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.district">
+      <path value="Patient.address.district" />
+      <max value="0" />
+    </element>
+    <element id="Patient.address.country">
+      <path value="Patient.address.country" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

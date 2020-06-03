@@ -1,0 +1,110 @@
+/// version = 0.1
+/// title = "nNGM: nNGMv08E_https_stagi - FHIR to CTS"
+
+map "http://uk-koeln.de/fhir/StructureMap/nNGMv08E_https_stagi" = nNGMv08E_https_stagi
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as source
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as target
+
+group TransformCTS(source src: Bundle, target cts: CTS_Transport)
+{
+	src -> cts.version = '1.1';
+	src -> cts.sourcesystem = 'FHIREndpoint';
+
+    src.entry as entry then
+    {
+        entry.resource as patient where "resource is Patient" then
+        {
+            //Patient.identifier -> //create patid if doesnt exist
+            patient.identifier as pid -> cts.pid = pid;
+        }
+    }
+
+
+	src -> cts.operations as operations collate, operations.crfid = '1-BA';
+	src -> cts.operations as operations collate, operations.type = 'save';
+
+	//Organization
+	src.entry as entry then
+    {
+        entry.resource as specimen where "resource is Organization" then
+	    {
+            //Organization.name -> Standort
+	        organization -> cts.operations as operations collate then {
+		        organization -> operations.data as data then {
+			        organization -> data.blockindex = 1;
+			        organization -> data.groupindex = 0;
+			        organization -> data.itemid = 'id_2435'; 
+			        organization.name as name -> data.values as values, values.value = name;
+		        };
+	        };
+            //Organization.contact -> Kontakt
+	        organization -> cts.operations as operations collate then {
+		        organization -> operations.data as data then {
+			        organization -> data.blockindex = 1;
+			        organization -> data.groupindex = 0;
+			        organization -> data.itemid = 'id_2458'; 
+			        organization.contact as contact, contact.address as address -> data.values as values, values.value = address;
+		        };
+	        };
+
+            //specimen.type as type, type.text as text where "coding.code = '119376003'" then MapSpecimenGewebediagnostik(specimen, cts);
+            //specimen.type as type, type.text as text where "coding.code = '119297000'" then MapSpecimenBlutdiagnostik(specimen, cts);
+        };
+    };
+
+    //Practitioner
+    src.entry as entry then
+    {
+        entry.resource as practitioner where "resource is Practitioner" then
+	    {
+            //Practitioner.identifier -> Netzwerkpartnernummer
+            practitioner -> cts.operations as operations collate then {
+		        practitioner -> operations.data as data then {
+			        practitioner -> data.blockindex = 0;
+			        practitioner -> data.groupindex = 0;
+			        practitioner -> data.itemid = 'id_2326'; 
+			        organization.identifier as npn-> data.values as values, values.value = npm;
+                };
+            };
+        };
+
+    //EpisodeOfCare
+    src.entry as entry then
+    {
+        entry.resource as episodeofcare where "resource is EpisodeOfCare" then
+	    {
+        
+            //EpisodeOfCare.extension.value -> Abrechnungsinformation
+            episodeofcare -> cts.operations as operations collate then {
+		        episodeofcare -> operations.data as data then {
+			        episodeofcare -> data.blockindex = 4;
+			        episodeofcare -> data.groupindex = 0;
+			        episodeofcare -> data.itemid = 'id_1600'; 
+			        episodeofcare.extension as abrechnungsinformation,
+                    abrechnungsinformation.value as abv -> data.values as values, values.value = abv;
+                };
+            };
+
+            
+
+
+    };
+
+
+    //ServiceRequest
+
+
+    //Coverage
+
+
+    //Observation
+
+
+    //Consent
+
+
+    //Condition ?
+
+
+}

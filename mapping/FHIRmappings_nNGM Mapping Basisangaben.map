@@ -1,7 +1,7 @@
 /// version = 0.1
 /// title = "nNGM: Mapping Basisangaben"
 
-map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_Basisangaben" = nNGM_Mapping_Basisangaben
+map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_BasisangabenFHIR" = nNGM_Mapping_BasisangabenFHIR
 
 uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
 uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
@@ -136,7 +136,7 @@ group TransformPatient(source src: CTS_Transport, target tgt: Patient)
 
     src.operations as operations, operations.data as data then
     {
-        // Geschlecht
+        // Geschlecht -> Patient.gender
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1131'" then
         {
             values.value as originalGender -> tgt.gender = translate(originalGender, 'http://uk-koeln.de/fhir/ConceptMap/nngm/Geschlecht', 'code') as translateGender then 
@@ -150,43 +150,43 @@ group TransformPatient(source src: CTS_Transport, target tgt: Patient)
             };
         };
 
-        // Nachname
+        // Nachname -> patient.name.family
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1125'" then
         {
              values.value as family -> tgt.name as tgtName collate, tgtName.family = family;
         };
 
-        // Vorname
+        // Vorname -> patient.name.given
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1124'" then
         {
              values.value as given -> tgt.name as tgtName collate, tgtName.given = given;
         };
 
-        // Geburtsdatum
+        // Geburtsdatum -> patient.birthDate
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1126'" then 
         {
             values.value as birthDate -> tgt.birthDate = dateOp(birthDate);
         };
 
-        // Straße
+        // Straße -> address.line
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1127'" then 
         {
             values.value as street -> tgt.address as address collate, address.line = street;
         };
 
-        // PLZ
+        // PLZ -> address.postalCode
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1128'" then 
         {
             values.value as postalCode -> tgt.address as address collate, address.postalCode = postalCode;
         };
 
-        // Wohnort
+        // Wohnort -> address.city
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1129'" then 
         {
             values.value as city -> tgt.address as address collate, address.city = city;
         };
 
-        // Land
+        // Land -> address.country
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1280'" then 
         {
             values.value as country -> tgt.address as address collate, address.country = country;
@@ -204,12 +204,22 @@ group TransformOrganization(source src: CTS_Transport, target tgt: Organization)
 
     src.operations as operations, operations.data as data then
     {
-        // Netzwerkzentrum
+        // Standort --> Organization.name
         // For now we create create Organization resources, need to be updated once the SMS provides them through a facade (-> use Logical References with Organization identifier)
         data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_2435'" then
         {
             values.value as name -> tgt.name = name;
         };
+
+        //Kontakt --> Organization.contact 
+        //How to parse freetext into this block?
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_2458'" then 
+        {
+            values.value as contact -> tgt.contact = create('BackboneElement') as contact,
+            contact.purpose = cc('http://hl7.org/fhir/ValueSet/contactentity-type', 'ADMIN', 'Administrative');
+            contact.address = contact;
+        }
+
     };
 }
 
@@ -222,11 +232,12 @@ group TransformPractitioner(source src: CTS_Transport, target tgt: Practitioner)
 
     src.operations as operations, operations.data as data then
     {
-        // Netzwerkpartnernummer
+        // Netzwerkpartnernummer -> Practitioner.identifier
         data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_2326'" then
         {
             values.value as netzwerkpartnernummer -> tgt.identifier = id('http://uk-koeln.de/NamingSystem/nNGM/netzwerkpartnernummer', netzwerkpartnernummer);
         };
+        
     };
 }
 
@@ -284,16 +295,19 @@ group TransformProcedureRequestTestung(source src: CTS_Transport, source patient
 
     src.operations as operations, operations.data as data then
     {
-        // Anforderungsdatum
+        // Anforderungsdatum --> ServiceRequest.authoredOn
         data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1571'" then
         {
             values.value as anforderungsdatum -> tgt.authoredOn = dateOp(anforderungsdatum);
         };
 
-        // Aufenhaltsart
+        //Patient war/ist zum zeitpunkt dieser anforderung --> context.extension(aufenhaltsart)
         data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1576'" then
         {
-            values.value as aufenhaltsart -> tgt.context as context, context.extension as aufenhaltsartExtension, aufenhaltsartExtension.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart', aufenhaltsartExtension.value = translate(aufenhaltsart, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/Aufenthaltsart', 'CodeableConcept');
+            values.value as aufenhaltsart -> tgt.context as context, 
+                                                context.extension as aufenhaltsartExtension, 
+                                                aufenhaltsartExtension.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart',
+                                                aufenhaltsartExtension.value = translate(aufenhaltsart, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/Aufenthaltsart', 'CodeableConcept');
         };
     };
 
@@ -356,6 +370,17 @@ group TransformCoverage(source src: CTS_Transport, source patient: Patient, targ
     
     src.operations as operations, operations.data as data then
     {
+        //Krankenkasse -> Coverage.type.text
+        //Krankenkasse.Typ -> Coverage.type 
+        //Krankenkasse.Kooperationsvereinbarung 
+        //Versicherten
+        //Abrechnungsinformation
+
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2459'" then
+        {
+            values.value as typeftext -> tgt.type as type = cc( http://fhir.de/CodeSystem/versicherungsart-de-basis), type.text = typeftext;
+        }
+
         // Krankenkasse Typ
         data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1269'" then 
         {

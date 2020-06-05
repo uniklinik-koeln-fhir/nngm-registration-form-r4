@@ -1,0 +1,613 @@
+{
+    "version": "1.1",
+    "patid": "6547",
+    "sourcesystem": "https://nngm-qat.staging.healex.systems/",
+    "operations": [
+        {
+            "oldstatus": "not_in_house",
+            "newstatus": "editable_by_eo",
+            "operationId": "S261",
+            "type": "statechange",
+            "editor": "https://clinicalsite.org/person/38",
+            "timestamp": "2020-06-03T15:14:12+02:00",
+            "crfid": "1-BA"
+        },
+        {
+            "oldstatus": "editable_by_eo",
+            "newstatus": "editable_by_eo",
+            "operationId": "S262",
+            "type": "statechange",
+            "editor": "https://clinicalsite.org/person/38",
+            "timestamp": "2020-06-03T15:14:12+02:00",
+            "crfid": "1-BA"
+        },
+        {
+            "data": [
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_2458",
+                    "values": [
+                        {
+                            "value": "\r\n\r\n"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 0,
+                    "groupindex": 0,
+                    "itemid": "id_2326",
+                    "values": [
+                        {
+                            "value": "partnernr"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_2435",
+                    "values": [
+                        {
+                            "value": "Berlin"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 2,
+                    "groupindex": 0,
+                    "itemid": "id_1571",
+                    "values": [
+                        {
+                            "value": "2020-06-03"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 2,
+                    "groupindex": 0,
+                    "itemid": "id_1576",
+                    "values": [
+                        {
+                            "value": "stationär"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1124",
+                    "values": [
+                        {
+                            "value": "vorname"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1125",
+                    "values": [
+                        {
+                            "value": "nachname"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1126",
+                    "values": [
+                        {
+                            "value": "2000-01-01"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1127",
+                    "values": [
+                        {
+                            "value": "strasse"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1128",
+                    "values": [
+                        {
+                            "unit": "count",
+                            "value": "10000"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1129",
+                    "values": [
+                        {
+                            "value": "Wohnort"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1131",
+                    "values": [
+                        {
+                            "value": "männlich"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1280",
+                    "values": [
+                        {
+                            "value": "Land"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_1269",
+                    "values": [
+                        {
+                            "value": "null"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_2459",
+                    "values": [
+                        {
+                            "value": "Krankenkasse"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_2460",
+                    "values": [
+                        {
+                            "value": "no"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
+                    "groupindex": 0,
+                    "itemid": "id_2440",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 9,
+                    "groupindex": 0,
+                    "itemid": "id_2296",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 9,
+                    "groupindex": 0,
+                    "itemid": "id_2297",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                }
+            ],
+            "operationId": "D60",
+            "type": "save",
+            "editor": "https://clinicalsite.org/person/38",
+            "timestamp": "2020-06-03T15:14:12+02:00",
+            "crfid": "1-BA"
+        },
+        {
+            "data": [
+                {
+                    "blockindex": 0,
+                    "groupindex": 0,
+                    "itemid": "id_2326",
+                    "values": [
+                        {
+                            "value": "partnernr"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_2435",
+                    "values": [
+                        {
+                            "value": "Berlin"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 2,
+                    "groupindex": 0,
+                    "itemid": "id_1571",
+                    "values": [
+                        {
+                            "value": "2020-06-03"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 2,
+                    "groupindex": 0,
+                    "itemid": "id_1576",
+                    "values": [
+                        {
+                            "value": "stationär"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1124",
+                    "values": [
+                        {
+                            "value": "vorname"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1125",
+                    "values": [
+                        {
+                            "value": "nachname"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1126",
+                    "values": [
+                        {
+                            "value": "2000-01-01"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1127",
+                    "values": [
+                        {
+                            "value": "strasse"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1128",
+                    "values": [
+                        {
+                            "unit": "count",
+                            "value": "10000"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1129",
+                    "values": [
+                        {
+                            "value": "Wohnort"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1131",
+                    "values": [
+                        {
+                            "value": "männlich"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
+                    "groupindex": 0,
+                    "itemid": "id_1280",
+                    "values": [
+                        {
+                            "value": "Land"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_1269",
+                    "values": [
+                        {
+                            "value": "null"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_2459",
+                    "values": [
+                        {
+                            "value": "Krankenkasse"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_2460",
+                    "values": [
+                        {
+                            "value": "no"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
+                    "groupindex": 0,
+                    "itemid": "id_2440",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 9,
+                    "groupindex": 0,
+                    "itemid": "id_2296",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 9,
+                    "groupindex": 0,
+                    "itemid": "id_2297",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_2458",
+                    "values": [
+                        {
+                            "value": "\r\n"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_1268",
+                    "values": [
+                        {
+                            "value": "Versichertennummer"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 4,
+                    "groupindex": 0,
+                    "itemid": "id_1333",
+                    "values": [
+                        {
+                            "value": "nNGM-BV Fall"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 5,
+                    "groupindex": 0,
+                    "itemid": "id_1132",
+                    "values": [
+                        {
+                            "unit": "kg",
+                            "value": "80.1"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 5,
+                    "groupindex": 0,
+                    "itemid": "id_1133",
+                    "values": [
+                        {
+                            "unit": "cm",
+                            "value": "188"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 5,
+                    "groupindex": 0,
+                    "itemid": "id_2290",
+                    "values": [
+                        {
+                            "value": "2 - gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig, kann mehr als 50% der Wachzeit aufstehen"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 6,
+                    "groupindex": 0,
+                    "itemid": "id_2292",
+                    "values": [
+                        {
+                            "value": "Ex-Raucher"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 6,
+                    "groupindex": 0,
+                    "itemid": "id_2293",
+                    "values": [
+                        {
+                            "value": "2019-08-01"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 6,
+                    "groupindex": 0,
+                    "itemid": "id_2294",
+                    "values": [
+                        {
+                            "unit": "count",
+                            "value": "10"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
+                    "groupindex": 0,
+                    "itemid": "id_2441",
+                    "values": [
+                        {
+                            "value": "2020-06-01"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
+                    "groupindex": 0,
+                    "itemid": "id_2446",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
+                    "groupindex": 0,
+                    "itemid": "id_2447",
+                    "values": [
+                        {
+                            "value": "2020-06-02"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
+                    "groupindex": 0,
+                    "itemid": "id_2449",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
+                    "groupindex": 0,
+                    "itemid": "id_2450",
+                    "values": [
+                        {
+                            "value": "2020-06-03"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 8,
+                    "groupindex": 0,
+                    "itemid": "id_2389",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 8,
+                    "groupindex": 0,
+                    "itemid": "id_2390",
+                    "values": [
+                        {
+                            "value": "2020-06-05"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 8,
+                    "groupindex": 0,
+                    "itemid": "id_2392",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 8,
+                    "groupindex": 0,
+                    "itemid": "id_2393",
+                    "values": [
+                        {
+                            "value": "2020-06-04"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 9,
+                    "groupindex": 0,
+                    "itemid": "id_2298",
+                    "values": [
+                        {
+                            "value": "emailadresse"
+                        }
+                    ]
+                }
+            ],
+            "operationId": "D61",
+            "type": "save",
+            "editor": "https://clinicalsite.org/person/38",
+            "timestamp": "2020-06-03T15:23:41+02:00",
+            "crfid": "1-BA"
+        }
+    ],
+    "resourceType": "nNGMv08E_https_stagi",
+    "id": "7a242bad-2a9e-455d-9e5a-ed3b8a911ac8",
+    "meta": {
+        "lastUpdated": "2020-06-03T15:24:02+02:00"
+    }
+}

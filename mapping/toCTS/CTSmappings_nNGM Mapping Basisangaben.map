@@ -1,0 +1,418 @@
+/// version = 0.1
+/// title = "nNGM: nNGMv08E_https_stagi - FHIR to CTS"
+
+map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_BasisangabenCTS" = nNGM_Mapping_BasisangabenCTS
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as source
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as target
+
+/*
+TODO:
+- Implement Consent logic
+
+
+*/
+
+group TransformCTS(source src: Bundle, target cts: CTS_Transport)
+{
+	src -> cts.version = '1.1';
+	src -> cts.sourcesystem = 'FHIREndpoint';
+
+    src.entry as entry then
+    {
+        entry.resource as patient where "resource is Patient" then
+        {
+            //Patient.identifier -> //create patid if doesnt exist
+            patient.identifier as pid -> cts.pid = pid;
+        };
+    };
+
+
+	src -> cts.operations as operations collate, operations.crfid = '1-BA';
+	src -> cts.operations as operations collate, operations.type = 'save';
+
+	//Organization
+	src.entry as entry then
+    {
+        entry.resource as organization where "resource is Organization" then
+	    {
+            //Organization.name -> Standort
+	        organization -> cts.operations as operations collate then {
+		        organization -> operations.data as data then {
+			        organization -> data.blockindex = 1;
+			        organization -> data.groupindex = 0;
+			        organization -> data.itemid = 'id_2435'; 
+			        organization.name as name -> data.values as values, 
+                    values.value = name;
+		        };
+	        };
+            //Organization.contact -> Kontakt
+	        organization -> cts.operations as operations collate then {
+		        organization -> operations.data as data then {
+			        organization -> data.blockindex = 1;
+			        organization -> data.groupindex = 0;
+			        organization -> data.itemid = 'id_2458'; 
+			        organization.contact as contact, 
+                    contact.address as address, 
+                    address.text as addressval -> data.values as values, 
+                    values.value = addressval;
+		        };
+	        };
+
+            //specimen.type as type, type.text as text where "coding.code = '119376003'" then MapSpecimenGewebediagnostik(specimen, cts);
+            //specimen.type as type, type.text as text where "coding.code = '119297000'" then MapSpecimenBlutdiagnostik(specimen, cts);
+        };
+    };
+    
+	//Practitioner
+    src.entry as entry then
+    {
+        entry.resource as practitioner where "resource is Practitioner" then
+	    {
+            //Practitioner.identifier -> Netzwerkpartnernummer
+            practitioner -> cts.operations as operations collate then {
+		        practitioner -> operations.data as data then {
+			        practitioner -> data.blockindex = 0;
+			        practitioner -> data.groupindex = 0;
+			        practitioner -> data.itemid = 'id_2326'; 
+			        practitioner.identifier as netzwerkpartnernummer,
+			        netzwerkpartnernummer.value as npn-> data.values as values, values.value = npn;
+                };
+            };
+
+            //Practitioner.telecom.value -> E-mail Adresse des Anforderers fuer die Einladung
+            practitioner -> cts.operations as operations collate then {
+		        practitioner -> operations.data as data then {
+			        practitioner -> data.blockindex = 9;
+			        practitioner -> data.groupindex = 0;
+			        practitioner -> data.itemid = 'id_2298'; 
+			        practitioner.telecom as contactpoint,
+			        contactpoint.value as num-> data.values as values, values.value = num;
+                };
+            };
+        };
+    };
+    
+     //EpisodeOfCare
+    src.entry as entry then
+    {
+        entry.resource as episodeofcare where "resource is EpisodeOfCare" then
+	    {
+        
+            //EpisodeOfCare.extension.value -> Abrechnungsinformation
+            episodeofcare -> cts.operations as operations collate then {
+		        episodeofcare -> operations.data as data then {
+			        episodeofcare -> data.blockindex = 4;
+			        episodeofcare -> data.groupindex = 0;
+			        episodeofcare -> data.itemid = 'id_1600'; 
+			        episodeofcare.extension as abrechnungsinformation,
+			        abrechnungsinformation.valueCodeableConcept as vcc,
+			        vcc.coding as coding, 
+			        coding.code as code -> data.values as values, values.value = code;
+                };
+            };
+		};
+	};
+  
+
+    //ServiceRequest
+    src.entry as entry then
+    {
+        entry.resource as servicerequest where "resource is ServiceRequest" then
+	    {
+        
+            //ServiceRequest.authoredOn -> Anforderungsdatum
+            servicerequest -> cts.operations as operations collate then {
+		        servicerequest -> operations.data as data then {
+			        servicerequest -> data.blockindex = 2;
+			        servicerequest -> data.groupindex = 0;
+			        servicerequest -> data.itemid = 'id_1571'; 
+			        servicerequest.authoredOn as anforderungsdatum -> data.values as values, values.value = dateOp(anforderungsdatum, 'yyyy-MM-dd', 'dd-MM-yyyy', 'date');
+                };
+            };
+
+            //ServiceRequest.authoredOn -> Aufenthaltsart
+            servicerequest -> cts.operations as operations collate then {
+		        servicerequest -> operations.data as data then {
+			        servicerequest -> data.blockindex = 2;
+			        servicerequest -> data.groupindex = 0;
+			        servicerequest -> data.itemid = 'id_1576'; 
+                    servicerequest.context as context,
+                    context.extension as extension,
+			        extension.valueCodeableConcept as vcc,
+                    vcc.text as aufenthaltsart -> data.values as values, values.value = aufenthaltsart;
+                };
+            };
+
+            //ServiceRequest.requester.agent -> Ich wuensche einen vorstellung
+            servicerequest -> cts.operations as operations collate then {
+		        servicerequest -> operations.data as data then {
+			        servicerequest -> data.blockindex = 9;
+			        servicerequest -> data.groupindex = 0;
+			        servicerequest -> data.itemid = 'id_2296'; 
+                    servicerequest.requester as requester,
+                    requester.agent as agent,
+			        agent.display as vorstellung -> data.values as values, values.value = vorstellung;
+                };
+            };
+
+            //ServiceRequest.requester.extension.valueBoolean -> moechte am telefonkonferenz teilnehmen
+            servicerequest -> cts.operations as operations collate then {
+		        servicerequest -> operations.data as data then {
+			        servicerequest -> data.blockindex = 9;
+			        servicerequest -> data.groupindex = 0;
+			        servicerequest -> data.itemid = 'id_2297'; 
+                    servicerequest.requester as requester,
+                    requester.extension as extension,
+			        extension.valueBoolean as teilnahme -> data.values as values, values.value = teilnahme;
+                };
+            };
+		};
+	};
+    
+    //Coverage
+    src.entry as entry then
+    {
+        entry.resource as coverage where "resource is Coverage" then
+	    {
+        
+            //Coverage.type.text -> Krankenkasse
+            coverage -> cts.operations as operations collate then {
+		        coverage -> operations.data as data then {
+			        coverage -> data.blockindex = 4;
+			        coverage -> data.groupindex = 0;
+			        coverage -> data.itemid = 'id_2459'; 
+			        coverage.type as type,
+			        type.coding as typecoding,
+                    typecoding.text as ftext -> data.values as values, values.value = ftext;
+                };
+            };
+
+            //Coverage.type.code -> Typ (GKV/PKV)
+            coverage -> cts.operations as operations collate then {
+		        coverage -> operations.data as data then {
+			        coverage -> data.blockindex = 4;
+			        coverage -> data.groupindex = 0;
+			        coverage -> data.itemid = 'id_1269'; 
+			        coverage.type as type,
+			        type.coding as typecoding,
+                    typecoding.code as typecode -> data.values as values, values.value = typecode;
+                };
+            };
+			
+			/*
+            //Coverage.payor.display -> Kooperationsvereinbarung
+            coverage -> cts.operations as operations collate then {
+		        coverage -> operations.data as data then {
+			        coverage -> data.blockindex = 4;
+			        coverage -> data.groupindex = 0;
+			        coverage -> data.itemid = 'id_1333'; 
+			        coverage.payor as code -> cc('https://placeholder.com', code);
+                };
+            };
+            */
+
+            //Coverage.payor.identifier -> Versichertennummer
+            coverage -> cts.operations as operations collate then {
+		        coverage -> operations.data as data then {
+			        coverage -> data.blockindex = 4;
+			        coverage -> data.groupindex = 0;
+			        coverage -> data.itemid = 'id_1268'; 
+			        coverage.payor as payor,
+                    payor.identifier as identifier,
+                    identifier.value as payid -> data.values as values, values.value = payid;
+                };
+            };
+			
+			/*
+            //Coverage.payor.cc -> Abrechnungsinformation
+            coverage -> cts.operations as operations collate then {
+		        coverage -> operations.data as data then {
+			        coverage -> data.blockindex = 4;
+			        coverage -> data.groupindex = 0;
+			        coverage -> data.itemid = 'id_2460'; 
+			        coverage.payor as code -> cc('https://placeholder.com', code);
+                };
+            };
+             */
+        };
+    };
+
+
+    //Observation
+    src.entry as entry then
+    {
+        entry.resource as observation where "resource is Observation" then
+	    {
+        
+            // Observation.valuequantity.value -> Körpergröße
+            observation -> cts.operations as operations collate then {
+		        observation -> operations.data as data then {
+			        observation -> data.blockindex = 5;
+			        observation -> data.groupindex = 0;
+			        observation -> data.itemid = 'id_1133'; 
+			        observation.valueQuantity as quantity,
+                    quantity.value as height -> data.values as values, values.value = height;
+                };
+            };
+
+            // Observation.valuequantity.value -> Gewicht
+            observation -> cts.operations as operations collate then {
+		        observation -> operations.data as data then {
+			        observation -> data.blockindex = 5;
+			        observation -> data.groupindex = 0;
+			        observation -> data.itemid = 'id_1132'; 
+			        observation.valueQuantity as quantity,
+                    quantity.value as weight -> data.values as values, values.value = weight;
+                };
+            };
+
+            // Observation.valueCodeableConcept -> ECOG
+            observation -> cts.operations as operations collate then {
+		        observation -> operations.data as data then {
+			        observation -> data.blockindex = 5;
+			        observation -> data.groupindex = 0;
+			        observation -> data.itemid = 'id_2290'; 
+			        observation.valueCodeableConcept as ecog -> data.values as values, values.value = translate(ecog, 'http://uk-koeln.de/fhir/ConceptMap/nngm/ecog', 'code');
+                };
+            };
+
+            // Observation.valueCodeableConcept -> RaucherTyp
+            observation -> cts.operations as operations collate then {
+		        observation -> operations.data as data then {
+			        observation -> data.blockindex = 6;
+			        observation -> data.groupindex = 0;
+			        observation -> data.itemid = 'id_2292'; 
+			        observation.valueCodeableConcept as smokertype -> data.values as values, values.value = translate(smokertype, 'http://uk-koeln.de/fhir/ConceptMap/nngm/raucherstatus', 'code');
+                };
+            };
+            // Observation.component.valuequantity.value -> Pack years
+            observation -> cts.operations as operations collate then {
+		        observation -> operations.data as data then {
+			        observation -> data.blockindex = 6;
+			        observation -> data.groupindex = 0;
+			        observation -> data.itemid = 'id_2294'; 
+			        observation.component as component,
+                    component.valueQuantity as packyears,
+                    packyears.value as py -> data.values as values, values.value = py;
+                };
+            };
+        };
+    };
+
+
+    //Consent, have to implement logic
+    /*
+    src.entry as entry then
+    {
+        entry.resource as consent where "resource is Consent" then
+	    {
+        
+            //Consent.except.type -> Teil 1a
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 7;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2240'; 
+			        consent.except as except,
+                    except.type as teilA -> data.values as values, values.value = teilA;
+                };
+            };
+        
+            //Consent.dateTime -> Teil 1a datum
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 7;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2241'; 
+			        consent.dateTime as teilADT -> dateOp(teilADT, 'yyyy-MM-dd', 'dd-MM-yyyy', 'dateTime');
+                };
+            };
+
+            //Consent.except.type -> Teil 1b
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 7;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2246'; 
+			        consent.except as except,
+                    except.type as teilB -> data.values as values, values.value = teilB;
+                };
+            };
+        
+            //Consent.dateTime -> Teil 1b datum
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 7;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2247'; 
+			        consent.dateTime as teilBDT -> dateOp(teilBDT, 'yyyy-MM-dd', 'dd-MM-yyyy', 'dateTime');
+                };
+            };
+
+            //Consent.except.type -> Teil 2
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 7;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2249'; 
+			        consent.except as except,
+                    except.type as teilzwei -> data.values as values, values.value = teilzwei;
+                };
+            };
+        
+            //Consent.dateTime -> Teil 2 datum
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 7;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2250'; 
+			        consent.dateTime as teilzweiDT -> dateOp(teilzweiDT, 'yyyy-MM-dd', 'dd-MM-yyyy', 'dateTime');
+                };
+            };
+
+            //Consent.except.type -> Teilnameerklarung unterschrieben
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 8;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2292'; 
+			        consent.except as except,
+                    except.type as teilnahme -> data.values as values, values.value = teilnahme;
+                };
+            };
+
+            //Consent.dateTime -> Teilnameerklarung datum
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 8;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2293'; 
+			        consent.dateTime as tdt -> dateOp(tdt, 'yyyy-MM-dd', 'dd-MM-yyyy', 'dateTime');
+                };
+            };
+
+            //Consent.except.type -> datenschutz unterschrieben
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 8;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2389'; 
+			        consent.except as except,
+                    except.type as ds -> data.values as values, values.value = ds;
+                };
+            };
+
+            //Consent.dateTime -> datenschutz datum
+            consent -> cts.operations as operations collate then {
+		        consent -> operations.data as data then {
+			        consent -> data.blockindex = 8;
+			        consent -> data.groupindex = 0;
+			        consent -> data.itemid = 'id_2390'; 
+			        consent.dateTime as dsdt -> dateOp(dsdt, 'yyyy-MM-dd', 'dd-MM-yyyy', 'dateTime');
+                };
+            };
+        };
+    };
+    */
+}

@@ -1,0 +1,102 @@
+{
+	"resourceType": "Bundle",
+	"id": "eea71348-a611-416b-ad64-c9cb968807c9",
+	"meta": {
+		"profile": [
+			"http://uk-koeln.de/fhir/StructureDefinition/Bundle/nNGM/registration-form"
+		]
+	},
+	"identifier": {
+		"system": "urn:ietf:rfc:3986",
+		"value": "urn:uuid:6a86db08-374b-461e-b36d-1e4dc714499a"
+	},
+	"type": "document",
+	"entry": [
+		{
+			"resource": {
+				"resourceType": "Specimen",
+				"id": "f10f6a55-c6b5-4966-9bb7-ff9571ebd2cf",
+				"meta": {
+					"profile": [
+						"http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM"
+					]
+				},
+				"identifier": [
+					{
+						"system": "http://uk-koeln.de/NamingSystem/nNGM/biopsieID",
+						"value": "123456789"
+					}
+				],
+				"type": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"version": "http://snomed.info/sct/900000000000207008",
+							"code": "119376003"
+						}
+					],
+					"text": "Gewebediagnostik"
+				},
+				"receivedTime": "2020-05-20",
+				"collection": {
+					"extension": [
+						{
+							"url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart",
+							"valueCodeableConcept": {
+								"coding": [
+									{
+										"system": "http://hl7.org/fhir/v3/ActCode",
+										"code": "AMB"
+									}
+								],
+								"text": "ambulant"
+							}
+						}
+					]
+				}
+			}
+		},
+		{
+			"resource": {
+				"resourceType": "Observation",
+				"id": "f0c94e1a-a8da-42e6-b2e2-70d149ccfbc3",
+				"meta": {
+					"profile": [
+						"http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie"
+					]
+				},
+				"valueCodeableConcept": {
+					"coding": [
+						{
+							"system": "http://uk-koeln.de/fhir/ValueSet/icd-o-3-m-lunge",
+							"code": "8041/3"
+						}
+					],
+					"text": "Adenokarzinom"
+				},
+				"status": "registered",
+				"category": [
+					{
+						"coding": [
+							{
+								"system": "http://hl7.org/fhir/observation-category",
+								"code": "laboratory"
+							}
+						]
+					}
+				],
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "59847-4"
+						}
+					]
+				},
+				"subject": {
+					"reference": "testpatient"
+				}
+			}
+		}
+	]
+}

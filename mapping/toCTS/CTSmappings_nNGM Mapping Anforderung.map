@@ -1,0 +1,121 @@
+/// version = 0.1
+/// title = "nNGM: nNGMv08E_https_stagi - FHIR to CTS"
+
+map "http://uk-koeln.de/fhir/StructureMap/nNGMv08E_https_stagi" = nNGMv08E_https_stagi
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as source
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as target
+
+group TransformCTS(source src: Bundle, target cts: CTS_Transport)
+{
+	src -> cts.version = '1.1';
+	src -> cts.patid = 'dummy';
+	src -> cts.sourcesystem = 'https://example.com';
+	
+	//Need to be inside collated operations
+	src -> cts.operations as operations collate, operations.crfid = '1-AF1';
+	src -> cts.operations as operations collate, operations.type = 'save';
+
+	//Specimen
+	src.entry as entry then
+    {
+        entry.resource as specimen where "resource is Specimen" then
+	    {
+            //Specimen.type -> Diagnostik.Typ
+	        specimen -> cts.operations as operations collate then {
+		        specimen-> operations.data as data then {
+			        specimen -> data.blockindex = 0;
+			        specimen -> data.groupindex = 0;
+			        specimen -> data.itemid = 'id_1368';
+			        specimen.type as type, type.text as text -> data.values as values, values.value = text;
+		        };
+	        };
+            //Specimen.identifier.value -> Diagnostik.ZuUntersuchendesTumormaterial(Biopsie-ID)
+	        specimen -> cts.operations as operations collate then {
+		        specimen-> operations.data as data then {
+			        specimen -> data.blockindex = 0;
+			        specimen -> data.groupindex = 0;
+			        specimen -> data.itemid = 'id_2457';
+			        specimen.identifier as id, id.value as val -> data.values as values, values.value = val;
+		        };
+	        };
+            specimen.type as type, type.text as text where "coding.code = '119376003'" then MapSpecimenGewebediagnostik(specimen, cts);
+            specimen.type as type, type.text as text where "coding.code = '119297000'" then MapSpecimenBlutdiagnostik(specimen, cts);
+
+            src.entry as entry, 
+            entry.resource as observation where "resource is Observation" then
+            {
+                observation.value as vcc where "value.text = 'Adenokarzinom' or text = 'Adenosquamöses Karzinom' or text = 'Adenosquamöses Karzinom' or text = 'Plattenepithelkarzinom' or text = 'Großzellig-neuroendokrines Karzinom' or text = 'Maligne Neoplasie'" then MapObservationGewebehistologie(observation, cts);
+				observation.value as vcc where "value.text = 'CUP'" then MapObservationBluthistologie(observation, cts);
+            };
+        };
+    };
+}
+
+group MapSpecimenGewebediagnostik(source specimen: Specimen, target cts: CTS_Transport)
+{
+    //Specimen.receivedTime -> AngabenZurGewebeDiagnostik.Entnahmedatum:
+	specimen -> cts.operations as operations collate then {
+		specimen-> operations.data as data then {
+			specimen -> data.blockindex = 1;
+			specimen -> data.groupindex = 0;
+			specimen -> data.itemid = 'id_1551';
+			specimen.receivedTime as time -> data.values as values, values.value = dateOp(time, 'yyyy-MM-dd', 'dd-MM-yyyy', 'date');
+		};
+	};
+     //Specimen.collection.extension.valueCodableConcept.text -> AngabenZurGewebeDiagnostik.MaterialentnahmeErfolgte
+	specimen -> cts.operations as operations collate then {
+		specimen-> operations.data as data then {
+			specimen -> data.blockindex = 1;
+			specimen -> data.groupindex = 0;
+			specimen -> data.itemid = 'id_1589';
+			specimen.collection as collection, collection.extension as extension, extension.valueCodeableConcept as vcc, vcc.text as ft -> data.values as values, values.value = ft;
+		};
+	};
+}
+
+group MapSpecimenBlutdiagnostik(source specimen: Specimen, target cts: CTS_Transport)
+{
+    //Specimen.receivedTime -> AngabenZurGewebeDiagnostik.Entnahmedatum:
+	specimen -> cts.operations as operations collate then {
+		specimen-> operations.data as data then {
+			specimen -> data.blockindex = 2;
+			specimen -> data.groupindex = 0;
+			specimen -> data.itemid = 'id_2316';
+			specimen.receivedTime as time -> data.values as values, values.value = dateOp(time, 'yyyy-MM-dd', 'dd-MM-yyyy', 'date');
+		};
+	};
+     //Specimen.collection.extension.valueCodableConcept.text -> AngabenZurGewebeDiagnostik.MaterialentnahmeErfolgte
+	specimen -> cts.operations as operations collate then {
+		specimen-> operations.data as data then {
+			specimen -> data.blockindex = 2;
+			specimen -> data.groupindex = 0;
+			specimen -> data.itemid = 'id_2320';
+			specimen.collection as collection, collection.extension as extension, extension.valueCodeableConcept as vcc, vcc.text as ft -> data.values as values, values.value = ft;
+		};
+	};
+}
+
+group MapObservationGewebehistologie(source observation : Observation, target cts : CTS_Transport)
+{
+    observation -> cts.operations as operations collate then{
+        observation -> operations.data as data then{
+            observation -> data.blockindex = 1;
+			observation -> data.groupindex = 0;
+			observation -> data.itemid = 'id_836';
+            observation.valueCodeableConcept as vcc, vcc.text as ftext -> data.values as values, values.value = ftext; 
+        };
+    };
+}
+
+group MapObservationBluthistologie(source observation : Observation, target cts : CTS_Transport)
+{
+    observation -> cts.operations as operations collate then{
+        observation -> operations.data as data then{
+            observation -> data.blockindex = 2;
+			observation -> data.groupindex = 0;
+			observation -> data.itemid = 'id_2319';
+            observation.valueCodeableConcept as vcc, vcc.text as ftext -> data.values as values, values.value = ftext; 
+        };
+    };
+}

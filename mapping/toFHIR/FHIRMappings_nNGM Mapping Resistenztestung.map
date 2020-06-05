@@ -1,0 +1,32 @@
+/// version = 0.1
+/// title = "nNGM: Mapping Resistenztestung FHIR"
+
+map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_ResistenztestungFHIR" = nNGM_Mapping_ResistenztestungFHIR
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+uses "http://hl7.org/fhir/StructureDefinition/Practitioner" as target
+uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
+
+group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
+{
+    src -> bundle.id = uuid();
+    src -> bundle.type = 'collection';
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Specimen') as specimen 
+           then TransformSpecimen(src, specimen);
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Observation') as observation 
+           then TransformObservation(src, observation);
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Practitioner') as practitioner 
+           then TransformPractitioner(src, practitioner);
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Organization') as organization 
+           then TransformOrganization(src, organization);
+}

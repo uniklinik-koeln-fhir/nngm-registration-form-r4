@@ -1,0 +1,134 @@
+{
+  "resourceType": "CTS_Transport",
+  "version": "1.1",
+  "patid": "dummy",
+  "sourcesystem": "https://example.com",
+  "operations": [
+    {
+      "crfid": "1-AF1",
+      "type": "save",
+      "data": [
+        {
+          "blockindex": 0,
+          "groupindex": 0,
+          "itemid": "id_1368",
+          "values": [
+            {
+              "value": "Gewebediagnostik"
+            }
+          ]
+        },
+        {
+          "blockindex": 0,
+          "groupindex": 0,
+          "itemid": "id_2457",
+          "values": [
+            {
+              "value": "123456789"
+            }
+          ]
+        },
+        {
+          "blockindex": 1,
+          "groupindex": 1,
+          "itemid": "id_1551",
+          "values": [
+            {
+              "value": "20-05-2020"
+            }
+          ]
+        },
+        {
+          "blockindex": 1,
+          "groupindex": 1,
+          "itemid": "id_1558",
+          "values": [
+            {
+              "value": "ambulant"
+            }
+          ]
+        },
+        {
+          "blockindex": 1,
+          "groupindex": 0,
+          "itemid": "id_836",
+          "values": [
+            {
+              "value": "Adenokarzinom"
+            }
+          ]
+        },
+        {
+          "blockindex": 2,
+          "groupindex": 0,
+          "itemid": "id_2319",
+          "values": [
+            {
+              "value": "CUP"
+            }
+          ]
+        },
+        {
+          "blockindex": 0,
+          "groupindex": 0,
+          "itemid": "id_1368",
+          "values": [
+            {
+              "value": "Blutdiagnostik"
+            }
+          ]
+        },
+        {
+          "blockindex": 0,
+          "groupindex": 0,
+          "itemid": "id_2457",
+          "values": [
+            {
+              "value": "987654321"
+            }
+          ]
+        },
+        {
+          "blockindex": 2,
+          "groupindex": 0,
+          "itemid": "id_2316",
+          "values": [
+            {
+              "value": "19-05-2020"
+            }
+          ]
+        },
+        {
+          "blockindex": 2,
+          "groupindex": 0,
+          "itemid": "id_2320",
+          "values": [
+            {
+              "value": "stationär"
+            }
+          ]
+        },
+        {
+          "blockindex": 1,
+          "groupindex": 0,
+          "itemid": "id_836",
+          "values": [
+            {
+              "value": "Adenokarzinom"
+            }
+          ]
+        },
+        {
+          "blockindex": 2,
+          "groupindex": 0,
+          "itemid": "id_2319",
+          "values": [
+            {
+              "value": "CUP"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

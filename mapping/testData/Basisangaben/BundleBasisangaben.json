@@ -1,0 +1,280 @@
+{
+    "resourceType": "Bundle",
+    "id": "75b32776-b8c9-4731-bd6d-2be3b515af1c",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Bundle/nNGM/registration-form"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:a754982d-63e0-40ed-890a-bcb4440d5255"
+    },
+    "type": "document",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "7c759bb1-6f56-41fc-8503-7568009c4db7",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site"
+                    ]
+                },
+                "name": "OrganizationName",
+                "contact": {
+                    "address": [
+                    	{ 
+                    		"text": "OrganizationAddress"
+                    	}
+                    ]
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "10f1b821-b243-4e32-b44a-0b4cb4bd3f81",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM"
+                    ]
+                },
+                "identifier": [
+                    {
+                        "system": "http://uk-koeln.de/NamingSystem/nNGM/netzwerkpartnernummer",
+                        "value": "123456"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "EpisodeOfCare",
+                "identifier": [
+                    {
+                        "system": "http://uk-koeln.de/fhir/NamingSystem/nNGM/fallnummer",
+                        "value": "1d7258e1-bdf7-4aa7-8294-7e12048c78a6"
+                    }
+                ],
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+                                    "code": "nngm-iv"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "status": "active",
+                "patient": {
+                    "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+                },
+                "period": {
+                    "start": "2017-10-13"
+                }
+            }
+        }, 
+        {
+            "resource": {
+                "resourceType": "ServiceRequest",
+                "id": "661d47e0-81ce-4a3f-b95c-7ca419106029",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/ProcedureRequest/nNGM/tumorboard"
+                    ]
+                },
+                "status": "active",
+                "intent": "proposal",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
+                            "code": "tumorboard"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+                },
+                
+                "requester": {
+                    "extension": [
+                        {
+                            "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/persoenlicheTeilnahme",
+                            "valueBoolean": true
+                        }
+                    ]
+                },
+                "performer": {
+                    "display": "UK Köln"
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Coverage",
+                "id": "3ffcbf52-7eb6-4008-b3ba-73f607977311",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/0.1"
+                    ]
+                },
+                "extension": [
+                    {
+                        "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform/0.1",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
+                                    "code": "basis"
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "value": "123456789"
+                    }
+                ],
+                "status": "active",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                            "code": "PKV"
+                        }
+                    ]
+                },
+                "beneficiary": {
+                    "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+                },
+                "payor": [
+                    {
+                        "display": "DKV Deutsche Krankenversicherung"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "id": "42e9ba29-ee76-4ff3-a86b-4a6f775934b7",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog"
+                    ]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "survey"
+                            }
+                        ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "89247-1"
+                        }
+                    ]
+                },
+                "subject": {
+                    "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+                },
+                
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
+                            "code": "1"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Consent",
+                "id": "ddd03f9b-1388-49f0-8b30-d7f1076ee957",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM"
+                    ]
+                },
+                "status": "active",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/einwilligungserklaerung",
+                                "code": "nngm-teilnahme"
+                            }
+                        ]
+                    }
+                ],
+                "patient": {
+                    "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+                },
+                "dateTime": "2019-02-04",
+                "policy": [
+                    {
+                        "authority": "https://ngm-cancer.com/",
+                        "uri": "http://ngm-cancer.com/opt-in/nngm-teilnahme"
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Condition",
+                "id": "1ced56a7-744a-4366-9b27-56747a734284",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Condition/nNGM"
+                    ]
+                },
+                "clinicalStatus": "active",
+                "verificationStatus": "confirmed",
+                "code": {
+                    "text": "Lungenkarzinom"
+                },
+                "subject": {
+                    "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+                },
+                
+                "stage": {
+                    "assessment": [
+                        {
+                            "reference": "urn:uuid:201dbebe-1235-4471-9388-338a17039fac"
+                        }
+                    ]
+                },
+                "evidence": [
+                    {
+                        "detail": [
+                            {
+                                "reference": "urn:uuid:477fb34c-2681-489d-86c8-db474452f6f5"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,17 +1,13 @@
 /// version = 0.1
-/// title = "nNGM: Mapping Basisangaben"
+/// title = "nNGM: Mapping Anforderung FHIR"
 
-map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_BasisangabenFHIR" = nNGM_Mapping_BasisangabenFHIR
+map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_AnforderungFHIR" = nNGM_Mapping_AnforderungFHIR
 
 uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
-uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
+uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
 uses "http://hl7.org/fhir/StructureDefinition/Practitioner" as target
-uses "http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" as target
-uses "http://hl7.org/fhir/StructureDefinition/ServiceRequest" as target
-uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
-uses "http://hl7.org/fhir/StructureDefinition/Coverage" as target
-uses "http://hl7.org/fhir/StructureDefinition/Condition" as target
-uses "http://hl7.org/fhir/StructureDefinition/Consent" as target
+uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
 
 group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
 {
@@ -19,8 +15,12 @@ group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
     src -> bundle.type = 'collection';
 
     src -> bundle.entry as entry, 
-           entry.resource = create('Patient') as patient 
-           then TransformPatient(src, patient), TransformPatientPostHandler(src, patient, bundle);
+           entry.resource = create('Specimen') as specimen 
+           then TransformSpecimen(src, specimen);
+
+    src -> bundle.entry as entry, 
+           entry.resource = create('Observation') as observation 
+           then TransformObservation(src, observation);
 
     src -> bundle.entry as entry, 
            entry.resource = create('Practitioner') as practitioner 
@@ -31,97 +31,53 @@ group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
            then TransformOrganization(src, organization);
 }
 
-group TransformPatientPostHandler(source src: CTS_Transport, source patient: Patient, target bundle: Bundle)
+/* ------------------------------ Specimen ---------------------------- */
+
+group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
 {
-    src -> bundle.entry as entry, 
-           entry.resource = create('Coverage') as coverage 
-           then TransformCoverage(src, patient, coverage);
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient'; 
 
-    src where "operations.data.where($this.itemid = 'id_1600').exists()" -> bundle.entry as entry, 
-                                                                            entry.resource  = create('EpisodeOfCare') as episodeOfCare 
-                                                                            then TransformEpisodeOfCare(src, patient, episodeOfCare),
-                                                                            TransformEpisodeOfCarePostHandler(src, patient, bundle, episodeOfCare);   
 
-    /*
+    tgt.type -> cc();
+
+    //Needs patient resolver, patient id not in form 
+    //patient.id as patientId -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
     src.operations as operations, operations.data as data then
     {
-        // Teil 1a: Molekularpathologische Diagnostik im nNGM
-        data.values as valuesPermit where "blockindex = 7 and groupindex = 0 and itemid = 'id_2440'" then
-        {
-            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 7 and groupindex = 0 and itemid = 'id_2441'" then
-            {
-                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsent1a(src, consent);
-            };
-        };
+    
 
-        // Teil 1b: Überregionale Beratung und Studiensuche im nNGM
-        data.values as valuesPermit where "blockindex = 7 and groupindex = 0 and itemid = 'id_2446'" then
+        //Tumormaterial -> identifier.value
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_2457'" then 
         {
-            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 7 and groupindex = 0 and itemid = 'id_2447'" then
-            {
-                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsent1b(src, consent);
-            };
+            values.value as tumorid -> tgt.identifier = create('BackboneElement') as identifier, identifier.value = id(tumorid);
         };
+    
+        /Diagnostik Typ -> type
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1368'" then
+        {
+            //Entnahmedatum -> collection.collectedDateTime
+            values.value as type where "$this = 'Gewebediagnostik': -> tgt.collection = create('BackboneElement') as collection, 
+            collection.extension = as collectionextension, 
+            collectionextension.url = , 
+            collectionextension.value = 
+            
+            //Materialentnahme erfolgte -> colleciton.extension.valueCodeableConcept
+            
 
-        // Teil 2: Forschung im nNGM
-        data.values as valuesPermit where "blockindex = 7 and groupindex = 0 and itemid = 'id_2449'" then
-        {
-            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 7 and groupindex = 0 and itemid = 'id_2450'" then
-            {
-                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsent2(src, consent);
-            };
-        };
 
-        // Teilnahmeerklärung
-        data.values as valuesPermit where "blockindex = 8 and groupindex = 0 and itemid = 'id_2392'" then
-        {
-            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 8 and groupindex = 0 and itemid = 'id_2393'" then
-            {
-                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsentTeilnahmeerklaerung(src, consent);
-            };
-        };
+        }; 
 
-        // Datenschutzerklärung
-        data.values as valuesPermit where "blockindex = 8 and groupindex = 0 and itemid = 'id_2389'" then
-        {
-            src.operations as operations, operations.data as data, data.values as valuesSignatureDate where "blockindex = 8 and groupindex = 0 and itemid = 'id_2390'" then
-            {
-                src -> bundle.entry as entry, entry.resource = create('Consent') as consent then TransformConsent(valuesSignatureDate, valuesPermit, patient, consent), TransformConsentDatenschutzerklaerung(src, consent);
-            };
-        };
+    
+
+            //Entnahmedatum -> collection.collectedDateTime
+
+            //Blutentnahme erfolgte -> collection.extension.valueCodeableConcept
+
 
     };
-    */
-}
 
-group TransformEpisodeOfCarePostHandler(source src: CTS_Transport, source patient: Patient, target bundle: Bundle, target context: EpisodeOfCare)
-{
-
-    src -> bundle.entry as entry, 
-           entry.resource = create('ServiceRequest') as procedureRequest 
-           then TransformServiceRequestTestung(src, patient, context, procedureRequest);
-
-    /*
-    src -> bundle.entry as entry, 
-           entry.resource = create('Condition') as condition 
-           then TransformCondition(src, patient, context, condition);      
-    */
-
-    src where "operations.data.where($this.itemid = 'id_1133').exists()" -> bundle.entry as entry, 
-                                                                            entry.resource = create('Observation') as koerpergroesseObservation 
-                                                                            then TransformObservationKoerpergroesse(src, patient, context, koerpergroesseObservation);
-
-    src where "operations.data.where($this.itemid = 'id_1132').exists()" -> bundle.entry as entry, 
-                                                                            entry.resource = create('Observation') as koerpergewichtObservation 
-                                                                            then TransformObservationKoerpergewicht(src, patient, context, koerpergewichtObservation);
-
-    src where "operations.data.where($this.itemid = 'id_2290').exists()" -> bundle.entry as entry, 
-                                                                            entry.resource  = create('Observation') as ecogObservation 
-                                                                            then TransformObservationECOG(src, patient, context, ecogObservation);
-
-    src where "operations.data.where($this.itemid = 'id_2292').exists()" -> bundle.entry as entry, 
-                                                                            entry.resource = create('Observation') as raucherstatusObservation 
-                                                                            then TransformObservationRaucherstatus(src, patient, context, raucherstatusObservation);
 }
 
 
@@ -165,7 +121,7 @@ group TransformPatient(source src: CTS_Transport, target tgt: Patient)
         // Geburtsdatum -> patient.birthDate
         data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_1126'" then 
         {
-            values.value as birthDate -> tgt.birthDate = dateOp(birthDate);
+            values.value as birthDate -> tgt.birthDate = dateOp(birthDate, 'dateTime');
         };
 
         // Straße -> address.line
@@ -211,15 +167,15 @@ group TransformOrganization(source src: CTS_Transport, target tgt: Organization)
             values.value as name -> tgt.name = name;
         };
 
+		/*
         //Kontakt --> Organization.contact 
         //How to parse freetext into this block?
         data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_2458'" then 
         {
-            values.value as contact -> tgt.contact = create('BackboneElement') as contact,
-            contact.purpose = cc('http://hl7.org/fhir/ValueSet/contactentity-type', 'ADMIN', 'Administrative');
-            contact.address = contact;
-        }
-
+            values.value as contactval -> tgt.contact = create('BackboneElement') as contact,
+            contact.address = contactval;
+        };
+        */
     };
 }
 
@@ -241,43 +197,12 @@ group TransformPractitioner(source src: CTS_Transport, target tgt: Practitioner)
     };
 }
 
-/* ------------------------------ EpisodeOfCare ---------------------------- */
+/* ------------------------------ ProcedureRequest ---------------------------- */
 
-group TransformEpisodeOfCare(source src: CTS_Transport, source patient: Patient, target tgt: EpisodeOfCare)
+group TransformProcedureRequestTestung(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: ProcedureRequest)
 {
     src -> tgt.id = uuid();
-    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM';
-
-    src -> tgt.status = 'active';
-
-    src.operations as operations, operations.data as data then
-    {
-        // Fall-ID -> EpisodeOfCare.identifier
-        data.values as values where "blockindex = 9 and groupindex = 0 and itemid = 'id_1600'" then
-        {
-            values.value as fallID -> tgt.identifier = id('http://uk-koeln.de/fhir/NamingSystem/nNGM/fallnummer', fallID);
-        };
-
-        // Abrechnungsinformation
-        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1333'" then
-        {
-            values.value as tarifform -> tgt.extension as abrechnungsinformation,
-            abrechnungsinformation.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation',
-            abrechnungsinformation.value = translate(tarifform, 'http://uk-koeln.de/fhir/ConceptMap/nNGM/Abrechnungsinformation', 'CodeableConcept');
-        };
-    };
-
-    patient.id as patientId -> tgt.patient = create('Reference') as beneficiary, 
-    						   beneficiary.reference = evaluate(patientId, '\'Patient/\' + $this');
-    src -> tgt.period = create('Period') as period, period.start = evaluate(period, 'now()');
-}
-
-/* ------------------------------ ServiceRequest ---------------------------- */
-
-group TransformServiceRequestTestung(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, target tgt: ServiceRequest)
-{
-    src -> tgt.id = uuid();
-    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung';
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ProcedureRequest/nNGM/testung';
 
     src -> tgt.status = 'active';
     src -> tgt.intent = 'proposal';
@@ -318,10 +243,10 @@ group TransformServiceRequestTestung(source src: CTS_Transport, source patient: 
     									   context.reference = evaluate(contextId, '\'EpisodeOfCare/\' + $this');
 }
 
-group TransformServiceRequestTumorboard(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, source practitioner: Practitioner, target tgt: ServiceRequest)
+group TransformProcedureRequestTumorboard(source src: CTS_Transport, source patient: Patient, source context: EpisodeOfCare, source practitioner: Practitioner, target tgt: ProcedureRequest)
 {
     src -> tgt.id = uuid();
-    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard';
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ProcedureRequest/nNGM/tumorboard';
 
     src -> tgt.status = 'active';
     src -> tgt.intent = 'proposal';
@@ -390,15 +315,17 @@ group TransformCoverage(source src: CTS_Transport, source patient: Patient, targ
                         identifier.system = 'http://fhir.de/NamingSystem/gkv/kvid-10',
                         identifier.value = gkv;
                     };
-
+ 
+					/* 
                     //Krankenkasse --> Coverage.type.text
                     //check scope and collate
                     src.operations as operations, operations.data as data, data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2459'" then
                     {
-                         values.value as typeftext -> tgt.type as type collate = cc('http://fhir.de/CodeSystem/identifier-type-de-basis', 'GKV', 'Gesetzliche Krankenversicherung'), 
+                         values.value as typeftext -> tgt.type as type collate,
                          type.text = typeftext;
                     };
-
+					*/
+					
                     // Kooperationsvereinbarung -> Coverage.payor.display
                     src.operations as operations, operations.data as data, data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2460'" then 
                     {
@@ -429,14 +356,15 @@ group TransformCoverage(source src: CTS_Transport, source patient: Patient, targ
 
                     };
 
+					/*
                     //Krankenkasse --> Coverage.type.text
                     //check scope and collate
                     src.operations as operations, operations.data as data, data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2459'" then
                     {
-                         values.value as typeftext -> tgt.type as type collate = cc('http://fhir.de/CodeSystem/identifier-type-de-basis', 'GKV', 'Gesetzliche Krankenversicherung'), 
+                         values.value as typeftext -> tgt.type, 
                          type.text = typeftext;
                     };
-
+					*/
 
                     // Kooperationsvereinbarung -> Coverage.payor.display
                     src.operations as operations, operations.data as data, data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2460'" then 

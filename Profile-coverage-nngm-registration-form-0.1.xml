@@ -13,6 +13,18 @@
   <baseDefinition value="http://fhir.de/StructureDefinition/coverage-de-basis" />
   <derivation value="constraint" />
   <differential>
+    <element id="Coverage.meta.security.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.meta.security.display" />
+    </element>
+    <element id="Coverage.meta.tag.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.meta.tag.display" />
+    </element>
     <element id="Coverage.extension">
       <path value="Coverage.extension" />
       <slicing>
@@ -60,6 +72,28 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.extension:pkvTarifform.value[x].coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.extension.value[x].coding.display" />
+    </element>
+    <element id="Coverage.extension:pkvTarifform.value[x].text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.extension.value[x].text" />
+    </element>
+    <element id="Coverage.extension:kooperationsvereinbarung">
+      <path value="Coverage.extension" />
+      <sliceName value="kooperationsvereinbarung" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung" />
+      </type>
+    </element>
     <element id="Coverage.identifier">
       <path value="Coverage.identifier" />
       <slicing>
@@ -72,6 +106,24 @@
       <short value="The primary coverage ID" />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.text" />
+    </element>
+    <element id="Coverage.identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.display" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier">
       <path value="Coverage.identifier" />
@@ -108,6 +160,12 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.coding.display" />
+    </element>
     <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type">
       <path value="Coverage.identifier.type.coding" />
       <sliceName value="GKV-Type" />
@@ -127,6 +185,18 @@
       <fixedCode value="GKV" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.text" />
+    </element>
     <element id="Coverage.identifier:GKV-Identifier.system">
       <path value="Coverage.identifier.system" />
       <min value="1" />
@@ -143,7 +213,28 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.identifier:GKV-Identifier.assigner.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.assigner.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.identifier.type.text" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.assigner.identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.identifier.assigner.display" />
+    </element>
     <element id="Coverage.identifier:GKV-Identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Coverage.identifier.assigner.display" />
       <min value="1" />
       <mustSupport value="true" />
@@ -177,6 +268,12 @@
       <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.coding.display" />
+    </element>
     <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type">
       <path value="Coverage.identifier.type.coding" />
       <sliceName value="PKV-Type" />
@@ -195,6 +292,18 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.type.text" />
+    </element>
     <element id="Coverage.identifier:PKV-Identifier.system">
       <path value="Coverage.identifier.system" />
       <mustSupport value="true" />
@@ -209,7 +318,28 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.identifier:PKV-Identifier.assigner.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.assigner.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.identifier.type.text" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.assigner.identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.identifier.assigner.display" />
+    </element>
     <element id="Coverage.identifier:PKV-Identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Coverage.identifier.assigner.display" />
       <min value="1" />
       <mustSupport value="true" />
@@ -237,6 +367,54 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.type.coding.display" />
+    </element>
+    <element id="Coverage.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.type.text" />
+    </element>
+    <element id="Coverage.policyHolder.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.policyHolder.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.policyHolder.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.policyHolder.identifier.type.text" />
+    </element>
+    <element id="Coverage.policyHolder.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.policyHolder.display" />
+    </element>
+    <element id="Coverage.subscriber.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.subscriber.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.subscriber.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.subscriber.identifier.type.text" />
+    </element>
+    <element id="Coverage.subscriber.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.subscriber.display" />
+    </element>
     <element id="Coverage.beneficiary">
       <path value="Coverage.beneficiary" />
       <type>
@@ -251,9 +429,45 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Coverage.beneficiary.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.beneficiary.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.beneficiary.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.beneficiary.identifier.type.text" />
+    </element>
+    <element id="Coverage.beneficiary.identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.beneficiary.identifier.assigner.display" />
+    </element>
+    <element id="Coverage.beneficiary.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.beneficiary.display" />
+    </element>
     <element id="Coverage.dependent">
       <path value="Coverage.dependent" />
       <max value="0" />
+    </element>
+    <element id="Coverage.relationship.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.relationship.coding.display" />
+    </element>
+    <element id="Coverage.relationship.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.relationship.text" />
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
@@ -268,9 +482,84 @@
         <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
       </type>
     </element>
+    <element id="Coverage.payor.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.payor.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.payor.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.payor.identifier.type.text" />
+    </element>
+    <element id="Coverage.payor.identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.payor.identifier.assigner.display" />
+    </element>
     <element id="Coverage.payor.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
       <path value="Coverage.payor.display" />
       <mustSupport value="true" />
+    </element>
+    <element id="Coverage.class.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.class.type.coding.display" />
+    </element>
+    <element id="Coverage.class.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.class.type.text" />
+    </element>
+    <element id="Coverage.costToBeneficiary.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.costToBeneficiary.type.coding.display" />
+    </element>
+    <element id="Coverage.costToBeneficiary.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.costToBeneficiary.type.text" />
+    </element>
+    <element id="Coverage.costToBeneficiary.exception.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.costToBeneficiary.exception.type.coding.display" />
+    </element>
+    <element id="Coverage.costToBeneficiary.exception.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.costToBeneficiary.exception.type.text" />
+    </element>
+    <element id="Coverage.contract.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.contract.identifier.type.coding.display" />
+    </element>
+    <element id="Coverage.contract.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.contract.identifier.type.text" />
+    </element>
+    <element id="Coverage.contract.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.contract.display" />
     </element>
   </differential>
 </StructureDefinition>

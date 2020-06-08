@@ -1,0 +1,33 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components",
+  "version": "0.1",
+  "name": "molpatho-components",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-02-09",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Komponenten von molekularpathologischen Befunden",
+  "caseSensitive": true,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/molpatho-components",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "exon",
+      "display": "Exon"
+    },
+    {
+      "code": "c",
+      "display": "c."
+    },
+    {
+      "code": "p",
+      "display": "p."
+    }
+  ]
+}

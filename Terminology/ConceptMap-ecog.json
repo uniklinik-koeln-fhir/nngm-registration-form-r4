@@ -1,0 +1,77 @@
+{
+  "resourceType": "ConceptMap",
+  "name": "ECOG",
+  "status": "active",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "fhir@healex.systems"
+        }
+      ]
+    }
+  ],
+  "description": "Maps the ECOG concepts of the internal nNGM forms to the published ECOG ValueSet",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "0",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "0 - normale, uneingeschränkte Aktivität, wie vor der Erkrankung",
+          "display": "ECOG 0 - normale, uneingeschränkte Aktivität, wie vor der Erkrankung"
+        },
+        {
+          "target": [
+            {
+              "code": "1",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "1 - Einschränkung bei körperlicher Anstrengung, gehfähig, leichte körperliche Arbeit möglich",
+          "display": "ECOG 1 - Einschränkung bei körperlicher Anstrengung, gehfähig, leichte körperliche Arbeit möglich"
+        },
+        {
+          "target": [
+            {
+              "code": "2",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "2 - gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig, kann mehr als 50% der Wachzeit aufstehen",
+          "display": "ECOG 2 - gefähig, Selbstversorgung möglich, aber nicht arbeitsfähig, kann mehr als 50% der Wachzeit aufstehen"
+        },
+        {
+          "target": [
+            {
+              "code": "3",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "3 - nur begrenzte Selbstversorgung möglich, 50% oder mehr der Wachzeit an Bett oder Stuhl gebunden",
+          "display": "ECOG 3 - nur begrenzte Selbstversorgung möglich, 50% oder mehr der Wachzeit an Bett oder Stuhl gebunden"
+        },
+        {
+          "target": [
+            {
+              "code": "4",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "4 - völlig pflegebedürftig, keinerlei Selbstversorgung möglich, völlig an Bett oder Stuhl gebunden",
+          "display": "ECOG 4 - völlig pflegebedürftig, keinerlei Selbstversorgung möglich, völlig an Bett oder Stuhl gebunden"
+        }
+      ],
+      "target": "urn:oid:1.2.276.0.76.3.1.131.1.5.153"
+    }
+  ],
+  "url": "http://uk-koeln.de/fhir/ConceptMap/nngm/ecog",
+  "targetUri": "http://uk-koeln.de/fhir/ValueSet/ecog",
+  "sourceUri": "http://uk-koeln.de/fhir/ValueSet/CTS/nNGM/ecog",
+  "title": "CTS ECOG to nNGM ECOG"
+}

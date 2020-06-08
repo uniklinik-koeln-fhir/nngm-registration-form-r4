@@ -1,0 +1,29 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
+  "version": "0.1",
+  "name": "point-in-time",
+  "status": "draft",
+  "experimental": true,
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Codes für den Zeitpunkt während des Diagnose- und Behandlungsprozesses",
+  "caseSensitive": true,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "ed",
+      "display": "Erstdiagnose"
+    },
+    {
+      "code": "aktuell",
+      "display": "aktuell"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+  "version": "0.1",
+  "name": "abrechnungsinformation",
+  "title": "nNGM: CodeSystem Abrechnungsinformation",
+  "status": "active",
+  "experimental": true,
+  "date": "2019-02-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Abrechnungsinformation im Kontext von nNGM",
+  "caseSensitive": true,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "nngm-iv",
+      "display": "nNGM-IV Fall"
+    },
+    {
+      "code": "nngm-stat",
+      "display": "nNGM-Fall stationär, nicht-IV"
+    },
+    {
+      "code": "us-path",
+      "display": "Ü-Schein Pathologie"
+    },
+    {
+      "code": "us-sonst",
+      "display": "Ü-Schein Sonstige"
+    },
+    {
+      "code": "116b-intern",
+      "display": "§116B/interner Fall"
+    },
+    {
+      "code": "116b-extern",
+      "display": "§116B/externer Fall"
+    },
+    {
+      "code": "privat",
+      "display": "Privatpatient"
+    },
+    {
+      "code": "ngm-pv",
+      "display": "NGM-PV Fall"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/icd-o-3-m-lunge",
+  "version": "0.1",
+  "name": "icd-o-3-m-lunge",
+  "title": "nNGM: ValueSet ICD-0-3-M-Lunge",
+  "status": "active",
+  "experimental": true,
+  "date": "2018-08-10",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "typische Histologien (Morphologien) von Lungenkrebserkrankungen",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.6.43.1",
+        "concept": [
+          {
+            "code": "8140/3",
+            "display": "Adenokarzinom"
+          },
+          {
+            "code": "8560/3",
+            "display": "Adenosquamöses Karzinom"
+          },
+          {
+            "code": "8070/3",
+            "display": "Plattenepithelkarzinom"
+          },
+          {
+            "code": "8041/3",
+            "display": "Kleinzelliges Karzinom"
+          },
+          {
+            "code": "8010/6",
+            "display": "CUP (Karzinom-Metastase o.n.A.)"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-icd-o-3-m-lunge-1",
+    "timestamp": "2018-08-10",
+    "total": 5,
+    "contains": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.6.43.1",
+        "code": "8140/3",
+        "display": "Adenokarzinom"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.6.43.1",
+        "code": "8560/3",
+        "display": "Adenosquamöses Karzinom"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.6.43.1",
+        "code": "8070/3",
+        "display": "Plattenepithelkarzinom"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.6.43.1",
+        "code": "8041/3",
+        "display": "Kleinzelliges Karzinom"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.6.43.1",
+        "code": "8010/6",
+        "display": "CUP (Karzinom-Metastase o.n.A.)"
+      }
+    ]
+  }
+}

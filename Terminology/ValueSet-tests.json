@@ -1,0 +1,55 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tests",
+  "version": "0.1",
+  "name": "tests",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-04-07",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Tests im Rahmen der Krebsdiagnose und -behandlung",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
+        "concept": [
+          {
+            "code": "komplett",
+            "display": "Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung"
+          },
+          {
+            "code": "resistenztestung",
+            "display": "Resistenztestung"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-tests",
+    "timestamp": "2019-04-07",
+    "total": 4,
+    "contains": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
+        "code": "gewebediagnostik",
+        "display": "Gewebediagnostik"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
+        "code": "blutdiagnostik",
+        "display": "Blutdiagnostik"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
+        "code": "komplett",
+        "display": "Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung, sofern ausreichend Tumormaterial vorhanden ist, umfasst alle therapeutisch relevanten Marker sowie Marker aus aktuellen klinischen Studien."
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
+        "code": "resistenztestung",
+        "display": "Resistenztestungk"
+      }
+    ]
+  }
+}

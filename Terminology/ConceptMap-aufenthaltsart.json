@@ -1,0 +1,67 @@
+{
+  "resourceType": "ConceptMap",
+  "name": "Aufenthaltsart",
+  "status": "active",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "fhir@healex.systems"
+        }
+      ]
+    }
+  ],
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "IMP",
+              "display": "inpatient encounter",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "stationär",
+          "display": "Stationär"
+        },
+        {
+          "target": [
+            {
+              "code": "AMB",
+              "display": "ambulatory",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "ambulant",
+          "display": "Ambulant"
+        }
+      ],
+      "target": "http://hl7.org/fhir/v3/ActCode"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "UNK",
+              "display": "unknown",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "N/A",
+          "display": "N/A"
+        }
+      ],
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+    }
+  ],
+  "url": "http://uk-koeln.de/fhir/ConceptMap/nNGM/Aufenthaltsart",
+  "description": "Maps the 'Aufenthaltsart' concepts of the internal nNGM forms to the published 'Aufenthaltsart' ValueSet",
+  "title": "CTS Aufenthaltsart to nNGM Aufenthaltsart",
+  "version": "0.1",
+  "publisher": "Universitätsklinikum Köln",
+  "sourceUri": "http://uk-koeln.de/fhir/ValueSet/CTS/nNGM/Aufenthaltsart",
+  "targetUri": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart"
+}

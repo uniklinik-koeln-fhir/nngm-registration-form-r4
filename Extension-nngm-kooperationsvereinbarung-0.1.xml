@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung" />
+  <name value="ExtensionNngmAbrechnungsinformationKooperationsvereinbarung" />
+  <status value="active" />
+  <description value="Presence of Kooperationsvereinbarung" />
+  <purpose value="nNGM: Extension Kooperationsvereinbarung" />
+  <fhirVersion value="4.0.0" />
+  <kind value="complex-type" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Coverage" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="uri" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="boolean" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

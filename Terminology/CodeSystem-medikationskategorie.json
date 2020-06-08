@@ -1,0 +1,33 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
+  "version": "0.1",
+  "name": "medikationskategorie",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-02-09",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Medikationskategorien",
+  "caseSensitive": true,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/tests",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "egfr-tki",
+      "display": "EGFR-TKI"
+    },
+    {
+      "code": "alk-tki",
+      "display": "ALK-TKI"
+    },
+    {
+      "code": "ros1-tki",
+      "display": "ROS1-TKI"
+    }
+  ]
+}

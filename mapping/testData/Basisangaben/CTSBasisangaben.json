@@ -1,110 +1,361 @@
 {
     "version": "1.1",
-    "patid": "6547",
-    "sourcesystem": "https://nngm-qat.staging.healex.systems/",
+    "patid": "0001",
+    "sourcesystem": "https:\/\/nngm-qat.staging.healex.systems\/",
     "operations": [
         {
             "oldstatus": "not_in_house",
             "newstatus": "editable_by_eo",
-            "operationId": "S261",
+            "operationId": "S337",
             "type": "statechange",
-            "editor": "https://clinicalsite.org/person/38",
-            "timestamp": "2020-06-03T15:14:12+02:00",
+            "editor": "https:\/\/clinicalsite.org\/person\/38",
+            "timestamp": "2020-06-09T12:59:39+02:00",
             "crfid": "1-BA"
         },
         {
             "oldstatus": "editable_by_eo",
             "newstatus": "editable_by_eo",
-            "operationId": "S262",
+            "operationId": "S338",
             "type": "statechange",
-            "editor": "https://clinicalsite.org/person/38",
-            "timestamp": "2020-06-03T15:14:12+02:00",
+            "editor": "https:\/\/clinicalsite.org\/person\/38",
+            "timestamp": "2020-06-09T12:59:39+02:00",
             "crfid": "1-BA"
         },
         {
             "data": [
                 {
-                    "blockindex": 1,
+                    "blockindex": 0,
                     "groupindex": 0,
-                    "itemid": "id_2458",
+                    "itemid": "id_ba_siteid",
                     "values": [
                         {
-                            "value": "\r\n\r\n"
+                            "unit": "count",
+                            "value": "12345"
                         }
                     ]
                 },
                 {
-                    "blockindex": 0,
+                    "blockindex": 10,
+                    "groupindex": 0,
+                    "itemid": "id_2296",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 10,
+                    "groupindex": 0,
+                    "itemid": "id_2297",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 10,
+                    "groupindex": 0,
+                    "itemid": "id_2298",
+                    "values": [
+                        {
+                            "value": "email"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2351",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2352",
+                    "values": [
+                        {
+                            "value": "2020-10-10"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2357",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2358",
+                    "values": [
+                        {
+                            "value": "2020-11-11"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2361",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2362",
+                    "values": [
+                        {
+                            "value": "2020-12-12"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2364",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2365",
+                    "values": [
+                        {
+                            "value": "2020-02-01"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2367",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2368",
+                    "values": [
+                        {
+                            "value": "2020-02-03"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2370",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2371",
+                    "values": [
+                        {
+                            "value": "2020-02-04"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2373",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2374",
+                    "values": [
+                        {
+                            "value": "2020-02-05"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2376",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2377",
+                    "values": [
+                        {
+                            "value": "2020-02-06"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2379",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2380",
+                    "values": [
+                        {
+                            "value": "2020-02-08"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2382",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 11,
+                    "groupindex": 0,
+                    "itemid": "id_2383",
+                    "values": [
+                        {
+                            "value": "2020-02-07"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
                     "groupindex": 0,
                     "itemid": "id_2326",
                     "values": [
                         {
-                            "value": "partnernr"
+                            "value": "54321"
                         }
                     ]
                 },
                 {
                     "blockindex": 1,
                     "groupindex": 0,
-                    "itemid": "id_2435",
+                    "itemid": "id_2485",
                     "values": [
                         {
-                            "value": "Berlin"
+                            "value": "Kontakt"
                         }
                     ]
                 },
                 {
                     "blockindex": 2,
+                    "groupindex": 0,
+                    "itemid": "id_2435",
+                    "values": [
+                        {
+                            "value": "Essen"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 2,
+                    "groupindex": 0,
+                    "itemid": "id_2458",
+                    "values": [
+                        {
+                            "value": "Kontakt"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 3,
                     "groupindex": 0,
                     "itemid": "id_1571",
                     "values": [
                         {
-                            "value": "2020-06-03"
+                            "value": "2020-01-01"
                         }
                     ]
                 },
                 {
-                    "blockindex": 2,
+                    "blockindex": 3,
                     "groupindex": 0,
                     "itemid": "id_1576",
                     "values": [
                         {
-                            "value": "stationär"
+                            "value": "station\u00e4r"
                         }
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1124",
                     "values": [
                         {
-                            "value": "vorname"
+                            "value": "Vorname"
                         }
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1125",
                     "values": [
                         {
-                            "value": "nachname"
+                            "value": "Nachname"
                         }
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1126",
                     "values": [
                         {
-                            "value": "2000-01-01"
+                            "value": "2020-02-02"
                         }
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1127",
                     "values": [
@@ -114,7 +365,7 @@
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1128",
                     "values": [
@@ -125,7 +376,7 @@
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1129",
                     "values": [
@@ -135,287 +386,27 @@
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1131",
                     "values": [
                         {
-                            "value": "männlich"
+                            "value": "weiblich"
                         }
                     ]
                 },
                 {
-                    "blockindex": 3,
+                    "blockindex": 4,
                     "groupindex": 0,
                     "itemid": "id_1280",
                     "values": [
                         {
-                            "value": "Land"
+                            "value": "PRK"
                         }
                     ]
                 },
                 {
-                    "blockindex": 4,
-                    "groupindex": 0,
-                    "itemid": "id_1269",
-                    "values": [
-                        {
-                            "value": "null"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 4,
-                    "groupindex": 0,
-                    "itemid": "id_2459",
-                    "values": [
-                        {
-                            "value": "Krankenkasse"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 4,
-                    "groupindex": 0,
-                    "itemid": "id_2460",
-                    "values": [
-                        {
-                            "value": "no"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 7,
-                    "groupindex": 0,
-                    "itemid": "id_2440",
-                    "values": [
-                        {
-                            "value": "yes"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 9,
-                    "groupindex": 0,
-                    "itemid": "id_2296",
-                    "values": [
-                        {
-                            "value": "yes"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 9,
-                    "groupindex": 0,
-                    "itemid": "id_2297",
-                    "values": [
-                        {
-                            "value": "yes"
-                        }
-                    ]
-                }
-            ],
-            "operationId": "D60",
-            "type": "save",
-            "editor": "https://clinicalsite.org/person/38",
-            "timestamp": "2020-06-03T15:14:12+02:00",
-            "crfid": "1-BA"
-        },
-        {
-            "data": [
-                {
-                    "blockindex": 0,
-                    "groupindex": 0,
-                    "itemid": "id_2326",
-                    "values": [
-                        {
-                            "value": "partnernr"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 1,
-                    "groupindex": 0,
-                    "itemid": "id_2435",
-                    "values": [
-                        {
-                            "value": "Berlin"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 2,
-                    "groupindex": 0,
-                    "itemid": "id_1571",
-                    "values": [
-                        {
-                            "value": "2020-06-03"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 2,
-                    "groupindex": 0,
-                    "itemid": "id_1576",
-                    "values": [
-                        {
-                            "value": "stationär"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1124",
-                    "values": [
-                        {
-                            "value": "vorname"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1125",
-                    "values": [
-                        {
-                            "value": "nachname"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1126",
-                    "values": [
-                        {
-                            "value": "2000-01-01"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1127",
-                    "values": [
-                        {
-                            "value": "strasse"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1128",
-                    "values": [
-                        {
-                            "unit": "count",
-                            "value": "10000"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1129",
-                    "values": [
-                        {
-                            "value": "Wohnort"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1131",
-                    "values": [
-                        {
-                            "value": "männlich"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 3,
-                    "groupindex": 0,
-                    "itemid": "id_1280",
-                    "values": [
-                        {
-                            "value": "Land"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 4,
-                    "groupindex": 0,
-                    "itemid": "id_1269",
-                    "values": [
-                        {
-                            "value": "null"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 4,
-                    "groupindex": 0,
-                    "itemid": "id_2459",
-                    "values": [
-                        {
-                            "value": "Krankenkasse"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 4,
-                    "groupindex": 0,
-                    "itemid": "id_2460",
-                    "values": [
-                        {
-                            "value": "no"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 7,
-                    "groupindex": 0,
-                    "itemid": "id_2440",
-                    "values": [
-                        {
-                            "value": "yes"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 9,
-                    "groupindex": 0,
-                    "itemid": "id_2296",
-                    "values": [
-                        {
-                            "value": "yes"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 9,
-                    "groupindex": 0,
-                    "itemid": "id_2297",
-                    "values": [
-                        {
-                            "value": "yes"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 1,
-                    "groupindex": 0,
-                    "itemid": "id_2458",
-                    "values": [
-                        {
-                            "value": "\r\n"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 4,
+                    "blockindex": 5,
                     "groupindex": 0,
                     "itemid": "id_1268",
                     "values": [
@@ -425,49 +416,89 @@
                     ]
                 },
                 {
-                    "blockindex": 4,
+                    "blockindex": 5,
+                    "groupindex": 0,
+                    "itemid": "id_1269",
+                    "values": [
+                        {
+                            "value": "PKV"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 5,
+                    "groupindex": 0,
+                    "itemid": "id_1270",
+                    "values": [
+                        {
+                            "value": "Basistarif"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 5,
                     "groupindex": 0,
                     "itemid": "id_1333",
                     "values": [
                         {
-                            "value": "nNGM-BV Fall"
+                            "value": "\u00a7116B\/interner Fall"
                         }
                     ]
                 },
                 {
                     "blockindex": 5,
                     "groupindex": 0,
-                    "itemid": "id_1132",
+                    "itemid": "id_2459",
                     "values": [
                         {
-                            "unit": "kg",
-                            "value": "80.1"
+                            "value": "TK - Techniker Krankenkasse"
                         }
                     ]
                 },
                 {
                     "blockindex": 5,
                     "groupindex": 0,
-                    "itemid": "id_1133",
+                    "itemid": "id_2460",
                     "values": [
                         {
-                            "unit": "cm",
-                            "value": "188"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 5,
-                    "groupindex": 0,
-                    "itemid": "id_2290",
-                    "values": [
-                        {
-                            "value": "2 - gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig, kann mehr als 50% der Wachzeit aufstehen"
+                            "value": "yes"
                         }
                     ]
                 },
                 {
                     "blockindex": 6,
+                    "groupindex": 0,
+                    "itemid": "id_1132",
+                    "values": [
+                        {
+                            "unit": "kg",
+                            "value": "70.8"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 6,
+                    "groupindex": 0,
+                    "itemid": "id_1133",
+                    "values": [
+                        {
+                            "unit": "cm",
+                            "value": "183"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 6,
+                    "groupindex": 0,
+                    "itemid": "id_2290",
+                    "values": [
+                        {
+                            "value": "3 - nur begrenzte Selbstversorgung m\u00f6glich, 50% oder mehr der Wachzeit an Bett oder Stuhl gebunden"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 7,
                     "groupindex": 0,
                     "itemid": "id_2292",
                     "values": [
@@ -477,17 +508,17 @@
                     ]
                 },
                 {
-                    "blockindex": 6,
+                    "blockindex": 7,
                     "groupindex": 0,
                     "itemid": "id_2293",
                     "values": [
                         {
-                            "value": "2019-08-01"
+                            "value": "2020-05-01"
                         }
                     ]
                 },
                 {
-                    "blockindex": 6,
+                    "blockindex": 7,
                     "groupindex": 0,
                     "itemid": "id_2294",
                     "values": [
@@ -498,17 +529,27 @@
                     ]
                 },
                 {
-                    "blockindex": 7,
+                    "blockindex": 8,
                     "groupindex": 0,
-                    "itemid": "id_2441",
+                    "itemid": "id_2440",
                     "values": [
                         {
-                            "value": "2020-06-01"
+                            "value": "yes"
                         }
                     ]
                 },
                 {
-                    "blockindex": 7,
+                    "blockindex": 8,
+                    "groupindex": 0,
+                    "itemid": "id_2441",
+                    "values": [
+                        {
+                            "value": "2020-04-04"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 8,
                     "groupindex": 0,
                     "itemid": "id_2446",
                     "values": [
@@ -518,17 +559,17 @@
                     ]
                 },
                 {
-                    "blockindex": 7,
+                    "blockindex": 8,
                     "groupindex": 0,
                     "itemid": "id_2447",
                     "values": [
                         {
-                            "value": "2020-06-02"
+                            "value": "2020-05-05"
                         }
                     ]
                 },
                 {
-                    "blockindex": 7,
+                    "blockindex": 8,
                     "groupindex": 0,
                     "itemid": "id_2449",
                     "values": [
@@ -538,17 +579,17 @@
                     ]
                 },
                 {
-                    "blockindex": 7,
+                    "blockindex": 8,
                     "groupindex": 0,
                     "itemid": "id_2450",
                     "values": [
                         {
-                            "value": "2020-06-03"
+                            "value": "2020-06-06"
                         }
                     ]
                 },
                 {
-                    "blockindex": 8,
+                    "blockindex": 9,
                     "groupindex": 0,
                     "itemid": "id_2389",
                     "values": [
@@ -558,17 +599,17 @@
                     ]
                 },
                 {
-                    "blockindex": 8,
+                    "blockindex": 9,
                     "groupindex": 0,
                     "itemid": "id_2390",
                     "values": [
                         {
-                            "value": "2020-06-05"
+                            "value": "2020-08-08"
                         }
                     ]
                 },
                 {
-                    "blockindex": 8,
+                    "blockindex": 9,
                     "groupindex": 0,
                     "itemid": "id_2392",
                     "values": [
@@ -578,36 +619,31 @@
                     ]
                 },
                 {
-                    "blockindex": 8,
+                    "blockindex": 9,
                     "groupindex": 0,
                     "itemid": "id_2393",
                     "values": [
                         {
-                            "value": "2020-06-04"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 9,
-                    "groupindex": 0,
-                    "itemid": "id_2298",
-                    "values": [
-                        {
-                            "value": "emailadresse"
+                            "value": "2020-07-07"
                         }
                     ]
                 }
             ],
-            "operationId": "D61",
+            "operationId": "D91",
             "type": "save",
-            "editor": "https://clinicalsite.org/person/38",
-            "timestamp": "2020-06-03T15:23:41+02:00",
+            "editor": "https:\/\/clinicalsite.org\/person\/38",
+            "timestamp": "2020-06-09T12:59:39+02:00",
             "crfid": "1-BA"
         }
     ],
+<<<<<<< HEAD
     "resourceType": "CTS_Transport",
     "id": "7a242bad-2a9e-455d-9e5a-ed3b8a911ac8",
+=======
+    "resourceType": "nNGMv09",
+    "id": "6400a9e0-41ac-4bdb-97c7-5a8da5c89f07",
+>>>>>>> 0075399aae59746d2e7e822b4e7047e01f2e54f3
     "meta": {
-        "lastUpdated": "2020-06-03T15:24:02+02:00"
+        "lastUpdated": "2020-06-09T12:59:58+02:00"
     }
 }

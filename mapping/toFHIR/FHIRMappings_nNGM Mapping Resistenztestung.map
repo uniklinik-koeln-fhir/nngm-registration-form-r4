@@ -4,10 +4,8 @@
 map "http://uk-koeln.de/fhir/StructureMap/nNGM_Mapping_ResistenztestungFHIR" = nNGM_Mapping_ResistenztestungFHIR
 
 uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
-uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
-uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
-uses "http://hl7.org/fhir/StructureDefinition/Practitioner" as target
-uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
+uses "http://hl7.org/fhir/StructureDefinition/Condition" as target
+uses "http://hl7.org/fhir/StructureDefinition/MedicationStatement" as target
 
 group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
 {
@@ -15,18 +13,71 @@ group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
     src -> bundle.type = 'collection';
 
     src -> bundle.entry as entry, 
-           entry.resource = create('Specimen') as specimen 
-           then TransformSpecimen(src, specimen);
+           entry.resource = create('Condition') as condition 
+           then TransformCondition(src, condition);
 
     src -> bundle.entry as entry, 
-           entry.resource = create('Observation') as observation 
-           then TransformObservation(src, observation);
+           entry.resource = create('MedicationStatement') as medicationstatement 
+           then TransformMedicationStatement(src, medicationstatement);
+}
 
-    src -> bundle.entry as entry, 
-           entry.resource = create('Practitioner') as practitioner 
-           then TransformPractitioner(src, practitioner);
+/* ------------------------------ Condition ---------------------------- */
 
-    src -> bundle.entry as entry, 
-           entry.resource = create('Organization') as organization 
-           then TransformOrganization(src, organization);
+group TransformCondition(source src: CTS_Transport, target tgt: Condition)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Condition/nNGM'; 
+
+    //Needs patient resolver, patient id not in form 
+    //patient.id as patientId -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    src.operations as operations, operations.data as data then
+    {
+    
+
+        //Rezidiv/Progress Ja/Nein-> clinicalStatus Recurrence/relapse
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1573'" then 
+        {
+            values.value as persoenlicheTeilnahme where "$this ='Ja'" -> tgt.clinicalStatus = cc('recurrence', 'http://hl7.org/fhir/ValueSet/condition-clinical');
+            values.value as persoenlicheTeilnahme where "$this ='Nein'" -> cc('relapse', 'http://hl7.org/fhir/ValueSet/condition-clinical');
+        };
+    
+        /Date of Assessment -> asserteddate
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_2502'" then
+        {
+           values.value as dateofassessment -> tgt.assertedDate = dateOp(dateofassessment, 'dateTime');
+        }; 
+    };
+}
+
+/* ------------------------------ MedicationStatement ---------------------------- */
+ 
+group TransformMedicationStatement(source src: CTS_Transport, target tgt: MedicationStatement)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/MedicationStatement/nNGM'; 
+
+    //Needs patient resolver, patient id not in form 
+    //patient.id as patientId -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patientId, '\'Patient/\' + $this');
+
+    src.operations as operations, operations.data as data then
+    {
+    
+
+        //Tumormaterial -> identifier.value
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_2457'" then 
+        {
+            values.value as tumorid -> tgt.identifier = create('BackboneElement') as identifier, identifier.value = id(tumorid);
+        };
+    
+        /Diagnostik Typ -> type
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1368'" then
+        {
+            //Entnahmedatum -> collection.collectedDateTime
+            values.value as type where "$this = 'Gewebediagnostik': -> tgt.collection = create('BackboneElement') as collection, 
+            collection.extension = as collectionextension, 
+            collectionextension.url = , 
+            collectionextension.value = 
+        }; 
+    };
 }

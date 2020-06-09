@@ -605,7 +605,7 @@
             "crfid": "1-BA"
         }
     ],
-    "resourceType": "nNGMv08E_https_stagi",
+    "resourceType": "CTS_Transport",
     "id": "7a242bad-2a9e-455d-9e5a-ed3b8a911ac8",
     "meta": {
         "lastUpdated": "2020-06-03T15:24:02+02:00"

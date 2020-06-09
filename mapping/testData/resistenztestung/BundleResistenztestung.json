@@ -1,0 +1,71 @@
+{
+    "resourceType": "Bundle",
+    "id": "75b32776-b8c9-4731-bd6d-2be3b515af1c",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Bundle/nNGM/registration-form"
+        ]
+    },
+    "identifier": {
+        "system": "urn:ietf:rfc:3986",
+        "value": "urn:uuid:a754982d-63e0-40ed-890a-bcb4440d5255"
+    },
+    "type": "document",
+    "entry": [
+        {
+            "resourceType": "Condition",
+            "id": "25e56be4-4784-4384-b7e0-da525f59d57a",
+            "meta": {
+                "profile": [
+                    "http://uk-koeln.de/fhir/StructureDefinition/Condition/nNGM"
+                ]
+            },
+            "clinicalStatus": "recurrence",
+            "verificationStatus": "confirmed",
+            "code": {
+                "text": "Lungenkarzinom"
+            },
+            "subject": {
+                "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+            },
+            "context": {
+                "reference": "urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6"
+            }
+            
+        },
+        {
+            "resourceType": "MedicationStatement",
+            "id": "41ce90fa-eaa2-4322-8252-ba3efe3edcd1",
+            "meta": {
+                "profile": [
+                    "http://uk-koeln.de/fhir/StructureDefinition/MedicationStatement/nNGM"
+                ]
+            },
+            "context": {
+                "reference": "urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6"
+            },
+            "category": {
+                "coding": [
+                    {
+                        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
+                        "code": "alk-tki",
+                        "display": "ALK-TKI"
+                    }
+                ]
+            },
+            "status": "stopped",
+            "medicationCodeableConcept": {
+                "text": "Crizotinib"
+            },
+            "subject": {
+                "reference": "urn:uuid:7d8af95e-5893-464f-91b5-bab1a8702771"
+            },
+            "taken": "y",
+            "note": [
+                {
+                    "text": "Bei bekannter ALK-Translokation."
+                }
+            ]
+        }
+    ]
+}

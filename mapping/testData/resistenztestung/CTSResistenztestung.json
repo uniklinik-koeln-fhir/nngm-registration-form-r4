@@ -1,24 +1,24 @@
 {
     "version": "1.1",
-    "patid": "6547",
+    "patid": "0001",
     "sourcesystem": "https:\/\/nngm-qat.staging.healex.systems\/",
     "operations": [
         {
             "oldstatus": "not_in_house",
             "newstatus": "editable_by_eo",
-            "operationId": "S277",
+            "operationId": "S343",
             "type": "statechange",
             "editor": "https:\/\/clinicalsite.org\/person\/38",
-            "timestamp": "2020-06-08T11:50:01+02:00",
+            "timestamp": "2020-06-10T13:07:17+02:00",
             "crfid": "*-RT1"
         },
         {
             "oldstatus": "editable_by_eo",
             "newstatus": "editable_by_eo",
-            "operationId": "S278",
+            "operationId": "S344",
             "type": "statechange",
             "editor": "https:\/\/clinicalsite.org\/person\/38",
-            "timestamp": "2020-06-08T11:50:01+02:00",
+            "timestamp": "2020-06-10T13:07:17+02:00",
             "crfid": "*-RT1"
         },
         {
@@ -65,7 +65,7 @@
                     "itemid": "id_1436",
                     "values": [
                         {
-                            "value": "EFGR Exon"
+                            "value": "EGFR Exon"
                         }
                     ]
                 },
@@ -95,7 +95,7 @@
                     "itemid": "id_1441",
                     "values": [
                         {
-                            "value": "EGFR-TKI Therapie 1"
+                            "value": "EGFR-TKI 1 Therapie"
                         }
                     ]
                 },
@@ -105,7 +105,7 @@
                     "itemid": "id_1442",
                     "values": [
                         {
-                            "value": "EGFR-TKI Therapie 2"
+                            "value": "EGFR-TKI 2 Therapie"
                         }
                     ]
                 },
@@ -115,7 +115,7 @@
                     "itemid": "id_1443",
                     "values": [
                         {
-                            "value": "EGFR-TKI Therapie 3"
+                            "value": "EGFR-TKI 3 Therapie"
                         }
                     ]
                 },
@@ -125,7 +125,7 @@
                     "itemid": "id_1444",
                     "values": [
                         {
-                            "value": "EGFR-TKI Therapie 4"
+                            "value": "EGFR-TKI 4 Therapie"
                         }
                     ]
                 },
@@ -135,7 +135,7 @@
                     "itemid": "id_1447",
                     "values": [
                         {
-                            "value": "ALK-TKI Therapie 1"
+                            "value": "ALK-TKI 1 Therapie"
                         }
                     ]
                 },
@@ -145,7 +145,7 @@
                     "itemid": "id_1448",
                     "values": [
                         {
-                            "value": "ALK-TKI Therapie 2"
+                            "value": "ALK-TKI 2 Therapie"
                         }
                     ]
                 },
@@ -155,7 +155,7 @@
                     "itemid": "id_1449",
                     "values": [
                         {
-                            "value": "ALK-TKI Therapie 3"
+                            "value": "ALK-TKI 3 Therapie"
                         }
                     ]
                 },
@@ -165,47 +165,7 @@
                     "itemid": "id_1450",
                     "values": [
                         {
-                            "value": "ALK-TKI Therapie 4"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 1,
-                    "groupindex": 0,
-                    "itemid": "id_1453",
-                    "values": [
-                        {
-                            "value": "ROS1-TKI Therapie 1"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 1,
-                    "groupindex": 0,
-                    "itemid": "id_1454",
-                    "values": [
-                        {
-                            "value": "ROS1-TKI Therapie 2"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 1,
-                    "groupindex": 0,
-                    "itemid": "id_1455",
-                    "values": [
-                        {
-                            "value": "ROS1-TKI Therapie 3"
-                        }
-                    ]
-                },
-                {
-                    "blockindex": 1,
-                    "groupindex": 0,
-                    "itemid": "id_1456",
-                    "values": [
-                        {
-                            "value": "ROS1-TKI Therapie 4"
+                            "value": "ALK-TKI 4 Therapie"
                         }
                     ]
                 },
@@ -225,7 +185,222 @@
                     "itemid": "id_2504",
                     "values": [
                         {
-                            "value": "ALK-Fusion Fusionpartner"
+                            "value": "ALK Fusion Fusionpartner"
+                        }
+                    ]
+                }
+            ],
+            "operationId": "D94",
+            "type": "save",
+            "editor": "https:\/\/clinicalsite.org\/person\/38",
+            "timestamp": "2020-06-10T13:07:17+02:00",
+            "crfid": "*-RT1"
+        },
+        {
+            "data": [
+                {
+                    "blockindex": 0,
+                    "groupindex": 0,
+                    "itemid": "id_1573",
+                    "values": [
+                        {
+                            "value": "yes"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 0,
+                    "groupindex": 0,
+                    "itemid": "id_2397",
+                    "values": [
+                        {
+                            "value": "2020-01-01"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1434",
+                    "values": [
+                        {
+                            "value": "EGFR"
+                        },
+                        {
+                            "value": "ALK"
+                        },
+                        {
+                            "value": "ROS1"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1436",
+                    "values": [
+                        {
+                            "value": "EGFR Exon"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1437",
+                    "values": [
+                        {
+                            "value": "HGVS c"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1438",
+                    "values": [
+                        {
+                            "value": "HGVS p "
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1441",
+                    "values": [
+                        {
+                            "value": "EGFR-TKI 1 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1442",
+                    "values": [
+                        {
+                            "value": "EGFR-TKI 2 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1443",
+                    "values": [
+                        {
+                            "value": "EGFR-TKI 3 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1444",
+                    "values": [
+                        {
+                            "value": "EGFR-TKI 4 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1447",
+                    "values": [
+                        {
+                            "value": "ALK-TKI 1 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1448",
+                    "values": [
+                        {
+                            "value": "ALK-TKI 2 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1449",
+                    "values": [
+                        {
+                            "value": "ALK-TKI 3 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1450",
+                    "values": [
+                        {
+                            "value": "ALK-TKI 4 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_2502",
+                    "values": [
+                        {
+                            "value": "2020-02-02"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_2504",
+                    "values": [
+                        {
+                            "value": "ALK Fusion Fusionpartner"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1453",
+                    "values": [
+                        {
+                            "value": "ROS1-TKI 1 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1454",
+                    "values": [
+                        {
+                            "value": "ROS1-TKI 2 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1455",
+                    "values": [
+                        {
+                            "value": "ROS1-TKI 3 Therapie"
+                        }
+                    ]
+                },
+                {
+                    "blockindex": 1,
+                    "groupindex": 0,
+                    "itemid": "id_1456",
+                    "values": [
+                        {
+                            "value": "ROS1-TKI 4 Therapie"
                         }
                     ]
                 },
@@ -235,21 +410,21 @@
                     "itemid": "id_2506",
                     "values": [
                         {
-                            "value": "ROS1-Fusion fusionspartner"
+                            "value": "ROS1 Fusionspartner"
                         }
                     ]
                 }
             ],
-            "operationId": "D77",
+            "operationId": "D95",
             "type": "save",
             "editor": "https:\/\/clinicalsite.org\/person\/38",
-            "timestamp": "2020-06-08T11:50:01+02:00",
+            "timestamp": "2020-06-10T13:08:10+02:00",
             "crfid": "*-RT1"
         }
     ],
-    "resourceType": "nNGMv08E_https_stagi",
-    "id": "de9e4dbe-3c60-4e18-bc5f-e57ceaa4c248",
+    "resourceType": "CTS_Transport",
+    "id": "26d3b6c3-1025-4f44-bcd8-b1862f1d70ff",
     "meta": {
-        "lastUpdated": "2020-06-08T11:50:09+02:00"
+        "lastUpdated": "2020-06-10T13:08:15+02:00"
     }
 }

@@ -636,14 +636,9 @@
             "crfid": "1-BA"
         }
     ],
-<<<<<<< HEAD
     "resourceType": "CTS_Transport",
-    "id": "7a242bad-2a9e-455d-9e5a-ed3b8a911ac8",
-=======
-    "resourceType": "nNGMv09",
-    "id": "6400a9e0-41ac-4bdb-97c7-5a8da5c89f07",
->>>>>>> 0075399aae59746d2e7e822b4e7047e01f2e54f3
+    "id": "7da4b1e3-bcf0-415b-b3eb-839cf568ebf5",
     "meta": {
-        "lastUpdated": "2020-06-09T12:59:58+02:00"
+        "lastUpdated": "2020-06-10T13:00:48+02:00"
     }
 }

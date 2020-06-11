@@ -64,11 +64,13 @@
     <element id="Specimen.type.coding:snomedGlobalPatientSet.system">
       <path value="Specimen.type.coding.system" />
       <min value="1" />
+      <fixedUri value="http://snomed.info/sct" />
       <mustSupport value="true" />
     </element>
     <element id="Specimen.type.coding:snomedGlobalPatientSet.version">
       <path value="Specimen.type.coding.version" />
       <min value="1" />
+      <fixedString value="http://snomed.info/sct/900000000000207008" />
       <mustSupport value="true" />
     </element>
     <element id="Specimen.type.coding:snomedGlobalPatientSet.code">
@@ -79,11 +81,32 @@
     <element id="Specimen.subject">
       <path value="Specimen.subject" />
       <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Substance" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+      </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Specimen.request">
+      <path value="Specimen.request" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung" />
+      </type>
     </element>
     <element id="Specimen.request.reference">
       <path value="Specimen.request.reference" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Specimen.collection">
+      <path value="Specimen.collection" />
       <mustSupport value="true" />
     </element>
     <element id="Specimen.collection.extension">
@@ -99,7 +122,6 @@
     <element id="Specimen.collection.extension:aufenthaltsart">
       <path value="Specimen.collection.extension" />
       <sliceName value="aufenthaltsart" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -127,6 +149,9 @@
     </element>
     <element id="Specimen.collection.collected[x]">
       <path value="Specimen.collection.collected[x]" />
+      <type>
+        <code value="dateTime" />
+      </type>
       <mustSupport value="true" />
     </element>
   </differential>

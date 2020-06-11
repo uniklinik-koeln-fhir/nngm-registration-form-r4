@@ -96,6 +96,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
+      <fixedString value="nNGM-Anmeldeformular" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.attester">
@@ -115,6 +116,9 @@
       <max value="0" />
     </element>
     <element id="Composition.section">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -126,6 +130,9 @@
       </slicing>
     </element>
     <element id="Composition.section:stammdaten">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
       <path value="Composition.section" />
       <sliceName value="stammdaten" />
       <min value="1" />
@@ -135,6 +142,7 @@
     <element id="Composition.section:stammdaten.title">
       <path value="Composition.section.title" />
       <min value="1" />
+      <fixedString value="stammdaten" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stammdaten.code">
@@ -281,6 +289,9 @@
       <max value="0" />
     </element>
     <element id="Composition.section:anforderer">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
       <path value="Composition.section" />
       <sliceName value="anforderer" />
       <min value="1" />
@@ -290,6 +301,7 @@
     <element id="Composition.section:anforderer.title">
       <path value="Composition.section.title" />
       <min value="1" />
+      <fixedString value="anforderer" />
     </element>
     <element id="Composition.section:anforderer.code">
       <path value="Composition.section.code" />
@@ -328,6 +340,9 @@
       <max value="0" />
     </element>
     <element id="Composition.section:diagnose">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
       <path value="Composition.section" />
       <sliceName value="diagnose" />
       <min value="1" />
@@ -337,6 +352,7 @@
     <element id="Composition.section:diagnose.title">
       <path value="Composition.section.title" />
       <min value="1" />
+      <fixedString value="diagnose" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:diagnose.code">
@@ -454,6 +470,9 @@
       <max value="0" />
     </element>
     <element id="Composition.section:therapie">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
       <path value="Composition.section" />
       <sliceName value="therapie" />
       <max value="1" />
@@ -501,6 +520,9 @@
       <max value="0" />
     </element>
     <element id="Composition.section:anforderungTestung">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
       <path value="Composition.section" />
       <sliceName value="anforderungTestung" />
       <max value="1" />
@@ -594,6 +616,9 @@
       <max value="0" />
     </element>
     <element id="Composition.section:anforderungTumorboard">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Section" />
+      </extension>
       <path value="Composition.section" />
       <sliceName value="anforderungTumorboard" />
       <max value="1" />

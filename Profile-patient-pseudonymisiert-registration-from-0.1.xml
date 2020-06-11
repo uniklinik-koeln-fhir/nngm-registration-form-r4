@@ -125,6 +125,24 @@
       <path value="Patient.deceased[x]" />
       <mustSupport value="true" />
     </element>
+    <element id="Patient.deceased[x].extension">
+            <path value="Patient.deceased[x].extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+        </element>
+        <element id="Patient.deceased[x].extension:informationZurTodesquelle">
+            <path value="Patient.deceased[x].extension" />
+            <sliceName value="informationZurTodesquelle" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
+            </type>
+        </element>
     <element id="Patient.address">
       <path value="Patient.address" />
       <max value="0" />

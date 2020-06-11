@@ -18,6 +18,10 @@
       <path value="Bundle.identifier" />
       <min value="1" />
     </element>
+    <element id="Bundle.identifier.system">
+      <path value="Bundle.identifier.system" />
+      <fixedUri value="urn:ietf:rfc:3986" />
+    </element>
     <element id="Bundle.type">
       <path value="Bundle.type" />
       <fixedCode value="document" />

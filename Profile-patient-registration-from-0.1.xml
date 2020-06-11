@@ -14,6 +14,24 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
   <derivation value="constraint" />
   <differential>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.Extension:informationZurTodesquelle">
+      <path value="Patient.extension" />
+      <sliceName value="informationZurTodesquelle" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
+      </type>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
@@ -46,35 +64,10 @@
       <path value="Patient.name" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.name.family">
-      <path value="Patient.name.family" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.name.family.extension">
-      <path value="Patient.name.family.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.name.family.extension:namenszusatz">
-      <path value="Patient.name.family.extension" />
-      <sliceName value="namenszusatz" />
       <type>
-        <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/humanname-namenszusatz" />
+        <code value="HumanName" />
+        <profile value="http://fhir.de/StructureDefinition/humanname-de-basis/0.2" />
       </type>
-    </element>
-    <element id="Patient.name.given">
-      <path value="Patient.name.given" />
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.gender">
@@ -142,6 +135,16 @@
     <element id="Patient.address.country">
       <path value="Patient.address.country" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes" />
+      </binding>
+    </element>
+    <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
+      <path value="Patient.contact" />
     </element>
   </differential>
 </StructureDefinition>

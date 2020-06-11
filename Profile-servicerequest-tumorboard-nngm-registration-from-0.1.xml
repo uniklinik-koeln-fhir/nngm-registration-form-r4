@@ -877,6 +877,40 @@
         <map value="Act[moodCode&lt;=INT]" />
       </mapping>
     </element>
+    <element id="ServiceRequest.extension">
+      <path value="ServiceRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ServiceRequest.extension:grundFurFehlendeTumorbiopsie">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="grundFurFehlendeTumorbiopsie" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundfehlend" />
+      </type>
+    </element>
+    <element id="ServiceRequest.extension:molekularpathologie">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="molekularpathologie" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/molekularpathologie" />
+      </type>
+    </element>
+    <element id="ServiceRequest.extension:liquidbiopsy">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="liquidbiopsy" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/liquidbiopsy" />
+      </type>
+    </element>
     <element id="ServiceRequest.Identifier">
       <path value="ServiceRequest.identifier" />
       <short value="Identifiers assigned to this order" />
@@ -1039,6 +1073,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="active" />
       <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" />
@@ -1079,6 +1114,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="proposal" />
       <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This element changes the interpretation of all descriptive attributes. For example &quot;the time the request is recommended to occur&quot; vs. &quot;the time the request is authorized to occur&quot; or &quot;who is recommended to perform the request&quot; vs. &quot;who is authorized to perform the request" />

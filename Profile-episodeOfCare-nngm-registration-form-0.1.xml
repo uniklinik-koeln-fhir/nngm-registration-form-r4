@@ -42,9 +42,6 @@
     <element id="EpisodeOfCare.extension:abrechnungsinformation">
       <path value="EpisodeOfCare.extension" />
       <sliceName value="abrechnungsinformation" />
-      <short value="Optional Extensions Element" />
-      <definition value="Optional Extension Element - found in all resources." />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -76,20 +73,20 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="EpisodeOfCare.identifier:Fall-ID">
+    <element id="EpisodeOfCare.identifier:Biopsy-ID">
       <path value="EpisodeOfCare.identifier" />
-      <sliceName value="Fall-ID" />
+      <sliceName value="Biopsy-ID" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="EpisodeOfCare.identifier:Fall-ID.system">
+    <element id="EpisodeOfCare.identifier:Biopsy-ID.system">
       <path value="EpisodeOfCare.identifier.system" />
       <min value="1" />
       <fixedUri value="http://uk-koeln.de/fhir/NamingSystem/nNGM/fallnummer" />
       <mustSupport value="true" />
     </element>
-    <element id="EpisodeOfCare.identifier:Fall-ID.value">
+    <element id="EpisodeOfCare.identifier:Biopsy-ID.value">
       <path value="EpisodeOfCare.identifier.value" />
       <min value="1" />
       <mustSupport value="true" />
@@ -98,6 +95,12 @@
       <path value="EpisodeOfCare.status" />
       <fixedCode value="active" />
       <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.diagnosis">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Diagnosis" />
+      </extension>
+      <path value="EpisodeOfCare.diagnosis" />
     </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />

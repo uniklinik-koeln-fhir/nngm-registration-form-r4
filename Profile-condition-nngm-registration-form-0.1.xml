@@ -13,6 +13,24 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Condition.extension">
+      <path value="Condition.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Condition.extension:letzterKontakt">
+      <path value="Condition.extension" />
+      <sliceName value="letzterKontakt" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/condition-assertedDate" />
+      </type>
+    </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
       <definition value="für nNGM:&#xD;&#xA;active = Ersterkrankung&#xD;&#xA;recurrence = Rezidiv" />
@@ -85,7 +103,6 @@
     <element id="Condition.code.coding:ICD-10-GM.extension:Haupt-Code_Kreuz-Code">
       <path value="Condition.code.coding.extension" />
       <sliceName value="Haupt-Code_Kreuz-Code" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -96,8 +113,6 @@
       <path value="Condition.code.coding.extension" />
       <sliceName value="Stern-Code" />
       <short value="Stern-Code" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://fhir.de/StructureDefinition/icd-10-gm-stern" />
@@ -107,8 +122,6 @@
       <path value="Condition.code.coding.extension" />
       <sliceName value="Ausrufezeichen-Code" />
       <short value="Ausrufezeichen-Code" />
-      <min value="0" />
-      <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://fhir.de/StructureDefinition/icd-10-gm-ausrufezeichen" />
@@ -153,12 +166,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/bodySite" />
       </type>
     </element>
-    <element id="Condition.bodySite.extension:Lokalisations-Referenz.value[x]">
-      <path value="Condition.bodySite.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Condition.bodySite.coding">
       <path value="Condition.bodySite.coding" />
       <slicing>
@@ -198,6 +205,32 @@
         <code value="dateTime" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Condition.asserter">
+      <path value="Condition.asserter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
+        <targetProfile value="http://fhir.de/StructureDefinition/practitioner-de-basis/0.2&quot;" />
+      </type>
+    </element>
+    <element id="Condition.stage">
+      <path value="Condition.stage" />
+      <max value="1" />
+    </element>
+    <element id="Condition.stage.assessment">
+      <path value="Condition.stage.assessment" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ClinicalImpression" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/DiagnosticReport" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

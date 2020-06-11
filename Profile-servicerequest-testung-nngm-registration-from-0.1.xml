@@ -876,6 +876,42 @@
         <map value="Act[moodCode&lt;=INT]" />
       </mapping>
     </element>
+    <element id="ServiceRequest.extension">
+      <path value="ServiceRequest.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="ServiceRequest.extension:aufenthaltsart">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="aufenthaltsart" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="ServiceRequest.extension:molekularpathologie">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="molekularpathologie" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/molekularpathologie" />
+      </type>
+    </element>
+    <element id="ServiceRequest.extension:grundFehlend">
+      <path value="ServiceRequest.extension" />
+      <sliceName value="grundFehlend" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundfehlend" />
+      </type>
+    </element>
     <element id="ServiceRequest.Identifier">
       <path value="ServiceRequest.identifier" />
       <short value="Identifiers assigned to this order" />
@@ -1038,6 +1074,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="active" />
       <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" />
@@ -1078,6 +1115,7 @@
       <type>
         <code value="code" />
       </type>
+      <fixedCode value="proposal" />
       <mustSupport value="true" />
       <isModifier value="true" />
       <isModifierReason value="This element changes the interpretation of all descriptive attributes. For example &quot;the time the request is recommended to occur&quot; vs. &quot;the time the request is authorized to occur&quot; or &quot;who is recommended to perform the request&quot; vs. &quot;who is authorized to perform the request" />
@@ -1115,9 +1153,9 @@
       </type>
       <isSummary value="true" />
       <binding>
-        <strength value="example" />
+        <strength value="required" />
         <description value="Classification of the requested service." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/servicerequest-category" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tests" />
       </binding>
       <mapping>
         <identity value="w5" />
@@ -1131,6 +1169,10 @@
         <identity value="rim" />
         <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;INT&quot;].code" />
       </mapping>
+    </element>
+    <element id="ServiceRequest.CodeableConcept.coding.system">
+      <path value="ServiceRequest.category.coding.system" />
+      <fixedUri value="http://hl7.org/fhir/ValueSet/procedure-category" />
     </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.priority" />
@@ -1201,9 +1243,9 @@
       <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
-        <strength value="example" />
+        <strength value="required" />
         <description value="Codes for tests or services that can be carried out by a designated individual, organization or healthcare service.  For laboratory, LOINC is  (preferred)[http://build.fhir.org/terminologies.html#preferred] and a valueset using LOINC Order codes is available [here](valueset-diagnostic-requests.html)." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/procedure-code" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tests" />
       </binding>
       <mapping>
         <identity value="workflow" />

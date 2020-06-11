@@ -19,35 +19,35 @@
   "content": "complete",
   "concept": [
     {
-      "code": "nngm-iv",
-      "display": "nNGM-IV Fall"
+      "code": "nNGM-BV Fall",
+      "display": "nNGM-BV Fall"
     },
     {
-      "code": "nngm-stat",
-      "display": "nNGM-Fall stationär, nicht-IV"
+      "code": "nNGM-Fall stationär, nicht BV",
+      "display": "nNGM-Fall stationär, nicht BV"
     },
     {
-      "code": "us-path",
+      "code": "U-Schein Pathologie",
       "display": "Ü-Schein Pathologie"
     },
     {
-      "code": "us-sonst",
+      "code": "Ü-Schein Sonstige",
       "display": "Ü-Schein Sonstige"
     },
     {
-      "code": "116b-intern",
+      "code": "§116B/interner Fall",
       "display": "§116B/interner Fall"
     },
     {
-      "code": "116b-extern",
+      "code": "§116B/externer Fall",
       "display": "§116B/externer Fall"
     },
     {
-      "code": "privat",
+      "code": "Privatpatient",
       "display": "Privatpatient"
     },
     {
-      "code": "ngm-pv",
+      "code": "NGM-PV Fall",
       "display": "NGM-PV Fall"
     }
   ]

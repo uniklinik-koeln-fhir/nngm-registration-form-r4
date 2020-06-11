@@ -27,7 +27,7 @@
   "expansion": {
     "identifier": "uk-koeln-work-abrechnungsinformation",
     "timestamp": "2018-02-09",
-    "total": 8,
+    "total": 9,
     "contains": [
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",

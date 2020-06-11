@@ -22,17 +22,17 @@
     "contains": [
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
-        "code": "egfr-tki",
+        "code": "EGFR",
         "display": "EGFR-TKI"
       },
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
-        "code": "alk-tki",
+        "code": "ALK",
         "display": "ALK-TKI"
       },
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
-        "code": "ros1-tki",
+        "code": "ROS1",
         "display": "ROS1-TKI"
       }
     ]

@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-t-lunge",
+  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-t-nngm",
   "version": "0.1",
   "name": "tnm-t-lunge",
   "status": "draft",
@@ -14,130 +14,86 @@
         "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
         "concept": [
           {
-            "code": "X",
-            "display": "TX"
-          },
-          {
-            "code": "0",
+            "code": "T0",
             "display": "T0"
           },
           {
-            "code": "is",
+            "code": "TX",
+            "display": "TX"
+          },
+          {
+            "code": "Tis",
             "display": "Tis"
           },
           {
-            "code": "1",
+            "code": "T1",
             "display": "T1"
           },
           {
-            "code": "1mi",
-            "display": "T1mi"
+            "code": "Ta",
+            "display": "Ta"
           },
           {
-            "code": "1a",
+            "code": "T1a",
             "display": "T1a"
           },
           {
-            "code": "1b",
+            "code": "T1a1",
+            "display": "T1a1"
+          },
+          {
+            "code": "T1a2",
+            "display": "T1a2"
+          },
+          {
+            "code": "T1b",
             "display": "T1b"
           },
           {
-            "code": "1c",
+            "code": "T1b1",
+            "display": "T1b1"
+          },
+          {
+            "code": "T1b2",
+            "display": "T1b2"
+          },
+          {
+            "code": "T1c",
             "display": "T1c"
           },
           {
-            "code": "2",
+            "code": "T1mi",
+            "display": "T1mi"
+          },
+          {
+            "code": "T2",
             "display": "T2"
           },
           {
-            "code": "2a",
+            "code": "T2a",
             "display": "T2a"
           },
           {
-            "code": "2b",
+            "code": "T2a1",
+            "display": "T2a1"
+          },
+          {
+            "code": "T2a2",
+            "display": "T2a2"
+          },
+          {
+            "code": "T2b",
             "display": "T2b"
           },
           {
-            "code": "3",
-            "display": "T3"
+            "code": "T2c",
+            "display": "T2c"
           },
           {
-            "code": "4",
-            "display": "T4"
+            "code": "T3",
+            "display": "T3"
           }
         ]
-      }
-    ]
-  },
-  "expansion": {
-    "identifier": "uk-koeln-work-tnm-t-lunge-1",
-    "timestamp": "2018-08-10",
-    "total": 13,
-    "contains": [
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "X",
-        "display": "TX"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "0",
-        "display": "T0"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "is",
-        "display": "Tis"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "1",
-        "display": "T1"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "1mi",
-        "display": "T1mi"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "1a",
-        "display": "T1a"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "1b",
-        "display": "T1b"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "1c",
-        "display": "T1c"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "2",
-        "display": "T2"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "2a",
-        "display": "T2a"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "2b",
-        "display": "T2b"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "3",
-        "display": "T3"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
-        "code": "4",
-        "display": "T4"
       }
     ]
   }

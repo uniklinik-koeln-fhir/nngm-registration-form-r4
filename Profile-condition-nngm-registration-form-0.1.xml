@@ -33,7 +33,7 @@
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
-      <definition value="für nNGM:&#xD;&#xA;active = Ersterkrankung&#xD;&#xA;recurrence = Rezidiv" />
+      <definition value="für nNGM:&#xD;&#xA;active = Progress&#xD;&#xA;recurrence = Rezidiv" />
       <min value="1" />
       <mustSupport value="true" />
     </element>

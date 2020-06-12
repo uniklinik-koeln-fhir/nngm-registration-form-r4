@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-m-lunge",
+  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-m-nngm",
   "version": "0.1",
   "name": "tnm-m-lunge",
   "status": "draft",

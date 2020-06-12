@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-n-lunge",
+  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-n-nngm",
   "version": "0.1",
   "name": "tnm-n-lunge",
   "status": "draft",
@@ -14,58 +14,58 @@
         "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.141",
         "concept": [
           {
-            "code": "X",
-            "display": "NX"
-          },
-          {
-            "code": "0",
+            "code": "N0",
             "display": "N0"
           },
           {
-            "code": "1",
+            "code": "NX",
+            "display": "NX"
+          },
+          {
+            "code": "N1",
             "display": "N1"
           },
           {
-            "code": "2",
+            "code": "N1a",
+            "display": "N1a"
+          },
+          {
+            "code": "N1b",
+            "display": "N1b"
+          },
+          {
+            "code": "N1c",
+            "display": "N1c"
+          },
+          {
+            "code": "N2",
             "display": "N2"
           },
           {
-            "code": "3",
+            "code": "N2a",
+            "display": "N2a"
+          },
+          {
+            "code": "N2b",
+            "display": "N2b"
+          },
+          {
+            "code": "N3",
             "display": "N3"
+          },
+          {
+            "code": "N3a",
+            "display": "N3"
+          },
+          {
+            "code": "N3b",
+            "display": "N3b"
+          },
+          {
+            "code": "N3c",
+            "display": "N3c"
           }
         ]
-      }
-    ]
-  },
-  "expansion": {
-    "identifier": "uk-koeln-work-tnm-n-lunge-1",
-    "timestamp": "2018-08-10",
-    "total": 5,
-    "contains": [
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.141",
-        "code": "X",
-        "display": "NX"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.141",
-        "code": "0",
-        "display": "N0"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.141",
-        "code": "1",
-        "display": "N1"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.141",
-        "code": "2",
-        "display": "N2"
-      },
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.141",
-        "code": "3",
-        "display": "N3"
       }
     ]
   }

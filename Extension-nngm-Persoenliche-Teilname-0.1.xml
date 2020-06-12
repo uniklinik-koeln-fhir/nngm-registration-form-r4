@@ -13,6 +13,10 @@
     <type value="element" />
     <expression value="ProcedureRequest.requester" />
   </context>
+  <context>
+    <type value="element" />
+    <expression value="Observation" />
+  </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />

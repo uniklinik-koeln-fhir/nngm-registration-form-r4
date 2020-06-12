@@ -1,0 +1,33 @@
+{
+    "resourceType":"ValueSet",
+    "url":"http://uk-koeln.de/fhir/ValueSet/tnm-suffix-miscy",
+    "version":"0.1",
+    "name":"tnm-praefix-cpu",
+    "status":"draft",
+    "experimental":true,
+    "date":"2018-10-31",
+    "publisher":"Uniklinik Köln",
+    "description":"TNM Präfix c/p/u",
+    "compose":{
+        "include": [
+            {
+                "system":"urn:oid:2.16.840.1.113883.15.16",
+                "version":"8",
+                "concept": [
+                    {
+                        "code":"m - multiple Tumore der gleichen Region",
+                        "display":"m - multiple Tumore der gleichen Region"
+                    },
+                    {
+                        "code":"p - histopathologisch gesichert",
+                        "display":"p - histopathologisch gesichert"
+                    },
+                    {
+                        "code":"u - Ultraschalldiagnostik",
+                        "display":"u - Ultraschalldiagnostik"
+                    }
+                ]
+            }
+        ]
+    }
+}

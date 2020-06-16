@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
+  <version value="0.1" />
+  <name value="CoverageNngm" />
+  <status value="active" />
+  <experimental value="true" />
+  <description value="Type of health insurance (private, public payor). Insurance identification number." />
+  <fhirVersion value="4.0.0" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Coverage" />
+  <baseDefinition value="http://fhir.de/StructureDefinition/coverage-de-basis" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Coverage.extension">
+      <path value="Coverage.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.extension:pkvTarifform">
+      <path value="Coverage.extension" />
+      <sliceName value="pkvTarifform" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform" />
+      </type>
+    </element>
+    <element id="Coverage.extension:pkvTarifform.value[x]">
+      <path value="Coverage.extension.value[x]" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:pkvTarifform.value[x].coding">
+      <path value="Coverage.extension.value[x].coding" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:pkvTarifform.value[x].coding.system">
+      <path value="Coverage.extension.value[x].coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:pkvTarifform.value[x].coding.code">
+      <path value="Coverage.extension.value[x].coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:kooperationsvereinbarung">
+      <path value="Coverage.extension" />
+      <sliceName value="kooperationsvereinbarung" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung" />
+      </type>
+    </element>
+    <element id="Coverage.identifier">
+      <path value="Coverage.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type.coding.code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <short value="The primary coverage ID" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier">
+      <path value="Coverage.identifier" />
+      <sliceName value="GKV-Identifier" />
+      <short value="The primary coverage ID" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type">
+      <path value="Coverage.identifier.type" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding">
+      <path value="Coverage.identifier.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding.system">
+      <path value="Coverage.identifier.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding.code">
+      <path value="Coverage.identifier.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type">
+      <path value="Coverage.identifier.type.coding" />
+      <sliceName value="GKV-Type" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type.system">
+      <path value="Coverage.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type.code">
+      <path value="Coverage.identifier.type.coding.code" />
+      <min value="1" />
+      <fixedCode value="GKV" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.system">
+      <path value="Coverage.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/NamingSystem/gkv/kvid-10" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.value">
+      <path value="Coverage.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.assigner">
+      <path value="Coverage.identifier.assigner" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:GKV-Identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier">
+      <path value="Coverage.identifier" />
+      <sliceName value="PKV-Identifier" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.type">
+      <path value="Coverage.identifier.type" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.coding">
+      <path value="Coverage.identifier.type.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.coding.system">
+      <path value="Coverage.identifier.type.coding.system" />
+      <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type">
+      <path value="Coverage.identifier.type.coding" />
+      <sliceName value="PKV-Type" />
+      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type.system">
+      <path value="Coverage.identifier.type.coding.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type.code">
+      <path value="Coverage.identifier.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.system">
+      <path value="Coverage.identifier.system" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.value">
+      <path value="Coverage.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.assigner">
+      <path value="Coverage.identifier.assigner" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier:PKV-Identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.identifier.assigner.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.status">
+      <path value="Coverage.status" />
+      <fixedCode value="active" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.type">
+      <path value="Coverage.type" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.type.coding">
+      <path value="Coverage.type.coding" />
+      <min value="1" />
+    </element>
+    <element id="Coverage.type.coding.system">
+      <path value="Coverage.type.coding.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.type.coding.code">
+      <path value="Coverage.type.coding.code" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.beneficiary">
+      <path value="Coverage.beneficiary" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.beneficiary.reference">
+      <path value="Coverage.beneficiary.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.dependent">
+      <path value="Coverage.dependent" />
+      <max value="0" />
+    </element>
+    <element id="Coverage.payor">
+      <path value="Coverage.payor" />
+      <max value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
+        <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
+        <targetProfile value="http://fhir.de/StructureDefinition/organization-de-basis/0.2" />
+      </type>
+    </element>
+    <element id="Coverage.payor.extension">
+      <path value="Coverage.payor.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.payor.extension:abrechnungsinformation">
+      <path value="Coverage.payor.extension" />
+      <sliceName value="abrechnungsinformation" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Coverage.payor.display" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

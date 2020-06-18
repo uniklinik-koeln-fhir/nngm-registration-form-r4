@@ -1,0 +1,149 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/icd-o-3-m-lunge",
+  "version": "0.1",
+  "name": "icd-o-3-m-lunge",
+  "title": "nNGM: ValueSet ICD-0-3-M-Lunge",
+  "status": "active",
+  "experimental": true,
+  "date": "2018-08-10",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "typische Histologien (Morphologien) von Lungenkrebserkrankungen",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.6.43.1",
+        "concept": [
+          {
+            "code": "8140/3",
+            "display": "Adenokarzinom"
+          },
+          {
+            "code": "8250/3",
+            "display": "lepidisches Adenokarzinom"
+          },
+          {
+            "code": "8551/3",
+            "display": "azinäres Adenokarzinom"
+          },
+          {
+            "code": "8260/3",
+            "display": "papilläres Adenokarzinom"
+          },
+          {
+            "code": "8265/3",
+            "display": "mikropapilläres Adenokarzinom"
+          },
+          {
+            "code": "8230/3",
+            "display": "solides Adenokarzinom"
+          },
+          {
+            "code": "8253/3",
+            "display": "invasives muzinöses Adenokarzinom"
+          },
+          {
+            "code": "8254/3",
+            "display": "gemischt invasives muzinöses und nicht-muzinöses Adenokarzinom"
+          },
+          {
+            "code": "8480/3",
+            "display": "kolloidales Adenokarzinom"
+          },
+          {
+            "code": "8333/3",
+            "display": "fetales Adenokarzinom"
+          },
+          {
+            "code": "8144/3",
+            "display": "enterisches Adenokarzinom"
+          },
+          {
+            "code": "8070/3",
+            "display": "Plattenepithelkarzinom"
+          },
+          {
+            "code": "8071/3",
+            "display": "keratinisierendes Plattenepithelkarzinom"
+          },
+          {
+            "code": "8072/3",
+            "display": "nicht-keratinisierendes Plattenepithelkarzinom"
+          },
+          {
+            "code": "8083/3",
+            "display": "basaloides Plattenepithelkarzinom"
+          },
+          {
+            "code": "8041/3",
+            "display": "kleinzelliges Karzinom"
+          },
+          {
+            "code": "8045/3",
+            "display": "kombiniertes kleinzelliges Karzinom"
+          },
+          {
+            "code": "8013/3",
+            "display": "großzelliges neuroendokrines Karzinom"
+          },
+          {
+            "code": "8013/3",
+            "display": "kombiniertes großzelliges neuroendokrines Karzinom"
+          },
+          {
+            "code": "8240/3",
+            "display": "typisches Karznoid"
+          },
+          {
+            "code": "8249/3",
+            "display": "atypisches Karzinoid"
+          },
+          {
+            "code": "8012/3",
+            "display": "großzelliges Karzinom"
+          },
+          {
+            "code": "8560/3",
+            "display": "adenosquamöses Karzinom"
+          },
+          {
+            "code": "8022/3",
+            "display": "pleomorphes Karzinom"
+          },
+          {
+            "code": "8430/3",
+            "display": "muzinösepidermoides Karzinom"
+          },
+          {
+            "code": "8200/3",
+            "display": "adenoides zystisches Karzinom"
+          },
+          {
+            "code": "8562/3",
+            "display": "epithelial-myoepitheliales Karzinom"
+          },
+          {
+            "code": "8000/0 ",
+            "display": "Benigne Neoplasie o.n.A."
+          },
+          {
+            "code": "8000/1 ",
+            "display": "Neoplasie fraglicher Dignität"
+          },
+          {
+            "code": "8000/3 ",
+            "display": "Maligne Neoplasie"
+          },
+          {
+            "code": "8000/1 ",
+            "display": "Neoplasie fraglicher Dignität"
+          },
+          {
+            "code": "8000/3 ",
+            "display": "Maligne Neoplasie"
+          }
+        ]
+      }
+    ]
+  }
+}

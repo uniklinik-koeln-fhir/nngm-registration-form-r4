@@ -1,0 +1,45 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-art",
+  "version": "0.1",
+  "name": "tnm-art",
+  "status": "draft",
+  "experimental": true,
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Art des TNM (klinische oder pathologische Sicherung)",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "75620-5",
+            "display": "TNM clinical staging before treatment panel"
+          },
+          {
+            "code": "75621-3",
+            "display": "TNM pathologic staging after surgery panel"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-tnm-art",
+    "timestamp": "2018-08-24",
+    "total": 2,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "75620-5",
+        "display": "TNM clinical staging before treatment panel"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "75621-3",
+        "display": "TNM pathologic staging after surgery panel"
+      }
+    ]
+  }
+}

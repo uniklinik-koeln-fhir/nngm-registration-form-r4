@@ -1,0 +1,33 @@
+{
+    "resourceType":"ValueSet",
+    "url":"http://uk-koeln.de/fhir/ValueSet/cancer-base/tnm-praefix-cpu",
+    "version":"0.1",
+    "name":"tnm-praefix-cpu",
+    "status":"draft",
+    "experimental":true,
+    "date":"2018-10-31",
+    "publisher":"Uniklinik Köln",
+    "description":"TNM Präfix c/p/u",
+    "compose":{
+        "include": [
+            {
+                "system":"urn:oid:2.16.840.1.113883.15.16",
+                "version":"8",
+                "concept": [
+                    {
+                        "code":"c - klinisch gesichert",
+                        "display":"c - klinisch gesichert"
+                    },
+                    {
+                        "code":"p - histopathologisch gesichert",
+                        "display":"p - histopathologisch gesichert"
+                    },
+                    {
+                        "code":"u - Ultraschalldiagnostik",
+                        "display":"u - Ultraschalldiagnostik"
+                    }
+                ]
+            }
+        ]
+    }
+}

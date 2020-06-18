@@ -1,0 +1,72 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-n-nngm",
+  "version": "0.1",
+  "name": "tnm-n-lunge",
+  "status": "draft",
+  "experimental": true,
+  "date": "2018-08-10",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "TNM: N-Klassifikation (Lunge)",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.141",
+        "concept": [
+          {
+            "code": "N0",
+            "display": "N0"
+          },
+          {
+            "code": "NX",
+            "display": "NX"
+          },
+          {
+            "code": "N1",
+            "display": "N1"
+          },
+          {
+            "code": "N1a",
+            "display": "N1a"
+          },
+          {
+            "code": "N1b",
+            "display": "N1b"
+          },
+          {
+            "code": "N1c",
+            "display": "N1c"
+          },
+          {
+            "code": "N2",
+            "display": "N2"
+          },
+          {
+            "code": "N2a",
+            "display": "N2a"
+          },
+          {
+            "code": "N2b",
+            "display": "N2b"
+          },
+          {
+            "code": "N3",
+            "display": "N3"
+          },
+          {
+            "code": "N3a",
+            "display": "N3"
+          },
+          {
+            "code": "N3b",
+            "display": "N3b"
+          },
+          {
+            "code": "N3c",
+            "display": "N3c"
+          }
+        ]
+      }
+    ]
+  }
+}

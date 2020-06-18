@@ -1,0 +1,79 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation",
+  "version": "0.1",
+  "name": "abrechnungsinformation",
+  "status": "active",
+  "experimental": true,
+  "date": "2019-02-09",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Abrechnungsinformation im Kontext von nNGM",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "concept": [
+          {
+            "code": "UNK",
+            "display": "unknown"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-abrechnungsinformation",
+    "timestamp": "2018-02-09",
+    "total": 9,
+    "contains": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "nNGM-BV Fall",
+        "display": "nNGM-BV Fall"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "nNGM-Fall stationär, nicht BV",
+        "display": "nNGM-Fall stationär, nicht BV"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "Ü-Schein Pathologie",
+        "display": "Ü-Schein Pathologie"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "Ü-Schein Sonstige",
+        "display": "Ü-Schein Sonstige"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "§116B/interner Fall",
+        "display": "§116B/interner Fall"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "§116B/externer Fall",
+        "display": "§116B/externer Fall"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "Privatpatient",
+        "display": "Privatpatient"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "code": "NGM-PV Fall",
+        "display": "NGM-PV Fall"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+        "code": "Abrechnungsinformation noch offen",
+        "display": "Abrechnungsinformation noch offen"
+      }
+    ]
+  }
+}

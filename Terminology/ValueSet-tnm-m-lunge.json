@@ -1,0 +1,76 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-m-nngm",
+  "version": "0.1",
+  "name": "tnm-m-lunge",
+  "status": "draft",
+  "experimental": true,
+  "date": "2018-08-10",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "TNM: M-Klassifikation (Lunge)",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.142",
+        "concept": [
+          {
+            "code": "M0",
+            "display": "M0"
+          },
+          {
+            "code": "M1",
+            "display": "M1"
+          },
+          {
+            "code": "M1a",
+            "display": "M1a"
+          },
+          {
+            "code": "M1b",
+            "display": "M1b"
+          },
+          {
+            "code": "M1c",
+            "display": "M1c"
+          },
+          {
+            "code": "M1d",
+            "display": "M1d"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-tnm-m-lunge-1",
+    "timestamp": "2018-08-10",
+    "total": 5,
+    "contains": [
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.142",
+        "code": "0",
+        "display": "M0"
+      },
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.142",
+        "code": "1",
+        "display": "M1"
+      },
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.142",
+        "code": "1a",
+        "display": "M1a"
+      },
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.142",
+        "code": "1b",
+        "display": "M1b"
+      },
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.142",
+        "code": "1c",
+        "display": "M1c"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes",
+  "title": "German Country Codes",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "urn:iso:std:iso:3166:deu"
+      }
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>German Country Codes</h2><tt>http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes</tt></div>"
+  },
+  "name": "German_Country_Codes"
+}

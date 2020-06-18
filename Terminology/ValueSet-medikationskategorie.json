@@ -1,0 +1,40 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/medikationskategorie",
+  "version": "0.1",
+  "name": "medikationskategorie",
+  "status": "draft",
+  "experimental": true,
+  "date": "2019-02-09",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Medikationskategorien",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-medikationskategorie",
+    "timestamp": "2019-02-09",
+    "total": 3,
+    "contains": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
+        "code": "EGFR",
+        "display": "EGFR-TKI"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
+        "code": "ALK",
+        "display": "ALK-TKI"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie",
+        "code": "ROS1",
+        "display": "ROS1-TKI"
+      }
+    ]
+  }
+}

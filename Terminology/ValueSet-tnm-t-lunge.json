@@ -1,0 +1,100 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/tnm-t-nngm",
+  "version": "0.1",
+  "name": "tnm-t-lunge",
+  "status": "draft",
+  "experimental": true,
+  "date": "2018-08-10",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "TNM: T-Klassifikation (Lunge)",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.143",
+        "concept": [
+          {
+            "code": "T0",
+            "display": "T0"
+          },
+          {
+            "code": "TX",
+            "display": "TX"
+          },
+          {
+            "code": "Tis",
+            "display": "Tis"
+          },
+          {
+            "code": "T1",
+            "display": "T1"
+          },
+          {
+            "code": "Ta",
+            "display": "Ta"
+          },
+          {
+            "code": "T1a",
+            "display": "T1a"
+          },
+          {
+            "code": "T1a1",
+            "display": "T1a1"
+          },
+          {
+            "code": "T1a2",
+            "display": "T1a2"
+          },
+          {
+            "code": "T1b",
+            "display": "T1b"
+          },
+          {
+            "code": "T1b1",
+            "display": "T1b1"
+          },
+          {
+            "code": "T1b2",
+            "display": "T1b2"
+          },
+          {
+            "code": "T1c",
+            "display": "T1c"
+          },
+          {
+            "code": "T1mi",
+            "display": "T1mi"
+          },
+          {
+            "code": "T2",
+            "display": "T2"
+          },
+          {
+            "code": "T2a",
+            "display": "T2a"
+          },
+          {
+            "code": "T2a1",
+            "display": "T2a1"
+          },
+          {
+            "code": "T2a2",
+            "display": "T2a2"
+          },
+          {
+            "code": "T2b",
+            "display": "T2b"
+          },
+          {
+            "code": "T2c",
+            "display": "T2c"
+          },
+          {
+            "code": "T3",
+            "display": "T3"
+          }
+        ]
+      }
+    ]
+  }
+}

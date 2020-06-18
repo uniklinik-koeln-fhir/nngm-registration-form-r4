@@ -1,0 +1,29 @@
+{
+    "resourceType": "ValueSet",
+    "url": "http://uk-koeln.de/fhir/ValueSet/liquidbiopsy",
+    "version": "0.1",
+    "name": "liquidbiopsyu",
+    "title": "nNGM: ValueSet Liquid Biopsy",
+    "status": "active",
+    "experimental": true,
+    "date": "2018-08-10",
+    "publisher": "Universitätsklinikum Köln",
+    "description": "typische Histologien (Morphologien) von Lungenkrebserkrankungen",
+    "compose": {
+      "include": [
+        {
+          "system": "http://uk-koeln.de/fhir/CodeSystem/liquidbiopsy",
+          "concept": [
+            {
+              "code": "Primärmutation",
+              "display": "Primärmutation"
+            },
+            {
+              "code": "Resistenztestung",
+              "display": "Resistenztestung"
+            }
+          ]
+        }
+      ]
+    }
+  }

@@ -1,0 +1,48 @@
+{
+    "resourceType": "ValueSet",
+    "url": "http://uk-koeln.de/fhir/ValueSet/ergebnis",
+    "version": "0.1",
+    "name": "ergebnis",
+    "title": "nNGM: ValueSet Ergebnis",
+    "status": "active",
+    "experimental": true,
+    "date": "2018-08-10",
+    "publisher": "Universitätsklinikum Köln",
+    "description": "Befund Ergebnis",
+    "compose": {
+      "include": [
+        {
+          "concept": [
+            {
+              "code": "positiv",
+              "display": "positiv"
+            },
+            {
+              "code": "negativ",
+              "display": "negativ"
+            },
+            {
+              "code": "nicht auswertbar",
+              "display": "nicht auswertbar"
+            },
+            {
+              "code": "positiv (high-level amplification)",
+              "display": "positiv (high-level amplification)"
+            },
+            {
+              "code": "positiv (moderate-level amplification)",
+              "display": "positiv (moderate-level amplification)"
+            },
+            {
+              "code": "aktivierende Mutation",
+              "display": "aktivierende Mutation"
+            },
+            {
+              "code": "keine aktivierende Mutation",
+              "display": "keine aktivierende Mutation"
+            }
+          ]
+        }
+      ]
+    }
+  }

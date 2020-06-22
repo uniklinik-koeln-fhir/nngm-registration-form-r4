@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="EpisodeOfCareNngm" />
   <title value="nNGM: Profil - EpisodeOfCare - Fall" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Date of first contact with the patient. Additional billing related information." />
   <fhirVersion value="4.0.0" />

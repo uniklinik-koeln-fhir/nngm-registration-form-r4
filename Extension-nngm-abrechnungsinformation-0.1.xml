@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="ExtensionNngmAbrechnungsinformation" />
   <title value="nNGM: Extension Abrechnungsinformation" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Coded billing information for nNGM" />

@@ -3,6 +3,7 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
   <version value="0.1" />
   <name value="CoverageNngm" />
+  <title value="nNGM: Profil - Coverage - Versicherungsverhältnis"/>
   <status value="active" />
   <experimental value="true" />
   <description value="Type of health insurance (private, public payor). Insurance identification number." />

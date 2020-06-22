@@ -3,7 +3,7 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM" />
   <version value="0.1" />
   <name value="PractitionerNngm" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="External practitioner (Oncology)" />
   <fhirVersion value="4.0.0" />

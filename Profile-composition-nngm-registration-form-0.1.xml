@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="CompositionNngmRegistrationForm" />
   <title value="nNGM: - Composition - Anmeldeformular" />
-  <status value="active" />
+  <status value="draft" />
   <description value="Content of the document bundle (local usage, incl. identifiable patient information)" />
   <fhirVersion value="4.0.0" />
   <kind value="resource" />

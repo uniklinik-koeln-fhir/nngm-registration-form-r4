@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="ObservationNngmHistologie" />
   <title value="nNGM: Profil - Observation - Histologie" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Details about the tumor tissue" />
   <fhirVersion value="4.0.0" />

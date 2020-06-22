@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="ExtensionNngmEffectivePointInTime" />
   <title value="Point in time" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Coded point in time (diagnose- and treatment prozess)" />
   <fhirVersion value="4.0.0" />

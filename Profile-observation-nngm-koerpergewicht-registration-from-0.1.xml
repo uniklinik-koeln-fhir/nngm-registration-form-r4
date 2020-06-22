@@ -3,8 +3,8 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
   <version value="0.1" />
   <name value="ObservationNngmKoerperGewicht" />
-  <title value="nNGM: Profil - Observation - ECOG" />
-  <status value="active" />
+  <title value="nNGM: Profil - Observation - Körpergewicht" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Recorded weight of the patient" />
   <fhirVersion value="4.0.0" />

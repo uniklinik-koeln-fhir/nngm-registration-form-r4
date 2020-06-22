@@ -2,8 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/pseudonymisiert" />
   <version value="0.1" />
+  <title value="nNGM: Profil - Coverage - Versicherungsverhältnis - pseudonymisiert" />
   <name value="CoveragePseudonymisiertNngm" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Type of health insurance (private, public payor). Insurance identification number." />
   <fhirVersion value="4.0.0" />

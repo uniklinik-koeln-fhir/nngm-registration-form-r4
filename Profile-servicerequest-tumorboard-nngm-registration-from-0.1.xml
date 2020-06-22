@@ -837,7 +837,7 @@
   <version value="0.1" />
   <name value="ServiceRequestTumorboardNngm" />
   <title value="nNGM: Profil - ProcedureRequest - Tumorboard" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <publisher value="Health Level Seven International (Orders and Observations)" />
   <description value="Request external practitioner for a tumorboard review" />

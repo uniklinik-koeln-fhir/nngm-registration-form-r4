@@ -3,8 +3,8 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergroesse" />
   <version value="0.1" />
   <name value="ObservationNngmKoerpergroesse" />
-  <title value="nNGM: Profil - Observation - ECOG" />
-  <status value="active" />
+  <title value="nNGM: Profil - Observation - Körpergröße" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Recorded height of the patient" />
   <fhirVersion value="4.0.0" />

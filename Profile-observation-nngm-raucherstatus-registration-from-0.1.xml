@@ -3,8 +3,8 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
   <version value="0.1" />
   <name value="ObservationNngmRaucherstatus" />
-  <title value="nNGM: Profil - Observation - EGFR-Primärmutation" />
-  <status value="active" />
+  <title value="nNGM: Profil - Observation - Raucherstatus" />
+  <status value="draft" />
   <experimental value="false" />
   <description value="Smoking status" />
   <fhirVersion value="4.0.0" />

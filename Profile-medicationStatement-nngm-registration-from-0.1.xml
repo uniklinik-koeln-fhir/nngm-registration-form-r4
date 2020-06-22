@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="MedicationStatementNngm" />
   <title value="nNGM: Profil - MedicationStatement - Medikamentöse Therapie" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Usage of tyrosine kinase inhibitors" />
   <fhirVersion value="4.0.0" />

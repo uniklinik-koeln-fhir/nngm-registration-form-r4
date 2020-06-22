@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="ObservationNngmEgfrPrimaermutation" />
   <title value="nNGM: Profil - Observation - EGFR-Primärmutation" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Assesment of a EGFR mutation" />
   <fhirVersion value="4.0.0" />

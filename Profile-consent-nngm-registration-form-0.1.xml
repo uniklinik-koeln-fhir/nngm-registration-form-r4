@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="ConsentNngm" />
   <title value="nNGM: Profil - Consent - Einwilligungserklärung" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Date of consent. Link to digital copy of consent form." />
   <fhirVersion value="4.0.0" />

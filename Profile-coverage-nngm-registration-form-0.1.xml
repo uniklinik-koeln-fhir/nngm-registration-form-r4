@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="CoverageNngm" />
   <title value="nNGM: Profil - Coverage - Versicherungsverhältnis"/>
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Type of health insurance (private, public payor). Insurance identification number." />
   <fhirVersion value="4.0.0" />

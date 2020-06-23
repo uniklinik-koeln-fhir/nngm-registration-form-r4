@@ -1,0 +1,1125 @@
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="75b32776-b8c9-4731-bd6d-2be3b515af1c" />
+  <meta>
+    <profile value="http://uk-koeln.de/fhir/StructureDefinition/Bundle/nNGM/registration-form" />
+  </meta>
+  <identifier>
+    <system value="urn:ietf:rfc:3986" />
+    <value value="urn:uuid:a754982d-63e0-40ed-890a-bcb4440d5255" />
+  </identifier>
+  <type value="document" />
+  <entry>
+    <fullUrl value="urn:uuid:7c759bb1-6f56-41fc-8503-7568009c4db7" />
+    <resource>
+      <Composition xmlns="http://hl7.org/fhir">
+        <id value="7c759bb1-6f56-41fc-8503-7568009c4db7" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/registration-form" />
+        </meta>
+        <status value="final" />
+        <type>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="11503-0" />
+          </coding>
+        </type>
+        <class>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="LP181089-6" />
+          </coding>
+        </class>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <date value="2019-04-05" />
+        <author>
+          <reference value="urn:uuid:10f1b821-b243-4e32-b44a-0b4cb4bd3f81" />
+        </author>
+        <title value="nNGM-Anmeldeformular" />
+        <section>
+          <title value="Stammdaten" />
+          <entry>
+            <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:52ca593d-86b7-43a8-bbda-1369f604f8e1" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:478f01b9-d645-4e1a-a982-865e52263103" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:d1dd4c0d-398d-45a5-a50d-160ef3c9c7f7" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:f7ed4172-fff0-4b83-bda7-ae121b7da227" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:5c7451b6-88c8-4388-8f71-784d0b7503ce" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:371c9d5a-5ec1-4d50-9f1c-0da80068ce47" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:ddc6dad1-a604-4390-a506-56a4bed6651f" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:ddd03f9b-1388-49f0-8b30-d7f1076ee957" />
+          </entry>
+        </section>
+        <section>
+          <title value="Anforderer" />
+          <entry>
+            <reference value="urn:uuid:10f1b821-b243-4e32-b44a-0b4cb4bd3f81" />
+          </entry>
+        </section>
+        <section>
+          <title value="Diagnose" />
+          <entry>
+            <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:1ced56a7-744a-4366-9b27-56747a734284" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:25e56be4-4784-4384-b7e0-da525f59d57a" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:42e9ba29-ee76-4ff3-a86b-4a6f775934b7" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:477fb34c-2681-489d-86c8-db474452f6f5" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:201dbebe-1235-4471-9388-338a17039fac" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:5d446212-e54d-4142-8a39-25e0c1603e9e" />
+          </entry>
+        </section>
+        <section>
+          <title value="Therapie" />
+          <entry>
+            <reference value="urn:uuid:6bf32272-6253-47b2-9b7a-4e8dc2e02726" />
+          </entry>
+        </section>
+        <section>
+          <title value="Anforderung Testung" />
+          <entry>
+            <reference value="urn:uuid:d50563e9-1564-4966-bb3e-8033d56c9e7d" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:63f96a44-ee55-4476-978d-68010cf4b1f3" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:d2b4e083-fe3d-403f-bfc7-827c5acd24ae" />
+          </entry>
+          <entry>
+            <reference value="urn:uuid:41ce90fa-eaa2-4322-8252-ba3efe3edcd1" />
+          </entry>
+        </section>
+        <section>
+          <title value="Anforderung Tumorboard" />
+          <entry>
+            <reference value="urn:uuid:661d47e0-81ce-4a3f-b95c-7ca419106029" />
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+    <resource>
+      <Patient xmlns="http://hl7.org/fhir">
+        <id value="003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
+        </meta>
+        <identifier>
+          <system value="http://clinicalsite.org/NamingSystem/patient-pseudonym" />
+          <value value="OIhd98HIuop" />
+        </identifier>
+        <gender value="male" />
+        <birthDate value="1990" />
+        <deceasedBoolean value="false" />
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:52ca593d-86b7-43a8-bbda-1369f604f8e1" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="52ca593d-86b7-43a8-bbda-1369f604f8e1" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergroesse" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="vital-signs" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="8302-2" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <valueQuantity>
+          <value value="165" />
+          <unit value="cm" />
+          <system value="http://unitsofmeasure.org" />
+          <code value="cm" />
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:478f01b9-d645-4e1a-a982-865e52263103" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="478f01b9-d645-4e1a-a982-865e52263103" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="vital-signs" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="29463-7" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <valueQuantity>
+          <value value="55" />
+          <unit value="kg" />
+          <system value="http://unitsofmeasure.org" />
+          <code value="kg" />
+        </valueQuantity>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d1dd4c0d-398d-45a5-a50d-160ef3c9c7f7" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="d1dd4c0d-398d-45a5-a50d-160ef3c9c7f7" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/cancer-base/vitalstatus" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="vital-signs" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="75186-7" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <effectiveDateTime value="2019-04-05" />
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus" />
+            <code value="L" />
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:f7ed4172-fff0-4b83-bda7-ae121b7da227" />
+    <resource>
+      <Coverage xmlns="http://hl7.org/fhir">
+        <id value="f7ed4172-fff0-4b83-bda7-ae121b7da227" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/pseudonymisiert" />
+        </meta>
+        <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform" />
+              <code value="basis" />
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="active" />
+        <type>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/versicherungsart-de-basis" />
+            <code value="GKV" />
+          </coding>
+        </type>
+        <beneficiary>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </beneficiary>
+        <payor>
+          <display value="Barmer" />
+        </payor>
+      </Coverage>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5c7451b6-88c8-4388-8f71-784d0b7503ce" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="5c7451b6-88c8-4388-8f71-784d0b7503ce" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="social-history" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="72166-2" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <valueCodeableConcept>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/raucherstatus" />
+            <code value="er" />
+          </coding>
+        </valueCodeableConcept>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="8664-5" />
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="40" />
+            <unit value="Pck/a" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="/a" />
+          </valueQuantity>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="63630-8" />
+            </coding>
+          </code>
+          <valueDateTime value="2019-01" />
+        </component>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:371c9d5a-5ec1-4d50-9f1c-0da80068ce47" />
+    <resource>
+      <Consent xmlns="http://hl7.org/fhir">
+        <id value="371c9d5a-5ec1-4d50-9f1c-0da80068ce47" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
+        </meta>
+        <status value="active" />
+        <category>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/einwilligungserklaerung" />
+            <code value="molpath" />
+          </coding>
+        </category>
+        <patient>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </patient>
+        <dateTime value="2019-02-04" />
+        <policy>
+          <authority value="https://ngm-cancer.com/" />
+          <uri value="http://ngm-cancer.com/opt-in/molpath" />
+        </policy>
+      </Consent>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ddc6dad1-a604-4390-a506-56a4bed6651f" />
+    <resource>
+      <Consent xmlns="http://hl7.org/fhir">
+        <id value="ddc6dad1-a604-4390-a506-56a4bed6651f" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
+        </meta>
+        <status value="active" />
+        <category>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/einwilligungserklaerung" />
+            <code value="behandlung_forschung" />
+          </coding>
+        </category>
+        <patient>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </patient>
+        <dateTime value="2019-02-04" />
+        <policy>
+          <authority value="https://ngm-cancer.com/" />
+          <uri value="http://ngm-cancer.com/opt-in/behandlung_forschung" />
+        </policy>
+      </Consent>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ddd03f9b-1388-49f0-8b30-d7f1076ee957" />
+    <resource>
+      <Consent xmlns="http://hl7.org/fhir">
+        <id value="ddd03f9b-1388-49f0-8b30-d7f1076ee957" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
+        </meta>
+        <status value="active" />
+        <category>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/einwilligungserklaerung" />
+            <code value="nngm-teilnahme" />
+          </coding>
+        </category>
+        <patient>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </patient>
+        <dateTime value="2019-02-04" />
+        <policy>
+          <authority value="https://ngm-cancer.com/" />
+          <uri value="http://ngm-cancer.com/opt-in/nngm-teilnahme" />
+        </policy>
+      </Consent>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:10f1b821-b243-4e32-b44a-0b4cb4bd3f81" />
+    <resource>
+      <Practitioner xmlns="http://hl7.org/fhir">
+        <id value="10f1b821-b243-4e32-b44a-0b4cb4bd3f81" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM" />
+        </meta>
+        <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/netzwerkpartner">
+          <valueBoolean value="true" />
+        </extension>
+        <identifier>
+          <system value="http://fhir.de/NamingSystem/nngm/netzwerkpartnernummer" />
+          <value value="654321" />
+        </identifier>
+        <name>
+          <text value="Dr. Manfred Mustermann" />
+          <family value="Mustermann" />
+          <given value="Manfred" />
+          <prefix value="Dr." />
+        </name>
+        <telecom>
+          <system value="email" />
+          <value value="manfred.mustermann@musterklinik.de" />
+        </telecom>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+    <resource>
+      <EpisodeOfCare xmlns="http://hl7.org/fhir">
+        <id value="1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM" />
+        </meta>
+        <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation">
+          <valueCodeableConcept>
+            <coding>
+              <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation" />
+              <code value="nngm-iv" />
+            </coding>
+          </valueCodeableConcept>
+        </extension>
+        <status value="active" />
+        <diagnosis>
+          <condition>
+            <reference value="urn:uuid:1ced56a7-744a-4366-9b27-56747a734284" />
+          </condition>
+        </diagnosis>
+        <diagnosis>
+          <condition>
+            <reference value="urn:uuid:1ced56a7-744a-4366-9b27-56747a734284" />
+          </condition>
+        </diagnosis>
+        <patient>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </patient>
+        <period>
+          <start value="2017-10-13" />
+        </period>
+      </EpisodeOfCare>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:1ced56a7-744a-4366-9b27-56747a734284" />
+    <resource>
+      <Condition xmlns="http://hl7.org/fhir">
+        <id value="1ced56a7-744a-4366-9b27-56747a734284" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Condition/nNGM" />
+        </meta>
+        <clinicalStatus value="active" />
+        <verificationStatus value="confirmed" />
+        <code>
+          <text value="Lungenkarzinom" />
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <stage>
+          <assessment>
+            <reference value="urn:uuid:201dbebe-1235-4471-9388-338a17039fac" />
+          </assessment>
+        </stage>
+        <evidence>
+          <detail>
+            <reference value="urn:uuid:477fb34c-2681-489d-86c8-db474452f6f5" />
+          </detail>
+        </evidence>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:25e56be4-4784-4384-b7e0-da525f59d57a" />
+    <resource>
+      <Condition xmlns="http://hl7.org/fhir">
+        <id value="25e56be4-4784-4384-b7e0-da525f59d57a" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Condition/nNGM" />
+        </meta>
+        <clinicalStatus value="recurrence">
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/progressUnterTherapie">
+            <extension url="progressUnterTherapie">
+              <valueBoolean value="true" />
+            </extension>
+            <extension url="therapie">
+              <valueReference>
+                <reference value="urn:uuid:41ce90fa-eaa2-4322-8252-ba3efe3edcd1" />
+              </valueReference>
+            </extension>
+          </extension>
+        </clinicalStatus>
+        <verificationStatus value="confirmed" />
+        <severity>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit" />
+            <code value="ko" />
+          </coding>
+        </severity>
+        <code>
+          <text value="Lungenkarzinom" />
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <onsetDateTime value="2018-06-07" />
+        <stage>
+          <assessment>
+            <reference value="urn:uuid:5d446212-e54d-4142-8a39-25e0c1603e9e" />
+          </assessment>
+        </stage>
+        <note>
+          <text value="Unter Therapie mit Crizotinib bei bekannter ALK-Translokation." />
+        </note>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:42e9ba29-ee76-4ff3-a86b-4a6f775934b7" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="42e9ba29-ee76-4ff3-a86b-4a6f775934b7" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="survey" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="89247-1" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:1.2.276.0.76.3.1.131.1.5.153" />
+            <code value="1" />
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:477fb34c-2681-489d-86c8-db474452f6f5" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="477fb34c-2681-489d-86c8-db474452f6f5" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="laboratory" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="59847-4" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.6.43.1" />
+            <code value="8041/3" />
+          </coding>
+        </valueCodeableConcept>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:201dbebe-1235-4471-9388-338a17039fac" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="201dbebe-1235-4471-9388-338a17039fac" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="survey" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="75620-5" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <effectiveDateTime>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time" />
+                <code value="ed" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </effectiveDateTime>
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.15.16" />
+            <code value="IIIA" />
+          </coding>
+        </valueCodeableConcept>
+        <component>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/tnm-praefix-cpu">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.15.16" />
+                <code value="p" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21899-0" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:1.2.276.0.76.3.1.131.1.5.143" />
+              <code value="4" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/tnm-praefix-cpu">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.15.16" />
+                <code value="p" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21900-6" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:1.2.276.0.76.3.1.131.1.5.141" />
+              <code value="1" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21894-1" />
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="18" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="1" />
+          </valueQuantity>
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21893-3" />
+            </coding>
+          </code>
+          <valueQuantity>
+            <value value="5" />
+            <system value="http://unitsofmeasure.org" />
+            <code value="1" />
+          </valueQuantity>
+        </component>
+        <component>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/tnm-praefix-cpu">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.15.16" />
+                <code value="c" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21907-1" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:1.2.276.0.76.3.1.131.1.5.142" />
+              <code value="0" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:5d446212-e54d-4142-8a39-25e0c1603e9e" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="5d446212-e54d-4142-8a39-25e0c1603e9e" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="survey" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="75620-5" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <effectiveDateTime>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time" />
+                <code value="aktuell" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+        </effectiveDateTime>
+        <valueCodeableConcept>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.15.16" />
+            <code value="IVA" />
+          </coding>
+        </valueCodeableConcept>
+        <component>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21983-2" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:2.16.840.1.113883.15.16" />
+              <code value="r" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/tnm-praefix-cpu">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.15.16" />
+                <code value="p" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21899-0" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:1.2.276.0.76.3.1.131.1.5.143" />
+              <code value="3" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/tnm-praefix-cpu">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.15.16" />
+                <code value="p" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21900-6" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:1.2.276.0.76.3.1.131.1.5.141" />
+              <code value="1" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+        <component>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/tnm-praefix-cpu">
+            <valueCodeableConcept>
+              <coding>
+                <system value="urn:oid:2.16.840.1.113883.15.16" />
+                <code value="c" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <code>
+            <coding>
+              <system value="http://loinc.org" />
+              <code value="21907-1" />
+            </coding>
+          </code>
+          <valueCodeableConcept>
+            <coding>
+              <system value="urn:oid:1.2.276.0.76.3.1.131.1.5.142" />
+              <code value="1a" />
+            </coding>
+          </valueCodeableConcept>
+        </component>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:6bf32272-6253-47b2-9b7a-4e8dc2e02726" />
+    <resource>
+      <Specimen xmlns="http://hl7.org/fhir">
+        <id value="6bf32272-6253-47b2-9b7a-4e8dc2e02726" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM" />
+        </meta>
+        <status value="available" />
+        <type>
+          <text value="Tumormaterial Primärtumor Oberlappen li." />
+        </type>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <request>
+          <reference value="urn:uuid:63f96a44-ee55-4476-978d-68010cf4b1f3" />
+        </request>
+        <collection>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart">
+            <valueCodeableConcept>
+              <coding>
+                <system value="http://hl7.org/fhir/v3/ActCode" />
+                <code value="AMB" />
+              </coding>
+            </valueCodeableConcept>
+          </extension>
+          <collector>
+            <display value="Dr. Peter Patholus, Panweg 33, 44444 Pathonia" />
+          </collector>
+        </collection>
+      </Specimen>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d50563e9-1564-4966-bb3e-8033d56c9e7d" />
+    <resource>
+      <ServiceRequest xmlns="http://hl7.org/fhir">
+        <id value="d50563e9-1564-4966-bb3e-8033d56c9e7d" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung" />
+        </meta>
+        <status value="active" />
+        <intent value="proposal" />
+        <code>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/procedures" />
+            <code value="gewebediagnostik" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <specimen>
+          <reference value="urn:uuid:6bf32272-6253-47b2-9b7a-4e8dc2e02726" />
+        </specimen>
+      </ServiceRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:63f96a44-ee55-4476-978d-68010cf4b1f3" />
+    <resource>
+      <ServiceRequest xmlns="http://hl7.org/fhir">
+        <id value="63f96a44-ee55-4476-978d-68010cf4b1f3" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung" />
+        </meta>
+        <status value="active" />
+        <intent value="proposal" />
+        <code>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/procedures" />
+            <code value="komplett" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <supportingInfo>
+          <display value="Tumormaterial-Lagerung in der Biobank der Musterklinik Musterstadt" />
+        </supportingInfo>
+        <specimen>
+          <reference value="urn:uuid:6bf32272-6253-47b2-9b7a-4e8dc2e02726" />
+        </specimen>
+      </ServiceRequest>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:d2b4e083-fe3d-403f-bfc7-827c5acd24ae" />
+    <resource>
+      <Observation xmlns="http://hl7.org/fhir">
+        <id value="d2b4e083-fe3d-403f-bfc7-827c5acd24ae" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/egfrPrimaermutation" />
+        </meta>
+        <status value="final" />
+        <category>
+          <coding>
+            <system value="http://hl7.org/fhir/observation-category" />
+            <code value="laboratory" />
+          </coding>
+        </category>
+        <code>
+          <coding>
+            <system value="http://loinc.org" />
+            <code value="21665-5" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <component>
+          <code>
+            <coding>
+              <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components" />
+              <code value="exon" />
+            </coding>
+          </code>
+          <valueString value="EinExon" />
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components" />
+              <code value="c" />
+            </coding>
+          </code>
+          <valueString value="EinC" />
+        </component>
+        <component>
+          <code>
+            <coding>
+              <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components" />
+              <code value="p" />
+            </coding>
+          </code>
+          <valueString value="EinP" />
+        </component>
+      </Observation>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:41ce90fa-eaa2-4322-8252-ba3efe3edcd1" />
+    <resource>
+      <MedicationStatement xmlns="http://hl7.org/fhir">
+        <id value="41ce90fa-eaa2-4322-8252-ba3efe3edcd1" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/MedicationStatement/nNGM" />
+        </meta>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <category>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/medikationskategorie" />
+            <code value="alk-tki" />
+            <display value="ALK-TKI" />
+          </coding>
+        </category>
+        <status value="stopped" />
+        <medicationCodeableConcept>
+          <text value="Crizotinib" />
+        </medicationCodeableConcept>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <taken value="y" />
+        <note>
+          <text value="Bei bekannter ALK-Translokation." />
+        </note>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:661d47e0-81ce-4a3f-b95c-7ca419106029" />
+    <resource>
+      <ServiceRequest xmlns="http://hl7.org/fhir">
+        <id value="661d47e0-81ce-4a3f-b95c-7ca419106029" />
+        <meta>
+          <profile value="http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard" />
+        </meta>
+        <status value="active" />
+        <intent value="proposal" />
+        <code>
+          <coding>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/procedures" />
+            <code value="tumorboard" />
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:003385b4-7e88-401c-a750-3a92b95ba5c7" />
+        </subject>
+        <context>
+          <reference value="urn:uuid:1d7258e1-bdf7-4aa7-8294-7e12048c78a6" />
+        </context>
+        <requester>
+          <extension url="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/persoenlicheTeilnahme">
+            <valueBoolean value="true" />
+          </extension>
+          <agent>
+            <reference value="urn:uuid:10f1b821-b243-4e32-b44a-0b4cb4bd3f81" />
+            <display value="Dr. Manfred Mustermann am Musterklinikum Musterstadt" />
+          </agent>
+        </requester>
+        <performer>
+          <display value="UK Köln" />
+        </performer>
+      </ServiceRequest>
+    </resource>
+  </entry>
+</Bundle>

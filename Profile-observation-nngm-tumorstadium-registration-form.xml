@@ -49,6 +49,7 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <fixedUri value="http://uk-koeln.de/fhir/ValueSet/cancer-base/tnm-art" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
@@ -368,7 +369,7 @@
       <sliceName value="praefix-cpu" />
       <type>
         <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/tnm-praefix-cpu" />
+        <profile value="http://uk-koeln.de/fhir/Extension/cancer-base/tnm-praefix-cpu" />
       </type>
       <mustSupport value="true" />
     </element>

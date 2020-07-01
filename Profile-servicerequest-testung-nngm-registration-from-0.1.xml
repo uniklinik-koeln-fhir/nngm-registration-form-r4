@@ -836,6 +836,7 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung" />
   <version value="0.1" />
   <name value="ServiceRequestTestungNngm" />
+  <title value="nNGM: Profil - ProcedureRequest - Anforderung" />
   <status value="draft" />
   <experimental value="true" />
   <publisher value="Health Level Seven International (Orders and Observations)" />

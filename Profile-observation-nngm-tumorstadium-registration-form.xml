@@ -49,6 +49,13 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationCode" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/tnm-art" />
+      </binding>
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">

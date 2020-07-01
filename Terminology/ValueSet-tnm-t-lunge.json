@@ -92,6 +92,38 @@
           {
             "code": "T3",
             "display": "T3"
+          },
+          {
+            "code": "T3a",
+            "display": "T3a"
+          },
+          {
+            "code": "T3b",
+            "display": "T3b"
+          },
+          {
+            "code": "T3c",
+            "display": "T3c"
+          },
+          {
+            "code": "T4",
+            "display": "T4"
+          },
+          {
+            "code": "T4a",
+            "display": "T4a"
+          },
+          {
+            "code": "T4b",
+            "display": "T4b"
+          },
+          {
+            "code": "T4c",
+            "display": "T4c"
+          },
+          {
+            "code": "T4d",
+            "display": "T4d"
           }
         ]
       }

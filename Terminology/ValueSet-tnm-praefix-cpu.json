@@ -1,6 +1,6 @@
 {
     "resourceType":"ValueSet",
-    "url":"http://uk-koeln.de/fhir/ValueSet/cancer-base/tnm-praefix-cpu",
+    "url":"http://uk-koeln.de/fhir/ValueSet/tnm-praefix-cpu",
     "version":"0.1",
     "name":"tnm-praefix-cpu",
     "status":"draft",

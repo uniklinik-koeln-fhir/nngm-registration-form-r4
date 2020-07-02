@@ -1,7 +1,7 @@
 {
   "resourceType": "CodeSystem",
   "title": "ISO-3166 Country Codes German",
-  "url": "urn:iso:std:iso:3166:deu",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/countrycodes",
   "status": "draft",
   "contact": [
     {

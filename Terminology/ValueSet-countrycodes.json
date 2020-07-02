@@ -15,7 +15,7 @@
   "compose": {
     "include": [
       {
-        "system": "urn:iso:std:iso:3166:deu"
+        "system": "http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes"
       }
     ]
   },

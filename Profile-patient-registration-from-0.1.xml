@@ -135,6 +135,10 @@
     <element id="Patient.address.country">
       <path value="Patient.address.country" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes" />
+      </binding>
     </element>
     <element id="Patient.contact">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">

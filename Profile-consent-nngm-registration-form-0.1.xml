@@ -75,11 +75,13 @@
     <element id="Consent.provision">
       <path value="Consent.provision" />
       <mustSupport value="true" />
+      <min value="1" />
+      <max value="*" />
     </element>
     <element id="Consent.provision.type">
       <path value="Consent.provision.type" />
       <min value="1" />
-      <max value="*" />
+      <max value="1" />
       <mustSupport value="true" />
     </element>
   </differential>

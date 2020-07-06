@@ -5,17 +5,17 @@
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/centers",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
   "version": "0.1",
-  "name": "nngm centers",
-  "title": "nNGM: CodeSystem Abrechnungsinformation",
+  "name": "nNGM_CodeSystem_Durchfuehrende_Einrichtung",
+  "title": "nNGM: CodeSystem Durchführende Einrichtung",
   "status": "active",
   "experimental": true,
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",
   "description": "Abrechnungsinformation im Kontext von nNGM",
   "caseSensitive": true,
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/centers",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/ExecutingOrganizationTyp",
   "content": "complete",
   "concept": [
     {

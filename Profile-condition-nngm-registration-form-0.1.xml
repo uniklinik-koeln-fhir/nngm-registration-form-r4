@@ -33,9 +33,12 @@
     </element>
     <element id="Condition.clinicalStatus">
       <path value="Condition.clinicalStatus" />
-      <definition value="für nNGM:&#xD;&#xA;active = Progress&#xD;&#xA;recurrence = Rezidiv" />
       <min value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/cancer-base/vitalstatus" />
+      </binding>
     </element>
     <element id="Condition.verificationStatus">
       <path value="Condition.verificationStatus" />

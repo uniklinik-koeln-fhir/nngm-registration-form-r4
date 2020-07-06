@@ -1,0 +1,45 @@
+{
+  "resourceType": "CodeSystem",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/Vitalstatus",
+  "version": "0.1",
+  "title": "nNGM CodeSystem Vitalstatus",
+  "name": "nNGM_CodeSystem_Vitalstatus",
+  "status": "draft",
+  "experimental": true,
+  "date": "2018-10-31",
+  "publisher": "Uniklinik Köln",
+  "description": "Vitalstatus des Patienten",
+  "caseSensitive": true,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/cancer-base/vitalstatus",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "L",
+      "display": "Patient lebt"
+    },
+    {
+      "code": "T",
+      "display": "Patient verstorben"
+    },
+    {
+      "code": "A",
+      "display": "unbekannt, Patient nicht mehr auffindbar (lost to follow-up)"
+    },
+    {
+      "code": "N",
+      "display": "unbekannt, Betreuung/Nachsorge nicht mehr nötig"
+    },
+    {
+      "code": "B",
+      "display": "unbekannt, Patient ist anderenorts in Betreuung"
+    },
+    {
+      "code": "V",
+      "display": "unbekannt, Patient verweigert weitere Betreuung"
+    },
+    {
+      "code": "X",
+      "display": "unbekannt"
+    }
+  ]
+}

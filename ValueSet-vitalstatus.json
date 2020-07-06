@@ -1,0 +1,60 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/vitalstatus",
+  "version": "0.1",
+  "name": "vitalstatus",
+  "status": "draft",
+  "experimental": true,
+  "date": "2018-10-31",
+  "publisher": "Uniklinik Köln",
+  "description": "Vitalstatus des Patienten",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-vitalstatus-1",
+    "timestamp": "2018-10-31",
+    "total": 7,
+    "contains": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "code": "L",
+        "display": "Patient lebt"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "code": "T",
+        "display": "Patient verstorben"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "code": "A",
+        "display": "unbekannt, Patient nicht mehr auffindbar (lost to follow-up)"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "code": "N",
+        "display": "unbekannt, Betreuung/Nachsorge nicht mehr nötig"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "code": "B",
+        "display": "unbekannt, Patient ist anderenorts in Betreuung"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "code": "V",
+        "display": "unbekannt, Patient verweigert weitere Betreuung"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "code": "X",
+        "display": "unbekannt"
+      }
+    ]
+  }
+}

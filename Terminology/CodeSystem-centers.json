@@ -1,0 +1,74 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/centers",
+  "version": "0.1",
+  "name": "nngm centers",
+  "title": "nNGM: CodeSystem Abrechnungsinformation",
+  "status": "active",
+  "experimental": true,
+  "date": "2019-02-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Abrechnungsinformation im Kontext von nNGM",
+  "caseSensitive": true,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/centers",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "nNGM-Zentrum",
+      "display": "nNGM-Zentrum"
+    },
+    {
+      "code": "Universitäre Einrichtung",
+      "display": "Universitäre Einrichtung"
+    },
+    {
+      "code": "anderes Krankenhaus - Lungenkrebszentrum",
+      "display": "anderes Krankenhaus - Lungenkrebszentrum"
+    },
+    {
+      "code": "anderes Krankenhaus - Pneumologie",
+      "display": "anderes Krankenhaus - Pneumologie"
+    },
+    {
+      "code": "anderes Krankenhaus - Onkologie",
+      "display": "anderes Krankenhaus - Onkologie"
+    },
+    {
+      "code": "anderes Krankenhaus - Chirurgie",
+      "display": "anderes Krankenhaus - Chirurgie"
+    },
+    {
+      "code": "niedergelassene Einrichtung - Pneumologie",
+      "display": "niedergelassene Einrichtung - Pneumologie"
+    },
+    {
+      "code": "niedergelassene Einrichtung - Onkologie",
+      "display": "niedergelassene Einrichtung - Onkologie"
+    },
+    {
+      "code": "niedergelassene Einrichtung - beides",
+      "display": "niedergelassene Einrichtung - beides"
+    },
+    {
+      "code": "niedergelassene Einrichtung - Strahlentherapie",
+      "display": "niedergelassene Einrichtung - Strahlentherapie"
+    },
+    {
+      "code": "niedergelassene Einrichtung - Chirurgie",
+      "display": "niedergelassene Einrichtung - Chirurgie"
+    },
+    {
+      "code": "niedergelassene Einrichtung - ausländische Einrichtung",
+      "display": "niedergelassene Einrichtung - ausländische Einrichtung"
+    },
+    {
+      "code": "niedergelassene Einrichtung - Andere",
+      "display": "niedergelassene Einrichtung - Andere"
+    }
+  ]
+}

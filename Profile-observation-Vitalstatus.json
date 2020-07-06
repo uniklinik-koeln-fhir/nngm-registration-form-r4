@@ -171,10 +171,7 @@
           {
             "code": "Reference",
             "profile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/MII-Reference"
-            ],
-            "targetProfile": [
-              "https://www.medizininformatik-initiative.de/fhir/core/StructureDefinition/Patient"
+              "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient"
             ]
           }
         ],
@@ -233,7 +230,7 @@
         "id": "Observation.value[x].coding:Vitalstatus.system",
         "path": "Observation.value[x].coding.system",
         "min": 1,
-        "fixedUri": "http://uk-koeln.de/fhir/CodeSystem/cancer-base/vitalstatus",
+        "fixedUri": "http://uk-koeln.de/fhir/ValueSet/nngm/vitalstatus",
         "mustSupport": true
       },
       {

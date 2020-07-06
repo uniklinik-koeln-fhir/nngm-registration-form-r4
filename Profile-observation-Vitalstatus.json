@@ -2,7 +2,7 @@
   "resourceType": "StructureDefinition",
   "url": "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/Vitalstatus",
   "version": "1.0",
-  "name": "Observation - Vitalstatus",
+  "name": "nNGM: Profil: Observation - Vitalstatus",
   "status": "draft",
   "description": "Vitalstatus der PatientIn",
   "fhirVersion": "4.0.1",

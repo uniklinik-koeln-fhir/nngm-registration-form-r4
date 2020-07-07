@@ -36,14 +36,24 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="MedicationStatement.extension:therapilinie">
+    <element id="MedicationStatement.extension:therapielinie">
       <path value="MedicationStatement.extension" />
-      <sliceName value="therapilinie" />
+      <sliceName value="therapielinie" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/cancer-base/therapielinie" />
+      </type>
+    </element>
+    <element id="MedicationStatement.extension:fusionspartner">
+      <path value="MedicationStatement.extension" />
+      <sliceName value="fusionspartner" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/fusionspartner" />
       </type>
     </element>
     <element id="MedicationStatement.identifier.type.coding.display">

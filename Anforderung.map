@@ -1,0 +1,175 @@
+/// version = 0.1
+/// title = "AnforderungMappingTest"
+
+map "http://uk-koeln.de/fhir/StructureMap/AnforderungMappingTest" = AnforderungMappingTest
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+uses "http://hl7.org/fhir/StructureDefinition/ServiceRequest" as target
+
+group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
+{
+    src -> bundle.id = uuid();
+    src -> bundle.type = 'collection';
+
+    src -> bundle.entry as entry then CreateTransformSpecimen(src, entry);
+    src -> bundle.entry as entry then CreateTransformObservation(src, entry);
+    src -> bundle.entry as entry then CreateTransformServiceRequest(src, entry);
+}
+
+group CreateTransformSpecimen(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1368'
+        or blockindex = 0 and groupindex = 0 and itemid = 'id_2457'
+        or blockindex = 1 and groupindex = 0 and itemid = 'id_1551'
+        or blockindex = 1 and groupindex = 0 and itemid = 'id_1589'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_2316'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_2320'" then
+        {
+            src -> tgt.resource = create('Specimen') as specimen then TransformSpecimen(src, specimen);
+        };
+    };
+}
+
+group CreateTransformObservation(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_836'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_2319'" then
+        {
+            src -> tgt.resource = create('Observation') as observation then TransformObservation(src, observation);
+        };
+    };
+}
+
+group CreateTransformServiceRequest(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "indexgroup = 3 and groupindex = 0 and itemid = 'id_2473'
+        or indexgroup = 3 and groupindex = 0 and itemid = 'id_2474'
+        or indexgroup = 3 and groupindex = 0 and itemid = 'id_2313'
+        or indexgroup = 3 and groupindex = 0 and itemid = 'id_2314'
+        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2476'
+        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2477'
+        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2478'
+        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2479'
+        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2480'" then
+        {
+            src -> tgt.resource = create('ServiceRequest') as serviceRequest then TransformServiceRequest(src, serviceRequest);
+        };
+    };
+}
+
+/* ------------------------------ Specimen ---------------------------- */
+
+group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM';
+
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
+
+    src.operations as operations, operations.data as data then
+    {
+        /* ------------------------------ Diagnostik ---------------------------- */
+        // Diagnostik Typ
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1368'" then
+        {
+            values.value as code ->     tgt.type as tgtType,
+                                        tgtType.coding as tgtCoding,
+                                        tgtCoding.system = 'http://snomed.info/sct',
+                                        tgtCoding.version = '900000000000207008',
+                                        tgtCoding.code = code;
+                                        /* ------------------------------ 
+                                            Should it be tgtCoding.code = translate(diagnostik, '', 'code');?
+                                            On simplifier, version is http://snomed.info/sct/900000000000207008
+                                        ---------------------------- */
+        };
+
+        // Zu untersuchendes Material (Biopsie-ID)
+        /* ------------------------------ 
+            On simplifier doesn't exist value element
+        ---------------------------- 
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_2457'" then
+        {
+            values.value as value ->    tgt.value = value;
+        };*/
+
+        /* ------------------------------ Angaben zur Gewebediagnostik ---------------------------- */
+        // Entnahmedatum
+        /* ------------------------------ 
+            On simplifier doesn't exist valueDateTime element
+        ---------------------------- 
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_1551'" then
+        {
+            values.value as dateTime ->     tgt.collection as tgtCollection,
+                                            tgtCollection.valueDateTime	= dateOp(dateTime, 'date');
+        };*/
+
+        // Materialentnahme erfolgte
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_1589'" then
+        {
+            values.value as valuecc ->      tgt.collection as tgtCollection,
+                                            tgtCollection.extension as tgtAufenthaltsart,
+                                            tgtAufenthaltsart.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart',
+                                            tgtAufenthaltsart.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/dummy', valuecc);
+                                            /* ------------------------------ 
+                                            From where 'http://uk-koeln.de/fhir/ValueSet/dummy' comes from?
+                                            ---------------------------- */
+        };
+
+        /* ------------------------------ Angaben zur Blutdiagnostik ((Only when A7 = Blutdiagnostik)) ---------------------------- */
+        // Entnahmedatum
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2316'" then
+        {
+            values.value as dateTime ->     tgt.collection as tgtCollection,
+                                            tgtCollection.collectedDateTime	= dateOp(dateTime, 'date');
+        };
+
+        // Materialentnahme erfolgte
+        /*data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2320'" then
+        {
+            values.value as valuecc ->      tgt.collection as tgtCollection,
+                                            tgtCollection.extension as tgtAufenthaltsart,
+                                            tgtAufenthaltsart.url = 'http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart',
+                                            tgtAufenthaltsart.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/dummy', valuecc);
+        };*/
+    };
+}
+
+group TransformObservation(source src: CTS_Transport, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie';
+
+    // Obligatory fields
+    src -> tgt.status = 'final';
+    src -> tgt.category = cc('http://hl7.org/fhir/observation-category', 'laboratory');
+    /* ------------------------------ Should I include subject? ---------------------------- */
+    src -> tgt.code = cc('http://loinc.org', '59847-4');
+
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_836'" then 
+        {
+            /* ------------------------------ Should I assign value tu tgt.url? ---------------------------- */
+            values.value as valuecc ->  tgt.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/dummy', valuecc);
+        };
+
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2319'" then
+        {
+            values.value as valueText ->    tgt.valueCodeableConcept as tgtValueCC,
+                                            tgtValueCC.text = valueText;
+        };
+    };
+}
+
+group TransformServiceRequest(source src: CTS_Transport, target tgt: ServiceRequest)
+{
+
+}

@@ -1,0 +1,111 @@
+{
+    "resourceType": "ValueSet",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation",
+    "title": "Valueset-histologie-klassifikation",
+    "status": "draft",
+    "contact": [
+      {
+        "telecom": [
+          {
+            "system": "email"
+          }
+        ]
+      }
+    ],
+    "compose": {
+      "include": [
+        {
+          "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+          "concept": [
+            {
+              "code": "8140/3",
+              "display": "Adenokarzinom"
+            },
+            {
+              "code": "8250/3",
+              "display": "lepidisches Adenokarzinom"
+            },
+            {
+              "code": "8551/3",
+              "display": "azinäres Adenokarzinom"
+            },
+            {
+              "code": "8260/3",
+              "display": "papilläres Adenokarzinom"
+            },
+            {
+              "code": "8265/3",
+              "display": "mikropapilläres Adenokarzinom"
+            },
+            {
+              "code": "8230/3",
+              "display": "solides Adenokarzinom"
+            },
+            {
+              "code": "8253/3",
+              "display": "invasives muzinöses Adenokarzinom"
+            },
+            {
+              "code": "8254/3",
+              "display": "gemischt invasives muzinöses und nicht-muzinöses Adenokarzinom"
+            },
+            {
+              "code": "8480/3",
+              "display": "kolloidales Adenokarzinom"
+            },
+            {
+              "code": "8333/3",
+              "display": "fetales Adenokarzinom"
+            },
+            {
+              "code": "8144/3",
+              "display": "enterisches Adenokarzinom"
+            },
+            {
+              "code": "8070/3",
+              "display": "Plattenepithelkarzinom"
+            },
+            {
+              "code": "8071/3",
+              "display": "keratinisierendes Plattenepithelkarzinom"
+            },
+            {
+              "code": "8072/3",
+              "display": "nicht-keratinisierendes Plattenepithelkarzinom"
+            },
+            {
+              "code": "8083/3",
+              "display": "basaloides Plattenepithelkarzinom"
+            },
+            {
+              "code": "(Überschrift)",
+              "display": "neuroendokrine Tumoren"
+            },
+            {
+              "code": "8041/3",
+              "display": "kleinzelliges Karzinom"
+            },
+            {
+              "code": "8045/3",
+              "display": "kombiniertes kleinzelliges Karzinom"
+            },
+            {
+              "code": "8013/3",
+              "display": "großzelliges neuroendokrines Karzinom"
+            },
+            {
+              "code": "8013/3",
+              "display": "kombiniertes großzelliges neuroendokrines Karzinom"
+            }
+          ]
+        }
+      ]
+    },
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Valueset-histologie-klassifikation</h2><tt>http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation</tt></div>"
+    },
+    "name": "Histologie_klassifikation",
+    "experimental": true,
+    "date": "2020-07-08"
+  }

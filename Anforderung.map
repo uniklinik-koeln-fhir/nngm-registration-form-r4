@@ -8,6 +8,7 @@ uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
 uses "http://hl7.org/fhir/StructureDefinition/ServiceRequest" as target
 uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
+uses "http://hl7.org/fhir/StructureDefinition/Practitioner" as target
 
 group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
 {
@@ -18,6 +19,7 @@ group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
     src -> bundle.entry as entry then CreateTransformObservation(src, entry);
     src -> bundle.entry as entry then CreateTransformServiceRequest(src, entry);
     src -> bundle.entry as entry then CreateTransformOrganization(src, entry);
+    src -> bundle.entry as entry then CreateTransformPractitioner(src, entry);
 }
 
 group CreateTransformSpecimen(source src: CTS_Transport, target tgt: BackboneElement)
@@ -75,6 +77,17 @@ group CreateTransformOrganization(source src: CTS_Transport, target tgt: Backbon
         or blockindex = 4 and groupindex = 0 and itemid = 'id_1562'" then
         {
             src -> tgt.resource = create('Organization') as organization then TransformOrganization(src, organization);
+        };
+    };
+}
+
+group CreateTransformPractitioner(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1560'" then
+        {
+            src -> tgt.resource = create('Practitioner') as practitioner then TransformPractitioner(src, practitioner);
         };
     };
 }
@@ -262,6 +275,7 @@ group TransformServiceRequest(source src: CTS_Transport, target tgt: ServiceRequ
     };
 }
 
+/* ------------------------------ Organization ---------------------------- */
 group TransformOrganization(source src: CTS_Transport, target tgt: Organization)
 {
     src -> tgt.id = uuid();
@@ -278,6 +292,25 @@ group TransformOrganization(source src: CTS_Transport, target tgt: Organization)
         {
             values.value as text -> tgt.address as tgtAddress,
                                     tgtAddress.text = text;
+        };
+    };
+}
+
+/* ------------------------------ Practitioner ---------------------------- */
+group TransformPractitioner(source src: CTS_Transport, target tgt: Practitioner)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM';
+    /* ------------------------------ name element is obligatory, but do not have the data ---------------------------- */
+    
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1560'" then
+        {
+            values.value as pathologe ->    tgt.identifier as tgtIdentifier,
+                                            tgtIdentifier.use = 'official',
+                                            tgtIdentifier.system = 'http://fhir.de/NamingSystem/kbv/lanr',
+                                            tgtIdentifier.value = pathologe;
         };
     };
 }

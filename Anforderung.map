@@ -50,15 +50,15 @@ group CreateTransformServiceRequest(source src: CTS_Transport, target tgt: Backb
 {
     src.operations as operations, operations.data as data then
     {
-        data.values as values where "indexgroup = 3 and groupindex = 0 and itemid = 'id_2473'
-        or indexgroup = 3 and groupindex = 0 and itemid = 'id_2474'
-        or indexgroup = 3 and groupindex = 0 and itemid = 'id_2313'
-        or indexgroup = 3 and groupindex = 0 and itemid = 'id_2314'
-        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2476'
-        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2477'
-        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2478'
-        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2479'
-        or indexgroup = 4 and groupindex = 0 and itemid = 'id_2480'" then
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2473'
+        or blockindex = 3 and groupindex = 0 and itemid = 'id_2474'
+        or blockindex = 3 and groupindex = 0 and itemid = 'id_2313'
+        or blockindex = 3 and groupindex = 0 and itemid = 'id_2314'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_2476'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_2477'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_2478'" then
+        //or blockindex = 4 and groupindex = 0 and itemid = 'id_2479'
+        //or blockindex = 4 and groupindex = 0 and itemid = 'id_2480'" then
         {
             src -> tgt.resource = create('ServiceRequest') as serviceRequest then TransformServiceRequest(src, serviceRequest);
         };
@@ -66,7 +66,6 @@ group CreateTransformServiceRequest(source src: CTS_Transport, target tgt: Backb
 }
 
 /* ------------------------------ Specimen ---------------------------- */
-
 group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
 {
     src -> tgt.id = uuid();
@@ -142,10 +141,12 @@ group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
     };
 }
 
+/* ------------------------------ Observation ---------------------------- */
 group TransformObservation(source src: CTS_Transport, target tgt: Observation)
 {
     src -> tgt.id = uuid();
     src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie';
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
 
     // Obligatory fields
     src -> tgt.status = 'final';
@@ -169,7 +170,80 @@ group TransformObservation(source src: CTS_Transport, target tgt: Observation)
     };
 }
 
+/* ------------------------------ ServiceRequest ---------------------------- */
 group TransformServiceRequest(source src: CTS_Transport, target tgt: ServiceRequest)
 {
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard';
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
 
+    // Obligatory fields
+    src -> tgt.status = 'active';
+    src -> tgt.intent = 'proposal';
+    /* ------------------------------ Should I include authoredOn? ---------------------------- */
+
+    src.operations as operations, operations.data as data then
+    {
+
+        /* ------------------------------ 
+        On simplifier doesn't exist code.valueCodeableConcept element
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2473'" then 
+        {
+            values.value as valuecc ->  tgt.code as tgtCode,
+                                        tgtCode.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/dummy', valuecc);
+        };
+        ---------------------------- */
+
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2474'" then
+        {
+            values.value as valuecc ->  tgt.extension as tgtExtension, 
+                                        tgtExtension.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/dummy', valuecc);
+        };
+
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2313'" then
+        {
+            values.value as valuecc ->  tgt.extension as tgtExtension, 
+                                        tgtExtension.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/dummy', valuecc);
+        };
+
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2314'" then
+        {
+            values.value as valueStr -> tgt.extension as tgtExtension,
+                                        tgtExtension.valueString = valueStr;
+        };
+
+        /* ------------------------------ 
+        On simplifier doesn't exist ja/entfallt element
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2476'" then 
+        {
+            values.value as srcTumorblockanforderung where "$this = 'yes'" then // Ja
+            {
+                srcTumorblockanforderung -> tgt.ja = cast('true','boolean');
+            };
+            values.value as srcTumorblockanforderung where "$this = 'no'" then
+            {
+                srcTumorblockanforderung -> tgt.entfallt = cast('false','boolean');
+            };
+        };
+        ---------------------------- */
+
+        /* ------------------------------ 
+        On simplifier doesn't exist occurrenceTiming.event element
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2477'" then
+        {
+            values.value as tumorblockanforderungErfolgt ->     tgt.occurrenceTiming as tgtTiming,
+                                                                tgtTiming.event = tumorblockanforderungErfolgt;
+        };
+        ------------------------------ */
+
+        /* ------------------------------ 
+        On simplifier doesn't exist occurrenceTiming.repeat.count element
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2478'" then
+        {
+            values.value as count ->    tgt.occurrenceTiming as tgtTiming,
+                                        tgtTiming.repeat as tgtRepeat,
+                                        tgtRepeat.count = count;
+        };
+        ------------------------------ */        
+    };
 }

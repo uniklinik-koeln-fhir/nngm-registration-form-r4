@@ -7,6 +7,7 @@ uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
 uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
 uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
 uses "http://hl7.org/fhir/StructureDefinition/ServiceRequest" as target
+uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
 
 group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
 {
@@ -16,6 +17,7 @@ group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
     src -> bundle.entry as entry then CreateTransformSpecimen(src, entry);
     src -> bundle.entry as entry then CreateTransformObservation(src, entry);
     src -> bundle.entry as entry then CreateTransformServiceRequest(src, entry);
+    src -> bundle.entry as entry then CreateTransformOrganization(src, entry);
 }
 
 group CreateTransformSpecimen(source src: CTS_Transport, target tgt: BackboneElement)
@@ -61,6 +63,18 @@ group CreateTransformServiceRequest(source src: CTS_Transport, target tgt: Backb
         //or blockindex = 4 and groupindex = 0 and itemid = 'id_2480'" then
         {
             src -> tgt.resource = create('ServiceRequest') as serviceRequest then TransformServiceRequest(src, serviceRequest);
+        };
+    };
+}
+
+group CreateTransformOrganization(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1563'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1562'" then
+        {
+            src -> tgt.resource = create('Organization') as organization then TransformOrganization(src, organization);
         };
     };
 }
@@ -245,5 +259,25 @@ group TransformServiceRequest(source src: CTS_Transport, target tgt: ServiceRequ
                                         tgtRepeat.count = count;
         };
         ------------------------------ */        
+    };
+}
+
+group TransformOrganization(source src: CTS_Transport, target tgt: Organization)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site';
+
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1563'" then
+        {
+            values.value as name -> tgt.name = name;
+        };
+
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1562'" then
+        {
+            values.value as text -> tgt.address as tgtAddress,
+                                    tgtAddress.text = text;
+        };
     };
 }

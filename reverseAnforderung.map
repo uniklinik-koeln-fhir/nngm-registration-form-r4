@@ -25,13 +25,64 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
                 {
                     specimen.type as type then
                     {
-                        type.coding as coding then
+                        type.coding as coding, coding.code as code then
                         {
-                            coding.code as code then 
+                            specimen -> data.blockindex = 0;
+                            specimen -> data.groupindex = 0;
+                            specimen -> data.itemid = 'id_1368';
+                            code -> data.values as values, values.value = code;
+                        };
+                    };
+                };
+            };
+
+            // Zu untersuchendes Material (Biopsie-ID)
+            /*specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.value as value then 
+                    {
+                        specimen -> data.blockindex = 0;
+                        specimen -> data.groupindex = 0;
+                        specimen -> data.itemid = 'id_2457';
+                        value -> data.values as values, values.value = value;
+                    };
+                };
+            };*/
+
+            // Entnahmedatum
+            /*specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.collection as collection then
+                    {
+                        collection.valueDateTime as valueDateTime then
+                        {
+                            specimen -> data.blockindex = 1;
+                            specimen -> data.groupindex = 0;
+                            specimen -> data.itemid = 'id_1551';
+                            valueDateTime -> data.values as values, values.value = valueDateTime;
+                        };
+                    };
+                };
+            };*/
+
+            // Materialentnahme erfolgte
+            specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.collection as collection then
+                    {
+                        collection.extension as aufenthaltsart then
+                        {
+                            aufenthaltsart.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
                             {
-                                specimen -> data.blockindex = 0;
+                                specimen -> data.blockindex = 1;
                                 specimen -> data.groupindex = 0;
-                                specimen -> data.itemid = 'id_1368';
+                                specimen -> data.itemid  = 'id_1589';
                                 code -> data.values as values, values.value = code;
                             };
                         };

@@ -107,6 +107,27 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
                     };
                 };
             };
+
+            // Blutentnahme erfolgte
+            specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.collection as collection then
+                    {
+                        collection.extension as aufenthaltsart then
+                        {
+                            aufenthaltsart.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                            {
+                                specimen -> data.blockindex = 2;
+                                specimen -> data.groupindex = 0;
+                                specimen -> data.itemid = 'id_2320';
+                                code -> data.values as values, values.value = code;
+                            };
+                        };
+                    };
+                };
+            };
         };
     };
 }

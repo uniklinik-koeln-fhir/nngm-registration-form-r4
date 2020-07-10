@@ -89,6 +89,24 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
                     };
                 };
             };
+
+            // Entnahmedatum
+            specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.collection as collection then
+                    {
+                        collection.collectedDateTime as collectedDateTime then
+                        {
+                            specimen -> data.blockindex = 2;
+                            specimen -> data.groupindex = 0;
+                            specimen -> data.itemid = 'id_2316';
+                            collectedDateTime -> data.values as values, values.value = collectedDateTime;
+                        };
+                    };
+                };
+            };
         };
     };
 }

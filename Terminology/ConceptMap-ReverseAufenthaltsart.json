@@ -1,0 +1,48 @@
+{
+  "resourceType": "ConceptMap",
+  "name": "Reverse Aufenthaltsart",
+  "status": "active",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "stationär",
+              "display": "stationär",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "IMP",
+          "display": "IMP"
+        },
+        {
+          "target": [
+            {
+              "code": "ambulant",
+              "display": "ambulant",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "AMB",
+          "display": "AMB"
+        },
+        {
+          "target": [
+            {
+              "code": "N/A",
+              "display": "N/A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "UNK",
+          "display": "UNK"
+        }
+      ]
+    }
+  ],
+  "url": "http://uk-koeln.de/fhir/ConceptMap/nngm/aufenthaltsartR",
+  "sourceUri": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
+  "targetUri": "CTS aufenthaltsart",
+  "title": "nNGM: ConceptMap Aufenthaltsart"
+}

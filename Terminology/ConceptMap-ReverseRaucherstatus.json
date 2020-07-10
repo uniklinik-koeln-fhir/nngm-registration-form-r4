@@ -1,0 +1,75 @@
+{
+  "resourceType": "ConceptMap",
+  "name": "Raucherstatus Reverse",
+  "status": "active",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email",
+          "value": "fhir@healex.systems"
+        }
+      ]
+    }
+  ],
+  "description": "Maps the smoker status concepts of the internal nNGM forms to the published Raucherstatus ValueSet",
+  "group": [
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "Raucher",
+              "display": "Raucher",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "r",
+          "display": "r"
+        },
+        {
+          "target": [
+            {
+              "code": "Ex-Raucher",
+              "display": "Ex-Raucher",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "er",
+          "display": "er"
+        },
+        {
+          "target": [
+            {
+              "code": "Nieraucher",
+              "display": "Nieraucher",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "nr",
+          "display": "nr"
+        }
+      ],
+      "target": "http://uk-koeln.de/fhir/CodeSystem/nngm/raucherstatus"
+    },
+    {
+      "element": [
+        {
+          "target": [
+            {
+              "code": "N/A",
+              "equivalence": "equivalent"
+            }
+          ],
+          "code": "unknown",
+          "display": "unknown"
+        }
+      ],
+      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+    }
+  ],
+  "url": "http://uk-koeln.de/fhir/ConceptMap/nngm/raucherstatusR",
+  "title": " CTS RaucherStatus to nNGM Mapping raucherstatus",
+  "sourceUri": "http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus",
+  "targetUri": "http://uk-koeln.de/fhir/ValueSet/CTS/nNGM/raucherstatus"
+}

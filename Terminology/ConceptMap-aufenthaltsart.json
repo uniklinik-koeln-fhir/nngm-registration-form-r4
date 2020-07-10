@@ -19,26 +19,26 @@
           "target": [
             {
               "code": "IMP",
-              "display": "inpatient encounter",
+              "display": "IMP",
               "equivalence": "equivalent"
             }
           ],
           "code": "stationär",
-          "display": "Stationär"
+          "display": "stationär"
         },
         {
           "target": [
             {
               "code": "AMB",
-              "display": "ambulatory",
+              "display": "AMB",
               "equivalence": "equivalent"
             }
           ],
           "code": "ambulant",
-          "display": "Ambulant"
-        }
+          "display": "ambulant"
+        },
       ],
-      "target": "http://hl7.org/fhir/v3/ActCode"
+      "target": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart"
     },
     {
       "element": [
@@ -46,8 +46,7 @@
           "target": [
             {
               "code": "UNK",
-              "display": "unknown",
-              "equivalence": "equivalent"
+              "equivalence": "unknown"
             }
           ],
           "code": "N/A",
@@ -57,11 +56,9 @@
       "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
     }
   ],
-  "url": "http://uk-koeln.de/fhir/ConceptMap/nNGM/Aufenthaltsart",
-  "description": "Maps the 'Aufenthaltsart' concepts of the internal nNGM forms to the published 'Aufenthaltsart' ValueSet",
-  "title": "CTS Aufenthaltsart to nNGM Aufenthaltsart",
-  "version": "0.1",
-  "publisher": "Universitätsklinikum Köln",
-  "sourceUri": "http://uk-koeln.de/fhir/ValueSet/CTS/nNGM/Aufenthaltsart",
-  "targetUri": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart"
+  "url": "http://uk-koeln.de/fhir/ConceptMap/nngm/aufenthaltsart",
+  "title": " CTS RaucherStatus to nNGM Mapping raucherstatus",
+  "targetUri": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
+  "sourceUri": "CTS aufenthaltsart",
+  "title": "nNGM: ConceptMap Aufenthaltsart"
 }

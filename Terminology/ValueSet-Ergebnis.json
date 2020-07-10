@@ -26,6 +26,10 @@
               "display": "nicht auswertbar"
             },
             {
+              "code": "fraglich",
+              "display": "fraglich"
+            },
+            {
               "code": "positiv (high-level amplification)",
               "display": "positiv (high-level amplification)"
             },

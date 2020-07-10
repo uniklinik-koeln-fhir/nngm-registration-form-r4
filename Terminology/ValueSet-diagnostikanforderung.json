@@ -1,8 +1,8 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tests",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/diagnostikanforderung",
   "version": "0.1",
-  "name": "tests",
+  "name": "diagnostikanforderung",
   "status": "draft",
   "experimental": true,
   "date": "2019-04-07",
@@ -28,27 +28,17 @@
   "expansion": {
     "identifier": "uk-koeln-work-tests",
     "timestamp": "2019-04-07",
-    "total": 4,
+    "total": 2,
     "contains": [
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "Gewebediagnostik",
-        "display": "Gewebediagnostik"
+        "code": "Komplette Untersuchung",
+        "display": "Komplette Untersuchung"
       },
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "Blutdiagnostik (Liquid Biopsy)",
-        "display": "Blutdiagnostik (Liquid Biopsy)"
-      },
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "komplett",
-        "display": "Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung, sofern ausreichend Tumormaterial vorhanden ist, umfasst alle therapeutisch relevanten Marker sowie Marker aus aktuellen klinischen Studien."
-      },
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "resistenztestung",
-        "display": "Resistenztestungk"
+        "code": "Einzeluntersuchung",
+        "display": "Einzeluntersuchung"
       }
     ]
   }

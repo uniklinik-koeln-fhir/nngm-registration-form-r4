@@ -929,6 +929,7 @@
     <element id="ServiceRequest.extension:storno">
       <path value="ServiceRequest.extension" />
       <sliceName value="storno" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/storno" />
@@ -938,6 +939,7 @@
     <element id="ServiceRequest.extension:versand">
       <path value="ServiceRequest.extension" />
       <sliceName value="versand" />
+       <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandmaterial" />

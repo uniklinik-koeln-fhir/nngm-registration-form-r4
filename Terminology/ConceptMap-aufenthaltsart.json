@@ -1,64 +1,48 @@
 {
-  "resourceType": "ConceptMap",
-  "name": "Aufenthaltsart",
-  "status": "active",
-  "contact": [
-    {
-      "telecom": [
+    "resourceType": "ConceptMap",
+    "name": "Aufenthaltsart",
+    "status": "active",
+    "group":  [
         {
-          "system": "email",
-          "value": "fhir@healex.systems"
+            "element":  [
+                {
+                    "target":  [
+                        {
+                            "code": "IMP",
+                            "display": "IMP",
+                            "equivalence": "equivalent"
+                        }
+                    ],
+                    "code": "stationär",
+                    "display": "stationär"
+                },
+                {
+                    "target":  [
+                        {
+                            "code": "AMB",
+                            "display": "AMB",
+                            "equivalence": "equivalent"
+                        }
+                    ],
+                    "code": "ambulant",
+                    "display": "ambulant"
+                },
+                {
+                    "target":  [
+                        {
+                            "code": "UNK",
+                            "display": "unknown",
+                            "equivalence": "equivalent"
+                        }
+                    ],
+                    "code": "N/A",
+                    "display": "N/A"
+                },
+            ]
         }
-      ]
-    }
-  ],
-  "group": [
-    {
-      "element": [
-        {
-          "target": [
-            {
-              "code": "IMP",
-              "display": "IMP",
-              "equivalence": "equivalent"
-            }
-          ],
-          "code": "stationär",
-          "display": "stationär"
-        },
-        {
-          "target": [
-            {
-              "code": "AMB",
-              "display": "AMB",
-              "equivalence": "equivalent"
-            }
-          ],
-          "code": "ambulant",
-          "display": "ambulant"
-        },
-      ],
-      "target": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart"
-    },
-    {
-      "element": [
-        {
-          "target": [
-            {
-              "code": "UNK",
-              "equivalence": "unknown"
-            }
-          ],
-          "code": "N/A",
-          "display": "N/A"
-        }
-      ],
-      "target": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
-    }
-  ],
-  "url": "http://uk-koeln.de/fhir/ConceptMap/nngm/aufenthaltsart",
-  "title": " CTS RaucherStatus to nNGM Mapping raucherstatus",
-  "targetUri": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
-  "sourceUri": "CTS aufenthaltsart",
-  "title": "nNGM: ConceptMap Aufenthaltsart"
+    ],
+    "url": "http://uk-koeln.de/fhir/ConceptMap/nngm/aufenthaltsart",
+    "targetUri": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
+    "sourceUri": "CTS aufenthaltsart",
+    "title": "nNGM: ConceptMap Aufenthaltsart"
 }

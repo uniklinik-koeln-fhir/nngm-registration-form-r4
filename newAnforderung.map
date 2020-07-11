@@ -16,7 +16,7 @@ group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
     src -> bundle.type = 'collection';
 
     src -> bundle.entry as entry then CreateTransformSpecimen(src, entry);
-    //src -> bundle.entry as entry then CreateTransformObservation(src, entry);
+    src -> bundle.entry as entry then CreateTransformObservation(src, entry);
     //src -> bundle.entry as entry then CreateTransformServiceRequest(src, entry);
     //src -> bundle.entry as entry then CreateTransformOrganization(src, entry);
     //src -> bundle.entry as entry then CreateTransformPractitioner(src, entry);
@@ -31,6 +31,18 @@ group CreateTransformSpecimen(source src: CTS_Transport, target tgt: BackboneEle
         or blockindex = 2 and groupindex = 0 and itemid = 'id_2316'" then
         {
             src -> tgt.resource = create('Specimen') as specimen then TransformSpecimen(src, specimen);
+        };
+    };
+}
+
+group CreateTransformObservation(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_836'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_2319'" then
+        {
+            src -> tgt.resource = create('Observation') as observation then TransformObservation(src, observation);
         };
     };
 }
@@ -68,6 +80,32 @@ group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
         {
             values.value as valueDT ->  tgt.collection as collection,
                                         collection.collectedDateTime = dateOp(valueDT, 'date');
+        };
+    };
+}
+
+/* ------------------------------ Observation ---------------------------- */
+group TransformObservation(source src: CTS_Transport, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie';
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
+
+    // Obligatory fields
+    src -> tgt.status = 'final';
+    src -> tgt.code = cc('http://loinc.org', '59847-4');
+
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_836'" then 
+        {
+            values.value as valuecc ->  tgt.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/dummy', valuecc);
+        };
+
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2319'" then
+        {
+            values.value as text -> tgt.valueCodeableConcept as valueCodeableConcept,
+                                    valueCodeableConcept.text = text;
         };
     };
 }

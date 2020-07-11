@@ -16,6 +16,7 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
 
     src.entry as entry then
     {
+        /* ------------------------------ Specimen ---------------------------- */
         entry.resource as specimen where "resource is Specimen" then
         {
             // Diagnostik Typ
@@ -124,6 +125,98 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
                                 specimen -> data.itemid = 'id_2320';
                                 code -> data.values as values, values.value = code;
                             };
+                        };
+                    };
+                };
+            };
+        };
+
+        /* ------------------------------ Observation ---------------------------- */
+        entry.resource as observation where "resource is Observation and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie'" then 
+        {
+            //Histologie des vorbefunds
+            /*observation -> tgt.operations as operations collate then
+            {
+                observation -> operations.data as data then
+                {
+                    observation.valueCodeableConcept as vcc then
+                    {
+                        observation -> data.blockindex = 1;
+                        observation -> data.groupindex = 0;
+                        observation -> data.itemid = 'id_836';
+                        vcc -> data.values as values, values.value = vcc;
+                    };
+                };
+            };*/
+
+            // Histologie des vorbefunds (freitext?)
+            observation -> tgt.operations as operations collate then
+            {
+                observation -> operations.data as data then
+                {
+                    observation.valueCodeableConcept as vcc then
+                    {
+                        vcc.text as text then {
+                            observation -> data.blockindex = 2;
+                            observation -> data.groupindex = 0;
+                            observation -> data.itemid = 'id_2319';
+                            text -> data.values as values, values.value = text;
+                        };
+                    };
+                };
+            };
+        };
+
+        /* ------------------------------ Organization ---------------------------- */
+        entry.resource as organization where "resource is Organization and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site'" then 
+        {
+            organization -> tgt.operations as operations collate then
+            {
+                organization -> operations.data as data then
+                {
+                    organization.name as name then 
+                    {
+                        organization -> data.blockindex = 4;
+                        organization -> data.groupindex = 0;
+                        organization -> data.itemid = 'id_1563';
+                        name -> data.values as values, values.value = name;
+                    };
+                };
+            };
+
+            organization -> tgt.operations as operations collate then
+            {
+                organization -> operations.data as data then
+                {
+                    organization.address as address then 
+                    {
+                        address.text as text then 
+                        {
+                            organization -> data.blockindex = 4;
+                            organization -> data.groupindex = 0;
+                            organization -> data.itemid = 'id_1562';
+                            text -> data.values as values, values.value = text;
+                        };
+                    };
+                };
+            };
+        };
+
+        /* ------------------------------ Practitioner ---------------------------- */
+        entry.resource as practitioner where "resource is Practitioner and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM'" then 
+        {
+            practitioner -> tgt.operations as operations collate then
+            {
+                practitioner -> operations.data as data then
+                {
+                    practitioner.identifier as identifier then 
+                    {
+                        identifier.value as value then 
+                        {
+                            practitioner -> data.blockindex = 4;
+                            practitioner -> data.groupindex = 0;
+                            practitioner -> data.itemid = 'id_1560';
+                            value -> data.values as values, values.value = value;
                         };
                     };
                 };

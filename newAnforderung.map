@@ -1,0 +1,73 @@
+/// version = 0.1
+/// title = "AnforderungMappingTest"
+
+map "http://uk-koeln.de/fhir/StructureMap/AnforderungMappingTest" = AnforderungMappingTest
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+uses "http://hl7.org/fhir/StructureDefinition/ServiceRequest" as target
+uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
+uses "http://hl7.org/fhir/StructureDefinition/Practitioner" as target
+
+group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
+{
+    src -> bundle.id = uuid();
+    src -> bundle.type = 'collection';
+
+    src -> bundle.entry as entry then CreateTransformSpecimen(src, entry);
+    //src -> bundle.entry as entry then CreateTransformObservation(src, entry);
+    //src -> bundle.entry as entry then CreateTransformServiceRequest(src, entry);
+    //src -> bundle.entry as entry then CreateTransformOrganization(src, entry);
+    //src -> bundle.entry as entry then CreateTransformPractitioner(src, entry);
+}
+
+group CreateTransformSpecimen(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_2457'
+        or blockindex = 1 and groupindex = 0 and itemid = 'id_1551'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_2316'" then
+        {
+            src -> tgt.resource = create('Specimen') as specimen then TransformSpecimen(src, specimen);
+        };
+    };
+}
+
+/* ------------------------------ Specimen ---------------------------- */
+group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM';
+
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
+
+    src.operations as operations, operations.data as data then
+    {
+        /* ------------------------------ Diagnostik ---------------------------- */
+        // Zu untersuchendes Material (Biopsie-ID)
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1368'" then
+        {
+            values.value as value ->    tgt.identifier as identifier,
+                                        identifier.value = value;
+        };
+
+        /* ------------------------------ Angaben zur Gewebediagnostik ---------------------------- 
+        // Entnahmedatum
+        // Could not be tested due to no element on Simplifier
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_1551'" then
+        {
+            values.value as valueDT ->  tgt.collection as collection,
+                                        collection.valueDateTime = dateOp(valueDT, 'date');
+        };*/
+
+        /* ------------------------------ Angaben zur Blutdiagnostik ((Only when A7 = Blutdiagnostik)) ---------------------------- */
+        // Entnahmedatum
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2316'" then
+        {
+            values.value as valueDT ->  tgt.collection as collection,
+                                        collection.collectedDateTime = dateOp(valueDT, 'date');
+        };
+    };
+}

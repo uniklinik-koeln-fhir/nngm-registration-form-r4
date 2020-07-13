@@ -1,0 +1,368 @@
+/// version = 0.1
+/// title = "nNGM: new Anforderung - FHIR to CTS"
+
+map "http://uk-koeln.de/fhir/StructureMap/newAnforderungCTS" = newAnforderungCTS
+
+uses "http://hl7.org/fhir/StructureDefinition/Bundle" as source
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as target
+
+group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
+{
+    src -> tgt.version = '1.1';
+    src -> tgt.sourcesystem = 'https:\/\/nngm-qat.staging.healex.systems\/';
+    
+    src -> tgt.operations as operations collate, operations.crfid = '1-AF1';
+    src -> tgt.operations as operations collate, operations.type = 'save';
+
+    src.entry as entry then
+    {
+        /* ------------------------------ Specimen ---------------------------- */
+        entry.resource as specimen where "resource is Specimen" then
+        {
+            /* ------------------------------ Diagnostik ---------------------------- */
+            // Zu untersuchendes Material (Biopsie-ID)
+            specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.identifier as identifier then
+                    {
+                        identifier.value as value then
+                        {
+                            specimen -> data.blockindex = 0;
+                            specimen -> data.groupindex = 0;
+                            specimen -> data.itemid = 'id_2457';
+                            value -> data.values as values, values.value = value;
+                        };
+                    };
+                };
+            };
+
+            /* ------------------------------ Angaben zur Gewebediagnostik	 ---------------------------- */
+            // Entnahmedatum
+            specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.collection as collection then
+                    {
+                        collection.valueDateTime as valueDT then
+                        {
+                            specimen -> data.blockindex = 1;
+                            specimen -> data.groupindex = 0;
+                            specimen -> data.itemid = 'id_1551';
+                            valueDT -> data.values as values, values.value = valueDT;
+                        };
+                    };
+                };
+            };
+
+            /* ------------------------------ Angaben zur Blutdiagnostik ((Only when A7 = Blutdiagnostik))	 ---------------------------- */
+            //Entnahmedatum
+            specimen -> tgt.operations as operations collate then
+            {
+                specimen -> operations.data as data then
+                {
+                    specimen.collection as collection then
+                    {
+                        collection.collectedDateTime as collectedDT then
+                        {
+                            specimen -> data.blockindex = 2 ;
+                            specimen -> data.groupindex = 0 ;
+                            specimen -> data.itemid = 'id_2316';
+                            collectedDT -> data.values as values, values.value = collectedDT;
+                        };
+                    };
+                };
+            };
+        };
+
+        /* ------------------------------ Observation ---------------------------- */
+        entry.resource as observation where "resource is Observation and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie'" then 
+        {
+            /* ------------------------------ Angaben zur Gewebediagnostik ---------------------------- */
+            // Histologie des vorbefunds
+            observation -> tgt.operations as operations collate then
+            {
+                observation -> operations.data as data then
+                {
+                    observation.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                    {
+                        observation -> data.blockindex = 1;
+                        observation -> data.groupindex = 0;
+                        observation -> data.itemid = 'id_836';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+
+            /* ------------------------------ Angaben zur Blutdiagnostik ((Only when A7 = Blutdiagnostik)) ---------------------------- */
+            // Histologie des vorbefunds (freitext?)
+            observation -> tgt.operations as operations collate then
+            {
+                observation -> operations.data as data then
+                {
+                    observation.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                    {
+                        observation -> data.blockindex = 2;
+                        observation -> data.groupindex = 0;
+                        observation -> data.itemid = 'id_2319';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+        };
+
+        /* ------------------------------ Organization ---------------------------- */
+        entry.resource as organization where "resource is Organization and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site'" then
+        {
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik) ---------------------------- */
+            // Pathologie (Institut, Praxis, etc)
+            organization -> tgt.operations as operations collate then
+            {
+                organization -> operations.data as data then
+                {
+                    organization.name as name then
+                    {
+                        organization -> data.blockindex = 4;
+                        organization -> data.groupindex = 0;
+                        organization -> data.itemid = 'id_1563';
+                        name -> data.values as values, values.value = name;
+                    };
+                };
+            };
+
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik) ---------------------------- */
+            // Anschrift der Pathologie
+            organization -> tgt.operations as operations collate then
+            {
+                organization -> operations.data as data then
+                {
+                    organization.address as address, address.text as text then
+                    {
+                        organization -> data.blockindex = 4;
+                        organization -> data.groupindex = 0;
+                        organization -> data.itemid = 'id_1562';
+                        text -> data.values as values, values.value = text;
+                    };
+                };
+            };
+        };
+
+        /* ------------------------------ Practitioner ---------------------------- */
+        entry.resource as practitioner where "resource is Practitioner and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM'" then
+        {
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik) ---------------------------- */
+            // Pathologe
+            practitioner -> tgt.operations as operations collate then
+            {
+                practitioner -> operations.data as data then
+                {
+                    practitioner.identifier as identifier, identifier.value as value then
+                    {
+                        practitioner -> data.blockindex = 4;
+                        practitioner -> data.groupindex = 0;
+                        practitioner -> data.itemid = 'id_1560';
+                        value -> data.values as values, values.value = value;
+                    };
+                };
+            };
+        };
+
+        /* ------------------------------ ServiceRequest ---------------------------- */
+        entry.resource as serviceRequest where "resource is ServiceRequest and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung'" then
+        {
+            /* ------------------------------ Diagnostik ---------------------------- */
+            // Diagnostik Typ
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.category as category, category.coding as coding, coding.code as code then
+                    {
+                        serviceRequest -> data.blockindex = 0;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_1368';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+
+            /* ------------------------------ Angaben zur Gewebediagnostik ---------------------------- */
+            // Materialentnahme erfolgte
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                    {
+                        serviceRequest -> data.blockindex = 1;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_1589';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+
+            /* ------------------------------ Angaben zur Blutdiagnostik ((Only when A7 = Blutdiagnostik)) ---------------------------- */
+            // Blutentnahme erfolgte
+            serviceRequest -> tgt.operations as operations collate then
+            {   
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                    {
+                        serviceRequest -> data.blockindex = 2;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2320';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+
+            /* ------------------------------ Diagnostikanforderungen (Only when A7 = Blutdiagnostik)	 ---------------------------- */
+            // Molekularpathologie	ServiceRequest
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                    {
+                        serviceRequest -> data.blockindex = 3;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2474';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+
+            /* ------------------------------ Diagnostikanforderungen (Only when A7 = Blutdiagnostik)	 ---------------------------- */
+            // Liquid Biopsy	ServiceRequest
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                    {
+                        serviceRequest -> data.blockindex = 3;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2313';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+
+            /* ------------------------------ Diagnostikanforderungen (Only when A7 = Blutdiagnostik)	 ---------------------------- */
+            // Grund fur fehlende Tumorbiopsie	ServiceRequest
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueString as valueString then
+                    {
+                        serviceRequest -> data.blockindex = 3;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2314';
+                        valueString -> data.values as values, values.value = valueString;
+                    };
+                };
+            };
+
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik)	 ---------------------------- */
+            // Tumorblockanforderung erfolgt
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.occurrenceDateTime as occurrenceDateTime then
+                    {
+                        serviceRequest -> data.blockindex = 4;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2477';
+                        occurrenceDateTime -> data.values as values, values.value = occurrenceDateTime;
+                    };
+                };
+            };
+
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik)	 ---------------------------- */
+            // Wiederholung(en) der Tumorblockanforderung
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.occurrenceTiming as occurrenceTiming, occurrenceTiming.repeat as repeat, repeat.count as count then
+                    {
+                        serviceRequest -> data.blockindex = 4;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2478';
+                        count -> data.values as values, values.value = count;
+                    };
+                };
+            };
+
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik)	 ---------------------------- */
+            // Storno der Tumorblockanforderung
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueDateTime as vdt then
+                    {
+                        serviceRequest -> data.blockindex = 4;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2479';
+                        vdt -> data.values as values, values.value = vdt;
+                    };
+                };
+            };
+
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik)	 ---------------------------- */
+            // Versand von Tumormaterial durch externen Pathologen
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueDateTime as vdt then
+                    {
+                        serviceRequest -> data.blockindex = 4;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2480';
+                        vdt -> data.values as values, values.value = vdt;
+                    };
+                };
+            };
+
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik)	 ---------------------------- */
+            // Gewünschte Diagnostik
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.category as category, category.coding as coding, coding.code as code then
+                    {
+                        serviceRequest -> data.blockindex = 3;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2473';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+
+            /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik)	 ---------------------------- */
+            // Gewünschte Diagnostik
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension, extension.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                    {
+                        serviceRequest -> data.blockindex = 4;
+                        serviceRequest -> data.groupindex = 0;
+                        serviceRequest -> data.itemid = 'id_2490';
+                        code -> data.values as values, values.value = code;
+                    };
+                };
+            };
+        };
+    };
+}

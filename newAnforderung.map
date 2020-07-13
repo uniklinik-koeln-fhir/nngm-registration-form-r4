@@ -49,8 +49,8 @@ group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
         // Zu untersuchendes Material (Biopsie-ID)
         data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_2457'" then
         {
-            values.value as identifier ->   tgt.identifier as identifier,
-                                            identifier.value = identifier;
+            values.value as identifier ->   tgt.identifier as tgtIdentifier,
+                                            tgtIdentifier.value = identifier;
         };
 
         /* ------------------------------ Angaben zur Gewebediagnostik	 ---------------------------- */
@@ -313,7 +313,6 @@ group TransformServiceRequest(source src: CTS_Transport, target tgt: ServiceRequ
 
         /* ------------------------------ Status der Biopsie ((Only when A7 = Gewebediagnostik)	 ---------------------------- */
         // Versand von Tumormaterial durch externen Pathologen
-        //extension(versandmaterial).valueDateTime
         data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2480'" then
         {
             values.value as dateTime -> tgt.extension as versandmaterial,

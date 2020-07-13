@@ -222,5 +222,111 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
                 };
             };
         };
+
+        /* ------------------------------ ServiceRequest ---------------------------- */
+        entry.resource as serviceRequest where "resource is ServiceRequest and resource.meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard'" then
+        {
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.code as code then
+                    {
+                        code.valueCodeableConcept as vcc then
+                        {
+                            serviceRequest -> data.blockindex = 3;
+                            serviceRequest -> data.groupindex = 0;
+                            serviceRequest -> data.itemid = 'id_2473';
+                            vcc -> data.values as values, values.value = vcc;
+                        };
+                    };
+                };
+            };
+
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension then
+                    {
+                        extension.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                        {
+                            serviceRequest -> data.blockindex = 3;
+                            serviceRequest -> data.groupindex = 0;
+                            serviceRequest -> data.itemid = 'id_2474';
+                            code -> data.values as values, values.value = code;
+                        };
+                    };
+                };
+            };
+
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension then
+                    {
+                        extension.valueCodeableConcept as vcc, vcc.coding as coding, coding.code as code then
+                        {
+                            serviceRequest -> data.blockindex = 3;
+                            serviceRequest -> data.groupindex = 0;
+                            serviceRequest -> data.itemid = 'id_2313';
+                            code -> data.values as values, values.value = code;
+                        };
+                    };
+                };
+            };
+
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.extension as extension then
+                    {
+                        extension.valueString as valueString then
+                        {
+                            serviceRequest -> data.blockindex = 3;
+                            serviceRequest -> data.groupindex = 0;
+                            serviceRequest -> data.itemid = 'id_2314';
+                            valueString -> data.values as values, values.value = valueString;
+                        };
+                    };
+                };
+            };
+
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.occurrenceTiming as occurrenceTiming then
+                    {
+                        occurrenceTiming.event as event then
+                        {
+                            serviceRequest -> data.blockindex = 4;
+                            serviceRequest -> data.groupindex = 0;
+                            serviceRequest -> data.itemid = 'id_2477';
+                            event -> data.values as values, values.value = event;
+                        };
+                    };
+                };
+            };
+
+            serviceRequest -> tgt.operations as operations collate then
+            {
+                serviceRequest -> operations.data as data then
+                {
+                    serviceRequest.occurrenceTiming as occurrenceTiming then
+                    {
+                        occurrenceTiming.repeat as repeat, repeat.count as count then
+                        {
+                            serviceRequest -> data.blockindex = 4;
+                            serviceRequest -> data.groupindex = 0;
+                            serviceRequest -> data.itemid = 'id_2478';
+                            count -> data.values as values, values.value = count;
+                        };
+                    };
+                };
+            };
+        }; 
     };
 }

@@ -1,0 +1,261 @@
+/// version = 0.1
+/// title = "LiquidBiopsyMapping"
+
+map "http://uk-koeln.de/fhir/StructureMap/LiquidBiopsyMapping" = LiquidBiopsyMapping
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Specimen" as target
+uses "http://hl7.org/fhir/StructureDefinition/Organization" as target
+uses "http://hl7.org/fhir/StructureDefinition/Observation" as target
+uses "http://hl7.org/fhir/StructureDefinition/ServiceRequest" as target
+
+group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
+{
+    src -> bundle.id = uuid();
+    src -> bundle.type = 'collection';
+
+    src -> bundle.entry as entry then CreateTransformSpecimen(src, entry);
+    src -> bundle.entry as entry then CreateTransformOrganization(src, entry);
+    src -> bundle.entry as entry then CreateTransformObservation(src, entry);
+    src -> bundle.entry as entry then CreateTransformServiceRequest(src, entry);
+}
+
+/* ------------------------------ Specimen ---------------------------- */
+group CreateTransformSpecimen(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'assessment_id'" then
+        {
+            src -> tgt.resource = create('Specimen') as specimen then TransformSpecimen(src, specimen);
+        };          
+    };
+}
+
+group TransformSpecimen(source src: CTS_Transport, target tgt: Specimen)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM';
+
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
+    // src -> tgt.type as type, type.coding as coding, coding.code = cc('http://snomed.info/sct', '');
+    src -> tgt.type as type, type.coding as coding, coding.version = '900000000000207008';
+
+    src.operations as operations, operations.data as data then
+    {
+        
+        /* ------------------------------ Referenzen ---------------------------- */
+        // Specimen
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'assessment_id'" then
+        {
+            values.value as value ->    tgt.identifier as identifier,
+                                        identifier.value = value;
+        };
+    };
+}
+
+/* ------------------------------ Organization ---------------------------- */
+group CreateTransformOrganization(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2435'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_2614'" then
+        {
+            src -> tgt.resource = create('Organization') as organization then TransformOrganization(src, organization);
+        };
+    };
+}
+
+group TransformOrganization(source src: CTS_Transport, target tgt: Organization)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site';
+
+    src.operations as operations, operations.data as data then
+    {
+        /* ------------------------------ Netzwerkzentrum ---------------------------- */
+        // Standort
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2435'" then
+        {   
+            
+            values.value as name -> tgt.name = name;
+        };
+
+        /* ------------------------------ Netzwerkzentrum ---------------------------- */
+        // SOP-Versionsnummer des Standorts
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_2614'" then
+        {   
+            values.value as text -> tgt.type as type,
+                                    type.text = text;
+        };
+    };
+}
+
+/* ------------------------------ Observation ---------------------------- */
+group CreateTransformObservation(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2601'
+        or blockindex = 3 and groupindex = 0 and itemid = 'id_2602'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_2528'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1929'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1928'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1931'
+        or blockindex = 4 and groupindex = 0 and itemid = 'lb_referencetranscript_5_end_gene'
+        or blockindex = 4 and groupindex = 0 and itemid = 'lb_3_end_gene'
+        or blockindex = 4 and groupindex = 0 and itemid = 'lb_referencetranscript_3_end_gen'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1930'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1932'" then
+        {
+            src -> tgt.resource = create('Observation') as observation then TransformObservation(src, observation);
+        };
+    };
+}
+
+group TransformObservation(source src: CTS_Transport, target tgt: Observation)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Observation/ngs-fusion-expression';
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
+
+    /* ------------------------------ Do not have the information to assign to required fields ---------------------------- */
+
+    src.operations as operations, operations.data as data then
+    {
+        /* ------------------------------ Methodik ---------------------------- */
+        // Assay
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2601'" then
+        {
+            values.value as vcc -> tgt.component = create('BackboneElement') as componentAssay then
+            {
+                componentAssay -> componentAssay.valueCodeableConcept =  cc('http://uk-koeln.de/fhir/ValueSet/ngs-assays', vcc);
+            };
+        };
+
+        /* ------------------------------ Methodik ---------------------------- */
+        // Hersteller
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2602'" then
+        {
+            values.value as vcc -> tgt.component = create('BackboneElement') as componentHersteller then
+            {
+                componentHersteller -> componentHersteller.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/hersteller-molpatho', vcc);
+            };
+        };   
+
+        /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+        // Date of Assessment
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_2528'" then
+        {
+            values.value as vdt -> tgt.valueDateTime = dateOp(vdt, 'date');
+        };
+
+        /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+        // Phaenotyp
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1929'" then
+        {
+            values.value as vcc -> tgt.component = create('BackboneElement') as componentPhaenotyp then
+            {
+                componentPhaenotyp -> componentPhaenotyp.valueCodeableConcept = cc('http://uk-koeln.de/fhir/ValueSet/phenotypes', vcc);
+            };
+        };
+
+        /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+        // Gen
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1928'" then
+        {
+            values.value as vcc -> tgt.component = create('BackboneElement') as componentGen then
+            {
+                componentGen -> componentGen.valueCodeableConcept = cc('http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc', vcc);
+            };
+        };
+
+        /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+        // Exon des 5' Gens
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1931'" then
+        {
+            values.value as integer -> tgt.component = create('BackboneElement') as componentExon then
+            {
+                componentExon -> componentExon.valueInteger = integer;
+            };
+        };
+
+        /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+        // Exon des 3' Gens
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'lb_3_end_gene'" then
+        {
+            values.value as integer -> tgt.component = create('BackboneElement') as componentExon then
+            {
+                componentExon -> componentExon.valueInteger = integer;
+            };
+        };
+
+        /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+        // HGVS c. (Mutation cDNA)
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1930'" then
+        {
+            values.value as valueStr -> tgt.component = create('BackboneElement') as componentDNA then
+            {
+                componentDNA -> componentDNA.valueString = valueStr;
+            };
+        };
+
+        /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+        // HGVS p. (Mutation Protein)
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1932'" then
+        {
+            values.value as valueStr -> tgt.component = create('BackboneElement') as componentAminoAcid then
+            {
+                componentAminoAcid -> componentAminoAcid.valueString = valueStr;
+            };
+        };
+    };
+}
+
+/* ------------------------------ ServiceRequest ---------------------------- */
+group CreateTransformServiceRequest(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_2520'
+        or blockindex = 5 and groupindex = 0 and itemid = 'id_2462'
+        or blockindex = 5 and groupindex = 0 and itemid = 'id_2521'" then
+        {
+            src -> tgt.resource = create('ServiceRequest') as serviceRequest then TransformServiceRequest(src, serviceRequest);
+        };
+    };
+}
+
+group TransformServiceRequest(source src: CTS_Transport, target tgt: ServiceRequest)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung';
+    src -> tgt.intent = 'proposal';
+    src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
+
+
+    src.operations as operations, operations.data as data then
+    {
+        /* ------------------------------ Status der Untersuchungen ---------------------------- */
+        //Durchfuehrung
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_2520'" then
+        {
+            values.value as status -> tgt.status = status;
+        };
+
+        /* ------------------------------ Status der Untersuchungen ---------------------------- */
+        //Abschluss
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_2462'" then
+        {
+            values.value as category -> tgt.category = cc('http://uk-koeln.de/fhir/ValueSet/nngm/diagnostikanforderung', category);
+        };
+
+        /* ------------------------------ Status der Untersuchungen ---------------------------- */
+        //Datum des Abschlusses
+        data.values as values where "blockindex = 5 and groupindex = 0 and itemid = 'id_2521'" then
+        {
+            values.value as vdt -> tgt.occurrenceDateTime = dateOp(vdt, 'date');
+        };
+    };
+}

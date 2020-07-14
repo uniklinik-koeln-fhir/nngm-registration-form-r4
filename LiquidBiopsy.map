@@ -177,7 +177,8 @@ group TransformObservation(source src: CTS_Transport, target tgt: Observation)
         {
             values.value as integer -> tgt.component = create('BackboneElement') as componentExon then
             {
-                componentExon -> componentExon.valueInteger = integer;
+                componentExon ->    componentExon.code as code, code.coding as coding, coding.system = 'http://uk-koeln.de/fhir/CodeSystem/tbd-codes',
+                                    componentExon.valueInteger = integer;
             };
         };
 
@@ -187,8 +188,9 @@ group TransformObservation(source src: CTS_Transport, target tgt: Observation)
         {
             values.value as integer -> tgt.component = create('BackboneElement') as componentExon then
             {
-                componentExon -> componentExon.valueInteger = integer;
-            };
+                componentExon ->    componentExon.code as code, code.coding as coding, coding.system = 'http://uk-koeln.de/fhir/CodeSystem/tbd-codes',
+                                    componentExon.valueInteger = integer;
+            }; 
         };
 
         /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */

@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site" />
+  <name value="OrganizationalUnit" />
+  <title value="Clinical Site: Organizational Unit" />
+  <status value="draft" />
+  <fhirVersion value="4.0.0" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Organization" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Organization.extension">
+      <path value="Organization.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.extension:betriebsstaetten-hierarchie">
+      <path value="Organization.extension" />
+      <sliceName value="betriebsstaetten-hierarchie" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://fhir.de/StructureDefinition/betriebsstaetten-hierarchie" />
+      </type>
+    </element>
+    <element id="Organization.identifier">
+      <path value="Organization.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.identifier:Betriebsstaettennummer">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.identifier" />
+      <sliceName value="Betriebsstaettennummer" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:Betriebsstaettennummer.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/NamingSystem/kbv/bsnr" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Betriebsstaettennummer.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.identifier" />
+      <sliceName value="Institutionskennzeichen" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/NamingSystem/arge-ik/iknr" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:Institutionskennzeichen.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:ASV-Teamnummer">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.identifier" />
+      <sliceName value="ASV-Teamnummer" />
+      <max value="1" />
+    </element>
+    <element id="Organization.identifier:ASV-Teamnummer.system">
+      <path value="Organization.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://fhir.de/NamingSystem/asv/teamnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.identifier:ASV-Teamnummer.value">
+      <path value="Organization.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.type">
+      <path value="Organization.type" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="OrganizationType" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/arge-ik/klassifikation" />
+      </binding>
+    </element>
+    <element id="Organization.name">
+      <path value="Organization.name" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom">
+      <path value="Organization.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="3" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:telefon">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.telecom" />
+      <sliceName value="telefon" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:telefon.system">
+      <path value="Organization.telecom.system" />
+      <min value="1" />
+      <fixedCode value="phone" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:telefon.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:email">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.telecom" />
+      <sliceName value="email" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:email.system">
+      <path value="Organization.telecom.system" />
+      <min value="1" />
+      <fixedCode value="email" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:email.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:website">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.telecom" />
+      <sliceName value="website" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:website.system">
+      <path value="Organization.telecom.system" />
+      <min value="1" />
+      <fixedCode value="url" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.telecom:website.value">
+      <path value="Organization.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address">
+      <path value="Organization.address" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="type" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <max value="2" />
+    </element>
+    <element id="Organization.address:postanschrift">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.address" />
+      <sliceName value="postanschrift" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address:postanschrift.use">
+      <path value="Organization.address.use" />
+      <fixedCode value="home" />
+    </element>
+    <element id="Organization.address:postanschrift.type">
+      <path value="Organization.address.type" />
+      <fixedCode value="postal" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:postanschrift.line">
+      <path value="Organization.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:postanschrift.line.extension">
+      <path value="Organization.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Strasse">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Strasse" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Strasse.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Hausnummer">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Hausnummer.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Adresszusatz">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Adresszusatz" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Adresszusatz.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Postfach">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Postfach" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.line.extension:Postfach.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:postanschrift.district">
+      <path value="Organization.address.district" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address:postanschrift.state">
+      <path value="Organization.address.state" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/iso/bundeslaender" />
+      </binding>
+    </element>
+    <element id="Organization.address:postanschrift.postalCode">
+      <path value="Organization.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:postanschrift.country">
+      <path value="Organization.address.country" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/jurisdiction" />
+      </binding>
+    </element>
+    <element id="Organization.address:besucheradresse">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Organization.address" />
+      <sliceName value="besucheradresse" />
+      <max value="1" />
+    </element>
+    <element id="Organization.address:besucheradresse.use">
+      <path value="Organization.address.use" />
+      <fixedCode value="home" />
+    </element>
+    <element id="Organization.address:besucheradresse.type">
+      <path value="Organization.address.type" />
+      <min value="1" />
+      <fixedCode value="physical" />
+    </element>
+    <element id="Organization.address:besucheradresse.line">
+      <path value="Organization.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension">
+      <path value="Organization.address.line.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Strasse">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Strasse" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Strasse.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Hausnummer">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Hausnummer" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Hausnummer.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Adresszusatz">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Adresszusatz" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Adresszusatz.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Postfach">
+      <path value="Organization.address.line.extension" />
+      <sliceName value="Postfach" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.line.extension:Postfach.value[x]">
+      <path value="Organization.address.line.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Organization.address:besucheradresse.city">
+      <path value="Organization.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:besucheradresse.district">
+      <path value="Organization.address.district" />
+      <max value="0" />
+    </element>
+    <element id="Organization.address:besucheradresse.state">
+      <path value="Organization.address.state" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://fhir.de/ValueSet/iso/bundeslaender" />
+      </binding>
+    </element>
+    <element id="Organization.address:besucheradresse.postalCode">
+      <path value="Organization.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Organization.address:besucheradresse.country">
+      <path value="Organization.address.country" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/jurisdiction" />
+      </binding>
+    </element>
+    <element id="Organization.partOf">
+      <path value="Organization.partOf" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
+          <valueBoolean value="true" />
+        </extension>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

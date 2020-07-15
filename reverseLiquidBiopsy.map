@@ -169,6 +169,23 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
             };
 
             /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+            // Referenztranskript 5' Gen
+            // component:exon.valueInteger	1_LB1__4_0__lb_referencetranscript_5_end_gene
+            observation -> tgt.operations as operations collate then
+            {
+                observation -> operations.data as data then
+                {
+                    observation.component as component, component.valueInteger as integer then
+                    {
+                        observation -> data.blockindex = 4;
+                        observation -> data.groupindex = 0;
+                        observation -> data.itemid = 'lb_referencetranscript_5_end_gene';
+                        integer -> data.values as values, values.value = integer;
+                    };
+                };
+            };
+
+            /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
             // Exon des 3' Gens
             observation -> tgt.operations as operations collate then
             {
@@ -180,6 +197,22 @@ group TransformCTS(source src: Bundle, target tgt: CTS_Transport)
                         observation -> data.groupindex = 0;
                         observation -> data.itemid = 'lb_3_end_gene';
                         component.valueInteger as integer -> data.values as values, values.value = integer;
+                    };
+                };
+            };
+
+            /* ------------------------------ Primaermutation/Ressistenztestung ---------------------------- */
+            // Referenztranskript 3' Gen
+            observation -> tgt.operations as operations collate then
+            {
+                observation -> operations.data as data then
+                {
+                    observation.component as component, component.valueInteger as integer then
+                    {
+                        observation -> data.blockindex = 4;
+                        observation -> data.groupindex = 0;
+                        observation -> data.itemid = 'lb_referencetranscript_3_end_gen';
+                        integer -> data.values as values, values.value = integer;
                     };
                 };
             };

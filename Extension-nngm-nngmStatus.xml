@@ -31,7 +31,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/nngmStatus" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngmStatus" />
       </binding>
     </element>
   </differential>

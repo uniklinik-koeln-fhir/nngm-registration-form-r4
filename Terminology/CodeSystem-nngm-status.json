@@ -1,0 +1,37 @@
+{
+  "resourceType": "CodeSystem",
+  "title": "nNGM Status",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngmStatus",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "lebt",
+      "display": "lebt"
+    },
+    {
+      "code": "lost to follow-up",
+      "display": "lost to follow-up"
+    },
+    {
+      "code": "tot",
+      "display": "tot"
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>nNGM Status</h2><tt>http://uk-koeln.de/fhir/CodeSystem/nngmStatus</tt><p></p></div>"
+  },
+  "count": 4,
+  "name": "NNGM_Status"
+}

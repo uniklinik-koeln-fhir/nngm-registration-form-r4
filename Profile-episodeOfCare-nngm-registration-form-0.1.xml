@@ -29,6 +29,18 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
   <derivation value="constraint" />
   <differential>
+    <element id="EpisodeOfCare.meta.security.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.meta.security.display" />
+    </element>
+    <element id="EpisodeOfCare.meta.tag.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.meta.tag.display" />
+    </element>
     <element id="EpisodeOfCare.extension">
       <path value="EpisodeOfCare.extension" />
       <slicing>
@@ -63,6 +75,36 @@
       <path value="EpisodeOfCare.extension.value[x].coding.code" />
       <mustSupport value="true" />
     </element>
+    <element id="EpisodeOfCare.extension:abrechnungsinformation.value[x].coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.extension.value[x].coding.display" />
+    </element>
+    <element id="EpisodeOfCare.extension:abrechnungsinformation.value[x].text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.extension.value[x].text" />
+    </element>
+    <element id="EpisodeOfCare.extension:letzterKontakt">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="letzterKontakt" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation/letzterKontakt" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.extension:erstdiagnose">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="erstdiagnose" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/nngmErstdiagnose" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="EpisodeOfCare.identifier">
       <path value="EpisodeOfCare.identifier" />
       <slicing>
@@ -73,12 +115,42 @@
         <rules value="open" />
       </slicing>
     </element>
+    <element id="EpisodeOfCare.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.assigner.display" />
+    </element>
     <element id="EpisodeOfCare.identifier:Biopsy-ID">
       <path value="EpisodeOfCare.identifier" />
       <sliceName value="Biopsy-ID" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.identifier:Biopsy-ID.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.identifier:Biopsy-ID.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.type.text" />
     </element>
     <element id="EpisodeOfCare.identifier:Biopsy-ID.system">
       <path value="EpisodeOfCare.identifier.system" />
@@ -91,16 +163,95 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="EpisodeOfCare.identifier:Biopsy-ID.assigner.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.assigner.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.identifier:Biopsy-ID.assigner.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.assigner.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.identifier:Biopsy-ID.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.identifier.assigner.display" />
+    </element>
     <element id="EpisodeOfCare.status">
       <path value="EpisodeOfCare.status" />
       <fixedCode value="active" />
       <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.status.extension">
+      <path value="EpisodeOfCare.status.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="EpisodeOfCare.status.extension:nngmStatus">
+      <path value="EpisodeOfCare.status.extension" />
+      <sliceName value="nngmStatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/nngmStatus" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.type.text" />
     </element>
     <element id="EpisodeOfCare.diagnosis">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Diagnosis" />
       </extension>
       <path value="EpisodeOfCare.diagnosis" />
+    </element>
+    <element id="EpisodeOfCare.diagnosis.condition.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.diagnosis.condition.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.diagnosis.condition.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.diagnosis.condition.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.diagnosis.condition.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.diagnosis.condition.display" />
+    </element>
+    <element id="EpisodeOfCare.diagnosis.role.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.diagnosis.role.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.diagnosis.role.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.diagnosis.role.text" />
     </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />
@@ -110,6 +261,48 @@
       <path value="EpisodeOfCare.patient.reference" />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.patient.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.patient.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.patient.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.patient.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.patient.identifier.assigner.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.patient.identifier.assigner.display" />
+    </element>
+    <element id="EpisodeOfCare.patient.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.patient.display" />
+    </element>
+    <element id="EpisodeOfCare.managingOrganization.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.managingOrganization.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.managingOrganization.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.managingOrganization.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.managingOrganization.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.managingOrganization.display" />
     </element>
     <element id="EpisodeOfCare.period">
       <path value="EpisodeOfCare.period" />
@@ -122,6 +315,78 @@
     <element id="EpisodeOfCare.period.end">
       <path value="EpisodeOfCare.period.end" />
       <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.referralRequest.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.referralRequest.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.referralRequest.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.referralRequest.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.referralRequest.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.referralRequest.display" />
+    </element>
+    <element id="EpisodeOfCare.careManager.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.careManager.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.careManager.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.careManager.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.careManager.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.careManager.display" />
+    </element>
+    <element id="EpisodeOfCare.team.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.team.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.team.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.team.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.team.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.team.display" />
+    </element>
+    <element id="EpisodeOfCare.account.identifier.type.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.account.identifier.type.coding.display" />
+    </element>
+    <element id="EpisodeOfCare.account.identifier.type.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.account.identifier.type.text" />
+    </element>
+    <element id="EpisodeOfCare.account.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="EpisodeOfCare.account.display" />
     </element>
   </differential>
 </StructureDefinition>

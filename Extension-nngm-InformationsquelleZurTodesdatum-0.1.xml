@@ -6,7 +6,7 @@
   <name value="InformationsquelleZurTodesdatum" />
   <status value="draft" />
   <experimental value="true" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -39,6 +39,18 @@
     <element id="Extension.value[x].coding.code">
       <path value="Extension.value[x].coding.code" />
       <min value="1" />
+    </element>
+    <element id="Extension.value[x].coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.value[x].coding.display" />
+    </element>
+    <element id="Extension.value[x].text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Extension.value[x].text" />
     </element>
   </differential>
 </StructureDefinition>

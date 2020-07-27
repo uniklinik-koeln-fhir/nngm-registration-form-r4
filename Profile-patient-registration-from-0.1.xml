@@ -42,8 +42,6 @@
         <rules value="open" />
       </slicing>
     </element>
-
-
     <element id="Patient.identifier:Patientenliste-Pseudonym">
       <path value="Patient.identifier" />
       <sliceName value="Patientenliste-Pseudonym" />
@@ -51,8 +49,6 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-
-
     <element id="Patient.identifier:Patientenliste-Pseudonym.system">
       <path value="Patient.identifier.system" />
       <min value="1" />
@@ -110,9 +106,6 @@
       <path value="Patient.gender.extension.value[x].code" />
       <min value="1" />
     </element>
-    <element id="Patient.gender.extension:other-amtlich.value[x].display">
-      <path value="Patient.gender.extension.value[x].display" />
-    </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
       <min value="1" />
@@ -125,23 +118,17 @@
     <element id="Patient.address">
       <path value="Patient.address" />
       <max value="1" />
+      <type>
+        <code value="Address" />
+        <profile value="http://fhir.de/StructureDefinition/address-de-basis" />
+      </type>
       <mustSupport value="true" />
     </element>
-    <element id="Patient.address.line">
-      <path value="Patient.address.line" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.address.city">
-      <path value="Patient.address.city" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.address.district">
-      <path value="Patient.address.district" />
-      <max value="0" />
-    </element>
-    <element id="Patient.address.country">
-      <path value="Patient.address.country" />
-      <mustSupport value="true" />
+    <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
+      <path value="Patient.contact" />
     </element>
   </differential>
 </StructureDefinition>

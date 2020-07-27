@@ -3,11 +3,11 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
   <version value="0.1" />
   <name value="CoverageNngm" />
-  <title value="nNGM: Profil - Coverage - Versicherungsverhältnis"/>
+  <title value="nNGM: Profil - Coverage - Versicherungsverhältnis" />
   <status value="draft" />
   <experimental value="true" />
   <description value="Type of health insurance (private, public payor). Insurance identification number." />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Coverage" />
@@ -27,41 +27,20 @@
     <element id="Coverage.extension:pkvTarifform">
       <path value="Coverage.extension" />
       <sliceName value="pkvTarifform" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform" />
       </type>
-    </element>
-    <element id="Coverage.extension:pkvTarifform.value[x]">
-      <path value="Coverage.extension.value[x]" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.extension:pkvTarifform.value[x].coding">
-      <path value="Coverage.extension.value[x].coding" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.extension:pkvTarifform.value[x].coding.system">
-      <path value="Coverage.extension.value[x].coding.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.extension:pkvTarifform.value[x].coding.code">
-      <path value="Coverage.extension.value[x].coding.code" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.extension:kooperationsvereinbarung">
       <path value="Coverage.extension" />
       <sliceName value="kooperationsvereinbarung" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier">
       <path value="Coverage.identifier" />
@@ -99,7 +78,7 @@
       </slicing>
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier.type.coding.system">
       <path value="Coverage.identifier.type.coding.system" />
@@ -122,13 +101,11 @@
       <path value="Coverage.identifier.type.coding.system" />
       <min value="1" />
       <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
-      <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type.code">
       <path value="Coverage.identifier.type.coding.code" />
       <min value="1" />
       <fixedCode value="GKV" />
-      <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier.system">
       <path value="Coverage.identifier.system" />
@@ -275,6 +252,7 @@
         <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
         <targetProfile value="http://fhir.de/StructureDefinition/organization-de-basis/0.2" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Coverage.payor.extension">
       <path value="Coverage.payor.extension" />

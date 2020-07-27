@@ -15,7 +15,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/countrycodes"
       }
     ]
   },

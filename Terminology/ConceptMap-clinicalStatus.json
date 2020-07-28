@@ -1,5 +1,6 @@
 {
     "resourceType": "ConceptMap",
+    "url": "http://uk-koeln.de/fhir/ConceptMap/nNGM/clinicalStatus",
     "name": "Aufenthaltsart",
     "status": "active",
     "group": [
@@ -30,7 +31,6 @@
         ]
       }
     ],
-    "url": "http://uk-koeln.de/fhir/ConceptMap/nNGM/clinicalStatus",
     "description": "Maps the 'Aufenthaltsart' concepts of the internal nNGM forms to the published 'Aufenthaltsart' ValueSet",
     "title": "CTS Aufenthaltsart to nNGM Aufenthaltsart",
     "version": "0.1",

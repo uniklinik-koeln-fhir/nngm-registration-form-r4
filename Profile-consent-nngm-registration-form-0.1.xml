@@ -99,7 +99,7 @@
           <valueString value="ConsentPolicyRule" />
         </extension>
         <strength value="required" />
-        <valueSet value="http://hl7.org/fhir/ValueSet/nngm-consent-policy" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy" />
       </binding>
     </element>
     <element id="Consent.policyRule.coding">

@@ -16,11 +16,32 @@
   <differential>
     <element id="Consent.status">
       <path value="Consent.status" />
+      <fixedCode value="active" />
       <mustSupport value="true" />
     </element>
     <element id="Consent.scope">
       <path value="Consent.scope" />
       <mustSupport value="true" />
+    </element>
+    <element id="Consent.scope.coding">
+      <path value="Consent.scope.coding" />
+      <min value="1" />
+      <max value="1" />
+    </element>
+    <element id="Consent.scope.coding.system">
+      <path value="Consent.scope.coding.system" />
+      <fixedUri value="http://hl7.org/fhir/ValueSet/consent-scope" />
+    </element>
+    <element id="Consent.scope.coding.code">
+      <path value="Consent.scope.coding.code" />
+      <fixedCode value="patient-privacy" />
+    </element>
+    <element id="Consent.scope.coding.display">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Consent.scope.coding.display" />
+      <fixedString value="Privacy Consent" />
     </element>
     <element id="Consent.category">
       <path value="Consent.category" />

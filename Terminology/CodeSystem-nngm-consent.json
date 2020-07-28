@@ -31,10 +31,6 @@
       "code": "VO"
     },
     {
-      "display": "Ich möchte am Tumorboard persönlich oder per Telefonkonferenz teilnehmen",
-      "code": "TK"
-    },
-    {
       "display": "Molekularpathologische Diagnostik im nNGM (Behandlungskontext)",
       "code": "MD"
     },

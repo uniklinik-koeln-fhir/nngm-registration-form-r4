@@ -1,7 +1,7 @@
 {
   "resourceType": "CodeSystem",
   "title": "nNGM Consent Policy",
-  "url": "http://hl7.org/fhir/CodeSystem/nngm-consent-policy",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
   "status": "draft",
   "compositional": false,
   "content": "complete",
@@ -75,7 +75,7 @@
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>nNGM Consent Policy</h2><tt>http://hl7.org/fhir/CodeSystem/nngm-consent-policy</tt><p></p></div>"
   },
-  "valueSet": "http://hl7.org/fhir/ValueSet/nngm-consent-policy",
-  "count": 18,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+  "count": 16,
   "name": "NNGM_Consent_Policy"
 }

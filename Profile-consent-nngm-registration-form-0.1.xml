@@ -74,7 +74,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://todo-daniel" />
+        <valueSet value="http://hl7.org/fhir/ValueSet/nngm-consent-policy" />
       </binding>
     </element>
     <element id="Consent.policyRule.coding.system">

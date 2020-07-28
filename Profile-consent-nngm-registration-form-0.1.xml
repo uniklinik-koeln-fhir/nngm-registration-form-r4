@@ -25,23 +25,31 @@
     </element>
     <element id="Consent.scope.coding">
       <path value="Consent.scope.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Consent.scope.coding:patientPrivacy">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Consent.scope.coding" />
+      <sliceName value="patientPrivacy" />
       <min value="1" />
       <max value="1" />
-    </element>
-    <element id="Consent.scope.coding.system">
-      <path value="Consent.scope.coding.system" />
-      <fixedUri value="http://hl7.org/fhir/ValueSet/consent-scope" />
-    </element>
-    <element id="Consent.scope.coding.code">
-      <path value="Consent.scope.coding.code" />
-      <fixedCode value="patient-privacy" />
-    </element>
-    <element id="Consent.scope.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Consent.scope.coding.display" />
-      <fixedString value="Privacy Consent" />
+      <patternCoding>
+        <system value="http://hl7.org/fhir/ValueSet/consent-scope" />
+        <code value="patient-privacy" />
+      </patternCoding>
+      <mustSupport value="true" />
     </element>
     <element id="Consent.category">
       <path value="Consent.category" />

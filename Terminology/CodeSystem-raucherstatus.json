@@ -19,15 +19,15 @@
   "content": "complete",
   "concept": [
     {
-      "code": "r",
+      "code": "LA18979-7",
       "display": "Raucher"
     },
     {
-      "code": "er",
+      "code": "LA15920-4",
       "display": "Ex-Raucher"
     },
     {
-      "code": "nr",
+      "code": "LA18978-9",
       "display": "Nieraucher"
     }
   ]

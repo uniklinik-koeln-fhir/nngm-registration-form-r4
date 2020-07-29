@@ -7,7 +7,7 @@
   <status value="draft" />
   <experimental value="false" />
   <description value="Smoking status" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
@@ -15,6 +15,9 @@
   <derivation value="constraint" />
   <differential>
     <element id="Observation.status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
+        <valueString value="default: final" />
+      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />
@@ -70,30 +73,13 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.encounter">
-      <path value="Observation.encounter" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM" />
-      </type>
-    </element>
-    <element id="Observation.encounter.reference">
-      <path value="Observation.encounter.reference" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -163,8 +149,8 @@
       <path value="Observation.component" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="code.coding.code" />
+          <type value="pattern" />
+          <path value="code.coding" />
         </discriminator>
         <rules value="closed" />
       </slicing>
@@ -184,54 +170,75 @@
       <path value="Observation.component.code.coding" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://ncit.nci.nih.gov" />
+        <code value="C73993" />
+      </patternCoding>
     </element>
     <element id="Observation.component:packungenProJahr.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packungenProJahr.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
-      <fixedCode value="exon" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packungenProJahr.value[x]">
       <path value="Observation.component.value[x]" />
       <min value="1" />
       <type>
-        <code value="string" />
+        <code value="Quantity" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packungenProJahr.value[x].unit">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true" />
+      </extension>
+      <path value="Observation.component.value[x].unit" />
+      <fixedString value="pack years" />
+    </element>
+    <element id="Observation.component:packungenProJahr.value[x].system">
+      <path value="Observation.component.value[x].system" />
+      <fixedUri value="http://unitsofmeasure.org" />
+    </element>
+    <element id="Observation.component:packungenProJahr.value[x].code">
+      <path value="Observation.component.value[x].code" />
+      <fixedCode value="1{pack years}" />
     </element>
     <element id="Observation.component:nichtraucherSeit">
       <path value="Observation.component" />
       <sliceName value="nichtraucherSeit" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:nichtraucherSeit.code.coding">
       <path value="Observation.component.code.coding" />
       <min value="1" />
       <max value="1" />
+      <patternCoding>
+        <system value="http://uk-koeln.de/fhir/CodeSystem/tbd-codes" />
+        <code value="nichtRaucherSeit" />
+      </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:nichtraucherSeit.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:nichtraucherSeit.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
-      <fixedCode value="p" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:nichtraucherSeit.value[x]">
       <path value="Observation.component.value[x]" />
       <min value="1" />
       <type>
-        <code value="string" />
+        <code value="dateTime" />
       </type>
     </element>
   </differential>

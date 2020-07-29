@@ -7,14 +7,55 @@
   <status value="draft" />
   <experimental value="true" />
   <description value="ECOG assesment score" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.extension:episodeOfCare">
+      <path value="Observation.extension" />
+      <sliceName value="episodeOfCare" />
+      <min value="1" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:episodeOfCare.value[x]">
+      <path value="Observation.extension.value[x]" />
+      <slicing>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.extension:episodeOfCare.value[x]:valueReference">
+      <path value="Observation.extension.valueReference" />
+      <sliceName value="valueReference" />
+      <min value="1" />
+    </element>
+    <element id="Observation.extension:episodeOfCare.value[x]:valueReference.reference">
+      <path value="Observation.extension.valueReference.reference" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
+        <valueString value="default: final" />
+      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />
@@ -34,7 +75,7 @@
     <element id="Observation.category.coding.system">
       <path value="Observation.category.coding.system" />
       <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/observation-category" />
+      <fixedUri value="http://hl7.org/fhir/ValueSet/observation-category" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.code">
@@ -70,31 +111,13 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-        <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject.reference">
       <path value="Observation.subject.reference" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.encounter">
-      <path value="Observation.encounter" />
-      <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM" />
-      </type>
-    </element>
-    <element id="Observation.encounter.reference">
-      <path value="Observation.encounter.reference" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
@@ -130,6 +153,10 @@
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://loinc.org/vs/LL529-9" />
+      </binding>
     </element>
     <element id="Observation.value[x].coding.system">
       <path value="Observation.value[x].coding.system" />

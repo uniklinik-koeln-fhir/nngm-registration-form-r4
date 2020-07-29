@@ -24,13 +24,14 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.extension:informationZurTodesquelle">
+    <element id="Patient.extension:informationsquelleTod">
       <path value="Patient.extension" />
-      <sliceName value="informationZurTodesquelle" />
+      <sliceName value="informationsquelleTod" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
@@ -113,6 +114,13 @@
     </element>
     <element id="Patient.deceased[x]">
       <path value="Patient.deceased[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
     </element>
     <element id="Patient.address">

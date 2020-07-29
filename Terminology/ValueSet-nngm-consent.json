@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policyy",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
   "title": "nNGM Consent Policy",
   "status": "draft",
   "compose": {
@@ -9,10 +9,6 @@
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy"
       }
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>nNGM Consent Policy</h2><tt>http://hl7.org/fhir/ValueSet/nngm-consent-policy</tt></div>"
   },
   "name": "NNGM_Consent_Policy"
 }

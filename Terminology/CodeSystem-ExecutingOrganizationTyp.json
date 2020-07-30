@@ -6,17 +6,19 @@
     ]
   },
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/ExecutingOrganizationTyp",
   "version": "0.1",
-  "name": "nNGM_CodeSystem_Durchfuehrende_Einrichtung",
+  "experimental": false,
   "title": "nNGM: CodeSystem Durchführende Einrichtung",
+  "name": "nNGM_CodeSystem_Durchfuehrende_Einrichtung",
   "status": "active",
-  "experimental": true,
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",
   "description": "Abrechnungsinformation im Kontext von nNGM",
+  "compositional": false, 
   "caseSensitive": true,
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/ExecutingOrganizationTyp",
   "content": "complete",
+  "count": 13,
   "concept": [
     {
       "code": "nNGM-Zentrum",

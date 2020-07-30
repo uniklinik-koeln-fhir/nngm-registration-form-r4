@@ -3,7 +3,7 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/progress-relapse" />
   <version value="0.1" />
   <name value="ObservationKrebsProgress" />
-  <title value="nNGM: Profil - Observation - Status Krebserkrankung" />
+  <title value="nNGM: Profil - Observation - Progress/Reizidiv Krebserkrankung" />
   <status value="active" />
   <description value="Krebserkrankung Progress Relapse" />
   <fhirVersion value="4.0.1" />

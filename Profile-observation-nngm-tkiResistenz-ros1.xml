@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-ros1" />
+  <name value="ObservationRos1TkiResistenz" />
+  <status value="active" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.code.coding.system">
+      <path value="Observation.code.coding.system" />
+      <fixedUri value="https://simplifier.net/nngm-registrationformr4/tki-resistenz" />
+    </element>
+    <element id="Observation.code.coding.code">
+      <path value="Observation.code.coding.code" />
+      <fixedCode value="C131071" />
+    </element>
+    <element id="Observation.component:fusionPartner">
+      <path value="Observation.component" />
+      <sliceName value="fusionPartner" />
+      <max value="1" />
+    </element>
+    <element id="Observation.component:fusionPartner.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncit.nci.nih.gov" />
+          <code value="C28510" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:fusionPartner.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

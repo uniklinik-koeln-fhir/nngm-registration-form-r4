@@ -2,6 +2,7 @@
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/procedures",
   "version": "1.0",
+  "title": "nNGM: ValueSet Procedures",
   "name": "nNGM_ValueSet_Procedures",
   "status": "active",
   "experimental": true,

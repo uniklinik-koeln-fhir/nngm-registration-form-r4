@@ -1,0 +1,165 @@
+/// version = 0.1
+/// title = "TherapieMapping"
+
+map "http://uk-koeln.de/fhir/StructureMap/TherapieMapping" = TherapieMapping
+
+uses "http://hl7.org/fhir/StructureDefinition/CTS_Transport" as source
+uses "http://hl7.org/fhir/StructureDefinition/Procedure" as target
+uses "http://hl7.org/fhir/StructureDefinition/Patient" as target
+
+group TransformBundle(source src: CTS_Transport, target bundle: Bundle)
+{
+    src -> bundle.id = uuid();
+    src -> bundle.type = 'collection';
+
+    src -> bundle.entry as entry then CreateTransformProcedure(src, entry);
+    src -> bundle.entry as entry then CreateTransformPatient(src, entry);
+}
+
+/* ------------------------------ Procedure ---------------------------- */
+group CreateTransformProcedure(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1213'
+        or blockindex = 1 and groupindex = 0 and itemid = 'id_1220'
+        or blockindex = 1 and groupindex = 0 and itemid = 'id_1221'
+        or blockindex = 1 and groupindex = 0 and itemid = 'id_2434'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_1215'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_1467'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_1218'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_1219'
+        or blockindex = 2 and groupindex = 0 and itemid = 'id_1547'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1360'
+        or blockindex = 4 and groupindex = 0 and itemid = 'id_1472'" then
+        {
+            src -> tgt.resource = create('Procedure') as procedure then TransformProcedure(src, procedure);
+        };
+    };
+}
+
+/* ------------------------------ Patient ---------------------------- */
+group CreateTransformPatient(source src: CTS_Transport, target tgt: BackboneElement)
+{
+    src.operations as operations, operations.data as data then
+    {
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2401'" then
+        {
+            src -> tgt.resource = create('Patient') as patient then TransformPatient(src, patient);
+        };         
+    };
+}
+
+/* ------------------------------ Procedure ---------------------------- */
+group TransformProcedure(source src: CTS_Transport, target tgt: Procedure)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Procedure/nNGM/SonstigeTherapie';
+
+    src.operations as operations, operations.data as data then
+    {
+        src.patid as patid -> tgt.subject = create('Reference') as subject, subject.reference = evaluate(patid, '\'Patient/\' + $this');
+
+        // Art der Therapie
+        data.values as values where "blockindex = 0 and groupindex = 0 and itemid = 'id_1213'" then
+        {
+            values.value as value -> tgt.category = cc('http://uk-koeln.de/fhir/ValueSet/SonstigeTherapieCategory', value);
+        };
+
+        // Therapiebeginn
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_1220'" then
+        {
+            values.value as value -> tgt.performedPeriod = create('BackboneElement') as performedPeriod collate, performedPeriod.start = dateOp(value, 'date');
+        };
+
+        // Therapieende
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_1221'" then
+        {
+            values.value as value -> tgt.performedPeriod = create('BackboneElement') as performedPeriod collate, performedPeriod.end = dateOp(value, 'date');
+        };
+
+        // Durchführende Einrichtung
+        data.values as values where "blockindex = 1 and groupindex = 0 and itemid = 'id_2434'" then
+        {
+            values.value as value -> tgt.performer as performer, performer.actor as actor, actor.display = value;
+        };
+
+        // Lokalisation (Auswahl)
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1215'" then
+        {
+            values.value as value -> tgt.bodySite as bodySite, bodySite.coding = c('http://uk-koeln.de/fhir/ValueSet/cancer-base/icdo-o-3-t', value);
+        };
+
+        // LLokalisation (Freitext)
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1215'" then
+        {
+            values.value as value -> tgt.bodySite as bodySite, bodySite.text = value;
+        };
+
+        // Methode (Auswahl)
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1467'" then
+        {
+            values.value as value -> tgt.code as code,  code.coding = create('Coding') as coding collate, 
+                                                        coding.system = 'http://uk-koeln.de/fhir/ValueSet/dummy',
+                                                        coding.code = value;
+        };
+
+        // Methode (Freitext)
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1467'" then
+        {
+            values.value as value -> tgt.code as code, code.text = value;
+        };
+
+        // Therapeutische Intention (Auswahl)
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1218'" then
+        {
+            values.value as value -> tgt.note as note, note.text = value, note.id = 'auswahl';
+        };
+
+        // Therapeutische Intention (Freitext)
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1218'" then
+        {
+            values.value as value -> tgt.note as note, note.text = value, note.id = 'freitext';
+        };
+
+        // Bezeichnung / Beschreibung der alternativen Methoden
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1219'" then
+        {
+            values.value as value -> tgt.code as code, code.text = value;
+        };
+
+        // Grund für keine Therapie / BSC
+        data.values as values where "blockindex = 2 and groupindex = 0 and itemid = 'id_1547'" then
+        {
+            values.value as value -> tgt.reasonCode as reasonCode, reasonCode.coding = c('http://uk-koeln.de/fhir/ValueSet/nNGM/sonstige-therapie-grund-bsc', value);
+        };
+
+        // Maintenance
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1360'" then
+        {
+            values.value as value -> tgt.note as note, note.text = value, note.id = 'maintenance';
+        };
+
+        // Bemerkungen
+        data.values as values where "blockindex = 4 and groupindex = 0 and itemid = 'id_1472'" then
+        {
+            values.value as value -> tgt.note as note, note.text = value, note.id = 'bemerkungen';
+        };
+    };
+}
+
+/* ------------------------------ Patient ---------------------------- */
+group TransformPatient(source src: CTS_Transport, target tgt: Patient)
+{
+    src -> tgt.id = uuid();
+    src -> tgt.meta as meta collate, meta.profile = 'http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM';
+
+    src.operations as operations, operations.data as data then
+    {
+        // Todesdatum
+        data.values as values where "blockindex = 3 and groupindex = 0 and itemid = 'id_2401'" then
+        {
+            values.value as value -> tgt.deceasedDateTime = dateOp(value, 'date');
+        };
+    };
+}

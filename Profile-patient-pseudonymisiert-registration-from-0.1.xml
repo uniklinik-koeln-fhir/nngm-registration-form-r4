@@ -7,13 +7,31 @@
   <status value="draft" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Patient without any identifiable data elements" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Patient" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
   <derivation value="constraint" />
   <differential>
+    <element id="Patient.extension">
+      <path value="Patient.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.extension:informationsquelleTodesdatum">
+      <path value="Patient.extension" />
+      <sliceName value="informationsquelleTodesdatum" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
+      </type>
+    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
@@ -21,8 +39,10 @@
           <type value="value" />
           <path value="system" />
         </discriminator>
-        <rules value="open" />
+        <rules value="closed" />
       </slicing>
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Patient.identifier:Patientenliste-Pseudonym">
       <path value="Patient.identifier" />
@@ -45,7 +65,6 @@
     <element id="Patient.name">
       <path value="Patient.name" />
       <max value="0" />
-      <mustSupport value="true" />
     </element>
     <element id="Patient.name.family">
       <path value="Patient.name.family" />
@@ -102,7 +121,6 @@
         <code value="Extension" />
         <profile value="http://fhir.de/StructureDefinition/gender-amtlich-de" />
       </type>
-      <mustSupport value="false" />
     </element>
     <element id="Patient.gender.extension:other-amtlich.value[x]">
       <path value="Patient.gender.extension.value[x]" />
@@ -125,28 +143,10 @@
       <path value="Patient.deceased[x]" />
       <mustSupport value="true" />
     </element>
-    <element id="Patient.deceased[x].extension">
-            <path value="Patient.deceased[x].extension" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="url" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-        </element>
-        <element id="Patient.deceased[x].extension:informationZurTodesquelle">
-            <path value="Patient.deceased[x].extension" />
-            <sliceName value="informationZurTodesquelle" />
-            <type>
-                <code value="Extension" />
-                <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
-            </type>
-        </element>
     <element id="Patient.address">
       <path value="Patient.address" />
       <max value="0" />
-      <mustSupport value="true" />
+      <mustSupport value="false" />
     </element>
     <element id="Patient.address.line">
       <path value="Patient.address.line" />
@@ -173,6 +173,9 @@
       <max value="0" />
     </element>
     <element id="Patient.contact">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="Contact" />
+      </extension>
       <path value="Patient.contact" />
       <max value="0" />
     </element>

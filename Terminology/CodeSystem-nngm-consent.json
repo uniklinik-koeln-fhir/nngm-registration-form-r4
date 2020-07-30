@@ -1,10 +1,13 @@
 {
   "resourceType": "CodeSystem",
   "title": "nNGM Consent Policy",
+  "name": "nNGM_Consent_Policy",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
-  "status": "draft",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+  "status": "active",
   "compositional": false,
   "content": "complete",
+  "count": 15,
   "concept": [
     {
       "code": "1a",
@@ -25,10 +28,6 @@
     {
       "display": "Datenschutzerklärung",
       "code": "DS"
-    },
-    {
-      "display": "Ich wünsche eine Vorstellung des Falls im Tumorboard des nNGM (nNGM-Zentrum der Anforderung)",
-      "code": "VO"
     },
     {
       "display": "Molekularpathologische Diagnostik im nNGM (Behandlungskontext)",
@@ -70,12 +69,5 @@
       "display": "Kontaktaufnahme des nNGM-Zentrums zum Zweck des Einschlusses in eine mögliche infrage kommende neue Studie",
       "code": "KE"
     }
-  ],
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>nNGM Consent Policy</h2><tt>http://hl7.org/fhir/CodeSystem/nngm-consent-policy</tt><p></p></div>"
-  },
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
-  "count": 16,
-  "name": "NNGM_Consent_Policy"
+  ]
 }

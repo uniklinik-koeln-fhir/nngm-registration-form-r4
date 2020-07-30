@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/diagnostikanforderung",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/procedures",
   "version": "1.0",
   "name": "nNGM_ValueSet_Procedures",
   "status": "active",

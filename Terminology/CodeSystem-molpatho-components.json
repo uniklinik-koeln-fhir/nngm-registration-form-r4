@@ -7,7 +7,7 @@
   },
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/molpatho-components",
-  "version": "0.1",
+  "version": "1.0",
   "experimental": false,
   "title": "nNGM: CodeSystem - MolPatho-Components",
   "name": "nNGM_CodeSystem_MolPatho-Components",

@@ -14,7 +14,7 @@
   "status": "active",
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",
-  "description": "Abrechnungsinformation im Kontext von nNGM",
+  "description": "Art der behandelnden Einrichtung",
   "compositional": false, 
   "caseSensitive": true,
   "content": "complete",

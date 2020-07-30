@@ -1,97 +1,90 @@
 {
     "resourceType": "ValueSet",
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation",
-    "title": "Valueset-histologie-klassifikation",
-    "status": "draft",
-    "contact": [
-      {
-        "telecom": [
-          {
-            "system": "email"
-          }
-        ]
-      }
-    ],
+    "version": "1.0",
+    "title": "nNGM: Valueset Histologie-Klassifikation",
+    "name": "nNGM_Valueset_Histologie-Klassifikation",
+    "status": "active",
+    "experimental": false,
+    "date": "2020-07-08",
+    "publisher": "Universitätsklinikum Köln",
+    "description": "ICD-0 Klassifikation (Histologie)",
     "compose": {
       "include": [
         {
-          "system": "http://fhir.de/CodeSystem/dimdi/icd-10-gm",
+          "system": "urn:oid:2.16.840.1.113883.6.43.1",
           "concept": [
             {
               "code": "8140/3",
-              "display": "Adenokarzinom"
+              "display": "Adenokarzinom o.n.A."
             },
             {
               "code": "8250/3",
-              "display": "lepidisches Adenokarzinom"
+              "display": "Bronchiolo-alveoläres Adenokarzinom o.n.A."
             },
             {
               "code": "8551/3",
-              "display": "azinäres Adenokarzinom"
+              "display": "Azinuszell-Zystadenokarzinom"
             },
             {
               "code": "8260/3",
-              "display": "papilläres Adenokarzinom"
+              "display": "Papilläres Adenokarzinom o.n.A."
             },
             {
               "code": "8265/3",
-              "display": "mikropapilläres Adenokarzinom"
+              "display": "Mikropapilläres Karzinom o.n.A."
             },
             {
               "code": "8230/3",
-              "display": "solides Adenokarzinom"
+              "display": "Solides Karzinom o.n.A."
             },
             {
               "code": "8253/3",
-              "display": "invasives muzinöses Adenokarzinom"
+              "display": "Muzinöses bronchiolo-alveoläres Karzinom"
             },
             {
               "code": "8254/3",
-              "display": "gemischt invasives muzinöses und nicht-muzinöses Adenokarzinom"
+              "display": "Gemischtes muzinöses und nichtmuzinöses bronchiolo-alveoläres Karzinom"
             },
             {
               "code": "8480/3",
-              "display": "kolloidales Adenokarzinom"
+              "display": "Muzinöses Adenokarzinom"
             },
             {
               "code": "8333/3",
-              "display": "fetales Adenokarzinom"
+              "display": "Fetales Adenokarzinom"
             },
             {
               "code": "8144/3",
-              "display": "enterisches Adenokarzinom"
+              "display": "Adenokarzinom vom intestinalen Typ"
             },
             {
               "code": "8070/3",
-              "display": "Plattenepithelkarzinom"
+              "display": "Plattenepithelkarzinom o.n.A."
             },
             {
               "code": "8071/3",
-              "display": "keratinisierendes Plattenepithelkarzinom"
+              "display": "Verhornendes Plattenepithelkarzinom o.n.A."
             },
             {
               "code": "8072/3",
-              "display": "nicht-keratinisierendes Plattenepithelkarzinom"
+              "display": "Großzelliges nichtverhornendes Plattenepithelkarzinom o.n.A."
             },
             {
               "code": "8083/3",
-              "display": "basaloides Plattenepithelkarzinom"
-            },
-            {
-              "code": "(Überschrift)",
-              "display": "neuroendokrine Tumoren"
+              "display": "Basaloides Plattenepithelkarzinom"
             },
             {
               "code": "8041/3",
-              "display": "kleinzelliges Karzinom"
+              "display": "Kleinzelliges Karzinom o.n.A."
             },
             {
               "code": "8045/3",
-              "display": "kombiniertes kleinzelliges Karzinom"
+              "display": "Kombiniertes kleinzelliges Karzinom"
             },
             {
               "code": "8013/3",
-              "display": "großzelliges neuroendokrines Karzinom"
+              "display": "Großzelliges neuroendokrines Karzinom"
             },
             {
               "code": "8013/3",
@@ -100,12 +93,5 @@
           ]
         }
       ]
-    },
-    "text": {
-      "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>Valueset-histologie-klassifikation</h2><tt>http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation</tt></div>"
-    },
-    "name": "Histologie_klassifikation",
-    "experimental": true,
-    "date": "2020-07-08"
+    }
   }

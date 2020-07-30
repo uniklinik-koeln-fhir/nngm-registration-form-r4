@@ -1,9 +1,10 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/behandelbarkeit",
-  "version": "0.1",
-  "name": "behandelbarkeit",
-  "status": "draft",
+  "version": "1.0",
+  "title": "nNGM ValueSet Behandelbarkeit",
+  "name": "nNGM_ValueSet_Behandelbarkeit",
+  "status": "active",
   "experimental": true,
   "date": "2018-08-24",
   "publisher": "Universitätsklinikum Köln",

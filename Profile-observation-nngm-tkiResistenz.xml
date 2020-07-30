@@ -170,7 +170,55 @@
     </element>
     <element id="Observation.component">
       <path value="Observation.component" />
-      <max value="0" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code.coding" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:tkiTherapie">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.component" />
+      <sliceName value="tkiTherapie" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:tkiTherapie.code">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncit.nci.nih.gov" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
+    <element id="Observation.component:tkiTherapie.code.coding.code">
+      <path value="Observation.component.code.coding.code" />
+      <fixedCode value="C62721" />
+    </element>
+    <element id="Observation.component:tkiTherapie.value[x]">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Observation.component.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

@@ -5,7 +5,6 @@
   "name": "raucherstatus",
   "title": "nNGM: ValueSet Raucherstatus",
   "status": "active",
-  "experimental": true,
   "date": "2018-08-24",
   "publisher": "Universitätsklinikum Köln",
   "description": "Raucherstatus",

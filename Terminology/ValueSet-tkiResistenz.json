@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tki-resistenz",
+  "version": "0.1",
+  "name": "tkiResistenz",
+  "title": "nNGM: ValueSet TKI Resistenz",
+  "status": "active",
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Observation zur Erfassung der erfolgten TKI Therapien",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/raucherstatus"
+      },
+      {
+        "system": "http://ncit.nci.nih.gov",
+        "concept": [
+          {
+            "code": "C142114",
+            "display": "ALK Fusion Gene Positive"
+          },
+          {
+            "code": "C134501",
+            "display": "EGFR Positive "
+          },
+          {
+            "code": "C131071",
+            "display": "ROS1 Fusion Positive"
+          }
+        ]
+      }
+    ]
+  }
+}

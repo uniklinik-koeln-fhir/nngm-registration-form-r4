@@ -1,11 +1,22 @@
 {
   "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "version": "1.0",
+  "experimental": false,
   "title": "nNGM Consent Policy",
   "name": "nNGM_Consent_Policy",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
   "status": "active",
+  "date": "2019-02-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Abrechnungsinformation im Kontext von nNGM",
   "compositional": false,
+  "caseSensitive": true,
   "content": "complete",
   "count": 15,
   "concept": [

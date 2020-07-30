@@ -6,16 +6,19 @@
     ]
   },
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/molpatho-components",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/molpatho-components",
   "version": "0.1",
-  "name": "molpatho-components",
-  "status": "draft",
-  "experimental": true,
+  "experimental": false,
+  "title": "nNGM: CodeSystem - MolPatho-Components",
+  "name": "nNGM_CodeSystem_MolPatho-Components",
+  "status": "active",
   "date": "2019-02-09",
   "publisher": "Universitätsklinikum Köln",
   "description": "Komponenten von molekularpathologischen Befunden",
+  "compositional": false, 
   "caseSensitive": true,
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/molpatho-components",
   "content": "complete",
+  "count": 3,
   "concept": [
     {
       "code": "exon",

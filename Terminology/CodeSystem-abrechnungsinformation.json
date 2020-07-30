@@ -6,17 +6,18 @@
     ]
   },
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
-  "version": "0.1",
-  "name": "abrechnungsinformation",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation",
+  "version": "1.0",
+  "experimental": false,
+  "name": "nNGM_Abrechnungsinformation",
   "title": "nNGM: CodeSystem Abrechnungsinformation",
   "status": "active",
-  "experimental": true,
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",
   "description": "Abrechnungsinformation im Kontext von nNGM",
   "caseSensitive": true,
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation",
   "content": "complete",
+  "count": 8,
   "concept": [
     {
       "code": "nNGM-BV Fall",
@@ -27,7 +28,7 @@
       "display": "nNGM-Fall stationär, nicht BV"
     },
     {
-      "code": "U-Schein Pathologie",
+      "code": "Ü-Schein Pathologie",
       "display": "Ü-Schein Pathologie"
     },
     {

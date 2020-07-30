@@ -1,27 +1,17 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/diagnostikanforderung",
-  "version": "0.1",
-  "name": "diagnostikanforderung",
-  "status": "draft",
+  "version": "1.0",
+  "name": "nNGM_ValueSet_Procedures",
+  "status": "active",
   "experimental": true,
   "date": "2019-04-07",
   "publisher": "Universitätsklinikum Köln",
-  "description": "Tests im Rahmen der Krebsdiagnose und -behandlung",
+  "description": "Diagnostiken durchgeführt im Rahmen von nNGM",
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "concept": [
-          {
-            "code": "komplett",
-            "display": "Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung"
-          },
-          {
-            "code": "resistenztestung",
-            "display": "Resistenztestung"
-          }
-        ]
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures"
       }
     ]
   },
@@ -32,13 +22,13 @@
     "contains": [
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "Komplette Untersuchung",
-        "display": "Komplette Untersuchung"
+        "code": "gewebediagnostik",
+        "display": "Gewebediagnostik"
       },
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "Einzeluntersuchung",
-        "display": "Einzeluntersuchung"
+        "code": "blutdiagnostik",
+        "display": "Blutdiagnostik"
       }
     ]
   }

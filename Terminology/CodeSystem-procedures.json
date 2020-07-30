@@ -6,15 +6,19 @@
     ]
   },
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-  "version": "0.1",
-  "name": "procedures",
-  "status": "draft",
-  "experimental": true,
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/procedures",
+  "version": "1.0",
+  "experimental": false,
+  "title": "nNGM: CodeSystem Procedures",
+  "name": "nNGM_CodeSystem_Procedures",
+  "status": "active",
   "date": "2019-04-07",
   "publisher": "Universitätsklinikum Köln",
   "description": "Prozeduren im Rahmen der Krebsdiagnose und -behandlung",
+  "compositional": false, 
   "caseSensitive": true,
   "content": "complete",
+  "count": 2,
   "concept": [
     {
       "code": "gewebediagnostik",
@@ -23,18 +27,6 @@
     {
       "code": "blutdiagnostik",
       "display": "Blutdiagnostik"
-    },
-    {
-      "code": "komplett",
-      "display": "Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung, sofern ausreichend Tumormaterial vorhanden ist, umfasst alle therapeutisch relevanten Marker sowie Marker aus aktuellen klinischen Studien."
-    },
-    {
-      "code": "resistenztestung",
-      "display": "Resistenztestungk"
-    },
-    {
-      "code": "tumorboard",
-      "display": "Tumorboard"
     }
   ]
 }

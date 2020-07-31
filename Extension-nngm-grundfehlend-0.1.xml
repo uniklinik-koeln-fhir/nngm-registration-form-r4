@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundfehlend" />
-  <name value="ExtensionNngmGrundFehlend" />
-  <status value="draft" />
-  <fhirVersion value="4.0.0" />
+  <name value="nNGM_Extension_GrundFehlend" />
+  <title value="nNGM: Extension Grund fehlende Tumorbiopsie" />
+  <status value="active" />
+  <publisher value="Universitätsklinikum Köln" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -14,6 +16,10 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <type>
@@ -26,9 +32,14 @@
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
+      <min value="1" />
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

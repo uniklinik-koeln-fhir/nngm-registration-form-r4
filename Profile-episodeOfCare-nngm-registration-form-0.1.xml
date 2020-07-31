@@ -92,7 +92,7 @@
       <sliceName value="nngmStatus" />
       <type>
         <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/nngmStatus" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/FollowUpStatus" />
       </type>
       <mustSupport value="true" />
     </element>

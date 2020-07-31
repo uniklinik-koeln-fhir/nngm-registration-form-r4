@@ -1200,14 +1200,17 @@
       <definition value="A code that classifies the service for searching, sorting and display purposes (e.g. &quot;Surgical Procedure&quot;)." />
       <comment value="There may be multiple axis of categorization depending on the context or use case for retrieving or displaying the resource.  The level of granularity is defined by the category concepts in the value set." />
       <requirements value="Used for filtering what service request are retrieved and displayed." />
+      <min value="1" />
+      <max value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
         <strength value="required" />
         <description value="Classification of the requested service." />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/diagnostikanforderung" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-kategorie" />
       </binding>
       <mapping>
         <identity value="w5" />
@@ -1221,10 +1224,6 @@
         <identity value="rim" />
         <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;INT&quot;].code" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.CodeableConcept.coding.system">
-      <path value="ServiceRequest.category.coding.system" />
-      <fixedUri value="http://uk-koeln.de/fhir/ValueSet/nngm/diagnostikanforderung" />
     </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.priority" />
@@ -1297,7 +1296,7 @@
       <binding>
         <strength value="required" />
         <description value="Codes for tests or services that can be carried out by a designated individual, organization or healthcare service.  For laboratory, LOINC is  (preferred)[http://build.fhir.org/terminologies.html#preferred] and a valueset using LOINC Order codes is available [here](valueset-diagnostic-requests.html)." />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tests" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code" />
       </binding>
       <mapping>
         <identity value="workflow" />
@@ -1345,11 +1344,12 @@
         <code value="CodeableConcept" />
       </type>
       <condition value="prr-1" />
+      <mustSupport value="true" />
       <isSummary value="true" />
       <binding>
-        <strength value="example" />
+        <strength value="required" />
         <description value="Codified order entry details which are based on order context." />
-        <valueSet value="http://hl7.org/fhir/ValueSet/servicerequest-orderdetail" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-orderDetails" />
       </binding>
       <mapping>
         <identity value="v2" />

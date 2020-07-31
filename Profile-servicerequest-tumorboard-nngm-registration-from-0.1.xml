@@ -46,76 +46,6 @@
         <map value="Act[moodCode&lt;=INT]" />
       </mapping>
     </element>
-    <element id="ServiceRequest.meta.security.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.meta.security.display" />
-    </element>
-    <element id="ServiceRequest.meta.tag.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.meta.tag.display" />
-    </element>
-    <element id="ServiceRequest.extension">
-      <path value="ServiceRequest.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="ServiceRequest.extension:grundFurFehlendeTumorbiopsie">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="grundFurFehlendeTumorbiopsie" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundfehlend" />
-      </type>
-    </element>
-    <element id="ServiceRequest.extension:molekularpathologie">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="molekularpathologie" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/molekularpathologie" />
-      </type>
-    </element>
-    <element id="ServiceRequest.extension:molekularpathologie.value[x].coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.extension.value[x].coding.display" />
-    </element>
-    <element id="ServiceRequest.extension:molekularpathologie.value[x].text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.extension.value[x].text" />
-    </element>
-    <element id="ServiceRequest.extension:liquidbiopsy">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="liquidbiopsy" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/liquidbiopsy" />
-      </type>
-    </element>
-    <element id="ServiceRequest.extension:liquidbiopsy.value[x].coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.extension.value[x].coding.display" />
-    </element>
-    <element id="ServiceRequest.extension:liquidbiopsy.value[x].text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.extension.value[x].text" />
-    </element>
     <element id="ServiceRequest.Identifier">
       <path value="ServiceRequest.identifier" />
       <short value="Identifiers assigned to this order" />
@@ -145,24 +75,6 @@
         <identity value="quick" />
         <map value="ClinicalStatement.identifier" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.Identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.identifier.assigner.display" />
     </element>
     <element id="ServiceRequest.canonical">
       <path value="ServiceRequest.instantiatesCanonical" />
@@ -235,24 +147,6 @@
         <map value=".outboundRelationship[typeCode=FLFS].target" />
       </mapping>
     </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.basedOn.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.basedOn.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.basedOn.display" />
-    </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.replaces" />
       <short value="What request replaces" />
@@ -277,24 +171,6 @@
         <identity value="rim" />
         <map value=".outboundRelationship[typeCode=RPLC].target" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.replaces.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.replaces.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.replaces.display" />
     </element>
     <element id="ServiceRequest.Identifier">
       <path value="ServiceRequest.requisition" />
@@ -321,24 +197,6 @@
         <identity value="rim" />
         <map value=".inboundRelationship(typeCode=COMP].source[moodCode=INT].identifier" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.Identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.requisition.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.requisition.type.text" />
-    </element>
-    <element id="ServiceRequest.Identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.requisition.assigner.display" />
     </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.status" />
@@ -446,18 +304,6 @@
         <map value=".outboundRelationship[typeCode=&quot;COMP].target[classCode=&quot;LIST&quot;, moodCode=&quot;INT&quot;].code" />
       </mapping>
     </element>
-    <element id="ServiceRequest.CodeableConcept.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.category.coding.display" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.category.text" />
-    </element>
     <element id="ServiceRequest.code">
       <path value="ServiceRequest.priority" />
       <short value="routine | urgent | asap | stat" />
@@ -560,24 +406,14 @@
     <element id="ServiceRequest.CodeableConcept.coding.system">
       <path value="ServiceRequest.code.coding.system" />
       <min value="1" />
+      <fixedUri value="http://ncit.nci.nih.gov" />
       <mustSupport value="true" />
     </element>
     <element id="ServiceRequest.CodeableConcept.coding.code">
       <path value="ServiceRequest.code.coding.code" />
       <min value="1" />
+      <fixedCode value="C19165" />
       <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.code.coding.display" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.code.text" />
     </element>
     <element id="ServiceRequest.CodeableConcept">
       <path value="ServiceRequest.orderDetail" />
@@ -607,18 +443,6 @@
         <identity value="quick" />
         <map value="Procedure.procedureCode" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.CodeableConcept.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.orderDetail.coding.display" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.orderDetail.text" />
     </element>
     <element id="ServiceRequest.Quantity">
       <path value="ServiceRequest.quantity[x]" />
@@ -690,30 +514,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.subject.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.subject.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.subject.identifier.assigner.display" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.subject.display" />
-    </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.encounter" />
       <short value="Encounter in which the request was created" />
@@ -760,29 +560,10 @@
       <path value="ServiceRequest.encounter.extension" />
       <sliceName value="aufenthaltsart" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart" />
       </type>
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.encounter.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.encounter.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.encounter.display" />
     </element>
     <element id="ServiceRequest.dateTime">
       <path value="ServiceRequest.occurrence[x]" />
@@ -945,7 +726,6 @@
       <path value="ServiceRequest.requester.extension" />
       <sliceName value="vorstellungTmb" />
       <min value="1" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/vorstellung-tmb" />
@@ -956,30 +736,6 @@
       <path value="ServiceRequest.requester.reference" />
       <min value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.requester.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.requester.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.requester.identifier.assigner.display" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.requester.display" />
     </element>
     <element id="ServiceRequest.CodeableConcept">
       <path value="ServiceRequest.performerType" />
@@ -1013,18 +769,6 @@
         <identity value="rim" />
         <map value=".participation[typeCode=PRF].role[scoper.determinerCode=KIND].code" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.CodeableConcept.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.performerType.coding.display" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.performerType.text" />
     </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.performer" />
@@ -1068,30 +812,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.performer.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.performer.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.performer.identifier.assigner.display" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.performer.display" />
-    </element>
     <element id="ServiceRequest.CodeableConcept">
       <path value="ServiceRequest.locationCode" />
       <short value="Requested location" />
@@ -1114,18 +834,6 @@
         <map value=".participation[typeCode=LOC].role[scoper.determinerCode=KIND].code" />
       </mapping>
     </element>
-    <element id="ServiceRequest.CodeableConcept.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.locationCode.coding.display" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.locationCode.text" />
-    </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.locationReference" />
       <short value="Requested location" />
@@ -1143,24 +851,6 @@
         <identity value="rim" />
         <map value=".participation[typeCode=LOC].role[scoper.determinerCode=INSTANCE]" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.locationReference.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.locationReference.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.locationReference.display" />
     </element>
     <element id="ServiceRequest.CodeableConcept">
       <path value="ServiceRequest.reasonCode" />
@@ -1193,18 +883,6 @@
         <map value=".reasonCode" />
       </mapping>
     </element>
-    <element id="ServiceRequest.CodeableConcept.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.reasonCode.coding.display" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.reasonCode.text" />
-    </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.reasonReference" />
       <short value="Explanation/Justification for service or service" />
@@ -1235,24 +913,6 @@
         <map value=".outboundRelationship[typeCode=RSON].target" />
       </mapping>
     </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.reasonReference.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.reasonReference.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.reasonReference.display" />
-    </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.insurance" />
       <short value="Associated insurance coverage" />
@@ -1274,24 +934,6 @@
         <identity value="rim" />
         <map value=".outboundRelationship[typeCode=COVBY].target" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.insurance.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.insurance.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.insurance.display" />
     </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.supportingInfo" />
@@ -1316,24 +958,6 @@
         <identity value="rim" />
         <map value=".outboundRelationship[typeCode=PERT].target" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.supportingInfo.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.supportingInfo.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.supportingInfo.display" />
     </element>
     <element id="ServiceRequest.Reference">
       <path value="ServiceRequest.specimen" />
@@ -1361,30 +985,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.specimen.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.specimen.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.specimen.identifier.assigner.display" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.specimen.display" />
-    </element>
     <element id="ServiceRequest.CodeableConcept">
       <path value="ServiceRequest.bodySite" />
       <short value="Location on Body" />
@@ -1409,18 +1009,6 @@
         <identity value="quick" />
         <map value="Procedure.targetBodySite" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.CodeableConcept.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.bodySite.coding.display" />
-    </element>
-    <element id="ServiceRequest.CodeableConcept.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.bodySite.text" />
     </element>
     <element id="ServiceRequest.Annotation">
       <path value="ServiceRequest.note" />
@@ -1485,24 +1073,6 @@
         <identity value="rim" />
         <map value=".inboundRelationship(typeCode=SUBJ].source[classCode=CACT, moodCode=EVN]" />
       </mapping>
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.relevantHistory.identifier.type.coding.display" />
-    </element>
-    <element id="ServiceRequest.Reference.identifier.type.text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.relevantHistory.identifier.type.text" />
-    </element>
-    <element id="ServiceRequest.Reference.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="ServiceRequest.relevantHistory.display" />
     </element>
   </differential>
 </StructureDefinition>

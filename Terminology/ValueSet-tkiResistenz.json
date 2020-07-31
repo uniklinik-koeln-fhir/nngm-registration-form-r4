@@ -11,9 +11,6 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/raucherstatus"
-      },
-      {
         "system": "http://ncit.nci.nih.gov",
         "concept": [
           {

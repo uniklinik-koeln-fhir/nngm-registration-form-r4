@@ -8,7 +8,7 @@
     "experimental": false,
     "date": "2020-07-08",
     "publisher": "Universitätsklinikum Köln",
-    "description": "ICD-0 Klassifikation (Histologie)",
+    "description": "nNGM ICD-0 Klassifikation (Histologie)",
     "compose": {
       "include": [
         {
@@ -85,6 +85,50 @@
             {
               "code": "8013/3",
               "display": "Großzelliges neuroendokrines Karzinom"
+            },
+            {
+              "code": "8240/3",
+              "display": "Karzinoidtumor o.n.A."
+            },
+            {
+              "code": "8249/3",
+              "display": "Atypischer Karzinoidtumor"
+            },
+            {
+              "code": "8012/3",
+              "display": "Großzelliges Karzinom o.n.A."
+            },
+            {
+              "code": "8560/3",
+              "display": "Adenosquamöses Karzinom"
+            },
+            {
+              "code": "8560/3",
+              "display": "Pleomorphes Karzinom"
+            },
+            {
+              "code": "8430/3",
+              "display": "Mukoepidermoid-Karzinom"
+            },
+            {
+              "code": "8200/3",
+              "display": "Adenoid-zystisches Karzinom"
+            },
+            {
+              "code": "8562/3",
+              "display": "Epithelial-myoepitheliales Karzinom"
+            },
+            {
+              "code": "8000/0",
+              "display": "Benigne Neoplasie o.n.A."
+            },
+            {
+              "code": "8000/1",
+              "display": "Neoplasie fraglicher Dignität"
+            },
+            {
+              "code": "8000/3",
+              "display": "Maligne Neoplasie"
             }
           ]
         }

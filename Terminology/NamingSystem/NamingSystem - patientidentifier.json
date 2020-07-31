@@ -2,7 +2,7 @@
   "resourceType": "NamingSystem",
   "meta": {
     "profile": [
-      "http://fhir.de/StructureDefinition/namingsystem-de-basis/0.2"
+      "http://fhir.de/StructureDefinition/namingsystem-de-basis"
     ]
   },
   "name": "nngm-patientidentifier",

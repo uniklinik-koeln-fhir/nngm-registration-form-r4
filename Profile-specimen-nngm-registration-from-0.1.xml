@@ -117,9 +117,10 @@
       <path value="Specimen.request" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/testung" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorblock" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Specimen.request.reference">
       <path value="Specimen.request.reference" />

@@ -9,6 +9,7 @@
   "status": "active",
   "kind": "identifier",
   "date": "2019-09-13",
+  "version": "1.0",
   "publisher": "Universitätsklinikum Köln",
   "type": {
     "coding": [
@@ -19,7 +20,6 @@
     ]
   },
   "description": "The patient identifier within the nNGM Project space",
-  "usage": "",
   "uniqueId": [
     {
       "type": "uri",

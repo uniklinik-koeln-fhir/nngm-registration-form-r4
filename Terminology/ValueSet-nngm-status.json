@@ -1,21 +1,12 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngmStatus",
+  "url": "http://uk-koeln.de/fhir/ValueSet/FollowUpStatus",
   "title": "nNGM Status",
   "status": "draft",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "email"
-        }
-      ]
-    }
-  ],
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngmStatus",
+        "system": "http://uk-koeln.de/fhir/CodeSystem/FollowUpStatus",
         "concept": [
           {
             "code": "lebt",
@@ -32,10 +23,6 @@
         ]
       }
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>nNGM Status</h2><tt>http://uk-koeln.de/fhir/ValueSet/nngmStatus</tt></div>"
   },
   "name": "NNGM_Status"
 }

@@ -25,21 +25,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.extension:angaben">
-      <path value="Observation.extension" />
-      <sliceName value="angaben" />
-      <min value="0" />
-      <max value="2" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/Angaben" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.extension:angaben.value[x]">
-      <path value="Observation.extension.value[x]" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.status">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
         <valueString value="default: final" />

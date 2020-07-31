@@ -4,10 +4,10 @@
   <version value="0.1" />
   <name value="PractitionerNngm" />
   <title value="nNGM: Profil - Practitioner - Externer Behandler" />
-  <status value="draft" />
-  <experimental value="true" />
+  <status value="active" />
+  <experimental value="false" />
   <description value="External practitioner (Oncology)" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="Practitioner" />
@@ -23,6 +23,36 @@
       <sliceName value="ZANR" />
       <mustSupport value="true" />
     </element>
+    <element id="Practitioner.identifier:nngmPractitionerId">
+      <path value="Practitioner.identifier" />
+      <sliceName value="nngmPractitionerId" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:nngmPractitionerId.type">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Practitioner.identifier.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://healex.systems/fhir/NamingSystem/nNGM/practitionerId" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.identifier:nngmPractitionerId.system">
+      <path value="Practitioner.identifier.system" />
+      <min value="1" />
+    </element>
+    <element id="Practitioner.identifier:nngmPractitionerId.value">
+      <path value="Practitioner.identifier.value" />
+      <min value="1" />
+    </element>
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <min value="1" />
@@ -33,26 +63,6 @@
       <path value="Practitioner.name.family" />
       <mustSupport value="true" />
     </element>
-    <element id="Practitioner.name.family.extension:nachname">
-      <path value="Practitioner.name.family.extension" />
-      <sliceName value="nachname" />
-    </element>
-    <element id="Practitioner.name.family.extension:nachname.value[x]">
-      <path value="Practitioner.name.family.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Practitioner.name.family.extension:vorsatzwort">
-      <path value="Practitioner.name.family.extension" />
-      <sliceName value="vorsatzwort" />
-    </element>
-    <element id="Practitioner.name.family.extension:vorsatzwort.value[x]">
-      <path value="Practitioner.name.family.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-    </element>
     <element id="Practitioner.name.given">
       <path value="Practitioner.name.given" />
       <mustSupport value="true" />
@@ -60,16 +70,6 @@
     <element id="Practitioner.name.prefix">
       <path value="Practitioner.name.prefix" />
       <mustSupport value="true" />
-    </element>
-    <element id="Practitioner.name.prefix.extension:prefix-qualifier">
-      <path value="Practitioner.name.prefix.extension" />
-      <sliceName value="prefix-qualifier" />
-    </element>
-    <element id="Practitioner.name.prefix.extension:prefix-qualifier.value[x]">
-      <path value="Practitioner.name.prefix.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
     </element>
     <element id="Practitioner.telecom">
       <path value="Practitioner.telecom" />

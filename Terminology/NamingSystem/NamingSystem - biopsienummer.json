@@ -5,7 +5,7 @@
       "http://fhir.de/StructureDefinition/namingsystem-de-basis/0.2"
     ]
   },
-  "name": "nngm-BiopsieIdentifier",
+  "name": "nNGM_NamingSystem_nNGM-BiopsieIdentifier",
   "status": "active",
   "kind": "identifier",
   "date": "2019-02-08",

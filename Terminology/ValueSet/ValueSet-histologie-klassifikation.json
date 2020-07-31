@@ -8,7 +8,7 @@
     "experimental": false,
     "date": "2020-07-08",
     "publisher": "Universitätsklinikum Köln",
-    "description": "nNGM ICD-0 Klassifikation (Histologie)",
+    "description": "ICD-0 Klassifikation (Histologie)",
     "compose": {
       "include": [
         {

@@ -6,6 +6,7 @@
   <title value="nNGM: Profil - Coverage - Versicherungsverhältnis" />
   <status value="draft" />
   <experimental value="true" />
+  <publisher value="Universitätsklinikum Köln" />
   <description value="Type of health insurance (private, public payor). Insurance identification number." />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />

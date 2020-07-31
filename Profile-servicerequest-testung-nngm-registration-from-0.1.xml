@@ -895,16 +895,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="ServiceRequest.extension:molekularpathologie">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="molekularpathologie" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/molekularpathologie" />
-      </type>
-      <mustSupport value="true" />
-    </element>
     <element id="ServiceRequest.extension:grundFehlend">
       <path value="ServiceRequest.extension" />
       <sliceName value="grundFehlend" />
@@ -912,55 +902,6 @@
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundfehlend" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.extension:grundEntfallen">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="grundEntfallen" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundentfallen" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.extension:storno">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="storno" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/storno" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.extension:versand">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="versand" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandmaterial" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.extension:datumAbschluss">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="datumAbschluss" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/datumabschluss" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="ServiceRequest.extension:datumVersands">
-      <path value="ServiceRequest.extension" />
-      <sliceName value="datumVersands" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/datumversands" />
       </type>
       <mustSupport value="true" />
     </element>

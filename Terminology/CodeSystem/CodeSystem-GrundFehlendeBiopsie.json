@@ -1,0 +1,42 @@
+{
+  "resourceType": "CodeSystem",
+  "title": "GrundFehlendeBiopsie",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
+  "status": "draft",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "display": "Fehlende Tumormanifestation, die einer Biopsie zugänglich wäre",
+      "code": "FT"
+    },
+    {
+      "display": "Reduzierter Allgemeinzustand",
+      "code": "RA"
+    },
+    {
+      "display": "Unzumutbares Risikos einer Biopsie bzw. zu erwartende Komplikationen",
+      "code": "UR"
+    },
+    {
+      "display": "Ablehnung seitens Patient(in)",
+      "code": "AP"
+    }
+  ],
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GrundFehlendeBiopsie</h2><tt>http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie</tt><p></p></div>"
+  },
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
+  "count": 5,
+  "name": "GrundFehlendeBiopsie"
+}

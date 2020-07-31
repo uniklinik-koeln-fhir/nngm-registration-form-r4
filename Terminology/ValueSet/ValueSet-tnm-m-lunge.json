@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m-nngm",
-  "version": "0.1",
+  "version": "1.0",
   "name": "nNGM_ValueSet_TNM-M-Lunge",
   "title": "nNGM: ValueSet TNM-M-Lunge",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "date": "2018-08-10",
   "publisher": "Universitätsklinikum Köln",
   "description": "TNM: M-Klassifikation (Lunge)",

@@ -14,11 +14,16 @@
         "system": "http://ncit.nci.nih.gov",
         "concept": [
           {
-            "code": "C25250",
-            "display": "Komplette Untersuchung"
+            "code": "komplett",
+            "display": "Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung"
           },
           {
-
+            "code": "resistenztestung",
+            "display": "Resistenztestung"
+          },
+          {
+            "code": "resistenztestung",
+            "display": "Resistenztestung"
           }
         ]
       }

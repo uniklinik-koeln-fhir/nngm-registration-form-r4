@@ -840,7 +840,7 @@
   <experimental value="true" />
   <publisher value="Health Level Seven International (Orders and Observations)" />
   <description value="Tissue diagnostic or resistance testing (ALK inhibitors)" />
-  <fhirVersion value="4.0.0" />
+  <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
   <type value="ServiceRequest" />
@@ -889,7 +889,6 @@
     <element id="ServiceRequest.extension:aufenthaltsart">
       <path value="ServiceRequest.extension" />
       <sliceName value="aufenthaltsart" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart" />
@@ -949,7 +948,6 @@
     <element id="ServiceRequest.extension:datumAbschluss">
       <path value="ServiceRequest.extension" />
       <sliceName value="datumAbschluss" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -1839,7 +1837,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM" />
       </type>
       <mustSupport value="true" />
       <isSummary value="true" />

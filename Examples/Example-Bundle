@@ -949,7 +949,7 @@
         <intent value="proposal" />
         <code>
           <coding>
-            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/procedures" />
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests" />
             <code value="gewebediagnostik" />
           </coding>
         </code>
@@ -977,7 +977,7 @@
         <intent value="proposal" />
         <code>
           <coding>
-            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/procedures" />
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests" />
             <code value="komplett" />
           </coding>
         </code>
@@ -1097,7 +1097,7 @@
         <intent value="proposal" />
         <code>
           <coding>
-            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/procedures" />
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests" />
             <code value="tumorboard" />
           </coding>
         </code>

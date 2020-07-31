@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung",
+  "version": "0.1",
+  "name": "anforderung",
+  "title": "nNGM: ValueSet Raucherstatus",
+  "status": "active",
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Anforderbare Untersuchungen des NNGM",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ncit.nci.nih.gov",
+        "concept": [
+          {
+            "code": "C25250",
+            "display": "Komplette Untersuchung"
+          },
+          {
+
+          }
+        ]
+      }
+    ]
+  }
+}

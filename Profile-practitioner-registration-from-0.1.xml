@@ -48,6 +48,7 @@
     <element id="Practitioner.identifier:nngmPractitionerId.system">
       <path value="Practitioner.identifier.system" />
       <min value="1" />
+      <fixedUri value="http://uk-koeln.de/NamingSystem/nNGM/netzwerkpartnernummer" />
     </element>
     <element id="Practitioner.identifier:nngmPractitionerId.value">
       <path value="Practitioner.identifier.value" />

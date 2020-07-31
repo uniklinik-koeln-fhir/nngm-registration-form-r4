@@ -1,13 +1,14 @@
 {
     "resourceType":"ValueSet",
-    "url":"http://uk-koeln.de/fhir/ValueSet/tnm-suffix-miscy",
-    "version":"0.1",
-    "name":"tnm-praefix-cpu",
+    "url":"http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-miscy",
+    "version":"1.0",
+    "title":"nNGM: ValueSet TNM-Suffix",
+    "name":"nNGM_ValueSet_TNM-Suffix",
     "status":"draft",
-    "experimental":true,
+    "experimental":false,
     "date":"2018-10-31",
     "publisher":"Uniklinik Köln",
-    "description":"TNM Präfix c/p/u",
+    "description":"TNM Suffix",
     "compose":{
         "include": [
             {
@@ -19,12 +20,12 @@
                         "display":"m - multiple Tumore der gleichen Region"
                     },
                     {
-                        "code":"p - histopathologisch gesichert",
-                        "display":"p - histopathologisch gesichert"
+                        "code":"is - Carcinoma in situ",
+                        "display":"is - Carcinoma in situ"
                     },
                     {
-                        "code":"u - Ultraschalldiagnostik",
-                        "display":"u - Ultraschalldiagnostik"
+                        "code":"cy - zytologisch",
+                        "display":"cy - zytologisch"
                     }
                 ]
             }

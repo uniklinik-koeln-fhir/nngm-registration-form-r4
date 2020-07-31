@@ -2,8 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="InformationsquelleTodesdatum" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
-  <version value="0.1" />
-  <name value="InformationsquelleTodesdatum" />
+  <version value="1.0" />
+  <name value="nNGM_Extension_InformationsquelleTodesdatum" />
+  <title value="nNGM: Extension InformationsquelleTodesdatum" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />

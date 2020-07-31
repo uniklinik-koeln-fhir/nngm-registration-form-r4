@@ -2,10 +2,10 @@
   "resourceType": "NamingSystem",
   "meta": {
     "profile": [
-      "http://fhir.de/StructureDefinition/namingsystem-de-basis/0.2"
+      "http://fhir.de/StructureDefinition/namingsystem-de-basis"
     ]
   },
-  "name": "nngm-fallidentifier",
+  "name": "nNGM_NamingSytem_nNGM-Netzwerkpartnernummer",
   "status": "active",
   "kind": "identifier",
   "date": "2019-02-08",
@@ -14,16 +14,16 @@
     "coding": [
       {
         "system": "http://hl7.org/fhir/v2/0203",
-        "code": "PHC"
+        "code": "PRN"
       }
     ]
   },
-  "description": "Die Fallnummer im nNGM-Projekt.",
-  "usage": "Die Fall ID ist ein eindeutiger Identifikator des Falles im Kontext von nNGM (EpisodeOfCare-Ressource).",
+  "description": "Die Netzwerkpartnernummer im nNGM-Projekt.",
+  "usage": "Die Netzwerkpartnernummer ist ein eindeutiger Identifikator des Arztes im Kontext von nNGM (Practitioner-Ressource).",
   "uniqueId": [
     {
       "type": "uri",
-      "value": "http://uk-koeln.de/NamingSystem/nNGM/fallnummer",
+      "value": "http://uk-koeln.de/NamingSystem/nNGM/netzwerkpartnernummer",
       "preferred": true,
       "period": {
         "start": "2019-02-08"

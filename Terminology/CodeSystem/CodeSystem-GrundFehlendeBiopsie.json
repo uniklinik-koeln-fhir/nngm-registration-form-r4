@@ -1,19 +1,24 @@
 {
   "resourceType": "CodeSystem",
-  "title": "GrundFehlendeBiopsie",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
   "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
-  "status": "draft",
-  "contact": [
-    {
-      "telecom": [
-        {
-          "system": "email"
-        }
-      ]
-    }
-  ],
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
+  "version": "1.0",
+  "experimental": false,
+  "title": "nNGM: CodeSystem GrundFehlendeBiopsie",
+  "name": "nNGM_CodeSystem_GrundFehlendeBiopsie",
+  "status": "active",
+  "date": "2019-02-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Grund für eine fehlende Biopsy (Liquid Biopsy)",
   "compositional": false,
+  "caseSensitive": true,
   "content": "complete",
+  "count": 4,
   "concept": [
     {
       "display": "Fehlende Tumormanifestation, die einer Biopsie zugänglich wäre",
@@ -31,12 +36,5 @@
       "display": "Ablehnung seitens Patient(in)",
       "code": "AP"
     }
-  ],
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>GrundFehlendeBiopsie</h2><tt>http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie</tt><p></p></div>"
-  },
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
-  "count": 5,
-  "name": "GrundFehlendeBiopsie"
+  ]
 }

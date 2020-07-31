@@ -11,7 +11,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests",
         "concept": [
           {
             "code": "komplett",
@@ -22,33 +22,6 @@
             "display": "Resistenztestung"
           }
         ]
-      }
-    ]
-  },
-  "expansion": {
-    "identifier": "uk-koeln-work-tests",
-    "timestamp": "2019-04-07",
-    "total": 4,
-    "contains": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "Gewebediagnostik",
-        "display": "Gewebediagnostik"
-      },
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "Blutdiagnostik (Liquid Biopsy)",
-        "display": "Blutdiagnostik (Liquid Biopsy)"
-      },
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "komplett",
-        "display": "Molekularpathologische Erstdiagnostik / Komplette nNGM-Untersuchung, sofern ausreichend Tumormaterial vorhanden ist, umfasst alle therapeutisch relevanten Marker sowie Marker aus aktuellen klinischen Studien."
-      },
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/procedures",
-        "code": "resistenztestung",
-        "display": "Resistenztestungk"
       }
     ]
   }

@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/obs-requests",
+  "version": "1.0",
+  "title": "nNGM: ValueSet Procedures",
+  "name": "nNGM_ValueSet_Procedures",
+  "status": "active",
+  "date": "2019-04-07",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Diagnostiken durchgeführt im Rahmen von nNGM",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests"
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-procedures",
+    "timestamp": "2019-04-07",
+    "total": 2,
+    "contains": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests",
+        "code": "gewebediagnostik",
+        "display": "Gewebediagnostik"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests",
+        "code": "blutdiagnostik",
+        "display": "Blutdiagnostik"
+      }
+    ]
+  }
+}

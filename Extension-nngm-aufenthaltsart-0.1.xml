@@ -15,7 +15,11 @@
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="ServiceRequest.encounter" />
+    <expression value="Specimen" />
+  </context>
+  <context>
+    <type value="element" />
+    <expression value="ServiceRequest" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
@@ -47,18 +51,6 @@
     <element id="Extension.value[x].coding.code">
       <path value="Extension.value[x].coding.code" />
       <min value="1" />
-    </element>
-    <element id="Extension.value[x].coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Extension.value[x].coding.display" />
-    </element>
-    <element id="Extension.value[x].text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Extension.value[x].text" />
     </element>
   </differential>
 </StructureDefinition>

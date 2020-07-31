@@ -209,10 +209,6 @@
       <path value="Observation.bodySite" />
       <max value="0" />
     </element>
-    <element id="Observation.method">
-      <path value="Observation.method" />
-      <max value="0" />
-    </element>
     <element id="Observation.specimen">
       <path value="Observation.specimen" />
       <type>

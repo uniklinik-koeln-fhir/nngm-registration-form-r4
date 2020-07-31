@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundfehlend" />
-  <name value="nNGM_Extension_GrundFehlend" />
-  <title value="nNGM: Extension Grund fehlende Tumorbiopsie" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/GrundFehlendeBiopsy" />
+  <version value="1.0" />
+  <name value="nNGM_Extension_GrundFehlendeBiopsy" />
+  <title value="nNGM: Extension GrundFehlendeBiopsy" />
   <status value="active" />
-  <publisher value="Universitätsklinikum Köln" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
@@ -16,10 +16,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension">
-      <path value="Extension" />
-      <max value="1" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
       <type>
@@ -28,7 +24,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundfehlend" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/GrundFehlendeBiopsy" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -38,8 +34,20 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/GrundFehlendeBiopsie" />
       </binding>
+    </element>
+    <element id="Extension.value[x].coding">
+      <path value="Extension.value[x].coding" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].coding.system">
+      <path value="Extension.value[x].coding.system" />
+      <min value="1" />
+    </element>
+    <element id="Extension.value[x].coding.code">
+      <path value="Extension.value[x].coding.code" />
+      <min value="1" />
     </element>
   </differential>
 </StructureDefinition>

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <meta>
-    <lastUpdated value="2017-12-05T18:33:36.883+01:00" />
-  </meta>
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart" />
-  <version value="0.1" />
-  <name value="ExtensionNngmAufenthaltsart" />
+  <version value="1.0" />
+  <name value="nNGM_Extension_Aufenthaltsart" />
   <title value="nNGM: Extension Art des Aufenthalts" />
   <status value="active" />
   <publisher value="Universitätsklinikum Köln" />
@@ -47,18 +44,6 @@
     <element id="Extension.value[x].coding.code">
       <path value="Extension.value[x].coding.code" />
       <min value="1" />
-    </element>
-    <element id="Extension.value[x].coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Extension.value[x].coding.display" />
-    </element>
-    <element id="Extension.value[x].text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Extension.value[x].text" />
     </element>
   </differential>
 </StructureDefinition>

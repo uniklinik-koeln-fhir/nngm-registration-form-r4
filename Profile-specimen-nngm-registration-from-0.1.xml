@@ -51,7 +51,7 @@
     </element>
     <element id="Specimen.identifier:biopsieID.system">
       <path value="Specimen.identifier.system" />
-      <fixedUri value="http://healex.systems/fhir/NamingSystem/nNGM/specimeId" />
+      <fixedUri value="http://uk-koeln.de/NamingSystem/nNGM/biopsienummer" />
       <mustSupport value="true" />
     </element>
     <element id="Specimen.identifier:biopsieID.value">

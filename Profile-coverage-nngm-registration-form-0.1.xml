@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
-  <version value="0.1" />
-  <name value="CoverageNngm" />
+  <version value="1.0" />
+  <name value="nNGM_Coverage_Versicherungsverhältnis" />
   <title value="nNGM: Profil - Coverage - Versicherungsverhältnis" />
-  <status value="draft" />
+  <status value="active" />
   <experimental value="true" />
   <description value="Type of health insurance (private, public payor). Insurance identification number." />
   <fhirVersion value="4.0.1" />

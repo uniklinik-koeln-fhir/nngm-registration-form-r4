@@ -1,37 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <meta>
-    <lastUpdated value="2017-12-05T18:33:36.883+01:00" />
-  </meta>
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart" />
-  <version value="0.1" />
-  <name value="ExtensionNngmAufenthaltsart" />
-  <title value="nNGM: Extension Art des Aufenthalts" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
+  <version value="1.0" />
+  <name value="nNGM_Extension_EffectivePointInTime" />
+  <title value="nNGM: Extension EffectivePointInTime" />
   <status value="active" />
-  <publisher value="Universitätsklinikum Köln" />
-  <description value="Type of stay for treatment purposes" />
+  <experimental value="true" />
+  <description value="Coded point in time (diagnose- and treatment prozess)" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Specimen" />
-  </context>
-  <context>
-    <type value="element" />
-    <expression value="ServiceRequest" />
+    <expression value="Observation.effectiveTime" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
-    <element id="Extension">
-      <path value="Extension" />
-      <max value="1" />
-    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -41,8 +30,13 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time" />
       </binding>
+    </element>
+    <element id="Extension.value[x].coding">
+      <path value="Extension.value[x].coding" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Extension.value[x].coding.system">
       <path value="Extension.value[x].coding.system" />

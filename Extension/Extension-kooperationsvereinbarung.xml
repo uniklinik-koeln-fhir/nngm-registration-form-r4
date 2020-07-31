@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung" />
-  <name value="ExtensionNngmAbrechnungsinformationKooperationsvereinbarung" />
-  <status value="draft" />
+  <version value="1.0" />
+  <name value="nNGM_Extension_Kooperationsvereinbarung" />
+  <title value="nNGM: Extension Kooperationsvereinbarung" />
+  <status value="active" />
   <description value="Presence of Kooperationsvereinbarung" />
   <purpose value="nNGM: Extension Kooperationsvereinbarung" />
   <fhirVersion value="4.0.1" />

@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
-  <version value="0.1" />
-  <name value="ExtensionNngmEffectivePointInTime" />
-  <title value="Point in time" />
-  <status value="draft" />
-  <experimental value="true" />
-  <description value="Coded point in time (diagnose- and treatment prozess)" />
-  <fhirVersion value="4.0.0" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/FollowUpStatus" />
+  <version value="1.0" />
+  <name value="nNGM_Extension_FollowUpStatus" />
+  <title value="nNGM: Extension FollowUpStatus" />
+  <status value="active" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
     <type value="element" />
-    <expression value="Observation.effectiveTime" />
+    <expression value="EpisodeOfCare.status" />
   </context>
   <type value="Extension" />
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
   <derivation value="constraint" />
   <differential>
+    <element id="Extension">
+      <path value="Extension" />
+      <max value="1" />
+    </element>
     <element id="Extension.url">
       <path value="Extension.url" />
-      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="uri" />
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String" />
+      </type>
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/FollowUpStatus" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -30,13 +38,12 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngmStatus" />
       </binding>
     </element>
     <element id="Extension.value[x].coding">
       <path value="Extension.value[x].coding" />
       <min value="1" />
-      <max value="1" />
     </element>
     <element id="Extension.value[x].coding.system">
       <path value="Extension.value[x].coding.system" />
@@ -45,18 +52,6 @@
     <element id="Extension.value[x].coding.code">
       <path value="Extension.value[x].coding.code" />
       <min value="1" />
-    </element>
-    <element id="Extension.value[x].coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Extension.value[x].coding.display" />
-    </element>
-    <element id="Extension.value[x].text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Extension.value[x].text" />
     </element>
   </differential>
 </StructureDefinition>

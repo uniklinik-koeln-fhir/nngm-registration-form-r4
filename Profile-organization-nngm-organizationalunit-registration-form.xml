@@ -43,36 +43,6 @@
       </extension>
       <path value="Organization.meta.tag.display" />
     </element>
-    <element id="Organization.extension">
-      <path value="Organization.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Organization.extension:betriebsstaetten-hierarchie">
-      <path value="Organization.extension" />
-      <sliceName value="betriebsstaetten-hierarchie" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://fhir.de/StructureDefinition/betriebsstaetten-hierarchie" />
-      </type>
-    </element>
-    <element id="Organization.extension:betriebsstaetten-hierarchie.value[x].coding.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Organization.extension.value[x].coding.display" />
-    </element>
-    <element id="Organization.extension:betriebsstaetten-hierarchie.value[x].text">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
-      <path value="Organization.extension.value[x].text" />
-    </element>
     <element id="Organization.identifier">
       <path value="Organization.identifier" />
       <slicing>

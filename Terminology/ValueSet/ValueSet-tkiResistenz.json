@@ -1,10 +1,11 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tki-resistenz",
-  "version": "0.1",
-  "name": "tkiResistenz",
+  "version": "1.0",
   "title": "nNGM: ValueSet TKI Resistenz",
+  "name": "nNGM_ValueSet_TKI-Resistenz",
   "status": "active",
+  "experimental":false,
   "date": "2018-08-24",
   "publisher": "Universitätsklinikum Köln",
   "description": "Observation zur Erfassung der erfolgten TKI Therapien",

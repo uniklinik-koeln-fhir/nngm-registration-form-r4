@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/uicc-lunge",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/uicc-lunge",
   "version": "1.0",
   "title": "nNGM: ValueSet UIIC Lunge",
   "name": "nNGM_ValueSet_UICC-Lunge",

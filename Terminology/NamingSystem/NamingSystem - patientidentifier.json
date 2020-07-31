@@ -5,7 +5,7 @@
       "http://fhir.de/StructureDefinition/namingsystem-de-basis"
     ]
   },
-  "name": "nngm-patientidentifier",
+  "name": "nNGM_NamingSystem_PatientenlistenIdentifier",
   "status": "active",
   "kind": "identifier",
   "date": "2019-09-13",

@@ -1,10 +1,11 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/uicc-lunge",
-  "version": "0.1",
-  "name": "uicc-lunge",
-  "status": "draft",
-  "experimental": true,
+  "version": "1.0",
+  "title": "nNGM: ValueSet UIIC Lunge",
+  "name": "nNGM_ValueSet_UICC-Lunge",
+  "status": "active",
+  "experimental": false,
   "date": "2018-08-10",
   "publisher": "Universitätsklinikum Köln",
   "description": "UICC-Klassifikation (Lunge)",
@@ -13,18 +14,6 @@
       {
         "system": "urn:oid:2.16.840.1.113883.15.16",
         "concept": [
-          {
-            "code": "okk",
-            "display": "Okkultes Karzinom"
-          },
-          {
-            "code": "0",
-            "display": "0"
-          },
-          {
-            "code": "IA",
-            "display": "IA"
-          },
           {
             "code": "IA1",
             "display": "IA1"
@@ -50,8 +39,20 @@
             "display": "IIB"
           },
           {
-            "code": "IIIA",
-            "display": "IIIA"
+            "code": "IIIA1",
+            "display": "IIIA1"
+          },
+          {
+            "code": "IIIA2",
+            "display": "IIIA2"
+          },
+          {
+            "code": "IIIA3",
+            "display": "IIIA3"
+          },
+          {
+            "code": "IIIA4",
+            "display": "IIIA4"
           },
           {
             "code": "IIIB",
@@ -60,10 +61,6 @@
           {
             "code": "IIIC",
             "display": "IIIC"
-          },
-          {
-            "code": "IV",
-            "display": "IV"
           },
           {
             "code": "IVA",
@@ -80,23 +77,8 @@
   "expansion": {
     "identifier": "uk-koeln-work-uicc-lunge-1",
     "timestamp": "2018-08-10",
-    "total": 15,
+    "total": 14,
     "contains": [
-      {
-        "system": "urn:oid:2.16.840.1.113883.15.16",
-        "code": "okk",
-        "display": "Okkultes Karzinom"
-      },
-      {
-        "system": "urn:oid:2.16.840.1.113883.15.16",
-        "code": "0",
-        "display": "0"
-      },
-      {
-        "system": "urn:oid:2.16.840.1.113883.15.16",
-        "code": "IA",
-        "display": "IA"
-      },
       {
         "system": "urn:oid:2.16.840.1.113883.15.16",
         "code": "IA1",
@@ -129,8 +111,23 @@
       },
       {
         "system": "urn:oid:2.16.840.1.113883.15.16",
-        "code": "IIIA",
-        "display": "IIIA"
+        "code": "IIIA1",
+        "display": "IIIA1"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "code": "IIIA2",
+        "display": "IIIA2"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "code": "IIIA3",
+        "display": "IIIA3"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "code": "IIIA4",
+        "display": "IIIA4"
       },
       {
         "system": "urn:oid:2.16.840.1.113883.15.16",
@@ -141,11 +138,6 @@
         "system": "urn:oid:2.16.840.1.113883.15.16",
         "code": "IIIC",
         "display": "IIIC"
-      },
-      {
-        "system": "urn:oid:2.16.840.1.113883.15.16",
-        "code": "IV",
-        "display": "IV"
       },
       {
         "system": "urn:oid:2.16.840.1.113883.15.16",

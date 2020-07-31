@@ -1,14 +1,19 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+  "version":"1.0",
   "title": "nNGM Consent Policy",
-  "status": "draft",
+  "name": "NNGM_Consent_Policy",
+  "status": "active",
+  "experimental":false,
+  "date":"2018-10-31",
+  "publisher":"Uniklinik Köln",
+  "description":"nNGM Consent Policy",
   "compose": {
     "include": [
       {
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy"
       }
     ]
-  },
-  "name": "NNGM_Consent_Policy"
+  }
 }

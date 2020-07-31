@@ -2,10 +2,10 @@
   "resourceType": "NamingSystem",
   "meta": {
     "profile": [
-      "http://fhir.de/StructureDefinition/namingsystem-de-basis/0.2"
+      "http://fhir.de/StructureDefinition/namingsystem-de-basis"
     ]
   },
-  "name": "nngm-netzwerkpartnernummer",
+  "name": "nNGM_NamingSytem_nNGM-Netzwerkpartnernummer",
   "status": "active",
   "kind": "identifier",
   "date": "2019-02-08",

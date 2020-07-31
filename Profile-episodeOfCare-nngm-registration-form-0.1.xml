@@ -99,7 +99,9 @@
     </element>
     <element id="EpisodeOfCare.identifier:nngmFallnummer.system">
       <path value="EpisodeOfCare.identifier.system" />
+      <min value="1" />
       <fixedUri value="http://uk-koeln.de/NamingSystem/nNGM/fallnummer" />
+      <mustSupport value="true" />
     </element>
     <element id="EpisodeOfCare.identifier:nngmFallnummer.value">
       <path value="EpisodeOfCare.identifier.value" />

@@ -393,13 +393,13 @@
       <sliceName value="praefix-cpu" />
       <type>
         <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/Extension/nngm/tnm-praefix-cpu" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
       </type>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:T.extension:praefix-cpu.url">
       <path value="Observation.component.extension.url" />
-      <fixedUri value="http://uk-koeln.de/fhir/Extension/nngm/tnm-praefix-cpu" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
     </element>
     <element id="Observation.component:T.extension:praefix-cpu.value[x]">
       <path value="Observation.component.extension.value[x]" />
@@ -408,12 +408,8 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/Extension/nngm/tnm-praefix-cpu" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-praefix-cpu" />
       </binding>
-    </element>
-    <element id="Observation.component:T.extension:praefix-cpu.value[x].coding.system">
-      <path value="Observation.component.extension.value[x].coding.system" />
-      <fixedUri value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-praefix-cpu" />
     </element>
     <element id="Observation.component:T.extension:suffix-miscy">
       <path value="Observation.component.extension" />

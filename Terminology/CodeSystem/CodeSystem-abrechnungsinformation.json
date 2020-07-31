@@ -10,7 +10,7 @@
   "version": "1.0",
   "experimental": false,
   "title": "nNGM: CodeSystem Abrechnungsinformation",
-  "name": "nNGM_Abrechnungsinformation",
+  "name": "nNGM_CodeSystem_Abrechnungsinformation",
   "status": "active",
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",

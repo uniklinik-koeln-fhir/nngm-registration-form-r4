@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/Extension/nngm/tnm-praefix-cpu" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
   <version value="1.0" />
   <name value="nNGM_Extension_TNM-Praefix" />
   <title value="nNGM: Extension TNM-Praefix" />
@@ -24,7 +24,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://uk-koeln.de/fhir/Extension/tnm-praefix-cpu" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />

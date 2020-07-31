@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code",
+  "version": "1.0",
+  "title": "nNGM: Valueset Anforderungscode",
+  "name": "nNGM_Valueset_Anforderungscode",
+  "status": "active",
+  "date": "2020-07-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "nNGM Anforderungscode",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ncit.nci.nih.gov",
+        "concept": [
+          {
+            "code": "komplette_untersuchung",
+            "display": "Komplette Untersuchung"
+          },
+          {
+            "code": "einzel_untersuchung",
+            "display": "Einzeluntersuchung"
+          },
+          {
+            "code": "liquid_biopsy",
+            "display": "Liquid Biopsy"
+          }
+        ]
+      }
+    ]
+  }
+}

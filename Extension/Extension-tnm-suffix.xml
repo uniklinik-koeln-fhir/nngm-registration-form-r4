@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/Extension/tnm-suffix-miscy" />
-  <name value="TNMSuffix" />
-  <status value="draft" />
-  <fhirVersion value="4.0.0" />
+  <url value="http://uk-koeln.de/fhir/Extension/nngm/tnm-suffix-miscy" />
+  <name value="nNGM_Extension_TNM-Suffix" />
+  <title value="nNGM: Extension TNM-Suffix" />
+  <status value="active" />
+  <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />
   <context>
@@ -22,7 +23,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://uk-koeln.de/fhir/Extension/tnm-suffix-miscy" />
+      <fixedUri value="http://uk-koeln.de/fhir/Extension/nngm/tnm-suffix-miscy" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -31,7 +32,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/tnm-suffix-miscy" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-miscy" />
       </binding>
     </element>
   </differential>

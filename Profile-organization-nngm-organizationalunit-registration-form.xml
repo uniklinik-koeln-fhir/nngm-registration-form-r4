@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site" />
+  <url value="http://clinicalsite.org/fhir/StructureDefinition/organizationalunit" />
   <name value="OrganizationalUnit" />
   <title value="Clinical Site: Organizational Unit" />
   <status value="active" />

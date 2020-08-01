@@ -1,0 +1,19 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes",
+  "version": "1.0",
+  "title": "nNGM: ValueSet Country-Codes ISO-3166",
+  "name": "nNGM_ValueSet_CountryCodes-ISO-3166",
+  "status": "active",
+  "experimental":false,
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "3-stellige Country Codes ISO3166",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/countrycodes"
+      }
+    ]
+  }
+}

@@ -113,6 +113,10 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Specimen.receivedTime">
+      <path value="Specimen.receivedTime" />
+      <mustSupport value="true" />
+    </element>
     <element id="Specimen.request">
       <path value="Specimen.request" />
       <type>

@@ -15,22 +15,5 @@
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit"
       }
     ]
-  },
-  "expansion": {
-    "identifier": "uk-koeln-work-behandelbarkeit",
-    "timestamp": "2018-08-24",
-    "total": 3,
-    "contains": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
-        "code": "ko",
-        "display": "kurativ operabel"
-      },
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
-        "code": "nko",
-        "display": "nicht kurativ operabel"
-      }
-    ]
   }
 }

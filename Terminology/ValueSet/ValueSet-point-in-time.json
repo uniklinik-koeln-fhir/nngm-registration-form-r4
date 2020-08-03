@@ -15,22 +15,5 @@
         "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time"
       }
     ]
-  },
-  "expansion": {
-    "identifier": "uk-koeln-work-point-in-time",
-    "timestamp": "2018-08-24",
-    "total": 2,
-    "contains": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
-        "code": "ed",
-        "display": "Erstdiagnose"
-      },
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
-        "code": "aktuell",
-        "display": "aktuell"
-      }
-    ]
   }
 }

@@ -74,7 +74,7 @@
       <max value="1" />
       <type>
         <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/wiederholung" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/wiederholungAnforderung" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -83,7 +83,7 @@
       <sliceName value="grundEntfallBlockAnforderung" />
       <type>
         <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/GrundEntfallBlockAnforderung" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundEntfallBlockAnforderung" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -659,7 +659,6 @@
       <short value="Date request signed" />
       <definition value="When the request transitioned to being actionable." />
       <alias value="orderedOn" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="dateTime" />

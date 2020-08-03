@@ -6,6 +6,7 @@
     ]
   },
   "name": "nNGM_CodeSystem_Informationsquelle_des_Todesdatums",
+  "title": "nNGM: CodeSystem Informationsquelle des Todesdatums",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/izt",
   "version": "1.0",

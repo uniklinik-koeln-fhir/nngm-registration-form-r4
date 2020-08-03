@@ -156,17 +156,17 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:packungenProJahr">
+    <element id="Observation.component:packYears">
       <path value="Observation.component" />
-      <sliceName value="packungenProJahr" />
+      <sliceName value="packYears" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:packungenProJahr.code">
+    <element id="Observation.component:packYears.code">
       <path value="Observation.component.code" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:packungenProJahr.code.coding">
+    <element id="Observation.component:packYears.code.coding">
       <path value="Observation.component.code.coding" />
       <min value="1" />
       <max value="1" />
@@ -175,17 +175,17 @@
         <code value="C73993" />
       </patternCoding>
     </element>
-    <element id="Observation.component:packungenProJahr.code.coding.system">
+    <element id="Observation.component:packYears.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:packungenProJahr.code.coding.code">
+    <element id="Observation.component:packYears.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:packungenProJahr.value[x]">
+    <element id="Observation.component:packYears.value[x]">
       <path value="Observation.component.value[x]" />
       <min value="1" />
       <type>
@@ -193,18 +193,18 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:packungenProJahr.value[x].unit">
+    <element id="Observation.component:packYears.value[x].unit">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
         <valueBoolean value="true" />
       </extension>
       <path value="Observation.component.value[x].unit" />
       <fixedString value="pack years" />
     </element>
-    <element id="Observation.component:packungenProJahr.value[x].system">
+    <element id="Observation.component:packYears.value[x].system">
       <path value="Observation.component.value[x].system" />
       <fixedUri value="http://unitsofmeasure.org" />
     </element>
-    <element id="Observation.component:packungenProJahr.value[x].code">
+    <element id="Observation.component:packYears.value[x].code">
       <path value="Observation.component.value[x].code" />
       <fixedCode value="1{pack years}" />
     </element>

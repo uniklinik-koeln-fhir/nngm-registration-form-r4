@@ -209,6 +209,10 @@
     <element id="Coverage.type">
       <path value="Coverage.type" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassen-typ" />
+      </binding>
     </element>
     <element id="Coverage.type.coding">
       <path value="Coverage.type.coding" />

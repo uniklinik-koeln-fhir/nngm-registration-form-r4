@@ -38,7 +38,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngmStatus" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/FollowUpStatus" />
       </binding>
     </element>
     <element id="Extension.value[x].coding">

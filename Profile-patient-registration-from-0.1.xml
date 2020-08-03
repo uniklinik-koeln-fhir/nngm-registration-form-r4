@@ -71,6 +71,14 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Patient.name.family">
+      <path value="Patient.name.family" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.name.given">
+      <path value="Patient.name.given" />
+      <mustSupport value="true" />
+    </element>
     <element id="Patient.gender">
       <path value="Patient.gender" />
       <min value="1" />
@@ -123,6 +131,26 @@
         <profile value="http://fhir.de/StructureDefinition/address-de-basis" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.line">
+      <path value="Patient.address.line" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.city">
+      <path value="Patient.address.city" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.postalCode">
+      <path value="Patient.address.postalCode" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.address.country">
+      <path value="Patient.address.country" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes" />
+      </binding>
     </element>
     <element id="Patient.contact">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">

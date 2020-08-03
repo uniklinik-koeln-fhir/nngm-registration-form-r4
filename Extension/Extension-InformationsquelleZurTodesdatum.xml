@@ -33,7 +33,7 @@
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/CodeSystem/nngm/izt" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/izt" />
       </binding>
     </element>
   </differential>

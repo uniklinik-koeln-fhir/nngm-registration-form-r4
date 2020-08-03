@@ -279,7 +279,12 @@
         <valueBoolean value="true" />
       </extension>
       <path value="Coverage.payor.display" />
+      <min value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

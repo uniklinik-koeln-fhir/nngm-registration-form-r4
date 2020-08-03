@@ -1,0 +1,18 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse",
+  "version": "1.0",
+  "title": "nNGM: ValueSet Krankenkassen",
+  "name": "nNGM_ValueSet_Krankenkassen",
+  "status": "active",
+  "experimental":false,
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/krankenkasse"
+      }
+    ]
+  }
+}

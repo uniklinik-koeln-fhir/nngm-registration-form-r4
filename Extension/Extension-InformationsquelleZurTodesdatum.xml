@@ -29,11 +29,11 @@
       <path value="Extension.value[x]" />
       <min value="1" />
       <type>
-        <code value="string" />
+        <code value="CodeableConcept" />
       </type>
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/izt" />
+        <valueSet value="http://uk-koeln.de/fhir/CodeSystem/nngm/izt" />
       </binding>
     </element>
   </differential>

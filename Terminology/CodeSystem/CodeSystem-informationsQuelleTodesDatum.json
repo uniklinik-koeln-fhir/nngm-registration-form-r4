@@ -1,0 +1,66 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "name": "nNGM_CodeSystem_Informationsquelle_des_Todesdatums",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/izt",
+  "version": "1.0",
+  "experimental": false,
+  "status": "active",
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "compositional": false,
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "Arztbrief",
+      "definition": "Arztbrief",
+      "display": "Arztbrief"
+    },
+    {
+      "code": "Kontakt Krankenkasse",
+      "display": "Kontakt Krankenkasse",
+      "definition": "Kontakt Krankenkasse"
+    },
+    {
+      "code": "Kontakt Behandler",
+      "display": "Kontakt Behandler",
+      "definition": "Kontakt Behandler"
+    },
+    {
+      "code": "Kontakt Angehoerige",
+      "display": "Kontakt Angehoerige",
+      "definition": "Kontakt Angehoerige"
+    },
+    {
+      "code": "Internet (Todesanzeigen)",
+      "display": "Internet (Todesanzeigen)",
+      "definition": "Internet (Todesanzeigen)"
+    },
+    {
+      "code": "Krebsregister",
+      "display": "Krebsregister",
+      "definition": "Krebsregister"
+    },
+    {
+      "code": "Dokumentar",
+      "display": "Dokumentar",
+      "definition": "Dokumentar"
+    },
+    {
+      "code": "Kiss",
+      "display": "Kiss",
+      "definition": "Kiss"
+    },
+    {
+      "code": "Andere hausinterne Datenbanken",
+      "display": "Andere hausinterne Datenbanken",
+      "definition": "Andere hausinterne Datenbanken"
+    }
+  ]
+}

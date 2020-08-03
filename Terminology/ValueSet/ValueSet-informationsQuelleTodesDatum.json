@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "name": "nNGM_ValueSet_Informationsquelle_des_Todesdatums",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/izt",
+  "status": "active",
+  "experimental": false,
+  "date": "2018-10-31",
+  "publisher": "Uniklinik Köln",
+  "description": "nNGM Consent Policy",
+  "compose": {
+    "include": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt"
+      }
+    ]
+  }
+}

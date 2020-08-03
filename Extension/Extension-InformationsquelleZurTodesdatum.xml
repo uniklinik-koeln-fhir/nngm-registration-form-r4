@@ -31,6 +31,10 @@
       <type>
         <code value="string" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/izt" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

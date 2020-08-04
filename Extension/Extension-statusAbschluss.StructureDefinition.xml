@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM//statusAbschluss" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/statusAbschluss" />
   <name value="StatusAbschluss" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />
@@ -18,13 +18,33 @@
       <path value="Extension" />
       <max value="1" />
     </element>
-    <element id="Extension.url">
-      <path value="Extension.url" />
-      <fixedUri value="http://uk-koeln.de/fhir/Extension/statusAbschluss" />
+    <element id="Extension.extension">
+      <path value="Extension.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
     </element>
-    <element id="Extension.value[x]">
-      <path value="Extension.value[x]" />
-      <min value="1" />
+    <element id="Extension.extension:status">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Extension.extension" />
+      <sliceName value="status" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:status.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="status" />
+    </element>
+    <element id="Extension.extension:status.value[x]">
+      <path value="Extension.extension.value[x]" />
       <type>
         <code value="CodeableConcept" />
       </type>
@@ -32,6 +52,35 @@
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/NNGM/statusAbschluss" />
       </binding>
+    </element>
+    <element id="Extension.extension:datum">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="normative" />
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
+        <valueCode value="4.0.0" />
+      </extension>
+      <path value="Extension.extension" />
+      <sliceName value="datum" />
+      <max value="1" />
+    </element>
+    <element id="Extension.extension:datum.url">
+      <path value="Extension.extension.url" />
+      <fixedUri value="datum" />
+    </element>
+    <element id="Extension.extension:datum.value[x]">
+      <path value="Extension.extension.value[x]" />
+      <type>
+        <code value="date" />
+      </type>
+    </element>
+    <element id="Extension.url">
+      <path value="Extension.url" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/statusAbschluss" />
+    </element>
+    <element id="Extension.value[x]">
+      <path value="Extension.value[x]" />
+      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

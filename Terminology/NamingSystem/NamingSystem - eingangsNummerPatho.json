@@ -1,0 +1,32 @@
+{
+  "resourceType": "NamingSystem",
+  "meta": {
+    "profile": [
+      "http://fhir.de/StructureDefinition/namingsystem-de-basis/0.2"
+    ]
+  },
+  "name": "nNGM_NamingSystem_nNGM-Eingangsnummer-Pathologie",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2019-02-08",
+  "publisher": "Universitätsklinikum Köln",
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/v2/0203",
+        "code": "SID"
+      }
+    ]
+  },
+  "description": "Die Eingangsnummer-Pathologie im nNGM-Projekt.",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://uk-koeln.de/NamingSystem/nNGM/eingangPathoNummer",
+      "preferred": true,
+      "period": {
+        "start": "2019-02-08"
+      }
+    }
+  ]
+}

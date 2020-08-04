@@ -10,14 +10,6 @@
   "kind": "identifier",
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",
-  "type": {
-    "coding": [
-      {
-        "system": "http://hl7.org/fhir/v2/0203",
-        "code": "SID"
-      }
-    ]
-  },
   "description": "Die Biopsienummer im nNGM-Projekt.",
   "usage": "Die Biopsie ID ist ein eindeutiger Identifikator des Probes im Kontext von nNGM (Specimen-Ressource).",
   "uniqueId": [

@@ -374,7 +374,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM//statusAbschluss"
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/statusAbschluss"
             ]
           }
         ],

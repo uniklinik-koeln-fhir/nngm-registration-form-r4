@@ -123,7 +123,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandDatumBlockAnforderung"
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandDatum"
             ]
           }
         ],

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandDatumBlockAnforderung" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandDatum" />
   <version value="1.0" />
-  <name value="nNGM_Extension_VersandDatumBlockAnforderung" />
-  <title value="nNGM: Extension VersandDatumBlockAnforderung" />
+  <name value="nNGM_Extension_VersandDatum" />
+  <title value="nNGM: Extension VersandDatum" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
@@ -28,13 +28,13 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandDatumBlockAnforderung" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandDatum" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
       <min value="1" />
       <type>
-        <code value="dateTime" />
+        <code value="date" />
       </type>
     </element>
   </differential>

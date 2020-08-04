@@ -1,0 +1,32 @@
+{
+  "resourceType": "CodeSystem",
+  "title": "nNGM Status Abschluss",
+  "name": "NNGM_Status_Abschluss",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
+  "status": "active",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "email"
+        }
+      ]
+    }
+  ],
+  "compositional": false,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "vollständig",
+      "display": "vollständig"
+    },
+    {
+      "code": "Teiluntersuchungen",
+      "display": "Teiluntersuchungen"
+    },
+    {
+      "code": "Durchführung nicht möglich (Material nicht auswertbar)",
+      "display": "Durchführung nicht möglich (Material nicht auswertbar)"
+    }
+  ],
+}

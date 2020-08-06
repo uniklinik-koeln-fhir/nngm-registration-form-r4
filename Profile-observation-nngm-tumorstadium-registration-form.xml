@@ -37,8 +37,6 @@
     <element id="Observation.extension:kurativ-operabel">
       <path value="Observation.extension" />
       <sliceName value="kurativ-operabel" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-kurativ-operabel" />
@@ -48,8 +46,6 @@
     <element id="Observation.extension:erstdiagnose">
       <path value="Observation.extension" />
       <sliceName value="erstdiagnose" />
-      <min value="0" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-erstdiagnose" />
@@ -287,30 +283,9 @@
       <path value="Observation.component.value[x]" />
       <min value="1" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="boolean" />
       </type>
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/cancer-base/tnm-praefix-y" />
-      </binding>
-    </element>
-    <element id="Observation.component:y.value[x].coding">
-      <path value="Observation.component.value[x].coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Observation.component:y.value[x].coding.system">
-      <path value="Observation.component.value[x].coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:y.value[x].coding.version">
-      <path value="Observation.component.value[x].coding.version" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:y.value[x].coding.code">
-      <path value="Observation.component.value[x].coding.code" />
-      <min value="1" />
     </element>
     <element id="Observation.component:y.interpretation">
       <path value="Observation.component.interpretation" />
@@ -352,30 +327,9 @@
       <path value="Observation.component.value[x]" />
       <min value="1" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="boolean" />
       </type>
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/cancer-base/tnm-praefix-r" />
-      </binding>
-    </element>
-    <element id="Observation.component:r.value[x].coding">
-      <path value="Observation.component.value[x].coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Observation.component:r.value[x].coding.system">
-      <path value="Observation.component.value[x].coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:r.value[x].coding.version">
-      <path value="Observation.component.value[x].coding.version" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:r.value[x].coding.code">
-      <path value="Observation.component.value[x].coding.code" />
-      <min value="1" />
     </element>
     <element id="Observation.component:r.interpretation">
       <path value="Observation.component.interpretation" />
@@ -451,7 +405,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/tnm-t-nngm" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t-nngm" />
       </binding>
     </element>
     <element id="Observation.component:T.value[x].coding">
@@ -533,6 +487,10 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-n-nngm" />
+      </binding>
     </element>
     <element id="Observation.component:N.value[x].coding">
       <path value="Observation.component.value[x].coding" />
@@ -542,7 +500,6 @@
     <element id="Observation.component:N.value[x].coding.system">
       <path value="Observation.component.value[x].coding.system" />
       <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/ValueSet/tnm-N-nngm" />
     </element>
     <element id="Observation.component:N.value[x].coding.version">
       <path value="Observation.component.value[x].coding.version" />
@@ -608,6 +565,10 @@
         <code value="CodeableConcept" />
       </type>
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m-nngm" />
+      </binding>
     </element>
     <element id="Observation.component:M.value[x].coding">
       <path value="Observation.component.value[x].coding" />
@@ -617,7 +578,6 @@
     <element id="Observation.component:M.value[x].coding.system">
       <path value="Observation.component.value[x].coding.system" />
       <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/ValueSet/tnm-m-nngm" />
     </element>
     <element id="Observation.component:M.value[x].coding.version">
       <path value="Observation.component.value[x].coding.version" />

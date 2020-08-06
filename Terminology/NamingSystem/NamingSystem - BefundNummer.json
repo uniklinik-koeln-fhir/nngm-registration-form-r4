@@ -1,0 +1,25 @@
+{
+  "resourceType": "NamingSystem",
+  "meta": {
+    "profile": [
+      "http://fhir.de/StructureDefinition/namingsystem-de-basis/0.2"
+    ]
+  },
+  "name": "nNGM_NamingSystem_nNGM-Befundnummer",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2019-02-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Die Befundnummer im nNGM-Projekt.",
+  "usage": "Die Befundnummer ist ein eindeutiger Identifikator eines Befunds im Kontext von nNGM (Specimen-Ressource).",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://uk-koeln.de/NamingSystem/nNGM/befundnummer",
+      "preferred": true,
+      "period": {
+        "start": "2019-02-08"
+      }
+    }
+  ]
+}

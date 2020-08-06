@@ -35,12 +35,6 @@
       <min value="1" />
     </element>
     <element id="Consent.scope.coding:patientPrivacy">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Consent.scope.coding" />
       <sliceName value="patientPrivacy" />
       <min value="1" />
@@ -56,7 +50,6 @@
       <mustSupport value="true" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/einwilligungserklaerung" />
       </binding>
     </element>
     <element id="Consent.category.coding">
@@ -66,10 +59,12 @@
     <element id="Consent.category.coding.system">
       <path value="Consent.category.coding.system" />
       <min value="1" />
+      <fixedUri value="http://loinc.org" />
     </element>
     <element id="Consent.category.coding.code">
       <path value="Consent.category.coding.code" />
       <min value="1" />
+      <fixedCode value="59284-0" />
     </element>
     <element id="Consent.patient">
       <path value="Consent.patient" />
@@ -150,6 +145,18 @@
         <valueString value="provisionData" />
       </extension>
       <path value="Consent.provision.provision.data" />
+    </element>
+    <element id="Consent.provision.provision.provision.actor">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="provisionActor" />
+      </extension>
+      <path value="Consent.provision.provision.provision.actor" />
+    </element>
+    <element id="Consent.provision.provision.provision.data">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
+        <valueString value="provisionData" />
+      </extension>
+      <path value="Consent.provision.provision.provision.data" />
     </element>
   </differential>
 </StructureDefinition>

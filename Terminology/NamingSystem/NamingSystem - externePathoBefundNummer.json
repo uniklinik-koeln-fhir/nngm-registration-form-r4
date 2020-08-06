@@ -1,0 +1,25 @@
+{
+  "resourceType": "NamingSystem",
+  "meta": {
+    "profile": [
+      "http://fhir.de/StructureDefinition/namingsystem-de-basis/0.2"
+    ]
+  },
+  "name": "nNGM_NamingSystem_nNGM-ExternePathoBefundNummer",
+  "status": "active",
+  "kind": "identifier",
+  "date": "2019-02-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Die externer Pathologie Befundnummer im nNGM-Projekt.",
+  "usage": "Die externer Befundnummer ist der Identifikator des Befundes im externen Patho-System nNGM (Specimen-Ressource).",
+  "uniqueId": [
+    {
+      "type": "uri",
+      "value": "http://uk-koeln.de/NamingSystem/nNGM/externePathoBefundnummer",
+      "preferred": true,
+      "period": {
+        "start": "2019-02-08"
+      }
+    }
+  ]
+}

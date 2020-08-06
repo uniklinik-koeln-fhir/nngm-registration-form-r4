@@ -14,6 +14,16 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
   <derivation value="constraint" />
   <differential>
+    <element id="Practitioner.identifier">
+      <path value="Practitioner.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
     <element id="Practitioner.identifier:nngmPractitionerId">
       <path value="Practitioner.identifier" />
       <sliceName value="nngmPractitionerId" />

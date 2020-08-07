@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="SpecimenNngm" />
   <title value="nNGM: Profil - Specimen - Tumormaterial" />
-  <status value="final" />
+  <status value="active" />
   <experimental value="true" />
   <description value="Organizational details about the tumor material" />
   <fhirVersion value="4.0.1" />

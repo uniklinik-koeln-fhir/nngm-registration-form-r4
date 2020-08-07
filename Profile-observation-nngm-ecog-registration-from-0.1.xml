@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="ObservationNngmEcog" />
   <title value="nNGM: Profil - Observation - ECOG" />
-  <status value="final" />
+  <status value="active" />
   <experimental value="true" />
   <description value="ECOG assesment score" />
   <fhirVersion value="4.0.1" />

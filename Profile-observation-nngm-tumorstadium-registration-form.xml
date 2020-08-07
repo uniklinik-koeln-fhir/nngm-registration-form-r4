@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="ObservationnNGMTumorstadium" />
   <title value="nNGM: Profil - Observation - Tumorstadium" />
-  <status value="final" />
+  <status value="active" />
   <experimental value="true" />
   <publisher value="Uniklinik Köln" />
   <description value="TNM / UICC" />

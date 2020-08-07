@@ -16,7 +16,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/registration-form" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <type>
           <coding>
             <system value="http://loinc.org" />
@@ -153,7 +153,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergroesse" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -189,7 +189,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -225,7 +225,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/cancer-base/vitalstatus" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -294,7 +294,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -575,7 +575,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -611,7 +611,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -647,7 +647,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -785,7 +785,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />
@@ -1004,7 +1004,7 @@
         <meta>
           <profile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/egfrPrimaermutation" />
         </meta>
-        <status value="final" />
+        <status value="active" />
         <category>
           <coding>
             <system value="http://hl7.org/fhir/observation-category" />

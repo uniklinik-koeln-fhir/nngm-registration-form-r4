@@ -4,6 +4,7 @@
   <version value="0.1" />
   <name value="ObservationNngmRaucherstatus" />
   <title value="nNGM: Profil - Observation - Raucherstatus" />
+  <status value="active" />
   <experimental value="false" />
   <description value="Smoking status" />
   <fhirVersion value="4.0.1" />

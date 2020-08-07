@@ -180,41 +180,20 @@
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:tkiTherapie">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Observation.component" />
       <sliceName value="tkiTherapie" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:tkiTherapie.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Observation.component.code" />
       <patternCodeableConcept>
         <coding>
           <system value="http://ncit.nci.nih.gov" />
+          <code value="C62721" />
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:tkiTherapie.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <fixedCode value="C62721" />
-    </element>
     <element id="Observation.component:tkiTherapie.value[x]">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Observation.component.value[x]" />
       <type>
         <code value="CodeableConcept" />

@@ -4,7 +4,7 @@
   <version value="0.1" />
   <name value="PatientPseudonimisiertNngm" />
   <title value="nNGM: Profil - Pseudonymisierter Patient" />
-  <status value="draft" />
+  <status value="final" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Patient without any identifiable data elements" />
   <fhirVersion value="4.0.1" />

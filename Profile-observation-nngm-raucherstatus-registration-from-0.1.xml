@@ -4,7 +4,6 @@
   <version value="0.1" />
   <name value="ObservationNngmRaucherstatus" />
   <title value="nNGM: Profil - Observation - Raucherstatus" />
-  <status value="draft" />
   <experimental value="false" />
   <description value="Smoking status" />
   <fhirVersion value="4.0.1" />
@@ -164,6 +163,12 @@
     </element>
     <element id="Observation.component:packYears.code">
       <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncit.nci.nih.gov" />
+          <code value="C20134" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.code.coding">
@@ -213,6 +218,15 @@
       <sliceName value="nichtraucherSeit" />
       <max value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:nichtraucherSeit.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncit.nci.nih.gov" />
+          <code value="C127065" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Observation.component:nichtraucherSeit.code.coding">
       <path value="Observation.component.code.coding" />

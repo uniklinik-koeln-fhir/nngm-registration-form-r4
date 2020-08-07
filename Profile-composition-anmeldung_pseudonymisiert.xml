@@ -125,7 +125,7 @@
       <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -189,7 +189,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Stammdaten" />
+      <fixedString value="Anmeldung pseudonymisiert" />
     </element>
     <element id="Composition.attester.party.identifier.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
@@ -683,7 +683,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -722,7 +722,7 @@
       <max value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/pseudonymisiert" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
       </type>
       <mustSupport value="true" />
     </element>

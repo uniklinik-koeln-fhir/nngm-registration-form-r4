@@ -68,11 +68,12 @@
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
+      <min value="1" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Composition.date">
       <path value="Composition.date" />

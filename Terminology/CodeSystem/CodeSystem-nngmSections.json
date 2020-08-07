@@ -1,0 +1,89 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/sections",
+  "version": "1.0",
+  "experimental": false,
+  "title": "nNGM: CodeSystem Sections",
+  "name": "nNGM_CodeSystem_Sections",
+  "status": "active",
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Codes für die verschiedenen nNGM Dokument Sections",
+  "compositional": false, 
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "stammdaten",
+      "display": "Stammdaten"
+    },
+    {
+      "code": "basisangaben",
+      "display": "Basisangaben"
+    },
+    {
+      "code": "anforderung",
+      "display": "Anforderung"
+    },
+    {
+      "code": "tnm",
+      "display": "TNM"
+    },
+    {
+      "code": "Therapie",
+      "display": "Resistenztestung"
+    },
+    {
+      "code": "resistenztestung",
+      "display": "Resistenztestung"
+    },
+    {
+      "code": "vorbefund",
+      "display": "Vorbefund"
+    },
+    {
+      "code": "immunohistochemie",
+      "display": "Immunohistochemie"
+    },
+    {
+      "code": "histologie",
+      "display": "Histologie"
+    },
+    {
+      "code": "molekularpathologie",
+      "display": "Molekularpathologie"
+    },
+    {
+      "code": "ngs-lung-panel",
+      "display": "NGS Lung Panel"
+    },
+    {
+      "code": "fusion-ngs",
+      "display": "Fusion NGS"
+    },
+    {
+      "code": "fast-track",
+      "display": "Fast Track"
+    },
+    {
+      "code": "sonstige-untersuchungen",
+      "display": "Sonstige Untersuchungen"
+    },
+    {
+      "code": "liquid-biopsy",
+      "display": "Liquid Biopsy"
+    },
+    {
+      "code": "beurteilung",
+      "display": "Beurteilung"
+    }
+
+
+  ]
+}

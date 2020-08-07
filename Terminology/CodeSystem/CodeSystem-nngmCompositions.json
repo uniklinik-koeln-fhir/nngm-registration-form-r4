@@ -1,0 +1,43 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/compositions",
+  "version": "1.0",
+  "experimental": false,
+  "title": "nNGM: CodeSystem Compositions",
+  "name": "nNGM_CodeSystem_Compositions",
+  "status": "active",
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Codes für die verschiedenen nNGM Compositions",
+  "compositional": false, 
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "stammdaten",
+      "display": "Stammdaten"
+    },
+    {
+      "code": "anmeldung",
+      "display": "Anmeldung"
+    },
+    {
+      "code": "vorbefunde",
+      "display": "Vorbefunde"
+    },
+    {
+      "code": "molpatho-befund",
+      "display": "Molpatho Befund"
+    },
+    {
+      "code": "therapie",
+      "display": "Therapie"
+    }
+  ]
+}

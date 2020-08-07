@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
+  },
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/composition-category",
+  "version": "1.0",
+  "experimental": false,
+  "title": "nNGM: CodeSystem Composition Categories",
+  "name": "nNGM_CodeSystem_CompositionCategories",
+  "status": "active",
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Kategorien für die verschiedenen nNGM Compositions",
+  "compositional": false,
+  "caseSensitive": true,
+  "content": "complete",
+  "concept": [
+    {
+      "code": "idat",
+      "display": "Identifizierend"
+    },
+    {
+      "code": "psn",
+      "display": "Pseudonymisiert"
+    }
+  ]
+}

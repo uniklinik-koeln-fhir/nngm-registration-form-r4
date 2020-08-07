@@ -87,6 +87,13 @@
     <element id="Observation.code">
       <path value="Observation.code" />
       <mustSupport value="true" />
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="ObservationCode" />
+        </extension>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art" />
+      </binding>
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
@@ -97,7 +104,6 @@
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/ValueSet/cancer-base/tnm-art" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.code">

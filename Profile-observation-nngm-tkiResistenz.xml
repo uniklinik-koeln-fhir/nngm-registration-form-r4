@@ -90,7 +90,7 @@
           <valueString value="ObservationCode" />
         </extension>
         <strength value="required" />
-        <valueSet value="https://simplifier.net/nngm-registrationformr4/tki-resistenz" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tki-resistenz" />
       </binding>
     </element>
     <element id="Observation.code.coding">

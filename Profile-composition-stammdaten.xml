@@ -97,12 +97,6 @@
       </slicing>
     </element>
     <element id="Composition.section:stammdaten">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
         <valueString value="Section" />
       </extension>
@@ -113,12 +107,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stammdaten.code">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Composition.section.code" />
       <min value="1" />
       <patternCodeableConcept>
@@ -129,29 +117,17 @@
       </patternCodeableConcept>
     </element>
     <element id="Composition.section:stammdaten.entry">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="profile" />
-          <path value="resolve()" />
+          <type value="type" />
+          <path value="$this.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stammdaten.entry:patient">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Composition.section.entry" />
       <sliceName value="patient" />
       <min value="1" />
@@ -159,6 +135,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -167,12 +144,6 @@
       <min value="1" />
     </element>
     <element id="Composition.section:stammdaten.entry:coverage">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Composition.section.entry" />
       <sliceName value="coverage" />
       <min value="1" />
@@ -180,6 +151,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -188,12 +160,6 @@
       <min value="1" />
     </element>
     <element id="Composition.section:stammdaten.entry:episodeOfCare">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
-        <valueCode value="normative" />
-      </extension>
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-normative-version">
-        <valueCode value="4.0.0" />
-      </extension>
       <path value="Composition.section.entry" />
       <sliceName value="episodeOfCare" />
       <min value="1" />
@@ -201,6 +167,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
       </type>
       <mustSupport value="true" />
     </element>

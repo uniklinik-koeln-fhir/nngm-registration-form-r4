@@ -28,7 +28,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -121,42 +121,6 @@
       <path value="Consent.provision.type" />
       <min value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="Consent.provision.actor">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="provisionActor" />
-      </extension>
-      <path value="Consent.provision.actor" />
-    </element>
-    <element id="Consent.provision.data">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="provisionData" />
-      </extension>
-      <path value="Consent.provision.data" />
-    </element>
-    <element id="Consent.provision.provision.actor">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="provisionActor" />
-      </extension>
-      <path value="Consent.provision.provision.actor" />
-    </element>
-    <element id="Consent.provision.provision.data">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="provisionData" />
-      </extension>
-      <path value="Consent.provision.provision.data" />
-    </element>
-    <element id="Consent.provision.provision.provision.actor">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="provisionActor" />
-      </extension>
-      <path value="Consent.provision.provision.provision.actor" />
-    </element>
-    <element id="Consent.provision.provision.provision.data">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="provisionData" />
-      </extension>
-      <path value="Consent.provision.provision.provision.data" />
     </element>
   </differential>
 </StructureDefinition>

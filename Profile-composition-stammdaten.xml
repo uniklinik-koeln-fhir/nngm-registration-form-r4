@@ -120,7 +120,7 @@
       <path value="Composition.section.entry" />
       <slicing>
         <discriminator>
-          <type value="type" />
+          <type value="profile" />
           <path value="$this.resolve()" />
         </discriminator>
         <rules value="open" />
@@ -135,7 +135,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -151,7 +150,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Coverage" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -167,7 +165,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/EpisodeOfCare" />
       </type>
       <mustSupport value="true" />
     </element>

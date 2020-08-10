@@ -217,7 +217,7 @@
     </element>
     <element id="Organization.address:postanschrift.use">
       <path value="Organization.address.use" />
-      <fixedCode value="home" />
+      <fixedCode value="work" />
     </element>
     <element id="Organization.address:postanschrift.type">
       <path value="Organization.address.type" />

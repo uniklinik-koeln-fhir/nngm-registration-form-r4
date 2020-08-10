@@ -247,15 +247,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
       </type>
     </element>
-    <element id="Organization.address:postanschrift.line.extension:Strasse.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Organization.address:postanschrift.line.extension:Hausnummer">
       <path value="Organization.address.line.extension" />
       <sliceName value="Hausnummer" />
@@ -263,15 +254,6 @@
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
-      </type>
-    </element>
-    <element id="Organization.address:postanschrift.line.extension:Hausnummer.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
       </type>
     </element>
     <element id="Organization.address:postanschrift.line.extension:Adresszusatz">
@@ -283,15 +265,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
       </type>
     </element>
-    <element id="Organization.address:postanschrift.line.extension:Adresszusatz.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Organization.address:postanschrift.line.extension:Postfach">
       <path value="Organization.address.line.extension" />
       <sliceName value="Postfach" />
@@ -299,15 +272,6 @@
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
-      </type>
-    </element>
-    <element id="Organization.address:postanschrift.line.extension:Postfach.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
       </type>
     </element>
     <element id="Organization.address:postanschrift.district">
@@ -369,15 +333,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName" />
       </type>
     </element>
-    <element id="Organization.address:besucheradresse.line.extension:Strasse.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Organization.address:besucheradresse.line.extension:Hausnummer">
       <path value="Organization.address.line.extension" />
       <sliceName value="Hausnummer" />
@@ -385,15 +340,6 @@
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-houseNumber" />
-      </type>
-    </element>
-    <element id="Organization.address:besucheradresse.line.extension:Hausnummer.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
       </type>
     </element>
     <element id="Organization.address:besucheradresse.line.extension:Adresszusatz">
@@ -405,15 +351,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-additionalLocator" />
       </type>
     </element>
-    <element id="Organization.address:besucheradresse.line.extension:Adresszusatz.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Organization.address:besucheradresse.line.extension:Postfach">
       <path value="Organization.address.line.extension" />
       <sliceName value="Postfach" />
@@ -421,15 +358,6 @@
       <type>
         <code value="Extension" />
         <profile value="http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-postBox" />
-      </type>
-    </element>
-    <element id="Organization.address:besucheradresse.line.extension:Postfach.value[x]">
-      <path value="Organization.address.line.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <type>
-        <code value="string" />
       </type>
     </element>
     <element id="Organization.address:besucheradresse.city">

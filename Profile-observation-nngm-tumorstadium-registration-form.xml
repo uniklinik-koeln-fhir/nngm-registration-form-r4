@@ -466,6 +466,12 @@
     </element>
     <element id="Observation.component:N.code">
       <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="21906-3" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:N.code.coding">
@@ -476,7 +482,6 @@
     <element id="Observation.component:N.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://loinc.org" />
     </element>
     <element id="Observation.component:N.code.coding.version">
       <path value="Observation.component.code.coding.version" />
@@ -485,7 +490,6 @@
     <element id="Observation.component:N.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
-      <fixedCode value="21906-3" />
     </element>
     <element id="Observation.component:N.value[x]">
       <path value="Observation.component.value[x]" />
@@ -548,6 +552,15 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Observation.component:M.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://loinc.org" />
+          <code value="21907-1" />
+        </coding>
+      </patternCodeableConcept>
+    </element>
     <element id="Observation.component:M.code.coding">
       <path value="Observation.component.code.coding" />
       <min value="1" />
@@ -557,12 +570,10 @@
     <element id="Observation.component:M.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://loinc.org" />
     </element>
     <element id="Observation.component:M.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
-      <fixedCode value="21907-1" />
     </element>
     <element id="Observation.component:M.value[x]">
       <path value="Observation.component.value[x]" />

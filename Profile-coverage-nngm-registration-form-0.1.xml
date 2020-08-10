@@ -47,7 +47,7 @@
       <path value="Coverage.identifier" />
       <slicing>
         <discriminator>
-          <type value="value" />
+          <type value="pattern" />
           <path value="type.coding.code" />
         </discriminator>
         <rules value="open" />
@@ -61,6 +61,14 @@
       <sliceName value="GKV-Identifier" />
       <short value="The primary coverage ID" />
       <max value="1" />
+      <patternIdentifier>
+        <type>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/versicherungsart-de-basis" />
+            <code value="GKV" />
+          </coding>
+        </type>
+      </patternIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier.type">
@@ -70,43 +78,9 @@
     </element>
     <element id="Coverage.identifier:GKV-Identifier.type.coding">
       <path value="Coverage.identifier.type.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
       <max value="1" />
       <mustSupport value="false" />
-    </element>
-    <element id="Coverage.identifier:GKV-Identifier.type.coding.system">
-      <path value="Coverage.identifier.type.coding.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.identifier:GKV-Identifier.type.coding.code">
-      <path value="Coverage.identifier.type.coding.code" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type">
-      <path value="Coverage.identifier.type.coding" />
-      <sliceName value="GKV-Type" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type.system">
-      <path value="Coverage.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
-    </element>
-    <element id="Coverage.identifier:GKV-Identifier.type.coding:GKV-Type.code">
-      <path value="Coverage.identifier.type.coding.code" />
-      <min value="1" />
-      <fixedCode value="GKV" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier.system">
       <path value="Coverage.identifier.system" />
@@ -136,6 +110,14 @@
       <path value="Coverage.identifier" />
       <sliceName value="PKV-Identifier" />
       <max value="1" />
+      <patternIdentifier>
+        <type>
+          <coding>
+            <system value="http://fhir.de/CodeSystem/versicherungsart-de-basis" />
+            <code value="PKV" />
+          </coding>
+        </type>
+      </patternIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:PKV-Identifier.type">
@@ -145,39 +127,18 @@
     </element>
     <element id="Coverage.identifier:PKV-Identifier.type.coding">
       <path value="Coverage.identifier.type.coding" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="system" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:PKV-Identifier.type.coding.system">
       <path value="Coverage.identifier.type.coding.system" />
-      <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type">
-      <path value="Coverage.identifier.type.coding" />
-      <sliceName value="PKV-Type" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type.system">
-      <path value="Coverage.identifier.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://fhir.de/CodeSystem/identifier-type-de-basis" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.identifier:PKV-Identifier.type.coding:PKV-Type.code">
+    <element id="Coverage.identifier:PKV-Identifier.type.coding.code">
       <path value="Coverage.identifier.type.coding.code" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:PKV-Identifier.system">
       <path value="Coverage.identifier.system" />

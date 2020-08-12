@@ -36,8 +36,8 @@
       "display": "TNM"
     },
     {
-      "code": "Therapie",
-      "display": "Resistenztestung"
+      "code": "therapie",
+      "display": "Therapie"
     },
     {
       "code": "resistenztestung",

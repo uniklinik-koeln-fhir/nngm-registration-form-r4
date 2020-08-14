@@ -20,10 +20,6 @@
                         "display":"m - multiple Tumore der gleichen Region"
                     },
                     {
-                        "code":"is - Carcinoma in situ",
-                        "display":"is - Carcinoma in situ"
-                    },
-                    {
                         "code":"cy - zytologisch",
                         "display":"cy - zytologisch"
                     }

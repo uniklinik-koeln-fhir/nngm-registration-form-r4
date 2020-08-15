@@ -191,7 +191,7 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site" />
+        <targetProfile value="http://clinicalsite.org/fhir/StructureDefinition/organizationalunit" />
       </type>
     </element>
     <element id="Observation.value[x]">

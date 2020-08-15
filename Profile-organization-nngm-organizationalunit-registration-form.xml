@@ -402,7 +402,7 @@
         </extension>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Organization/clinical-site" />
+        <targetProfile value="http://clinicalsite.org/fhir/StructureDefinition/organizationalunit" />
       </type>
     </element>
     <element id="Organization.contact">

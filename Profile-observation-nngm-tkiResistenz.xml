@@ -194,9 +194,9 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:tkiTherapie.extension:myExtension">
+    <element id="Observation.component:tkiTherapie.extension:componentOrder">
       <path value="Observation.component.extension" />
-      <sliceName value="myExtension" />
+      <sliceName value="componentOrder" />
       <min value="0" />
       <max value="1" />
       <type>

@@ -2,55 +2,18 @@
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code",
   "version": "1.0",
-  "title": "nNGM: Valueset Anforderungscode",
-  "name": "nNGM_Valueset_Anforderungscode",
+  "title": "nNGM: ValueSet Sections",
+  "name": "nNGM_ValueSet_sections",
   "status": "active",
-  "date": "2020-07-08",
+  "experimental": false,
+  "date": "2019-02-09",
   "publisher": "Universitätsklinikum Köln",
-  "description": "nNGM Anforderungscode",
+  "description": "Sections der Dokument Compositions der verschiedenen nNGM Eingabeformulare",
   "compose": {
-    "include": [
-      {
-        "system": "http://ncit.nci.nih.gov",
-        "concept": [
+      "include":  [
           {
-            "code": "C16681",
-            "display": "Histologie"
-          },
-          {
-            "code": "C16722",
-            "display": "Immunohistochemie"
-          },
-          {
-            "code": "NGS Lung Panel",
-            "display": "NGS Lung Panel"
-          },
-          {
-            "code": "C18098",
-            "display": "Molekularpathologie"
-          },
-          {
-            "code": "Fusion NGS",
-            "display": "Fusion NGS"
-          },
-          {
-            "code": "C79203",
-            "display": "Fast Track"
-          },
-          {
-            "code": "Sonstige Untersuchungen",
-            "display": "Sonstige Untersuchungen"
-          },
-          {
-            "code": "C135727",
-            "display": "Liquid Biopsy"
-          },
-          {
-            "code": "Beurteilung",
-            "display": "Beurteilung"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections"
           }
-        ]
-      }
-    ]
+      ]
   }
 }

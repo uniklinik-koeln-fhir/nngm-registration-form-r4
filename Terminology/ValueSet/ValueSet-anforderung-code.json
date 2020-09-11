@@ -14,16 +14,40 @@
         "system": "http://ncit.nci.nih.gov",
         "concept": [
           {
-            "code": "komplette_untersuchung",
-            "display": "Komplette Untersuchung"
+            "code": "C16681",
+            "display": "Histologie"
           },
           {
-            "code": "einzel_untersuchung",
-            "display": "Einzeluntersuchung"
+            "code": "C16722",
+            "display": "Immunohistochemie"
           },
           {
-            "code": "liquid_biopsy",
+            "code": "NGS Lung Panel",
+            "display": "NGS Lung Panel"
+          },
+          {
+            "code": "C18098",
+            "display": "Molekularpathologie"
+          },
+          {
+            "code": "Fusion NGS",
+            "display": "Fusion NGS"
+          },
+          {
+            "code": "C79203",
+            "display": "Fast Track"
+          },
+          {
+            "code": "Sonstige Untersuchungen",
+            "display": "Sonstige Untersuchungen"
+          },
+          {
+            "code": "C135727",
             "display": "Liquid Biopsy"
+          },
+          {
+            "code": "Beurteilung",
+            "display": "Beurteilung"
           }
         ]
       }

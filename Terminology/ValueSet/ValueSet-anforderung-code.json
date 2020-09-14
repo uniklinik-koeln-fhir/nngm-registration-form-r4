@@ -3,7 +3,7 @@
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code",
   "version": "1.0",
   "title": "nNGM: ValueSet Sections",
-  "name": "nNGM_ValueSet_sections",
+  "name": "nNGM_ValueSet_Sections",
   "status": "active",
   "experimental": false,
   "date": "2019-02-09",

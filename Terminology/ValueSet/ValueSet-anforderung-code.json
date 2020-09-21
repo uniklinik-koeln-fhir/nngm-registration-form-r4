@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/testung-anforderung-code",
   "version": "1.0",
   "title": "nNGM: ValueSet Sections",
   "name": "nNGM_ValueSet_Sections",

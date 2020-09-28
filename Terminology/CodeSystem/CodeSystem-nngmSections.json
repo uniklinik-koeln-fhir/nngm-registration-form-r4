@@ -48,8 +48,8 @@
       "display": "Vorbefund"
     },
     {
-      "code": "immunohistochemie",
-      "display": "Immunohistochemie"
+      "code": "immunhistochemie",
+      "display": "Immunhistochemie"
     },
     {
       "code": "histologie",

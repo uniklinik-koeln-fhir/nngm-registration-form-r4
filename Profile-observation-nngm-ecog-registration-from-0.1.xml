@@ -145,7 +145,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/ecog" />
+        <valueSet value="http://loinc.org/vs/LL529-9" />
       </binding>
     </element>
     <element id="Observation.value[x].coding">
@@ -153,10 +153,6 @@
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://loinc.org/vs/LL529-9" />
-      </binding>
     </element>
     <element id="Observation.value[x].coding.system">
       <path value="Observation.value[x].coding.system" />

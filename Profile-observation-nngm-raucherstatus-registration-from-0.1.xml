@@ -222,20 +222,14 @@
     </element>
     <element id="Observation.component:nichtraucherSeit.code">
       <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://ncit.nci.nih.gov" />
-          <code value="C127065" />
-        </coding>
-      </patternCodeableConcept>
     </element>
     <element id="Observation.component:nichtraucherSeit.code.coding">
       <path value="Observation.component.code.coding" />
       <min value="1" />
       <max value="1" />
       <patternCoding>
-        <system value="http://uk-koeln.de/fhir/CodeSystem/tbd-codes" />
-        <code value="nichtRaucherSeit" />
+        <system value="http://ncit.nci.nih.gov" />
+        <code value="C127065" />
       </patternCoding>
       <mustSupport value="true" />
     </element>

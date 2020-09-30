@@ -1,18 +1,32 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/FollowUpStatus",
-  "version":"1.0",
+  "version": "1.0",
   "title": "nNGM: ValueSet Follow Up Status",
   "name": "nNGM_ValueSet_FollowUpStatus",
   "status": "active",
-  "experimental":false,
-  "date":"2018-10-31",
-  "publisher":"Uniklinik Köln",
-  "description":"nNGM FollowUp Status",
+  "experimental": false,
+  "date": "2018-10-31",
+  "publisher": "Uniklinik Köln",
+  "description": "nNGM FollowUp Status",
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/ngnm/FollowUpStatus"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/ngnm/FollowUpStatus",
+        "concept": [
+          {
+            "code": "lebt",
+            "display": "lebt"
+          },
+          {
+            "code": "lost to follow-up",
+            "display": "lost to follow-up"
+          },
+          {
+            "code": "tot",
+            "display": "tot"
+          }
+        ]
       }
     ]
   }

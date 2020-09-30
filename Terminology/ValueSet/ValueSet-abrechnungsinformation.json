@@ -12,7 +12,41 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+        "concept": [
+          {
+            "code": "nNGM-BV Fall",
+            "display": "nNGM-BV Fall"
+          },
+          {
+            "code": "nNGM-Fall stationär, nicht BV",
+            "display": "nNGM-Fall stationär, nicht BV"
+          },
+          {
+            "code": "Ü-Schein Pathologie",
+            "display": "Ü-Schein Pathologie"
+          },
+          {
+            "code": "Ü-Schein Sonstige",
+            "display": "Ü-Schein Sonstige"
+          },
+          {
+            "code": "§116B/interner Fall",
+            "display": "§116B/interner Fall"
+          },
+          {
+            "code": "§116B/externer Fall",
+            "display": "§116B/externer Fall"
+          },
+          {
+            "code": "Privatpatient",
+            "display": "Privatpatient"
+          },
+          {
+            "code": "NGM-PV Fall",
+            "display": "NGM-PV Fall"
+          }
+        ]
       }
     ]
   }

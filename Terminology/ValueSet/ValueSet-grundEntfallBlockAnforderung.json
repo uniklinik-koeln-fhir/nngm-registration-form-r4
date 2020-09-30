@@ -10,7 +10,17 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
+        "concept": [
+          {
+            "code": "bereitsUnterwegs",
+            "display": "Tumormaterial bereits unterwegs"
+          },
+          {
+            "code": "innerePathologie",
+            "display": "Antrag interne Pathologie"
+          }
+        ]
       }
     ]
   }

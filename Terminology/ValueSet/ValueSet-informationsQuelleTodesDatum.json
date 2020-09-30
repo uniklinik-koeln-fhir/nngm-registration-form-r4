@@ -10,7 +10,45 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+        "concept": [
+          {
+            "code": "Arztbrief",
+            "definition": "Arztbrief"
+          },
+          {
+            "code": "Kontakt Krankenkasse",
+            "display": "Kontakt Krankenkasse"
+          },
+          {
+            "code": "Kontakt Behandler",
+            "display": "Kontakt Behandler"
+          },
+          {
+            "code": "Kontakt Angehoerige",
+            "display": "Kontakt Angehoerige"
+          },
+          {
+            "code": "Internet (Todesanzeigen)",
+            "display": "Internet (Todesanzeigen)"
+          },
+          {
+            "code": "Krebsregister",
+            "display": "Krebsregister"
+          },
+          {
+            "code": "Dokumentar",
+            "display": "Dokumentar"
+          },
+          {
+            "code": "Kiss",
+            "display": "Kiss"
+          },
+          {
+            "code": "Andere hausinterne Datenbanken",
+            "display": "Andere hausinterne Datenbanken"
+          }
+        ]
       }
     ]
   }

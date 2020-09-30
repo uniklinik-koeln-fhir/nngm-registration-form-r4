@@ -11,7 +11,17 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/obs-requests",
+        "concept": [
+          {
+            "code": "gewebediagnostik",
+            "display": "Gewebediagnostik"
+          },
+          {
+            "code": "blutdiagnostik",
+            "display": "Blutdiagnostik"
+          }
+        ]
       }
     ]
   }

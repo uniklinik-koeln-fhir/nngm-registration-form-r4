@@ -12,7 +12,17 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
+        "concept": [
+          {
+            "code": "ko",
+            "display": "kurativ operabel"
+          },
+          {
+            "code": "nko",
+            "display": "nicht kurativ operabel"
+          }
+        ]
       }
     ]
   }

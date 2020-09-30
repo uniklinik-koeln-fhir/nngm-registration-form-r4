@@ -12,7 +12,29 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+        "concept": [
+          {
+            "code": "stammdaten",
+            "display": "Stammdaten"
+          },
+          {
+            "code": "anmeldung",
+            "display": "Anmeldung"
+          },
+          {
+            "code": "vorbefunde",
+            "display": "Vorbefunde"
+          },
+          {
+            "code": "molpatho-befund",
+            "display": "Molpatho Befund"
+          },
+          {
+            "code": "therapie",
+            "display": "Therapie"
+          }
+        ]
       }
     ]
   }

@@ -12,7 +12,17 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
+        "concept": [
+          {
+            "code": "ed",
+            "display": "Erstdiagnose"
+          },
+          {
+            "code": "aktuell",
+            "display": "aktuell"
+          }
+        ]
       }
     ]
   }

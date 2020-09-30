@@ -12,7 +12,21 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform"
+        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
+        "concept": [
+          {
+            "code": "basis",
+            "display": "Basistarif"
+          },
+          {
+            "code": "standard",
+            "display": "Standardtarif"
+          },
+          {
+            "code": "voll",
+            "display": "Vollversichert"
+          }
+        ]
       }
     ]
   }

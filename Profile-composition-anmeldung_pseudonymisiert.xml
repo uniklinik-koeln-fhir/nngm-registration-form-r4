@@ -145,7 +145,7 @@
     <element id="Composition.section:basisangaben.entry:netzwerkpartner">
       <path value="Composition.section.entry" />
       <sliceName value="netzwerkpartner" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -160,7 +160,7 @@
     <element id="Composition.section:basisangaben.entry:anforderungTMB">
       <path value="Composition.section.entry" />
       <sliceName value="anforderungTMB" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -221,6 +221,7 @@
     <element id="Composition.section:basisangaben.entry:consent">
       <path value="Composition.section.entry" />
       <sliceName value="consent" />
+      <min value="1" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
@@ -264,7 +265,7 @@
     <element id="Composition.section:anforderung.entry:anforderungTestung">
       <path value="Composition.section.entry" />
       <sliceName value="anforderungTestung" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -340,7 +341,7 @@
       </extension>
       <path value="Composition.section" />
       <sliceName value="tnm" />
-      <min value="1" />
+      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

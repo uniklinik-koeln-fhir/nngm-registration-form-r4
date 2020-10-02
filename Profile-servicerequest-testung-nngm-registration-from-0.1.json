@@ -108,40 +108,6 @@
         }
       },
       {
-        "id": "ServiceRequest.extension:aufenthaltsart",
-        "path": "ServiceRequest.extension",
-        "sliceName": "aufenthaltsart",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.extension:aufenthaltsart.value[x].coding.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "ServiceRequest.extension.value[x].coding.display"
-      },
-      {
-        "id": "ServiceRequest.extension:aufenthaltsart.value[x].text",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "ServiceRequest.extension.value[x].text"
-      },
-      {
         "id": "ServiceRequest.extension:grundFehlendeBiopsy",
         "path": "ServiceRequest.extension",
         "sliceName": "grundFehlendeBiopsy",

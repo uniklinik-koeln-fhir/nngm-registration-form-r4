@@ -14,24 +14,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Patient" />
   <derivation value="constraint" />
   <differential>
-    <element id="Patient.extension">
-      <path value="Patient.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Patient.extension:informationsquelleTodesdatum">
-      <path value="Patient.extension" />
-      <sliceName value="informationsquelleTodesdatum" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
-      </type>
-    </element>
     <element id="Patient.identifier">
       <path value="Patient.identifier" />
       <slicing>
@@ -139,10 +121,29 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Patient.deceased[x]">
-      <path value="Patient.deceased[x]" />
-      <mustSupport value="true" />
-    </element>
+    <element id="Patient.deceaseddateTime">
+            <path value="Patient.deceaseddateTime" />
+            <mustSupport value="true" />
+        </element>
+        <element id="Patient.deceaseddateTime.extension">
+            <path value="Patient.deceaseddateTime.extension" />
+            <slicing>
+                <discriminator>
+                    <type value="value" />
+                    <path value="url" />
+                </discriminator>
+                <rules value="open" />
+            </slicing>
+        </element>
+        <element id="Patient.deceaseddateTime.extension:informationsquelleTod">
+            <path value="Patient.deceaseddateTime.extension" />
+            <sliceName value="informationsquelleTod" />
+            <type>
+                <code value="Extension" />
+                <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
+            </type>
+            <mustSupport value="true" />
+        </element>
     <element id="Patient.address">
       <path value="Patient.address" />
       <max value="0" />

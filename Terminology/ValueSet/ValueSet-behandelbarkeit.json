@@ -1,29 +1,30 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/behandelbarkeit",
-  "version": "1.0",
-  "title": "nNGM ValueSet Behandelbarkeit",
-  "name": "nNGM_ValueSet_Behandelbarkeit",
   "status": "active",
-  "experimental": false,
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Behandelbarkeit",
   "compose": {
-    "include": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
-        "concept": [
+      "include": [
           {
-            "code": "ko",
-            "display": "kurativ operabel"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit"
+          }
+      ]
+  },
+  "expansion": {
+      "identifier": "f5ec14fd-c47d-4dcc-9552-6e1e3c09525d",
+      "timestamp": "2020-10-13T08:54:13+00:00",
+      "total": 2,
+      "contains": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
+              "version": "1.0",
+              "code": "ko",
+              "display": "kurativ operabel"
           },
           {
-            "code": "nko",
-            "display": "nicht kurativ operabel"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
+              "version": "1.0",
+              "code": "nko",
+              "display": "nicht kurativ operabel"
           }
-        ]
-      }
-    ]
+      ]
   }
 }

@@ -16,21 +16,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
-        "concept": [
-          {
-            "code": "vollständig",
-            "display": "vollständig"
-          },
-          {
-            "code": "Teiluntersuchungen",
-            "display": "Teiluntersuchungen"
-          },
-          {
-            "code": "Durchführung nicht möglich (Material nicht auswertbar)",
-            "display": "Durchführung nicht möglich (Material nicht auswertbar)"
-          }
-        ]
+        "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss"
       },
       {
         "system": "http://ncit.nci.nih.gov",
@@ -40,6 +26,28 @@
             "display": "Other"
           }
         ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "ea0d82bb-9494-4ba9-90c7-5a009e99b1fa",
+    "timestamp": "2020-10-13T09:00:15+00:00",
+    "total": 3,
+    "contains": [
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
+        "code": "vollständig",
+        "display": "vollständig"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
+        "code": "Teiluntersuchungen",
+        "display": "Teiluntersuchungen"
+      },
+      {
+        "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
+        "code": "Durchführung nicht möglich (Material nicht auswertbar)",
+        "display": "Durchführung nicht möglich (Material nicht auswertbar)"
       }
     ]
   }

@@ -1,27 +1,30 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/grundEntfallBlockAnforderung",
-  "version": "1.0",
-  "title": "nNGM: Valueset Grund Entfallene Tumorblock-Anforderung",
-  "name": "nNGM_Valueset_Grund_Entfallene-Tumorblock-Anforderung",
   "status": "active",
-  "date": "2020-07-08",
-  "publisher": "Universitätsklinikum Köln",
   "compose": {
-    "include": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
-        "concept": [
+      "include": [
           {
-            "code": "bereitsUnterwegs",
-            "display": "Tumormaterial bereits unterwegs"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung"
+          }
+      ]
+  },
+  "expansion": {
+      "identifier": "19d18e78-b484-4976-bb8a-3cb4c3164e7f",
+      "timestamp": "2020-10-13T08:55:57+00:00",
+      "total": 2,
+      "contains": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
+              "version": "1.0",
+              "code": "bereitsUnterwegs",
+              "display": "Tumormaterial bereits unterwegs"
           },
           {
-            "code": "innerePathologie",
-            "display": "Antrag interne Pathologie"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
+              "version": "1.0",
+              "code": "innerePathologie",
+              "display": "Antrag interne Pathologie"
           }
-        ]
-      }
-    ]
+      ]
   }
 }

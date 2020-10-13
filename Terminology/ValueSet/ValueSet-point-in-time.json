@@ -1,29 +1,30 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time",
-  "version": "1.0",
-  "title": "nNGM: ValueSet Point-In-Time",
-  "name": "nNGM_ValueSet_Point-In-Time",
   "status": "active",
-  "experimental": false,
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Codes für den Zeitpunkt während des Diagnose- und Behandlungsprozesses",
   "compose": {
-    "include": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
-        "concept": [
+      "include": [
           {
-            "code": "ed",
-            "display": "Erstdiagnose"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time"
+          }
+      ]
+  },
+  "expansion": {
+      "identifier": "c96fcfac-6cb5-45d2-bfef-fc5a06df93a8",
+      "timestamp": "2020-10-13T09:02:57+00:00",
+      "total": 2,
+      "contains": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
+              "version": "1.0",
+              "code": "ed",
+              "display": "Erstdiagnose"
           },
           {
-            "code": "aktuell",
-            "display": "aktuell"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
+              "version": "1.0",
+              "code": "aktuell",
+              "display": "aktuell"
           }
-        ]
-      }
-    ]
+      ]
   }
 }

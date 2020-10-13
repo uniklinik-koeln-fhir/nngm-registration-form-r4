@@ -1,84 +1,113 @@
 {
     "resourceType": "ValueSet",
-    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/testung-anforderung-code",
-    "version": "1.0",
-    "title": "nNGM: ValueSet Sections",
-    "name": "nNGM_ValueSet_Sections",
     "status": "active",
-    "experimental": false,
-    "date": "2019-02-09",
-    "publisher": "Universitätsklinikum Köln",
-    "description": "Sections der Dokument Compositions der verschiedenen nNGM Eingabeformulare",
     "compose": {
         "include": [
             {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections"
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "418a9b5b-4e2f-44dc-8a85-8d5aa957a364",
+        "timestamp": "2020-10-13T08:52:14+00:00",
+        "total": 16,
+        "contains": [
+            {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-                "concept": [
-                    {
-                        "code": "stammdaten",
-                        "display": "Stammdaten"
-                    },
-                    {
-                        "code": "basisangaben",
-                        "display": "Basisangaben"
-                    },
-                    {
-                        "code": "anforderung",
-                        "display": "Anforderung"
-                    },
-                    {
-                        "code": "tnm",
-                        "display": "TNM"
-                    },
-                    {
-                        "code": "therapie",
-                        "display": "Therapie"
-                    },
-                    {
-                        "code": "resistenztestung",
-                        "display": "Resistenztestung"
-                    },
-                    {
-                        "code": "vorbefund",
-                        "display": "Vorbefund"
-                    },
-                    {
-                        "code": "immunhistochemie",
-                        "display": "Immunhistochemie"
-                    },
-                    {
-                        "code": "histologie",
-                        "display": "Histologie"
-                    },
-                    {
-                        "code": "molekularpathologie",
-                        "display": "Molekularpathologie"
-                    },
-                    {
-                        "code": "ngs-lung-panel",
-                        "display": "NGS Lung Panel"
-                    },
-                    {
-                        "code": "fusion-ngs",
-                        "display": "Fusion NGS"
-                    },
-                    {
-                        "code": "fast-track",
-                        "display": "Fast Track"
-                    },
-                    {
-                        "code": "sonstige-untersuchungen",
-                        "display": "Sonstige Untersuchungen"
-                    },
-                    {
-                        "code": "liquid-biopsy",
-                        "display": "Liquid Biopsy"
-                    },
-                    {
-                        "code": "beurteilung",
-                        "display": "Beurteilung"
-                    }
-                ]
+                "version": "1.0",
+                "code": "stammdaten",
+                "display": "Stammdaten"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "basisangaben",
+                "display": "Basisangaben"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "anforderung",
+                "display": "Anforderung"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "tnm",
+                "display": "TNM"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "therapie",
+                "display": "Therapie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "resistenztestung",
+                "display": "Resistenztestung"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "vorbefund",
+                "display": "Vorbefund"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "immunhistochemie",
+                "display": "Immunhistochemie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "histologie",
+                "display": "Histologie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "molekularpathologie",
+                "display": "Molekularpathologie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "ngs-lung-panel",
+                "display": "NGS Lung Panel"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "fusion-ngs",
+                "display": "Fusion NGS"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "fast-track",
+                "display": "Fast Track"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "sonstige-untersuchungen",
+                "display": "Sonstige Untersuchungen"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "liquid-biopsy",
+                "display": "Liquid Biopsy"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "beurteilung",
+                "display": "Beurteilung"
             }
         ]
     }

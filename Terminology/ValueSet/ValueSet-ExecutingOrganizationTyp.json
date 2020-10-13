@@ -1,73 +1,96 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/ExecutingOrganizationTyp",
-  "version": "1.0",
-  "title": "nNGM ValueSet Durchführende Einrichtung",
-  "name": "nNGM_ValueSet_Durchfuehrende_Einrichtung",
   "status": "active",
-  "experimental": false,
-  "date": "2018-10-31",
-  "publisher": "Uniklinik Köln",
-  "description": "nNGM ValueSet Durchführende Einrichtung",
   "compose": {
-    "include": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
-        "concept": [
+      "include": [
           {
-            "code": "nNGM-Zentrum",
-            "display": "nNGM-Zentrum"
-          },
-          {
-            "code": "Universitäre Einrichtung",
-            "display": "Universitäre Einrichtung"
-          },
-          {
-            "code": "anderes Krankenhaus - Lungenkrebszentrum",
-            "display": "anderes Krankenhaus - Lungenkrebszentrum"
-          },
-          {
-            "code": "anderes Krankenhaus - Pneumologie",
-            "display": "anderes Krankenhaus - Pneumologie"
-          },
-          {
-            "code": "anderes Krankenhaus - Onkologie",
-            "display": "anderes Krankenhaus - Onkologie"
-          },
-          {
-            "code": "anderes Krankenhaus - Chirurgie",
-            "display": "anderes Krankenhaus - Chirurgie"
-          },
-          {
-            "code": "niedergelassene Einrichtung - Pneumologie",
-            "display": "niedergelassene Einrichtung - Pneumologie"
-          },
-          {
-            "code": "niedergelassene Einrichtung - Onkologie",
-            "display": "niedergelassene Einrichtung - Onkologie"
-          },
-          {
-            "code": "niedergelassene Einrichtung - beides",
-            "display": "niedergelassene Einrichtung - beides"
-          },
-          {
-            "code": "niedergelassene Einrichtung - Strahlentherapie",
-            "display": "niedergelassene Einrichtung - Strahlentherapie"
-          },
-          {
-            "code": "niedergelassene Einrichtung - Chirurgie",
-            "display": "niedergelassene Einrichtung - Chirurgie"
-          },
-          {
-            "code": "niedergelassene Einrichtung - ausländische Einrichtung",
-            "display": "niedergelassene Einrichtung - ausländische Einrichtung"
-          },
-          {
-            "code": "Andere",
-            "display": "Andere"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp"
           }
-        ]
-      }
-    ]
+      ]
+  },
+  "expansion": {
+      "identifier": "866feed1-d731-4715-8139-693520510547",
+      "timestamp": "2020-10-13T08:55:30+00:00",
+      "total": 13,
+      "contains": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "nNGM-Zentrum",
+              "display": "nNGM-Zentrum"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "Universitäre Einrichtung",
+              "display": "Universitäre Einrichtung"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "anderes Krankenhaus - Lungenkrebszentrum",
+              "display": "anderes Krankenhaus - Lungenkrebszentrum"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "anderes Krankenhaus - Pneumologie",
+              "display": "anderes Krankenhaus - Pneumologie"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "anderes Krankenhaus - Onkologie",
+              "display": "anderes Krankenhaus - Onkologie"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "anderes Krankenhaus - Chirurgie",
+              "display": "anderes Krankenhaus - Chirurgie"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "niedergelassene Einrichtung - Pneumologie",
+              "display": "niedergelassene Einrichtung - Pneumologie"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "niedergelassene Einrichtung - Onkologie",
+              "display": "niedergelassene Einrichtung - Onkologie"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "niedergelassene Einrichtung - beides",
+              "display": "niedergelassene Einrichtung - beides"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "niedergelassene Einrichtung - Strahlentherapie",
+              "display": "niedergelassene Einrichtung - Strahlentherapie"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "niedergelassene Einrichtung - Chirurgie",
+              "display": "niedergelassene Einrichtung - Chirurgie"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "niedergelassene Einrichtung - ausländische Einrichtung",
+              "display": "niedergelassene Einrichtung - ausländische Einrichtung"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+              "version": "1.0",
+              "code": "Andere",
+              "display": "Andere"
+          }
+      ]
   }
 }

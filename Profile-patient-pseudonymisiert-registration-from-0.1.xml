@@ -122,28 +122,27 @@
       <mustSupport value="true" />
     </element>
     <element id="Patient.deceaseddateTime">
-            <path value="Patient.deceaseddateTime" />
-            <mustSupport value="true" />
-        </element>
-        <element id="Patient.deceaseddateTime.extension">
-            <path value="Patient.deceaseddateTime.extension" />
-            <slicing>
-                <discriminator>
-                    <type value="value" />
-                    <path value="url" />
-                </discriminator>
-                <rules value="open" />
-            </slicing>
-        </element>
-        <element id="Patient.deceaseddateTime.extension:informationsquelleTod">
-            <path value="Patient.deceaseddateTime.extension" />
-            <sliceName value="informationsquelleTod" />
-            <type>
-                <code value="Extension" />
-                <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
-            </type>
-            <mustSupport value="true" />
-        </element>
+      <path value="Patient.deceaseddateTime" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Patient.deceaseddateTime.extension">
+      <path value="Patient.deceaseddateTime.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Patient.deceaseddateTime.extension:informationsquelleTodesdatum">
+      <path value="Patient.deceaseddateTime.extension" />
+      <sliceName value="informationsquelleTodesdatum" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt" />
+      </type>
+    </element>
     <element id="Patient.address">
       <path value="Patient.address" />
       <max value="0" />

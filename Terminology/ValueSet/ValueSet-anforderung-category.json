@@ -1,28 +1,40 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-kategorie",
-  "version": "1.0",
-  "title": "nNGM: Valueset Anforderungskategorie",
-  "name": "nNGM_Valueset_Anforderungskategorie",
   "status": "active",
-  "date": "2020-07-08",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "nNGM Anforderungskategorie (Gewebe/Blut)",
   "compose": {
-    "include": [
-      {
-        "system": "http://ncit.nci.nih.gov",
-        "concept": [
+      "include": [
           {
-            "code": "C12434",
-            "display": "Blutdiagnostik"
+              "system": "http://ncit.nci.nih.gov",
+              "concept": [
+                  {
+                      "code": "C12434",
+                      "display": "Blutdiagnostik"
+                  },
+                  {
+                      "code": "C12801",
+                      "display": "Gewebediagnostik"
+                  }
+              ]
+          }
+      ]
+  },
+  "expansion": {
+      "identifier": "7bde33c5-7559-4c5a-88d1-880c4309d517",
+      "timestamp": "2020-10-15T12:33:42+00:00",
+      "total": 2,
+      "contains": [
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C12434",
+              "display": "Blood"
           },
           {
-            "code": "C12801",
-            "display": "Gewebediagnostik"
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C12801",
+              "display": "Tissue"
           }
-        ]
-      }
-    ]
+      ]
   }
 }

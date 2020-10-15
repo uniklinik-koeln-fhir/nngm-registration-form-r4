@@ -1,56 +1,110 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-orderDetails",
-  "version": "1.0",
-  "title": "nNGM: Valueset Anforderung OrderDetails",
-  "name": "nNGM_Valueset_Anforderung_OrderDetails",
   "status": "active",
-  "date": "2020-07-08",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "nNGM Anforderung OrderDetails",
   "compose": {
-    "include": [
-      {
-        "system": "http://ncit.nci.nih.gov",
-        "concept": [
+      "include": [
           {
-            "code": "C128554",
-            "display": "PD-L1"
-          },
-          {
-            "code": "C38184",
-            "display": "ALK"
-          },
-          {
-            "code": "C148329",
-            "display": "MET1"
-          },
-          {
-            "code": "C18399",
-            "display": "ROS1"
-          },
-          {
-            "code": "C18363",
-            "display": "BRAF"
-          },
-          {
-            "code": "C17757",
-            "display": "EGFR"
-          },
-          {
-            "code": "C25785",
-            "display": "KRAS"
-          },
-          {
-            "code": "C16885",
-            "display": "Primärmutation"
-          },
-          {
-            "code": "C19391",
-            "display": "Resistenztestung"
+              "system": "http://ncit.nci.nih.gov",
+              "concept": [
+                  {
+                      "code": "C128554",
+                      "display": "PD-L1"
+                  },
+                  {
+                      "code": "C38184",
+                      "display": "ALK"
+                  },
+                  {
+                      "code": "C148329",
+                      "display": "MET1"
+                  },
+                  {
+                      "code": "C18399",
+                      "display": "ROS1"
+                  },
+                  {
+                      "code": "C18363",
+                      "display": "BRAF"
+                  },
+                  {
+                      "code": "C17757",
+                      "display": "EGFR"
+                  },
+                  {
+                      "code": "C25785",
+                      "display": "KRAS"
+                  },
+                  {
+                      "code": "C16885",
+                      "display": "Primärmutation"
+                  },
+                  {
+                      "code": "C19391",
+                      "display": "Resistenztestung"
+                  }
+              ]
           }
-        ]
-      }
-    ]
+      ]
+  },
+  "expansion": {
+      "identifier": "9ce5c132-f7aa-4b47-80d9-128de8cea5d4",
+      "timestamp": "2020-10-15T12:34:08+00:00",
+      "total": 9,
+      "contains": [
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C148329",
+              "display": "GZMM wt Allele"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C17757",
+              "display": "EGFR Gene"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C18363",
+              "display": "BRAF Gene"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C18399",
+              "display": "ROS1 Gene"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C25785",
+              "display": "KRAS Gene"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C38184",
+              "display": "ALK Gene"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C16885",
+              "display": "Mutation"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C19391",
+              "display": "Resistance"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C128554",
+              "display": "PD-L1 Positive"
+          }
+      ]
   }
 }

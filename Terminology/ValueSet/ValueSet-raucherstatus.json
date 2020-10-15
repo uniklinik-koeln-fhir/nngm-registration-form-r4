@@ -1,5 +1,6 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus", 
   "status": "active",
   "compose": {
       "include": [

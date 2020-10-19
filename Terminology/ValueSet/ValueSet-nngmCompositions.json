@@ -1,19 +1,48 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/compositions",
-  "version": "1.0",
-  "title": "nNGM: ValueSet Forms",
-  "name": "nNGM_ValueSet_Forms",
   "status": "active",
-  "experimental": false,
-  "date": "2019-02-09",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Codes für die verschiedenen nNGM Eingabeformulare",
   "compose": {
-    "include": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions"
-      }
-    ]
+      "include": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions"
+          }
+      ]
+  },
+  "expansion": {
+      "identifier": "edff9f4a-939e-45a0-afad-1d516a472186",
+      "timestamp": "2020-10-13T09:01:42+00:00",
+      "total": 5,
+      "contains": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+              "version": "1.0",
+              "code": "stammdaten",
+              "display": "Stammdaten"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+              "version": "1.0",
+              "code": "anmeldung",
+              "display": "Anmeldung"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+              "version": "1.0",
+              "code": "vorbefunde",
+              "display": "Vorbefunde"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+              "version": "1.0",
+              "code": "molpatho-befund",
+              "display": "Molpatho Befund"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+              "version": "1.0",
+              "code": "therapie",
+              "display": "Therapie"
+          }
+      ]
   }
 }

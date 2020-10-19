@@ -1,38 +1,55 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
-  "version": "1.0",
-  "title": "nNGM: ValueSet Aufenthaltsart",
-  "name": "nNGM_ValueSet_Aufenthaltsart",
   "status": "active",
-  "experimental": false,
-  "date": "2019-02-08",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Art des Aufenthalts",
   "compose": {
-    "include": [
-      {
-        "system": "http://hl7.org/fhir/v3/ActCode",
-        "concept": [
+      "include": [
           {
-            "code": "AMB",
-            "display": "ambulatory"
+              "system": "http://hl7.org/fhir/v3/ActCode",
+              "concept": [
+                  {
+                      "code": "AMB",
+                      "display": "ambulatory"
+                  },
+                  {
+                      "code": "IMP",
+                      "display": "inpatient encounter"
+                  }
+              ]
           },
           {
-            "code": "IMP",
-            "display": "inpatient encounter"
+              "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+              "concept": [
+                  {
+                      "code": "UNK",
+                      "display": "unknown"
+                  }
+              ]
           }
-        ]
-      },
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
-        "concept": [
+      ]
+  },
+  "expansion": {
+      "identifier": "072a2c6f-57cb-4a66-b2d6-1515ba7a10bb",
+      "timestamp": "2020-10-13T10:05:08+00:00",
+      "total": 3,
+      "contains": [
           {
-            "code": "UNK",
-            "display": "unknown"
+              "system": "http://hl7.org/fhir/v3/ActCode",
+              "version": "2016-11-11",
+              "code": "IMP",
+              "display": "inpatient encounter"
+          },
+          {
+              "system": "http://hl7.org/fhir/v3/ActCode",
+              "version": "2016-11-11",
+              "code": "AMB",
+              "display": "ambulatory"
+          },
+          {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+              "version": "2018-08-12",
+              "code": "UNK",
+              "display": "unknown"
           }
-        ]
-      }
-    ]
+      ]
   }
 }

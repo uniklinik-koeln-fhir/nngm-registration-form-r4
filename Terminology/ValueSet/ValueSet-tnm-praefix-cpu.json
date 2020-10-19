@@ -1,33 +1,47 @@
 {
-    "resourceType":"ValueSet",
-    "url":"http://uk-koeln.de/fhir/ValueSet/nngm/tnm-praefix-cpu",
-    "version":"1.0",
-    "title": "nNGM: ValueSet TNM Präfix",
-    "name": "nNGM_ValueSet_TNM_Praefix",
-    "status":"active",
-    "experimental":false,
-    "date":"2018-10-31",
-    "publisher":"Uniklinik Köln",
-    "description":"TNM Präfix c/p/u",
-    "compose":{
+    "resourceType": "ValueSet",
+    "status": "active",
+    "compose": {
         "include": [
             {
-                "system":"urn:oid:2.16.840.1.113883.15.16",
-                "version":"8",
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "version": "8",
                 "concept": [
                     {
-                        "code":"c - klinisch gesichert",
-                        "display":"c - klinisch gesichert"
+                        "code": "c - klinisch gesichert",
+                        "display": "c - klinisch gesichert"
                     },
                     {
-                        "code":"p - histopathologisch gesichert",
-                        "display":"p - histopathologisch gesichert"
+                        "code": "p - histopathologisch gesichert",
+                        "display": "p - histopathologisch gesichert"
                     },
                     {
-                        "code":"u - Ultraschalldiagnostik",
-                        "display":"u - Ultraschalldiagnostik"
+                        "code": "u - Ultraschalldiagnostik",
+                        "display": "u - Ultraschalldiagnostik"
                     }
                 ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "eb80feab-b595-43a0-8830-a679fa05db03",
+        "timestamp": "2020-10-15T12:50:41+00:00",
+        "total": 0,
+        "contains": [
+            {
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "code": "c - klinisch gesichert",
+                "display": "c - klinisch gesichert"
+            },
+            {
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "code": "p - histopathologisch gesichert",
+                "display": "p - histopathologisch gesichert"
+            },
+            {
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "code": "u - Ultraschalldiagnostik",
+                "display": "u - Ultraschalldiagnostik"
             }
         ]
     }

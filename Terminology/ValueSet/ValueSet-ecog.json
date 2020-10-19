@@ -1,41 +1,65 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/ecog",
-  "version": "1.0",
-  "title": "nNGM: ValueSet ECOG",
-  "name": "nNGM_ValueSet_ECOG",
   "status": "active",
-  "experimental": false,
-  "date": "2018-08-10",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Allgemeiner Leistungszustand (ECOG)",
   "compose": {
-    "include": [
-      {
-        "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
-        "concept": [
+      "include": [
           {
-            "code": "0",
-            "display": "ECOG 0 (Normale, uneingeschränkte Aktivität wie vor der Erkrankung)"
-          },
-          {
-            "code": "1",
-            "display": "ECOG 1: (Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen)"
-          },
-          {
-            "code": "2",
-            "display": "ECOG 2: (Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50% der Wachzeit aufstehen)"
-          },
-          {
-            "code": "3",
-            "display": "ECOG 3: (Nur begrenzte Selbstversorgung möglich; ist 50% oder mehr der Wachzeit an Bett oder Stuhl gebunden)"
-          },
-          {
-            "code": "4",
-            "display": "ECOG 4: (Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden)"
+              "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
+              "concept": [
+                  {
+                      "code": "0",
+                      "display": "ECOG 0 (Normale, uneingeschränkte Aktivität wie vor der Erkrankung)"
+                  },
+                  {
+                      "code": "1",
+                      "display": "ECOG 1: (Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen)"
+                  },
+                  {
+                      "code": "2",
+                      "display": "ECOG 2: (Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50% der Wachzeit aufstehen)"
+                  },
+                  {
+                      "code": "3",
+                      "display": "ECOG 3: (Nur begrenzte Selbstversorgung möglich; ist 50% oder mehr der Wachzeit an Bett oder Stuhl gebunden)"
+                  },
+                  {
+                      "code": "4",
+                      "display": "ECOG 4: (Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden)"
+                  }
+              ]
           }
-        ]
-      }
-    ]
+      ]
+  },
+  "expansion": {
+      "identifier": "916e4031-a9a0-4f80-b4cf-7659964d88c2",
+      "timestamp": "2020-10-15T12:49:51+00:00",
+      "total": 0,
+      "contains": [
+          {
+              "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
+              "code": "0",
+              "display": "ECOG 0 (Normale, uneingeschränkte Aktivität wie vor der Erkrankung)"
+          },
+          {
+              "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
+              "code": "1",
+              "display": "ECOG 1: (Einschränkung bei körperlicher Anstrengung, aber gehfähig; leichte körperliche Arbeit bzw. Arbeit im Sitzen)"
+          },
+          {
+              "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
+              "code": "2",
+              "display": "ECOG 2: (Gehfähig, Selbstversorgung möglich, aber nicht arbeitsfähig; kann mehr als 50% der Wachzeit aufstehen)"
+          },
+          {
+              "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
+              "code": "3",
+              "display": "ECOG 3: (Nur begrenzte Selbstversorgung möglich; ist 50% oder mehr der Wachzeit an Bett oder Stuhl gebunden)"
+          },
+          {
+              "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
+              "code": "4",
+              "display": "ECOG 4: (Völlig pflegebedürftig, keinerlei Selbstversorgung möglich; völlig an Bett oder Stuhl gebunden)"
+          }
+      ]
   }
 }

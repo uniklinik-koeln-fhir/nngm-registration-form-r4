@@ -1,17 +1,72 @@
 {
   "resourceType": "ValueSet",
-  "name": "nNGM_ValueSet_Informationsquelle_des_Todesdatums",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/izt",
   "status": "active",
-  "experimental": false,
-  "date": "2018-10-31",
-  "publisher": "Uniklinik Köln",
-  "description": "nNGM Consent Policy",
   "compose": {
-    "include": [
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt"
-      }
-    ]
+      "include": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt"
+          }
+      ]
+  },
+  "expansion": {
+      "identifier": "b0e60188-6f46-4f5b-8f95-7c99a1441854",
+      "timestamp": "2020-10-13T08:57:22+00:00",
+      "total": 9,
+      "contains": [
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Arztbrief",
+              "display": "Arztbrief"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Kontakt Krankenkasse",
+              "display": "Kontakt Krankenkasse"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Kontakt Behandler",
+              "display": "Kontakt Behandler"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Kontakt Angehoerige",
+              "display": "Kontakt Angehoerige"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Internet (Todesanzeigen)",
+              "display": "Internet (Todesanzeigen)"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Krebsregister",
+              "display": "Krebsregister"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Dokumentar",
+              "display": "Dokumentar"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Kiss",
+              "display": "Kiss"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+              "version": "1.0",
+              "code": "Andere hausinterne Datenbanken",
+              "display": "Andere hausinterne Datenbanken"
+          }
+      ]
   }
 }

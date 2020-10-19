@@ -1,33 +1,50 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tki-resistenz",
-  "version": "1.0",
-  "title": "nNGM: ValueSet TKI Resistenz",
-  "name": "nNGM_ValueSet_TKI-Resistenz",
   "status": "active",
-  "experimental":false,
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Observation zur Erfassung der erfolgten TKI Therapien",
   "compose": {
-    "include": [
-      {
-        "system": "http://ncit.nci.nih.gov",
-        "concept": [
+      "include": [
           {
-            "code": "C142114",
-            "display": "ALK Fusion Gene Positive"
-          },
-          {
-            "code": "C134501",
-            "display": "EGFR Positive "
-          },
-          {
-            "code": "C131071",
-            "display": "ROS1 Fusion Positive"
+              "system": "http://ncit.nci.nih.gov",
+              "concept": [
+                  {
+                      "code": "C142114",
+                      "display": "ALK Fusion Gene Positive"
+                  },
+                  {
+                      "code": "C134501",
+                      "display": "EGFR Positive "
+                  },
+                  {
+                      "code": "C131071",
+                      "display": "ROS1 Fusion Positive"
+                  }
+              ]
           }
-        ]
-      }
-    ]
+      ]
+  },
+  "expansion": {
+      "identifier": "3ce3414e-581e-475c-b21e-dd4a1d799baf",
+      "timestamp": "2020-10-15T12:30:40+00:00",
+      "total": 3,
+      "contains": [
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C134501",
+              "display": "EGFR Positive"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C142114",
+              "display": "ALK Fusion Gene Positive"
+          },
+          {
+              "system": "http://ncit.nci.nih.gov",
+              "version": "20.02d",
+              "code": "C131071",
+              "display": "ROS1 Fusion Positive"
+          }
+      ]
   }
 }

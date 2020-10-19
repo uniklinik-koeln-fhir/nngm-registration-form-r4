@@ -1,29 +1,38 @@
 {
-    "resourceType":"ValueSet",
-    "url":"http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-miscy",
-    "version":"1.0",
-    "title":"nNGM: ValueSet TNM-Suffix",
-    "name":"nNGM_ValueSet_TNM-Suffix",
-    "status":"active",
-    "experimental":false,
-    "date":"2018-10-31",
-    "publisher":"Uniklinik Köln",
-    "description":"TNM Suffix",
-    "compose":{
+    "resourceType": "ValueSet",
+    "status": "active",
+    "compose": {
         "include": [
             {
-                "system":"urn:oid:2.16.840.1.113883.15.16",
-                "version":"8",
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "version": "8",
                 "concept": [
                     {
-                        "code":"m - multiple Tumore der gleichen Region",
-                        "display":"m - multiple Tumore der gleichen Region"
+                        "code": "m - multiple Tumore der gleichen Region",
+                        "display": "m - multiple Tumore der gleichen Region"
                     },
                     {
-                        "code":"cy - zytologisch",
-                        "display":"cy - zytologisch"
+                        "code": "cy - zytologisch",
+                        "display": "cy - zytologisch"
                     }
                 ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "8c37dfdc-1b52-45d3-8284-3a2e7982465c",
+        "timestamp": "2020-10-15T12:49:12+00:00",
+        "total": 0,
+        "contains": [
+            {
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "code": "m - multiple Tumore der gleichen Region",
+                "display": "m - multiple Tumore der gleichen Region"
+            },
+            {
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "code": "cy - zytologisch",
+                "display": "cy - zytologisch"
             }
         ]
     }

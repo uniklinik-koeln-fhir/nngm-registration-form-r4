@@ -12,17 +12,7 @@
   "compose": {
     "include": [
       {
-        "system": "http://loinc.org",
-        "concept": [
-          {
-            "code": "75620-5",
-            "display": "TNM clinical staging before treatment panel"
-          },
-          {
-            "code": "75621-3",
-            "display": "TNM pathologic staging after surgery panel"
-          }
-        ]
+        "system": "http://loinc.org"
       }
     ]
   },

@@ -1,114 +1,122 @@
 {
-  "resourceType": "ValueSet",
-  "status": "active",
-  "compose": {
-      "include": [
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections"
-          }
-      ]
-  },
-  "expansion": {
-      "identifier": "39b294ff-c6cb-4ebd-8e33-90e1e739e8f7",
-      "timestamp": "2020-10-13T09:02:00+00:00",
-      "total": 16,
-      "contains": [
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "stammdaten",
-              "display": "Stammdaten"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "basisangaben",
-              "display": "Basisangaben"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "anforderung",
-              "display": "Anforderung"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "tnm",
-              "display": "TNM"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "therapie",
-              "display": "Therapie"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "resistenztestung",
-              "display": "Resistenztestung"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "vorbefund",
-              "display": "Vorbefund"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "immunhistochemie",
-              "display": "Immunhistochemie"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "histologie",
-              "display": "Histologie"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "molekularpathologie",
-              "display": "Molekularpathologie"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "ngs-lung-panel",
-              "display": "NGS Lung Panel"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "fusion-ngs",
-              "display": "Fusion NGS"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "fast-track",
-              "display": "Fast Track"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "sonstige-untersuchungen",
-              "display": "Sonstige Untersuchungen"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "liquid-biopsy",
-              "display": "Liquid Biopsy"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-              "version": "1.0",
-              "code": "beurteilung",
-              "display": "Beurteilung"
-          }
-      ]
-  }
+    "resourceType": "ValueSet",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/sections",
+    "version": "1.0",
+    "title": "nNGM: ValueSet Sections",
+    "name": "nNGM_ValueSet_sections",
+    "status": "active",
+    "experimental": false,
+    "date": "2019-02-09",
+    "publisher": "Universitätsklinikum Köln",
+    "description": "Sections der Dokument Compositions der verschiedenen nNGM Eingabeformulare",
+    "compose": {
+        "include": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections"
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "39b294ff-c6cb-4ebd-8e33-90e1e739e8f7",
+        "timestamp": "2020-10-13T09:02:00+00:00",
+        "total": 16,
+        "contains": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "stammdaten",
+                "display": "Stammdaten"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "basisangaben",
+                "display": "Basisangaben"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "anforderung",
+                "display": "Anforderung"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "tnm",
+                "display": "TNM"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "therapie",
+                "display": "Therapie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "resistenztestung",
+                "display": "Resistenztestung"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "vorbefund",
+                "display": "Vorbefund"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "immunhistochemie",
+                "display": "Immunhistochemie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "histologie",
+                "display": "Histologie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "molekularpathologie",
+                "display": "Molekularpathologie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "ngs-lung-panel",
+                "display": "NGS Lung Panel"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "fusion-ngs",
+                "display": "Fusion NGS"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "fast-track",
+                "display": "Fast Track"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "sonstige-untersuchungen",
+                "display": "Sonstige Untersuchungen"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "liquid-biopsy",
+                "display": "Liquid Biopsy"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "beurteilung",
+                "display": "Beurteilung"
+            }
+        ]
+    }
 }

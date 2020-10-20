@@ -1,5 +1,13 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/FollowUpStatus",
+  "version": "1.0",
+  "title": "nNGM: ValueSet Follow Up Status",
+  "name": "nNGM_ValueSet_FollowUpStatus",
+  "experimental": false,
+  "date": "2018-10-31",
+  "publisher": "Uniklinik Köln",
+  "description": "nNGM FollowUp Status",
   "status": "active",
   "compose": {
       "include": [

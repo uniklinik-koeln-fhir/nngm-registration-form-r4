@@ -1,6 +1,13 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-kategorie",
+  "version": "1.0",
+  "title": "nNGM: Valueset Anforderungskategorie",
+  "name": "nNGM_Valueset_Anforderungskategorie",
   "status": "active",
+  "date": "2020-07-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "nNGM Anforderungskategorie (Gewebe/Blut)",
   "compose": {
       "include": [
           {

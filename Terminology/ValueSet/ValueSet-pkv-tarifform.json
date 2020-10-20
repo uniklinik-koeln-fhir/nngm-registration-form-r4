@@ -1,6 +1,14 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/pkv-tarifform",
+  "version": "1.0",
+  "title": "nNGM: ValueSet PKV-Tarifform",
+  "name": "nNGM_ValueSet_PKV-Tarifform",
   "status": "active",
+  "experimental": false,
+  "date": "2018-08-24",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "PKV-Tarifformen",
   "compose": {
       "include": [
           {

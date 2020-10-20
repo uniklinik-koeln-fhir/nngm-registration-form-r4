@@ -1,6 +1,13 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-orderDetails",
+  "version": "1.0",
+  "title": "nNGM: Valueset Anforderung OrderDetails",
+  "name": "nNGM_Valueset_Anforderung_OrderDetails",
   "status": "active",
+  "date": "2020-07-08",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "nNGM Anforderung OrderDetails",
   "compose": {
       "include": [
           {

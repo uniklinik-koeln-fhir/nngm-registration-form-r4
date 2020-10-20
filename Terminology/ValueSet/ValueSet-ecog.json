@@ -1,6 +1,14 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/ecog",
+  "version": "1.0",
+  "title": "nNGM: ValueSet ECOG",
+  "name": "nNGM_ValueSet_ECOG",
   "status": "active",
+  "experimental": false,
+  "date": "2018-08-10",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Allgemeiner Leistungszustand (ECOG)",
   "compose": {
       "include": [
           {

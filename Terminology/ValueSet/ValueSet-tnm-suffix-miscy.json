@@ -1,6 +1,14 @@
 {
-    "resourceType": "ValueSet",
-    "status": "active",
+    "resourceType":"ValueSet",
+    "url":"http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-miscy",
+    "version":"1.0",
+    "title":"nNGM: ValueSet TNM-Suffix",
+    "name":"nNGM_ValueSet_TNM-Suffix",
+    "status":"active",
+    "experimental":false,
+    "date":"2018-10-31",
+    "publisher":"Uniklinik Köln",
+    "description":"TNM Suffix",
     "compose": {
         "include": [
             {

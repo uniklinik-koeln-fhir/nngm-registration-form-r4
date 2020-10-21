@@ -1,6 +1,14 @@
 {
-  "resourceType": "ValueSet",
-  "status": "active",
+    "resourceType": "ValueSet",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/ExecutingOrganizationTyp",
+    "version":"1.0",
+    "title": "nNGM ValueSet Durchführende Einrichtung",
+    "name": "nNGM_ValueSet_Durchfuehrende_Einrichtung",
+    "status": "active",
+    "experimental":false,
+    "date":"2018-10-31",
+    "publisher":"Uniklinik Köln",
+    "description": "nNGM ValueSet Durchführende Einrichtung",
   "compose": {
       "include": [
           {

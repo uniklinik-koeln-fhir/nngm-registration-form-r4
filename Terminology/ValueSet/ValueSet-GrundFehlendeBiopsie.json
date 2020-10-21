@@ -1,6 +1,14 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/GrundFehlendeBiopsie",
+  "version": "1.0",
+  "name": "nNGM_ValueSet_GrundFehlendeBiopsie",
+  "title": "nNGM: ValueSet GrundFehlendeBiopsie",
   "status": "active",
+  "experimental": false,
+  "date": "2019-02-09",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Grund fehlende Biopsy",
   "compose": {
       "include": [
           {

@@ -1,6 +1,13 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/obs-requests",
+  "version": "1.0",
+  "title": "nNGM: ValueSet Procedures",
+  "name": "nNGM_ValueSet_Procedures",
   "status": "active",
+  "date": "2019-04-07",
+  "publisher": "Universitätsklinikum Köln",
+  "description": "Diagnostiken durchgeführt im Rahmen von nNGM",
   "compose": {
       "include": [
           {

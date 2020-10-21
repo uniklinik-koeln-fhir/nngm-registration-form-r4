@@ -1,48 +1,51 @@
 {
-  "resourceType": "ValueSet",
-  "status": "active",
-  "compose": {
-      "include": [
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss"
-          },
-          {
-              "system": "http://ncit.nci.nih.gov",
-              "concept": [
-                  {
-                      "code": "C17649",
-                      "display": "Other"
-                  }
-              ]
-          }
-      ]
-  },
-  "expansion": {
-      "identifier": "1433279a-e338-4154-af0a-18dd4ca046d8",
-      "timestamp": "2020-10-15T12:30:04+00:00",
-      "total": 4,
-      "contains": [
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
-              "code": "vollständig",
-              "display": "vollständig"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
-              "code": "Teiluntersuchungen",
-              "display": "Teiluntersuchungen"
-          },
-          {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
-              "code": "Durchführung nicht möglich (Material nicht auswertbar)",
-              "display": "Durchführung nicht möglich (Material nicht auswertbar)"
-          },
-          {
-              "system": "http://ncit.nci.nih.gov",
-              "version": "20.02d",
-              "code": "C17649",
-              "display": "Other"
-          }
-      ]
-  }
+    "resourceType": "ValueSet",
+    "url": "http://uk-koeln.de/fhir/ValueSet/NNGM/statusAbschluss",
+    "name": "NNGM_Status_Abschluss",
+    "title": "nNGM Status Abschluss",
+    "status": "active",
+    "compose": {
+        "include": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss"
+            },
+            {
+                "system": "http://ncit.nci.nih.gov",
+                "concept": [
+                    {
+                        "code": "C17649",
+                        "display": "Other"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "1433279a-e338-4154-af0a-18dd4ca046d8",
+        "timestamp": "2020-10-15T12:30:04+00:00",
+        "total": 4,
+        "contains": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
+                "code": "vollständig",
+                "display": "vollständig"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
+                "code": "Teiluntersuchungen",
+                "display": "Teiluntersuchungen"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/NNGM/statusAbschluss",
+                "code": "Durchführung nicht möglich (Material nicht auswertbar)",
+                "display": "Durchführung nicht möglich (Material nicht auswertbar)"
+            },
+            {
+                "system": "http://ncit.nci.nih.gov",
+                "version": "20.02d",
+                "code": "C17649",
+                "display": "Other"
+            }
+        ]
+    }
 }

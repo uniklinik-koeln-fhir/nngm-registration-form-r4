@@ -1,6 +1,14 @@
 {
-    "resourceType": "ValueSet",
-    "status": "active",
+    "resourceType":"ValueSet",
+    "url":"http://uk-koeln.de/fhir/ValueSet/nngm/tnm-praefix-cpu",
+    "version":"1.0",
+    "title": "nNGM: ValueSet TNM Präfix",
+    "name": "nNGM_ValueSet_TNM_Praefix",
+    "status":"active",
+    "experimental":false,
+    "date":"2018-10-31",
+    "publisher":"Uniklinik Köln",
+    "description":"TNM Präfix c/p/u",
     "compose": {
         "include": [
             {

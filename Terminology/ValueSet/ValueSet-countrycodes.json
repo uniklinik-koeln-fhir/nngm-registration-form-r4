@@ -1,6 +1,12 @@
 {
   "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/grundEntfallBlockAnforderung",
+  "version": "1.0",
+  "title": "nNGM: Valueset Grund Entfallene Tumorblock-Anforderung",
+  "name": "nNGM_Valueset_Grund_Entfallene-Tumorblock-Anforderung",
   "status": "active",
+  "date": "2020-07-08",
+  "publisher": "Universitätsklinikum Köln",
   "compose": {
       "include": [
           {

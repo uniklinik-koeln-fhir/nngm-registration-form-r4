@@ -11,7 +11,7 @@
     "compose": {
         "include":  [
             {
-                "system": "http://ncit.nci.nih.gov",
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
                 "concept":  [
                     {
                         "code": "komplette_untersuchung",
@@ -26,6 +26,28 @@
                         "display": "Liquid Biopsy"
                     }
                 ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "dfe0644f-81b2-4fd4-b8fb-12a1142fee47",
+        "timestamp": "2020-11-12T12:30:04+00:00",
+        "total": 3,
+        "contains":  [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+                "code": "komplette_untersuchung",
+                "display": "Komplette Untersuchung"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+                 "code": "einzel_untersuchung",
+                 "display": "Einzeluntersuchung"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+                "code": "liquid_biopsy",
+                "display": "Liquid Biopsy"
             }
         ]
     }

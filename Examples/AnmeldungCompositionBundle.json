@@ -5,6 +5,168 @@
     "entry": [
         {
             "resource": {
+                "resourceType": "Composition",
+                "id": "8dbfdcb5-17db-4dab-ac5c-fd78dee6ae44",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Anmeldung-pseudonymisiert"
+                    ]
+                },
+                "status": "final",
+                "type": {
+                    "coding": {
+                        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+                        "code": "anmeldung"
+                    }
+                },
+                "category": {
+                    "coding": {
+                        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/composition-category",
+                        "code": "psn"
+                    }
+                },
+                "subject": {
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
+                },
+                "date": "2020-11-12",
+                "author": [
+                    {
+                        "reference": "https://clinicalsite.org/person/1234"
+                    }
+                ],
+                "title": "Anmeldung pseudonymisiert",
+                "section": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "stammdaten"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "Organization/84466b43-9ba2-4410-8743-1972ebaffbc9"
+                            },
+                            {
+                                "reference": "ServiceRequest/3ce00de6-a1fe-4aa7-924e-0b945bd2c437"
+                            },
+                            {
+                                "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
+                            },
+                            {
+                                "reference": "Coverage/32ad0d53-df7b-4458-87a5-70b648e77c2e"
+                            },
+                            {
+                                "reference": "Observation/f44861b8-97b3-4c56-992e-bf17795bdf4c"
+                            },
+                            {
+                                "reference": "Observation/c0fabf55-6409-4790-a738-895ce2cb10cc"
+                            },
+                            {
+                                "reference": "Observation/93850071-d716-44ef-904a-8bfd2296c1b3"
+                            },
+                            {
+                                "reference": "Observation/306072b3-c0e6-4a48-8cd0-96fa17ddd518"
+                            },
+                            {
+                                "reference": "Observation/5fb68b58-8148-44f7-8b58-2d117ec56d48"
+                            },
+                            {
+                                "reference": "Observation/ef45ead7-560c-461c-aa0b-59dc91109928"
+                            },
+                            {
+                                "reference": "Observation/302453b7-935e-40fa-8fea-d3192fca575e"
+                            },
+                            {
+                                "reference": "Consent/e6df1191-5377-494e-81a9-fafa3c3d56fc"
+                            },
+                            {
+                                "reference": "Consent/003c5dc8-c50a-48d1-b5ca-594ad8f225d9"
+                            },
+                            {
+                                "reference": "Consent/69d89897-cbc6-454a-b7cf-229d14ffc44a"
+                            },
+                            {
+                                "reference": "Consent/954d0903-0c2a-44e1-82a2-e336ff8ad669"
+                            },
+                            {
+                                "reference": "Consent/6aed5564-bce6-429f-9c81-168fd20c45a6"
+                            },
+                            {
+                                "reference": "Consent/91107b27-e900-44c8-aca9-4116b79dca1c"
+                            },
+                            {
+                                "reference": "Consent/acc95dee-e837-47ae-baec-3483693f030a"
+                            },
+                            {
+                                "reference": "Consent/92aa5031-f4ec-4d0a-969d-211524d98372"
+                            },
+                            {
+                                "reference": "Consent/c27a5894-c85e-4464-b9ba-7875afacf6fd"
+                            },
+                            {
+                                "reference": "Consent/4c4d706e-3282-487d-b967-24977fdaed22"
+                            },
+                            {
+                                "reference": "Consent/9e9d21c2-2884-4da8-926c-cca2c8e06a87"
+                            },
+                            {
+                                "reference": "Consent/4048bd2d-c9e9-4245-bf6f-f61d2c6410bf"
+                            },
+                            {
+                                "reference": "Consent/d6a302bc-4ebf-42f5-a82e-dffd7f5e8783"
+                            },
+                            {
+                                "reference": "Consent/054a92a7-af9f-4ce6-af61-17af3eb30ba6"
+                            },
+                            {
+                                "reference": "Consent/4b34335f-4da5-4a50-b2b4-9fc284cb3a2a"
+                            }
+                        ]
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "anforderung"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "ServiceRequest/d9aa01ef-8ecf-44e1-bf35-973d480ae6b3"
+                            },
+                            {
+                                "reference": "Specimen/c8bd26ec-3ed9-49cd-9d82-dd66085abb3b"
+                            },
+                            {
+                                "reference": "Organization/84466b43-9ba2-4410-8743-1972ebaffbc9"
+                            }
+                        ]
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "tnm"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "Observation/f44861b8-97b3-4c56-992e-bf17795bdf4c"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "resource": {
                 "resourceType": "Patient",
                 "id": "1e7fb494-860e-4ee1-96dd-91388dba53a9",
                 "meta": {

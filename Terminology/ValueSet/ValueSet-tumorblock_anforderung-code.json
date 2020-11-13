@@ -10,23 +10,48 @@
   "description": "nNGM Anforderungscode",
   "compose": {
     "include": [
-      {
-        "system": "http://ncit.nci.nih.gov",
-        "concept": [
-          {
+        {
+            "system": "http://ncit.nci.nih.gov",
+            "concept": [
+                {
+                    "code": "komplette_untersuchung",
+                    "display": "Komplette Untersuchung"
+                },
+                {
+                    "code": "einzel_untersuchung",
+                    "display": "Einzeluntersuchung"
+                },
+                {
+                    "code": "liquid_biopsy",
+                    "display": "Liquid Biopsy"
+                }
+            ]
+        }
+    ]
+},
+"expansion": {
+    "identifier": "0f08855d-149b-4e71-b419-4b36a130d18c",
+    "timestamp": "2020-11-13T17:51:12+00:00",
+    "total": 3,
+    "contains": [
+        {
+            "system": "http://ncit.nci.nih.gov",
+            "version": "20.02d",
             "code": "komplette_untersuchung",
             "display": "Komplette Untersuchung"
-          },
-          {
+        },
+        {
+            "system": "http://ncit.nci.nih.gov",
+            "version": "20.02d",
             "code": "einzel_untersuchung",
             "display": "Einzeluntersuchung"
-          },
-          {
+        },
+        {
+            "system": "http://ncit.nci.nih.gov",
+            "version": "20.02d",
             "code": "liquid_biopsy",
             "display": "Liquid Biopsy"
-          }
-        ]
-      }
+        }
     ]
-  }
+}
 }

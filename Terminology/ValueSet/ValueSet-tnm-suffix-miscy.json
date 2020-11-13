@@ -30,15 +30,17 @@
     "expansion": {
         "identifier": "8c37dfdc-1b52-45d3-8284-3a2e7982465c",
         "timestamp": "2020-10-15T12:49:12+00:00",
-        "total": 0,
+        "total": 2,
         "contains": [
             {
                 "system": "urn:oid:2.16.840.1.113883.15.16",
+                "version": "8",
                 "code": "m - multiple Tumore der gleichen Region",
                 "display": "m - multiple Tumore der gleichen Region"
             },
             {
                 "system": "urn:oid:2.16.840.1.113883.15.16",
+                "version": "8",
                 "code": "cy - zytologisch",
                 "display": "cy - zytologisch"
             }

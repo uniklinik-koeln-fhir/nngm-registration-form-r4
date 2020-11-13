@@ -110,12 +110,6 @@
                 "version": "1.0",
                 "code": "liquid-biopsy",
                 "display": "Liquid Biopsy"
-            },
-            {
-                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
-                "version": "1.0",
-                "code": "beurteilung",
-                "display": "Beurteilung"
             }
         ]
     }

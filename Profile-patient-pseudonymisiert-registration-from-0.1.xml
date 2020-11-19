@@ -118,15 +118,27 @@
     </element>
     <element id="Patient.birthDate">
       <path value="Patient.birthDate" />
-      <min value="1" />
+      <mustSupport value="false" />
+    </element>
+    <element id="Patient.deceased[x]">
+      <path value="Patient.deceased[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+      </slicing>
+    </element>
+    <element id="Patient.deceased[x]:deceasedDateTime">
+      <path value="Patient.deceased[x]" />
+      <sliceName value="deceasedDateTime" />
+      <type>
+        <code value="dateTime" />
+      </type>
       <mustSupport value="true" />
     </element>
-    <element id="Patient.deceaseddateTime">
-      <path value="Patient.deceaseddateTime" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Patient.deceaseddateTime.extension">
-      <path value="Patient.deceaseddateTime.extension" />
+    <element id="Patient.deceased[x]:deceasedDateTime.extension">
+      <path value="Patient.deceased[x].extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -135,8 +147,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.deceaseddateTime.extension:informationsquelleTodesdatum">
-      <path value="Patient.deceaseddateTime.extension" />
+    <element id="Patient.deceased[x]:deceasedDateTime.extension:informationsquelleTodesdatum">
+      <path value="Patient.deceased[x].extension" />
       <sliceName value="informationsquelleTodesdatum" />
       <type>
         <code value="Extension" />
@@ -173,9 +185,6 @@
       <max value="0" />
     </element>
     <element id="Patient.contact">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Contact" />
-      </extension>
       <path value="Patient.contact" />
       <max value="0" />
     </element>

@@ -53,9 +53,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />
@@ -88,9 +85,6 @@
       <path value="Observation.code" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationCode" />
-        </extension>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art" />
       </binding>
@@ -125,6 +119,14 @@
       <path value="Observation.subject.reference" />
       <min value="1" />
       <mustSupport value="true" />
+    </element>
+    <element id="Observation.encounter">
+      <path value="Observation.encounter" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM" />
+      </type>
     </element>
     <element id="Observation.encounter.reference">
       <path value="Observation.encounter.reference" />
@@ -170,20 +172,16 @@
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
       </type>
     </element>
+    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.url">
+      <path value="Observation.effective[x].extension.url" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
+    </element>
     <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x]">
       <path value="Observation.effective[x].extension.value[x]" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x].coding">
-      <path value="Observation.effective[x].extension.value[x].coding" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x].coding.system">
-      <path value="Observation.effective[x].extension.value[x].coding.system" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x].coding.code">
-      <path value="Observation.effective[x].extension.value[x].coding.code" />
+    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.coding">
+      <path value="Observation.effective[x].extension.coding" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.performer">

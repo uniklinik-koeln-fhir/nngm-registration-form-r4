@@ -48,9 +48,6 @@
     <element id="Consent.category">
       <path value="Consent.category" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="extensible" />
-      </binding>
     </element>
     <element id="Consent.category.coding">
       <path value="Consent.category.coding" />
@@ -82,7 +79,6 @@
     </element>
     <element id="Consent.dateTime">
       <path value="Consent.dateTime" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Consent.policyRule">
@@ -90,9 +86,6 @@
       <min value="1" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ConsentPolicyRule" />
-        </extension>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy" />
       </binding>
@@ -110,9 +103,6 @@
       <min value="1" />
     </element>
     <element id="Consent.provision">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="provision" />
-      </extension>
       <path value="Consent.provision" />
       <min value="1" />
       <mustSupport value="true" />

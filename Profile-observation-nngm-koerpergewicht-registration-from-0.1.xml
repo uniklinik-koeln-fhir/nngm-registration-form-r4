@@ -66,6 +66,7 @@
     <element id="Observation.extension:episodeOfCare.value[x]">
       <path value="Observation.extension.value[x]" />
       <slicing>
+        <description value="this value" />
         <rules value="open" />
       </slicing>
       <min value="1" />
@@ -76,11 +77,15 @@
       <min value="1" />
     </element>
     <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <slicing>
+        <description value="coding" />
+        <rules value="open" />
+      </slicing>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -98,6 +103,7 @@
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
       <slicing>
+        <description value="quantity" />
         <rules value="open" />
       </slicing>
       <min value="1" />

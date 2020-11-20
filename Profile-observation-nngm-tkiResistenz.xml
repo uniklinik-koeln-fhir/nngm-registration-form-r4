@@ -36,6 +36,7 @@
     <element id="Observation.extension:episodeOfCare.value[x]">
       <path value="Observation.extension.value[x]" />
       <slicing>
+        <description value="type" />
         <rules value="open" />
       </slicing>
       <min value="1" />
@@ -51,9 +52,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />
@@ -86,9 +84,6 @@
       <path value="Observation.code" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationCode" />
-        </extension>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tki-resistenz" />
       </binding>
@@ -197,7 +192,6 @@
     <element id="Observation.component:tkiTherapie.extension:componentOrder">
       <path value="Observation.component.extension" />
       <sliceName value="componentOrder" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Extension" />

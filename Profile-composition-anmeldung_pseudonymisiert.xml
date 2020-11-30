@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Anmeldung-pseudonymisiert" />
-  <name value="Anmeldung-pseudonymisiert" />
+  <name value="AnmeldungPseudonymisiert" />
+  <title value="Anmeldung-pseudonymisiert" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -84,9 +85,6 @@
       <fixedString value="Anmeldung pseudonymisiert" />
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -97,9 +95,6 @@
       </slicing>
     </element>
     <element id="Composition.section:basisangaben">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="basisangaben" />
       <min value="1" />
@@ -145,7 +140,6 @@
     <element id="Composition.section:basisangaben.entry:netzwerkpartner">
       <path value="Composition.section.entry" />
       <sliceName value="netzwerkpartner" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -160,7 +154,6 @@
     <element id="Composition.section:basisangaben.entry:anforderungTMB">
       <path value="Composition.section.entry" />
       <sliceName value="anforderungTMB" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -233,9 +226,6 @@
       <min value="1" />
     </element>
     <element id="Composition.section:anforderung">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="anforderung" />
       <min value="1" />
@@ -265,7 +255,6 @@
     <element id="Composition.section:anforderung.entry:anforderungTestung">
       <path value="Composition.section.entry" />
       <sliceName value="anforderungTestung" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -335,13 +324,26 @@
       <path value="Composition.section.entry.reference" />
       <min value="1" />
     </element>
+    <element id="Composition.section:anforderung.entry:resistenztestung">
+      <path value="Composition.section.entry" />
+      <sliceName value="resistenztestung" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/progress-relapse" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-ros1" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-egfr" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-alk" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:anforderung.entry:resistenztestung.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+    </element>
     <element id="Composition.section:tnm">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="tnm" />
-      <min value="0" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

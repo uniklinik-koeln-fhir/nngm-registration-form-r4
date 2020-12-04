@@ -1,6 +1,6 @@
 {
     "resourceType": "ValueSet",
-    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/histologie-klassifikation",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation",
     "title": "nNGM: ValueSet Histologie-Klassifikation",
     "name": "nNGM_ValueSet_Histologie-Klassifikation",
     "status": "active",

@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/GrundFehlendeBiopsie",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
   "version": "1.0",
   "name": "nNGM_ValueSet_GrundFehlendeBiopsie",
   "title": "nNGM: ValueSet GrundFehlendeBiopsie",

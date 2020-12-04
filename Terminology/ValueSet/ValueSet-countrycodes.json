@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/grundEntfallBlockAnforderung",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes",
   "version": "1.0",
   "title": "nNGM: Valueset Grund Entfallene Tumorblock-Anforderung",
   "name": "nNGM_Valueset_Grund_Entfallene-Tumorblock-Anforderung",

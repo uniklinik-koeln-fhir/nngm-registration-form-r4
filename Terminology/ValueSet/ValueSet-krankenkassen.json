@@ -1,6 +1,6 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse",
   "version": "1.0",
   "title": "nNGM ValueSet Consent Policy",
   "name": "NNGM_ValueSet_Consent-Policy",

@@ -19,7 +19,7 @@
   "expansion": {
       "identifier": "866feed1-d731-4715-8139-693520510547",
       "timestamp": "2020-10-13T08:55:30+00:00",
-      "total": 13,
+      "total": 15,
       "contains": [
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
@@ -58,6 +58,12 @@
               "display": "anderes Krankenhaus - Chirurgie"
           },
           {
+            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+            "version": "1.0",
+            "code": "anderes Krankenhaus - Strahlentherapie",
+            "display": "anderes Krankenhaus - Strahlentherapie"
+        },
+          {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
               "version": "1.0",
               "code": "niedergelassene Einrichtung - Pneumologie",
@@ -92,6 +98,12 @@
               "version": "1.0",
               "code": "niedergelassene Einrichtung - ausländische Einrichtung",
               "display": "niedergelassene Einrichtung - ausländische Einrichtung"
+          },
+          {
+            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",
+            "version": "1.0",
+            "code": "ausländische Einrichtung",
+            "display": "ausländische Einrichtung"
           },
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/ExecutingOrganizationTyp",

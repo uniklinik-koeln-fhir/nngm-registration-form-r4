@@ -54,9 +54,14 @@
       "definition": "Dokumentar"
     },
     {
-      "code": "Kiss",
-      "display": "Kiss",
-      "definition": "Kiss"
+      "code": "KISS",
+      "display": "KISS",
+      "definition": "KISS"
+    },
+    {
+      "code": "Kontakt Angehörige",
+      "display": "Kontakt Angehörige",
+      "definition": "Kontakt Angehörige"
     },
     {
       "code": "Andere hausinterne Datenbanken",

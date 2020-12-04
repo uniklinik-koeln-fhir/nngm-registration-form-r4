@@ -18,7 +18,7 @@
   "compositional": false, 
   "caseSensitive": true,
   "content": "complete",
-  "count": 13,
+  "count": 15,
   "concept": [
     {
       "code": "nNGM-Zentrum",
@@ -45,6 +45,10 @@
       "display": "anderes Krankenhaus - Chirurgie"
     },
     {
+      "code": "anderes Krankenhaus - Strahlentherapie",
+      "display": "anderes Krankenhaus - Strahlentherapie"
+    },
+    {
       "code": "niedergelassene Einrichtung - Pneumologie",
       "display": "niedergelassene Einrichtung - Pneumologie"
     },
@@ -67,6 +71,10 @@
     {
       "code": "niedergelassene Einrichtung - ausländische Einrichtung",
       "display": "niedergelassene Einrichtung - ausländische Einrichtung"
+    },
+    {
+      "code": "ausländische Einrichtung",
+      "display": "ausländische Einrichtung"
     },
     {
       "code": "Andere",

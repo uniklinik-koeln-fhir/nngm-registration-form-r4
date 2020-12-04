@@ -124,12 +124,16 @@
     <element id="Organization.type">
       <path value="Organization.type" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="OrganizationType" />
-        </extension>
         <strength value="required" />
-        <valueSet value="http://fhir.de/ValueSet/arge-ik/klassifikation" />
       </binding>
+    </element>
+    <element id="Organization.type.coding.system">
+      <path value="Organization.type.coding.system" />
+      <fixedUri value="http://hl7.org/fhir/ValueSet/organization-type" />
+    </element>
+    <element id="Organization.type.coding.code">
+      <path value="Organization.type.coding.code" />
+      <fixedCode value="prov" />
     </element>
     <element id="Organization.name">
       <path value="Organization.name" />
@@ -397,9 +401,6 @@
     <element id="Organization.partOf">
       <path value="Organization.partOf" />
       <type>
-        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy">
-          <valueBoolean value="true" />
-        </extension>
         <code value="Reference" />
         <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
         <targetProfile value="http://clinicalsite.org/fhir/StructureDefinition/organizationalunit" />

@@ -84,9 +84,6 @@
       <fixedString value="Anmeldung" />
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -97,9 +94,6 @@
       </slicing>
     </element>
     <element id="Composition.section:basisangaben">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="basisangaben" />
       <min value="1" />
@@ -145,7 +139,6 @@
     <element id="Composition.section:basisangaben.entry:netzwerkpartner">
       <path value="Composition.section.entry" />
       <sliceName value="netzwerkpartner" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -160,7 +153,6 @@
     <element id="Composition.section:basisangaben.entry:anforderungTMB">
       <path value="Composition.section.entry" />
       <sliceName value="anforderungTMB" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -233,13 +225,9 @@
       <min value="1" />
     </element>
     <element id="Composition.section:anforderung">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="anforderung" />
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:anforderung.code">
@@ -265,7 +253,6 @@
     <element id="Composition.section:anforderung.entry:anforderungTestung">
       <path value="Composition.section.entry" />
       <sliceName value="anforderungTestung" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -295,7 +282,6 @@
     <element id="Composition.section:anforderung.entry:anforderungTumorblock">
       <path value="Composition.section.entry" />
       <sliceName value="anforderungTumorblock" />
-      <min value="0" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -336,13 +322,8 @@
       <min value="1" />
     </element>
     <element id="Composition.section:tnm">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="tnm" />
-      <min value="0" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:tnm.code">

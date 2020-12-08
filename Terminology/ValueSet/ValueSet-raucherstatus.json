@@ -12,11 +12,7 @@
     "compose": {
         "include": [
             {
-<<<<<<< HEAD
-                "system": "http://loinc.org",
-=======
                 "system": "http://loinc.org/",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
                 "concept": [
                     {
                         "code": "LA18976-3",
@@ -65,11 +61,7 @@
     },
     "expansion": {
         "identifier": "2f2cc62c-b35e-4aac-8e94-8b8d5f26b1ee",
-<<<<<<< HEAD
-        "timestamp": "2020-10-13T10:22:09+00:00",
-=======
         "timestamp": "2020-11-12T13:22:09+00:00",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
         "total": 9,
         "contains": [
             {
@@ -79,76 +71,42 @@
                 "display": "unknown"
             },
             {
-<<<<<<< HEAD
-                "system": "http://loinc.org",
-=======
                 "system": "http://loinc.org/",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
                 "code": "LA18976-3",
                 "display": "Current every day smoker"
             },
             {
-<<<<<<< HEAD
-                "system": "http://loinc.org",
-                "code": "LA18977-1",
-                "display": "Current every day smoker"
-            },
-            {
-                "system": "http://loinc.org",
-=======
                 "system": "http://loinc.org/",
                 "code": "LA18977-1",
                 "display": "Current some day smoker"
             },
             {
                 "system": "http://loinc.org/",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
                 "code": "LA15920-4",
                 "display": "Former smoker"
             },
             {
-<<<<<<< HEAD
-                "system": "http://loinc.org",
-=======
                 "system": "http://loinc.org/",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
                 "code": "LA18978-9",
                 "display": "Never smoker"
             },
             {
-<<<<<<< HEAD
-                "system": "http://loinc.org",
-                "code": "LA18979-7",
-                "display": "Smoker, current status unknown"
-            },
-            {
-                "system": "http://loinc.org",
-=======
                 "system": "http://loinc.org/",
                 "code": "LA18979-7",
                 "display": "Smoker, current status unknown"
             },
             {   
                 "system": "http://loinc.org/",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
                 "code": "LA18980-5",
                 "display": "Unknown if ever smoked"
             },
             {
-<<<<<<< HEAD
-                "system": "http://loinc.org",
-=======
                 "system": "http://loinc.org/",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
                 "code": "LA18981-3",
                 "display": "Heavy tobacco smoker"
             },
             {
-<<<<<<< HEAD
-                "system": "http://loinc.org",
-=======
                 "system": "http://loinc.org/",
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
                 "code": "LA18982-1",
                 "display": "Light tobacco smoker"
             }

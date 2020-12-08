@@ -1,75 +1,43 @@
 {
-  "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code-tumorblock",
-  "version": "1.0",
-  "title": "nNGM: Valueset Anforderungscode Tumorblock",
-  "name": "nNGM_Valueset_Anforderungscode_Tumorblock",
-  "status": "active",
-  "date": "2020-07-08",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "nNGM Anforderungscode",
-  "compose": {
-    "include": [
-<<<<<<< HEAD
-        {
-            "system": "http://ncit.nci.nih.gov",
-            "concept": [
-                {
-                    "code": "komplette_untersuchung",
-                    "display": "Komplette Untersuchung"
-                },
-                {
-                    "code": "einzel_untersuchung",
-                    "display": "Einzeluntersuchung"
-                },
-                {
-                    "code": "liquid_biopsy",
-                    "display": "Liquid Biopsy"
-                }
-            ]
-        }
-    ]
-},
-"expansion": {
-    "identifier": "0f08855d-149b-4e71-b419-4b36a130d18c",
-    "timestamp": "2020-11-13T17:51:12+00:00",
-    "total": 3,
-    "contains": [
-        {
-            "system": "http://ncit.nci.nih.gov",
-            "version": "20.02d",
-=======
-      {
-        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
-        "concept": [
-          {
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4
-            "code": "komplette_untersuchung",
-            "display": "Komplette Untersuchung"
-        },
-        {
-            "system": "http://ncit.nci.nih.gov",
-            "version": "20.02d",
-            "code": "einzel_untersuchung",
-            "display": "Einzeluntersuchung"
-        },
-        {
-            "system": "http://ncit.nci.nih.gov",
-            "version": "20.02d",
-            "code": "liquid_biopsy",
-            "display": "Liquid Biopsy"
-        }
-    ]
-<<<<<<< HEAD
-}
-}
-=======
-  },
-   "expansion": {
+    "resourceType": "ValueSet",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code-tumorblock",
+    "version": "1.0",
+    "title": "nNGM: Valueset Anforderungscode Tumorblock",
+    "name": "nNGM_Valueset_Anforderungscode_Tumorblock",
+    "status": "active",
+    "date": "2020-07-08",
+    "publisher": "Universitätsklinikum Köln",
+    "description": "nNGM Anforderungscode",
+    "compose": {
+        "include": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+                "concept": [
+                    {
+                        "code": "komplette_untersuchung",
+                        "display": "Komplette Untersuchung"
+                    },
+                    {
+                        "system": "http://ncit.nci.nih.gov",
+                        "version": "20.02d",
+                        "code": "einzel_untersuchung",
+                        "display": "Einzeluntersuchung"
+                    },
+                    {
+                        "system": "http://ncit.nci.nih.gov",
+                        "version": "20.02d",
+                        "code": "liquid_biopsy",
+                        "display": "Liquid Biopsy"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
         "identifier": "c20d9185-9c36-4260-9efd-5b39e5ba1883",
         "timestamp": "2020-11-12T12:30:04+00:00",
         "total": 3,
-        "contains":  [
+        "contains": [
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
                 "code": "komplette_untersuchung",
@@ -77,8 +45,8 @@
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
-                 "code": "einzel_untersuchung",
-                 "display": "Einzeluntersuchung"
+                "code": "einzel_untersuchung",
+                "display": "Einzeluntersuchung"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
@@ -88,4 +56,3 @@
         ]
     }
 }
->>>>>>> 767dc7bc128af4b27de506778160af36bbb35ec4

@@ -164,12 +164,6 @@
     </element>
     <element id="Observation.component:packYears.code">
       <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://ncit.nci.nih.gov" />
-          <code value="C20134" />
-        </coding>
-      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.code.coding">

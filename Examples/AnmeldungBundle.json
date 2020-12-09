@@ -14,8 +14,8 @@
                 },
                 "birthDate": "1957-08-24",
                 "identifier": {
-                	"system": "http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier",
-                	"value": "12345",
+                    "system": "http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier",
+                    "value": "12345"
                 },
                 "gender": "male"
             }
@@ -30,11 +30,11 @@
                     ]
                 },
                 "identifier": {
-                	"system": "http://uk-koeln.de/NamingSystem/nNGM/fallnummer",
-                	"value": "54321"
+                    "system": "http://uk-koeln.de/NamingSystem/nNGM/fallnummer",
+                    "value": "54321"
                 },
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "status": "active",
                 "extension": [
@@ -71,11 +71,10 @@
                             "system": "http://loinc.org",
                             "code": "75620-5"
                         }
-                        
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "extension": [
                     {
@@ -122,7 +121,7 @@
                             "text": "T slice",
                             "coding": [
                                 {
-                                    "system": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t-nngm",
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
                                     "code": "Tis",
                                     "version": "7"
                                 }
@@ -135,7 +134,7 @@
                                     "text": "T-praefix slice",
                                     "coding": [
                                         {
-                                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-praefix-cpu",
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
                                             "code": "p - histopathologisch gesichert"
                                         }
                                     ]
@@ -147,8 +146,8 @@
                                     "text": "T-suffix slice",
                                     "coding": [
                                         {
-                                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-miscy",
-                                            "code": "is - Carcinoma in situ"
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "cy - zytologisch"
                                         }
                                     ]
                                 }
@@ -169,8 +168,8 @@
                             "text": "N slice",
                             "coding": [
                                 {
-                                    "system": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-n-nngm",
-                                    "code": "N0", 
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
+                                    "code": "N0",
                                     "version": "7"
                                 }
                             ]
@@ -181,7 +180,7 @@
                                 "valueCodeableConcept": {
                                     "coding": [
                                         {
-                                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-praefix-cpu",
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
                                             "code": "u - Ultraschalldiagnostik"
                                         }
                                     ],
@@ -203,7 +202,7 @@
                             "text": "M slice",
                             "coding": [
                                 {
-                                    "system": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m-nngm",
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
                                     "code": "M0",
                                     "version": "7"
                                 }
@@ -215,7 +214,7 @@
                                 "valueCodeableConcept": {
                                     "coding": [
                                         {
-                                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-praefix-cpu",
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
                                             "code": "u - Ultraschalldiagnostik"
                                         }
                                     ],
@@ -223,35 +222,6 @@
                                 }
                             }
                         ]
-                    }
-                ]
-            }
-        },
-        {
-            "resource": {
-                "resourceType": "Specimen",
-                "id": "226d3baf-3182-4c8e-bc6a-129a9abc632d",
-                "meta": {
-                    "profile": [
-                        "http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM"
-                    ]
-                },
-                "type": {
-                    "coding": [
-                        {
-                            "system": "http://snomed.info/sct",
-                            "version": "http://snomed.info/sct/900000000000207008",
-                            "code": "UNKNOWN"
-                        }
-                    ]
-                },
-                "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
-                },
-                "identifier": [
-                    {
-                        "system": "http://uk-koeln.de/NamingSystem/nNGM/biopsienummer",
-                        "value": "007"
                     }
                 ]
             }
@@ -266,11 +236,11 @@
                     ]
                 },
                 "extension": [
-                	{
-                                "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
-                                "valueReference": {
-                                	"reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
-                                }
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
+                        "valueReference": {
+                            "reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
+                        }
                     }
                 ],
                 "effectiveDateTime": "2020-08-10",
@@ -294,7 +264,7 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "valueBoolean": false
             }
@@ -344,10 +314,10 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "requester": {
-                    "reference": "http://localhost:4080/administration/",
+                    "reference": "http://Organization/84466b43-9ba2-4410-8743-1972ebaffbc9:4080/administration/",
                     "_reference": {
                         "extension": [
                             {
@@ -369,13 +339,14 @@
                 },
                 "authoredOn": "2020-09-16",
                 "encounter": {
+                    "reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16",
                     "extension": [
                         {
                             "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart",
                             "valueCodeableConcept": {
                                 "coding": [
                                     {
-                                        "system": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
+                                        "system": "http://hl7.org/fhir/v3/ActCode",
                                         "code": "AMB",
                                         "display": "ambulatory"
                                     }
@@ -397,7 +368,7 @@
                 },
                 "status": "active",
                 "beneficiary": {
-                    "reference": "http://localhost:4080/administration/",
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9",
                     "_reference": {
                         "extension": [
                             {
@@ -417,6 +388,7 @@
                 },
                 "payor": [
                     {
+                        "display": "TK - Techniker Krankenkasse",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation",
@@ -430,8 +402,7 @@
                                 }
                             }
                         ]
-                    },
-                    
+                    }
                 ],
                 "extension": [
                     {
@@ -451,11 +422,11 @@
                     ]
                 },
                 "extension": [
-                	{
-                                "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
-                                "valueReference": {
-                                	"reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
-                                }
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
+                        "valueReference": {
+                            "reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
+                        }
                     }
                 ],
                 "status": "final",
@@ -478,7 +449,7 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "effectiveDateTime": "2020-07-05",
                 "valueQuantity": {
@@ -499,11 +470,11 @@
                     ]
                 },
                 "extension": [
-                	{
-                                "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
-                                "valueReference": {
-                                	"reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
-                                }
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
+                        "valueReference": {
+                            "reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
+                        }
                     }
                 ],
                 "status": "final",
@@ -526,7 +497,7 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "effectiveDateTime": "2020-08-05",
                 "valueQuantity": {
@@ -547,11 +518,11 @@
                     ]
                 },
                 "extension": [
-                	{
-                                "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
-                                "valueReference": {
-                                	"reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
-                                }
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
+                        "valueReference": {
+                            "reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
+                        }
                     }
                 ],
                 "status": "final",
@@ -574,12 +545,12 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "valueCodeableConcept": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/ecog",
+                            "system": "urn:oid:1.2.276.0.76.3.1.131.1.5.153",
                             "code": "3",
                             "display": "3 - nur begrenzte Selbstversorgung möglich, 50 % oder mehr der Wachzeit an Bett oder Stuhl gebunden"
                         }
@@ -616,12 +587,12 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "valueCodeableConcept": {
                     "coding": [
                         {
-                            "system": "http://loinc.org/vs/LL2201-3",
+                            "system": "http://loinc.org/",
                             "code": "LA18976-3",
                             "display": "Current every day smoker"
                         }
@@ -634,15 +605,15 @@
                             "coding": [
                                 {
                                     "system": "http://ncit.nci.nih.gov",
-                                    "code": "C127065"
+                                    "code": "C73993"
                                 }
                             ]
                         },
                         "valueQuantity": {
+                            "value": "1",
                             "unit": "pack years",
                             "system": "http://unitsofmeasure.org",
-                            "code": "{Pack Years}",
-                            "value": 1
+                            "code": "1{pack years}"
                         }
                     }
                 ]
@@ -677,7 +648,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -686,7 +657,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "TE"
                         }
                     ]
@@ -722,7 +693,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -731,7 +702,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "DS"
                         }
                     ]
@@ -767,7 +738,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -776,7 +747,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "1a"
                         }
                     ]
@@ -812,7 +783,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -821,7 +792,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "1b"
                         }
                     ]
@@ -857,7 +828,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -866,7 +837,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "2"
                         }
                     ]
@@ -902,7 +873,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -911,7 +882,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "MD"
                         }
                     ]
@@ -947,7 +918,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -956,7 +927,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "ST"
                         }
                     ]
@@ -992,7 +963,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1001,7 +972,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "WPI"
                         }
                     ]
@@ -1037,7 +1008,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1046,7 +1017,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "WP"
                         }
                     ]
@@ -1082,7 +1053,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1091,7 +1062,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "WD"
                         }
                     ]
@@ -1127,7 +1098,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1136,7 +1107,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "WR"
                         }
                     ]
@@ -1172,7 +1143,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1181,7 +1152,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "WPK"
                         }
                     ]
@@ -1217,7 +1188,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1226,7 +1197,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "WK"
                         }
                     ]
@@ -1262,7 +1233,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1271,7 +1242,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "KW"
                         }
                     ]
@@ -1307,7 +1278,7 @@
                     }
                 ],
                 "patient": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "dateTime": "2020-07-15",
                 "provision": {
@@ -1316,7 +1287,7 @@
                 "policyRule": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
                             "code": "KE"
                         }
                     ]
@@ -1333,16 +1304,16 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "code": {
-                            "coding": [
-                                {
-                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
-                                    "code": "komplette_untersuchung"
-                                }
-                            ]
-                        },
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+                            "code": "komplette_untersuchung"
+                        }
+                    ]
+                },
                 "status": "active",
                 "authoredOn": "2020-06-12",
                 "intent": "proposal",
@@ -1352,7 +1323,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C12434",
-                                "display": "Blutdiagnostik (Liquid Biopsy)"
+                                "display": "Blood"
                             }
                         ]
                     }
@@ -1363,7 +1334,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C16885",
-                                "display": "Primärmutation"
+                                "display": "Mutation"
                             }
                         ]
                     }
@@ -1374,7 +1345,7 @@
                         "valueCodeableConcept": {
                             "coding": [
                                 {
-                                    "system": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/grundfehlendeBiopsie",
                                     "code": "UR",
                                     "display": "Unzumutbares Risikos einer Biopsie bzw. zu erwartende Komplikationen"
                                 }
@@ -1394,7 +1365,7 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "type": {
                     "coding": [
@@ -1427,7 +1398,7 @@
                         "valueCodeableConcept": {
                             "coding": [
                                 {
-                                    "system": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
+                                    "system": "http://hl7.org/fhir/v3/ActCode",
                                     "code": "IMP",
                                     "display": "inpatient encounter"
                                 }
@@ -1447,14 +1418,14 @@
                     ]
                 },
                 "subject": {
-                    "reference": "http://localhost:4080/administration/Patient/DQqg1AYD"
+                    "reference": "Patient/1e7fb494-860e-4ee1-96dd-91388dba53a9"
                 },
                 "extension": [
-                	{
-                                "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
-                                "valueReference": {
-                                	"reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
-                                }
+                    {
+                        "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
+                        "valueReference": {
+                            "reference": "EpisodeOfCare/fbfc0d64-890c-4186-94cd-ac7a2c3d9b16"
+                        }
                     }
                 ],
                 "status": "final",
@@ -1479,9 +1450,9 @@
                 "valueCodeableConcept": {
                     "coding": [
                         {
-                            "system": "http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation",
-                            "code": "CUP",
-                            "display": "CUP"
+                            "system": "http://ncit.nci.nih.gov",
+                            "code": "C3812",
+                            "display": "Carcinoma of Unknown Primary"
                         }
                     ]
                 }

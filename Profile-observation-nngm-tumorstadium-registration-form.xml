@@ -120,14 +120,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.encounter">
-      <path value="Observation.encounter" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM" />
-      </type>
-    </element>
     <element id="Observation.encounter.reference">
       <path value="Observation.encounter.reference" />
       <min value="1" />
@@ -171,10 +163,6 @@
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
       </type>
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.url">
-      <path value="Observation.effective[x].extension.url" />
-      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x]">
       <path value="Observation.effective[x].extension.value[x]" />

@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
   <version value="1.0" />
-  <name value="nNGM_Consent_Einwilligungserklärung" />
+  <name value="NNGM_Consent_Einwilligungserklaerung" />
   <title value="nNGM: Profil - Consent - Einwilligungserklärung" />
   <status value="active" />
   <publisher value="Universitätsklinikum Köln" />
@@ -79,6 +79,12 @@
     </element>
     <element id="Consent.dateTime">
       <path value="Consent.dateTime" />
+      <constraint>
+        <key value="date" />
+        <requirements value="Consent.provision.type.where(type = 'permit') implies Consent.dateTime.exists()" />
+        <severity value="error" />
+        <human value="If a consent was given a date needs to be present" />
+      </constraint>
       <mustSupport value="true" />
     </element>
     <element id="Consent.policyRule">

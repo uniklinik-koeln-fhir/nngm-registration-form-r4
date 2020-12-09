@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Anmeldung" />
-  <name value="Anmeldung" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Antrag" />
+  <name value="Antrag" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -50,7 +50,7 @@
     </element>
     <element id="Composition.type.coding.code">
       <path value="Composition.type.coding.code" />
-      <fixedCode value="anmeldung" />
+      <fixedCode value="antrag" />
     </element>
     <element id="Composition.category">
       <path value="Composition.category" />
@@ -81,7 +81,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Anmeldung" />
+      <fixedString value="Antrag" />
     </element>
     <element id="Composition.section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">

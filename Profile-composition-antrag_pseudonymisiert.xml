@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Anmeldung-pseudonymisiert" />
-  <name value="AnmeldungPseudonymisiert" />
-  <title value="Anmeldung-pseudonymisiert" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Antrag-pseudonymisiert" />
+  <name value="AntragPseudonymisiert" />
+  <title value="Antrag-pseudonymisiert" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -51,7 +51,7 @@
     </element>
     <element id="Composition.type.coding.code">
       <path value="Composition.type.coding.code" />
-      <fixedCode value="anmeldung" />
+      <fixedCode value="antrag" />
     </element>
     <element id="Composition.category">
       <path value="Composition.category" />
@@ -82,7 +82,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Anmeldung pseudonymisiert" />
+      <fixedString value="Antrag pseudonymisiert" />
     </element>
     <element id="Composition.section">
       <path value="Composition.section" />

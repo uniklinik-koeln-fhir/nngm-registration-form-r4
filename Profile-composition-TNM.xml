@@ -86,8 +86,6 @@
     </element>
     <element id="Composition.section">
       <path value="Composition.section" />
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section.title">

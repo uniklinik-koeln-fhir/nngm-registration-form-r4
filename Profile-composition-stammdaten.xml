@@ -84,9 +84,6 @@
       <fixedString value="Stammdaten" />
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -97,9 +94,6 @@
       </slicing>
     </element>
     <element id="Composition.section:stammdaten">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="stammdaten" />
       <min value="1" />
@@ -169,6 +163,22 @@
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stammdaten.entry:episodeOfCare.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:stammdaten.entry:consent">
+      <path value="Composition.section.entry" />
+      <sliceName value="consent" />
+      <min value="2" />
+      <max value="2" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:stammdaten.entry:consent.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
     </element>

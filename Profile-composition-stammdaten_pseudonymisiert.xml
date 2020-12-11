@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Stammdaten-pseudonymisiert" />
-  <name value="Stammdaten-pseudonymisiert" />
+  <name value="StammdatenPseudonymisiert" />
+  <title value="Stammdaten Pseudonymisiert" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -84,9 +85,6 @@
       <fixedString value="Stammdaten pseudonymisiert" />
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <slicing>
         <discriminator>
@@ -97,9 +95,6 @@
       </slicing>
     </element>
     <element id="Composition.section:stammdaten">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section" />
-      </extension>
       <path value="Composition.section" />
       <sliceName value="stammdaten" />
       <min value="1" />
@@ -169,6 +164,22 @@
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stammdaten.entry:episodeOfCare.reference">
+      <path value="Composition.section.entry.reference" />
+      <min value="1" />
+    </element>
+    <element id="Composition.section:stammdaten.entry:consent">
+      <path value="Composition.section.entry" />
+      <sliceName value="consent" />
+      <min value="2" />
+      <max value="2" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Resource" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:stammdaten.entry:consent.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
     </element>

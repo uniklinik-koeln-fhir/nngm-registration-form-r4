@@ -30,8 +30,8 @@
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
               "version": "1.0",
-              "code": "anmeldung",
-              "display": "Anmeldung"
+              "code": "antrag",
+              "display": "Antrag"
           },
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",

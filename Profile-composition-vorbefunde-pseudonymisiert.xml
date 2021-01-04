@@ -189,7 +189,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Anmeldung" />
+      <fixedString value="Antrag" />
     </element>
     <element id="Composition.attester.party.identifier.type.coding.display">
       <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">

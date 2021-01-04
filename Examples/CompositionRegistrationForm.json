@@ -3,7 +3,7 @@
     "id": "2181fa40-ce09-40f8-b4ff-4bb3bf99d84c",
     "meta": {
         "profile":  [
-            "http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Anmeldung"
+            "http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Antrag"
         ]
     },
     "status": "final",
@@ -11,7 +11,7 @@
         "coding":  [
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
-                "code": "anmeldung"
+                "code": "antrag"
             }
         ]
     },
@@ -30,7 +30,7 @@
     "author": {
         "reference": "Practitioner/4541e503-b35b-4f15-a1e0-8e234c6e860d"
     },
-    "title": "Anmeldung",
+    "title": "Antrag",
     "section":  [
         {
             "code": {

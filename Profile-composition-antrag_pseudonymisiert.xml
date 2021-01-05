@@ -46,19 +46,19 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Composition.identifier:sliceIdentifier">
+    <element id="Composition.identifier:FallIdentifier">
       <path value="Composition.identifier" />
-      <sliceName value="sliceIdentifier" />
+      <sliceName value="FallIdentifier" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.identifier:sliceIdentifier.system">
+    <element id="Composition.identifier:FallIdentifier.system">
       <path value="Composition.identifier.system" />
       <min value="1" />
       <fixedUri value="http://uk-koeln.de/NamingSystem/nNGM/fallnummer" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.identifier:sliceIdentifier.value">
+    <element id="Composition.identifier:FallIdentifier.value">
       <path value="Composition.identifier.value" />
       <min value="1" />
       <mustSupport value="true" />

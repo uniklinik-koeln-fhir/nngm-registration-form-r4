@@ -284,11 +284,13 @@
     </element>
     <element id="Composition.section:biopsie.code.coding.system">
       <path value="Composition.section.code.coding.system" />
+      <min value="1" />
       <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
     </element>
     <element id="Composition.section:biopsie.code.coding.code">
       <path value="Composition.section.code.coding.code" />
-      <patternCode value="biopsie" />
+      <min value="1" />
+      <fixedCode value="biopsie" />
     </element>
     <element id="Composition.section:biopsie.entry">
       <path value="Composition.section.entry" />

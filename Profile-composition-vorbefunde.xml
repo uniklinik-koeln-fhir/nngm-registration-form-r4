@@ -81,7 +81,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Anmeldung" />
+      <fixedString value="Antrag" />
     </element>
     <element id="Composition.section">
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">

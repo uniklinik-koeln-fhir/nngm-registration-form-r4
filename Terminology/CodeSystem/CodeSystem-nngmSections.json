@@ -44,8 +44,20 @@
       "display": "TNM"
     },
     {
-      "code": "therapie",
-      "display": "Therapie"
+      "code": "operation",
+      "display": "operation"
+    },
+    {
+      "code": "systemischeTherapie",
+      "display": "systemischeTherapie"
+    },
+    {
+      "code": "strahlentherapie",
+      "display": "strahlentherapie"
+    },
+    {
+      "code": "sonstigeTherapie",
+      "display": "sonstigeTherapie"
     },
     {
       "code": "resistenztestung",
@@ -91,7 +103,5 @@
       "code": "beurteilung",
       "display": "Beurteilung"
     }
-
-
   ]
 }

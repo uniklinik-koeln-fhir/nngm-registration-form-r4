@@ -19,8 +19,20 @@
     "expansion": {
         "identifier": "39b294ff-c6cb-4ebd-8e33-90e1e739e8f7",
         "timestamp": "2020-10-13T09:02:00+00:00",
-        "total": 16,
+        "total": 21,
         "contains": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "antrag",
+                "display": "antrag"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "befund",
+                "display": "befund"
+            },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
                 "version": "1.0",
@@ -48,8 +60,26 @@
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
                 "version": "1.0",
-                "code": "therapie",
-                "display": "Therapie"
+                "code": "operation",
+                "display": "operation"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "systemischeTherapie",
+                "display": "systemischeTherapie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "strahlentherapie",
+                "display": "strahlentherapie"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                "version": "1.0",
+                "code": "sonstigeTherapie",
+                "display": "sonstigeTherapie"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",

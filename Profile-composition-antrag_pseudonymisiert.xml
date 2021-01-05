@@ -36,6 +36,33 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Composition" />
   <derivation value="constraint" />
   <differential>
+    <element id="Composition.identifier">
+      <path value="Composition.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="system" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Composition.identifier:sliceIdentifier">
+      <path value="Composition.identifier" />
+      <sliceName value="sliceIdentifier" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.identifier:sliceIdentifier.system">
+      <path value="Composition.identifier.system" />
+      <min value="1" />
+      <fixedUri value="http://uk-koeln.de/NamingSystem/nNGM/fallnummer" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.identifier:sliceIdentifier.value">
+      <path value="Composition.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.status">
       <path value="Composition.status" />
       <fixedCode value="final" />
@@ -80,9 +107,14 @@
       <path value="Composition.date" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.author">
+      <path value="Composition.author" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.title">
       <path value="Composition.title" />
       <fixedString value="Antrag pseudonymisiert" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section">
       <path value="Composition.section" />

@@ -20,6 +20,14 @@
   "content": "complete",
   "concept": [
     {
+      "code": "antrag",
+      "display": "Antrag"
+    },
+    {
+      "code": "befund",
+      "display": "Befund"
+    },
+    {
       "code": "stammdaten",
       "display": "Stammdaten"
     },

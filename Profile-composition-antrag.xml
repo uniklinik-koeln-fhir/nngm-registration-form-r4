@@ -93,7 +93,7 @@
     </element>
     <element id="Composition.category.coding.code">
       <path value="Composition.category.coding.code" />
-      <fixedCode value="psn" />
+      <fixedCode value="idat" />
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />

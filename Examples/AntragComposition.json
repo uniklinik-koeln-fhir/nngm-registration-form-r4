@@ -1,6 +1,5 @@
 {
     "resourceType": "Composition",
-    "title": "Antrag",
     "id": "example-nngm-antrag",
     "meta": {
         "profile": [
@@ -43,6 +42,7 @@
             "reference": "https://clinicalsite.org/person/38"
         }
     ],
+    "title": "nNGM - Antrag Pseudonymisiert",
     "section": [
         {
             "title": "basisangaben",

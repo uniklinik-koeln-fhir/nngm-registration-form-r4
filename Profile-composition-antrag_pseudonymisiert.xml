@@ -132,6 +132,11 @@
       <path value="Composition.author" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.title">
+      <path value="Composition.title" />
+      <fixedString value="nNGM - Antrag Pseudonymisiert" />
+      <mustSupport value="true" />
+    </element>
     <element id="Composition.section">
       <path value="Composition.section" />
       <slicing>

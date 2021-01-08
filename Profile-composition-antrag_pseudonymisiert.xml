@@ -282,30 +282,23 @@
       <path value="Composition.section" />
       <sliceName value="biopsie" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="biopsie" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:biopsie.title">
-      <path value="Composition.section.title" />
-      <fixedString value="biopsy" />
     </element>
     <element id="Composition.section:biopsie.code">
       <path value="Composition.section.code" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:biopsie.code.coding.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:biopsie.code.coding.code">
-      <path value="Composition.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="biopsie" />
-    </element>
     <element id="Composition.section:biopsie.entry">
       <path value="Composition.section.entry" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:biopsie.entry.identifier">
       <path value="Composition.section.entry.identifier" />

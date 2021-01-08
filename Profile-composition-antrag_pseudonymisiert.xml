@@ -549,6 +549,11 @@
       <path value="Composition.section.section" />
       <sliceName value="vorbefund" />
       <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:biopsie.section:vorbefund.code">
+      <path value="Composition.section.section.code" />
+      <min value="1" />
       <patternCodeableConcept>
         <coding>
           <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />

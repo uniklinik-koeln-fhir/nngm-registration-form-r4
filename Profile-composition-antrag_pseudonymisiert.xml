@@ -45,6 +45,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.identifier:FallIdentifier">
       <path value="Composition.identifier" />

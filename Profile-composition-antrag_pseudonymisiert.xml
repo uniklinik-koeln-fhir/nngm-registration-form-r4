@@ -348,23 +348,15 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:biopsie.section:anforderung.title">
-      <path value="Composition.section.section.title" />
-      <fixedString value="anforderung" />
-    </element>
     <element id="Composition.section:biopsie.section:anforderung.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:biopsie.section:anforderung.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:biopsie.section:anforderung.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="anforderung" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="anforderung" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:biopsie.section:anforderung.entry">
       <path value="Composition.section.section.entry" />

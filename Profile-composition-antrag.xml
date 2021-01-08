@@ -2,6 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Antrag" />
   <name value="Antrag" />
+  <title value="Antrag" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -44,14 +45,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.identifier:FallIdentifier">
       <path value="Composition.identifier" />
       <sliceName value="FallIdentifier" />
       <min value="1" />
-      <fixedIdentifier>
-        <system value="http://uk-koeln.de/NamingSystem/nNGM/fallnummer" />
-      </fixedIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Composition.identifier:FallIdentifier.system">
@@ -94,7 +93,7 @@
     </element>
     <element id="Composition.category.coding.code">
       <path value="Composition.category.coding.code" />
-      <fixedCode value="idat" />
+      <fixedCode value="psn" />
     </element>
     <element id="Composition.subject">
       <path value="Composition.subject" />
@@ -135,7 +134,7 @@
     </element>
     <element id="Composition.title">
       <path value="Composition.title" />
-      <fixedString value="Antrag" />
+      <fixedString value="nNGM - Antrag" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section">
@@ -161,20 +160,9 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-          <code value="stammdaten" />
+          <code value="basisangaben" />
         </coding>
       </patternCodeableConcept>
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:basisangaben.code.coding.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:basisangaben.code.coding.code">
-      <path value="Composition.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="basisangaben" />
     </element>
     <element id="Composition.section:basisangaben.entry">
       <path value="Composition.section.entry" />
@@ -296,26 +284,21 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:biopsie.title">
-      <path value="Composition.section.title" />
-      <fixedString value="biopsy" />
-    </element>
     <element id="Composition.section:biopsie.code">
       <path value="Composition.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="biopsie" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:biopsie.code.coding.system">
-      <path value="Composition.section.code.coding.system" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:biopsie.code.coding.code">
-      <path value="Composition.section.code.coding.code" />
-      <patternCode value="biopsie" />
     </element>
     <element id="Composition.section:biopsie.entry">
       <path value="Composition.section.entry" />
       <min value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:biopsie.entry.identifier">
       <path value="Composition.section.entry.identifier" />
@@ -332,9 +315,6 @@
     <element id="Composition.section:biopsie.entry.identifier:formularId">
       <path value="Composition.section.entry.identifier" />
       <sliceName value="formularId" />
-      <fixedIdentifier>
-        <system value="http://uk-koeln.de/NamingSystem/nNGM/formularId" />
-      </fixedIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:biopsie.entry.identifier:formularId.system">
@@ -365,23 +345,15 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:biopsie.section:anforderung.title">
-      <path value="Composition.section.section.title" />
-      <fixedString value="anforderung" />
-    </element>
     <element id="Composition.section:biopsie.section:anforderung.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
-    </element>
-    <element id="Composition.section:biopsie.section:anforderung.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:biopsie.section:anforderung.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="anforderung" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="anforderung" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:biopsie.section:anforderung.entry">
       <path value="Composition.section.section.entry" />
@@ -470,24 +442,16 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:biopsie.section:tnm.title">
-      <path value="Composition.section.section.title" />
-      <fixedString value="tnm" />
-    </element>
     <element id="Composition.section:biopsie.section:tnm.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="tnm" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:biopsie.section:tnm.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:biopsie.section:tnm.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="tnm" />
     </element>
     <element id="Composition.section:biopsie.section:tnm.entry">
       <path value="Composition.section.section.entry" />
@@ -504,24 +468,16 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:biopsie.section:resistenztestung.title">
-      <path value="Composition.section.section.title" />
-      <fixedString value="resistenztestung" />
-    </element>
     <element id="Composition.section:biopsie.section:resistenztestung.code">
       <path value="Composition.section.section.code" />
       <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="resistenztestung" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:biopsie.section:resistenztestung.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:biopsie.section:resistenztestung.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="resistenztestung" />
     </element>
     <element id="Composition.section:biopsie.section:resistenztestung.entry">
       <path value="Composition.section.section.entry" />
@@ -595,19 +551,16 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:biopsie.section:vorbefund.title">
-      <path value="Composition.section.section.title" />
-      <fixedString value="vorbefund" />
-    </element>
-    <element id="Composition.section:biopsie.section:vorbefund.code.coding.system">
-      <path value="Composition.section.section.code.coding.system" />
+    <element id="Composition.section:biopsie.section:vorbefund.code">
+      <path value="Composition.section.section.code" />
       <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:biopsie.section:vorbefund.code.coding.code">
-      <path value="Composition.section.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="vorbefund" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="vorbefund" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
     </element>
     <element id="Composition.section:biopsie.section:vorbefund.entry">
       <path value="Composition.section.section.entry" />

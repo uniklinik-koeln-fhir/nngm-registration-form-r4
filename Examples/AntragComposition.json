@@ -1,7 +1,7 @@
 {
     "resourceType": "Composition",
     "title": "Antrag",
-    "id": "9067051d-67e1-4662-acf1-a821768c077a",
+    "id": "example-nngm-antrag",
     "meta": {
         "profile": [
             "http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Antrag-pseudonymisiert"

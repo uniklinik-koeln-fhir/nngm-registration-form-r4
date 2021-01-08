@@ -160,19 +160,9 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-          <code value="stammdaten" />
+          <code value="basisangaben" />
         </coding>
       </patternCodeableConcept>
-    </element>
-    <element id="Composition.section:basisangaben.code.coding.system">
-      <path value="Composition.section.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
-    </element>
-    <element id="Composition.section:basisangaben.code.coding.code">
-      <path value="Composition.section.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="basisangaben" />
     </element>
     <element id="Composition.section:basisangaben.entry">
       <path value="Composition.section.entry" />

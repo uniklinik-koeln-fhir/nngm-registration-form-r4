@@ -315,9 +315,6 @@
     <element id="Composition.section:biopsie.entry.identifier:formularId">
       <path value="Composition.section.entry.identifier" />
       <sliceName value="formularId" />
-      <fixedIdentifier>
-        <system value="http://uk-koeln.de/NamingSystem/nNGM/formularId" />
-      </fixedIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:biopsie.entry.identifier:formularId.system">

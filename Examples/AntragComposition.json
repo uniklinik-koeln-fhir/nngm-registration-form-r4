@@ -1,0 +1,231 @@
+{
+    "resource": {
+        "resourceType": "Composition",
+        "title": "Antrag",
+        "id": "9067051d-67e1-4662-acf1-a821768c077a",
+        "meta": {
+            "profile": [
+                "http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Antrag-pseudonymisiert"
+            ]
+        },
+        "status": "final",
+        "identifier": {
+            "system": "http://uk-koeln.de/NamingSystem/nNGM/fallnummer",
+            "value": "1"
+        },
+        "type": {
+            "coding": [
+                {
+                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+                    "code": "antrag"
+                }
+            ]
+        },
+        "category": [
+            {
+                "coding": [
+                    {
+                        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/composition-category",
+                        "code": "idat"
+                    }
+                ]
+            }
+        ],
+        "subject": {
+            "reference": "http://localhost:4080/administration/620c7635-8810-48a7-843e-3b037aa860ae",
+            "identifier": {
+                "system": "http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier",
+                "value": "uOnB7JY8"
+            }
+        },
+        "date": "2021-01-07T10:54:59+01:00",
+        "author": [
+            {
+                "reference": "https://clinicalsite.org/person/38"
+            }
+        ],
+        "section": [
+            {
+                "title": "basisangaben",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                            "code": "basisangaben"
+                        }
+                    ]
+                },
+                "entry": [
+                    {
+                        "reference": "http://localhost:4080/administration/Organization/0055f819-5a28-4626-a83f-a098aa9fac80"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/ServiceRequest/b900b576-f7bf-4c32-bddf-5783fa560d5e"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Coverage/2b23f65d-25f0-48f7-9c03-cf009b11a645"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Observation/86eb51de-8138-422e-a7ca-0c497c2a6259"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Observation/50bb8c57-591d-4687-9039-c34bca3a4ed9"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Observation/8a8f7493-6c18-40bb-bd25-e48944cf4462"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Observation/5cf7f77b-678f-441f-b6ab-fb1f0fd7a9ba"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Practitioner/d7d69f9e-3c05-4d31-8a5f-569f8daceb39"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/bcfefe27-d69d-4d65-8268-fe167b2fe79f"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/d1f5a6ae-91fb-4417-92fc-b65fa3bec0f5"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/9cf95bcf-5d2d-4a8b-8223-6a56e599236b"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/9b851ad1-6538-42ee-bfab-c5ff15315e41"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/6c2e8aa4-8d62-4e72-b910-bb431bd69541"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/368ad519-af04-4cea-90f2-0bf9f2b6ff44"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/6e14c356-e44e-4964-9434-71afbaeca57b"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/863f46c3-fcdd-4c7a-a420-0130ac8b07d2"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/934911e9-b35c-4388-8616-4db4529f5603"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/0d41057c-a6ab-498c-8501-f09cc3103266"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/61a78398-10d4-4865-95d1-937e976057bd"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/0cb9f080-9089-444f-ac6d-6d563af609af"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/9201b5db-a298-4cf1-8894-c2d26e00df00"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/2f757581-bd15-4961-8763-d6f86d26468c"
+                    },
+                    {
+                        "reference": "http://localhost:4080/administration/Consent/717e4675-0ddb-4c6c-a4fb-935193750f1c"
+                    }
+                ]
+            },
+            {
+                "title": "biopsy",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                            "code": "biopsie"
+                        }
+                    ]
+                },
+                "entry": [
+                    {
+                        "identifier": {
+                            "system": "http://uk-koeln.de/NamingSystem/nNGM/formularId",
+                            "value": "1"
+                        }
+                    }
+                ],
+                "section": [
+                    {
+                        "title": "anforderung",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "anforderung"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "http://localhost:4080/administration/ServiceRequest/5c45b8b0-08f7-4ee1-af09-02f0367be5a2"
+                            },
+                            {
+                                "reference": "http://localhost:4080/administration/Observation/c31e9745-f0ad-479c-b0c2-b6bb41217200"
+                            },
+                            {
+                                "reference": "http://localhost:4080/administration/Organization/e96fcbf7-fefa-4bcd-8338-461bbad8ce0d"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "tnm",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "tnm"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "http://localhost:4080/administration/Observation/7ef97554-dbab-4a47-a747-d2e32a381109"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": "biopsy",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                            "code": "biopsie"
+                        }
+                    ]
+                },
+                "entry": [
+                    {
+                        "identifier": {
+                            "system": "http://uk-koeln.de/NamingSystem/nNGM/formularId",
+                            "value": "2"
+                        }
+                    }
+                ],
+                "section": [
+                    {
+                        "title": "anforderung",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "anforderung"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "http://localhost:4080/administration/ServiceRequest/552f9267-6811-4983-8134-58ffe229448f"
+                            },
+                            {
+                                "reference": "http://localhost:4080/administration/Observation/ca339653-b86a-4ab2-b71f-f07bc2e19967"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

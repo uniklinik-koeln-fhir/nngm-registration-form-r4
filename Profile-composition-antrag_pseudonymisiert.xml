@@ -254,9 +254,6 @@
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergroesse" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
       </type>
       <mustSupport value="true" />
     </element>

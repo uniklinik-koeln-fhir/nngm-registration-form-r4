@@ -95,7 +95,6 @@
     <element id="EpisodeOfCare.identifier:nngmFallnummer">
       <path value="EpisodeOfCare.identifier" />
       <sliceName value="nngmFallnummer" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

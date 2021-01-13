@@ -84,10 +84,24 @@
     <element id="EpisodeOfCare.extension:FollowUpStatus">
       <path value="EpisodeOfCare.extension" />
       <sliceName value="FollowUpStatus" />
+      <min value="0" />
+      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/FollowUpStatus" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="EpisodeOfCare.extension:ErstDiagnose">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="ErstDiagnose" />
+      <min value="0" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/Erstdiagnose" />
+      </type>
+      <mustSupport value="true" />
     </element>
     <element id="EpisodeOfCare.identifier">
       <path value="EpisodeOfCare.identifier" />
@@ -122,13 +136,12 @@
       <fixedCode value="active" />
       <mustSupport value="true" />
     </element>
-    <element id="EpisodeOfCare.diagnosis">
-      <path value="EpisodeOfCare.diagnosis" />
-      <mustSupport value="true" />
-    </element>
-    <element id="EpisodeOfCare.diagnosis.condition.reference">
-      <path value="EpisodeOfCare.diagnosis.condition.reference" />
-      <mustSupport value="true" />
+    <element id="EpisodeOfCare.diagnosis.condition">
+      <path value="EpisodeOfCare.diagnosis.condition" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="https://www.hl7.org/fhir/condition.html" />
+      </type>
     </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />

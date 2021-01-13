@@ -90,7 +90,6 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="EpisodeOfCare.identifier:nngmFallnummer">
@@ -136,9 +135,6 @@
       <mustSupport value="true" />
     </element>
     <element id="EpisodeOfCare.diagnosis">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Diagnosis" />
-      </extension>
       <path value="EpisodeOfCare.diagnosis" />
       <mustSupport value="true" />
     </element>

@@ -149,7 +149,7 @@
       <slicing>
         <discriminator>
           <type value="profile" />
-          <path value="this.resolve()" />
+          <path value="$this.resolve()" />
         </discriminator>
         <rules value="open" />
       </slicing>

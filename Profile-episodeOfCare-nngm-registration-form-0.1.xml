@@ -81,6 +81,14 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="EpisodeOfCare.extension:FollowUpStatus">
+      <path value="EpisodeOfCare.extension" />
+      <sliceName value="FollowUpStatus" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/FollowUpStatus" />
+      </type>
+    </element>
     <element id="EpisodeOfCare.identifier">
       <path value="EpisodeOfCare.identifier" />
       <slicing>
@@ -112,25 +120,6 @@
     <element id="EpisodeOfCare.status">
       <path value="EpisodeOfCare.status" />
       <fixedCode value="active" />
-      <mustSupport value="true" />
-    </element>
-    <element id="EpisodeOfCare.status.extension">
-      <path value="EpisodeOfCare.status.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="EpisodeOfCare.status.extension:nngmStatus">
-      <path value="EpisodeOfCare.status.extension" />
-      <sliceName value="nngmStatus" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/FollowUpStatus" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="EpisodeOfCare.diagnosis">

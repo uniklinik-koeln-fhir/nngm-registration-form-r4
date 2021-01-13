@@ -36,6 +36,9 @@
       <type>
         <code value="date" />
       </type>
+      <type>
+        <code value="dateTime" />
+      </type>
     </element>
   </differential>
 </StructureDefinition>

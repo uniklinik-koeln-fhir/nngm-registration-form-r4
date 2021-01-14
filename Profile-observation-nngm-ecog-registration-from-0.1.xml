@@ -14,48 +14,7 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.extension:episodeOfCare">
-      <path value="Observation.extension" />
-      <sliceName value="episodeOfCare" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.extension:episodeOfCare.value[x]">
-      <path value="Observation.extension.value[x]" />
-      <slicing>
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.extension:episodeOfCare.value[x]:valueReference">
-      <path value="Observation.extension.valueReference" />
-      <sliceName value="valueReference" />
-      <min value="1" />
-    </element>
-    <element id="Observation.extension:episodeOfCare.value[x]:valueReference.reference">
-      <path value="Observation.extension.valueReference.reference" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />
@@ -75,7 +34,7 @@
     <element id="Observation.category.coding.system">
       <path value="Observation.category.coding.system" />
       <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/ValueSet/observation-category" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/observation-category" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.code">

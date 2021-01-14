@@ -42,45 +42,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/bodyheight" />
   <derivation value="constraint" />
   <differential>
-    <element id="Observation.extension">
-      <path value="Observation.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Observation.extension:episodeOfCare">
-      <path value="Observation.extension" />
-      <sliceName value="episodeOfCare" />
-      <min value="1" />
-      <max value="1" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.extension:episodeOfCare.value[x]">
-      <path value="Observation.extension.value[x]" />
-      <slicing>
-        <description value="this" />
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.extension:episodeOfCare.value[x]:valueReference">
-      <path value="Observation.extension.value[x]" />
-      <sliceName value="valueReference" />
-      <min value="1" />
-    </element>
-    <element id="Observation.extension:episodeOfCare.value[x]:valueReference.reference">
-      <path value="Observation.extension.value[x].reference" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />

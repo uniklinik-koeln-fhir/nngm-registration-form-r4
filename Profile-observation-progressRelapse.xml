@@ -26,7 +26,6 @@
     <element id="Observation.extension:episodeOfCare">
       <path value="Observation.extension" />
       <sliceName value="episodeOfCare" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -72,7 +71,7 @@
     <element id="Observation.category.coding.system">
       <path value="Observation.category.coding.system" />
       <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/ValueSet/observation-category" />
+      <fixedUri value="http://terminology.hl7.org/CodeSystem/observation-category" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category.coding.code">

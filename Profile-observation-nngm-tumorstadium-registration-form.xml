@@ -472,10 +472,6 @@
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
     </element>
-    <element id="Observation.component:N.code.coding.version">
-      <path value="Observation.component.code.coding.version" />
-      <min value="1" />
-    </element>
     <element id="Observation.component:N.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />

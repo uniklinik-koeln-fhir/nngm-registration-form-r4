@@ -25,7 +25,6 @@
     <element id="Observation.extension:episodeOfCare">
       <path value="Observation.extension" />
       <sliceName value="episodeOfCare" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -141,7 +140,6 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <min value="1" />
       <type>
         <code value="boolean" />
       </type>
@@ -192,7 +190,6 @@
     <element id="Observation.component:tkiTherapie.extension:componentOrder">
       <path value="Observation.component.extension" />
       <sliceName value="componentOrder" />
-      <max value="1" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order" />

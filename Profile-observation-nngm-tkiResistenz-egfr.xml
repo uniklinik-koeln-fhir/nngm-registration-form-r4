@@ -10,6 +10,21 @@
   <baseDefinition value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Observation.extension:episodeOfCare">
+      <path value="Observation.extension" />
+      <sliceName value="episodeOfCare" />
+      <min value="0" />
+    </element>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
       <fixedUri value="http://ncit.nci.nih.gov" />

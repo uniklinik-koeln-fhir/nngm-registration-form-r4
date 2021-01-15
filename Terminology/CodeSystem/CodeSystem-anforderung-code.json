@@ -8,15 +8,15 @@
     "content": "fragment",
     "concept": [
         {
-            "code": "komplette_untersuchung",
+            "code": "Komplette Untersuchung",
             "display": "Komplette Untersuchung"
         },
         {
-            "code": "einzel_untersuchung",
+            "code": "Einzeluntersuchung",
             "display": "Einzeluntersuchung"
         },
         {
-            "code": "liquid_biopsy",
+            "code": "Liquid Biopsy",
             "display": "Liquid Biopsy"
         }
     ]

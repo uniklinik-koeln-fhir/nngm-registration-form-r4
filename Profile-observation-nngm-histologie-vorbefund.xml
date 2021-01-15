@@ -53,7 +53,6 @@
     <element id="Observation.extension:episodeOfCare">
       <path value="Observation.extension" />
       <sliceName value="episodeOfCare" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Extension" />
@@ -62,9 +61,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />

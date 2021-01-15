@@ -12,200 +12,199 @@
   "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
   "derivation": "constraint",
   "differential": {
-      "element": [
+    "element": [
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.status.extension",
+        "path": "ServiceRequest.status.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.status.extension:statusAbschluss",
+        "path": "ServiceRequest.status.extension",
+        "sliceName": "statusAbschluss",
+        "type": [
           {
-              "id": "ServiceRequest.status",
-              "path": "ServiceRequest.status",
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.status.extension",
-              "path": "ServiceRequest.status.extension",
-              "slicing": {
-                  "discriminator": [
-                      {
-                          "type": "value",
-                          "path": "url"
-                      }
-                  ],
-                  "rules": "open"
-              }
-          },
-          {
-              "id": "ServiceRequest.status.extension:statusAbschluss",
-              "path": "ServiceRequest.status.extension",
-              "sliceName": "statusAbschluss",
-              "min": 0,
-              "max": "*",
-              "type": [
-                  {
-                      "code": "Extension",
-                      "profile": [
-                          "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/statusAbschluss"
-                      ]
-                  }
-              ],
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.intent",
-              "path": "ServiceRequest.intent",
-              "fixedCode": "proposal",
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.category",
-              "path": "ServiceRequest.category",
-              "min": 1,
-              "max": "1",
-              "mustSupport": true,
-              "binding": {
-                  "strength": "required",
-                  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-kategorie"
-              }
-          },
-          {
-              "id": "ServiceRequest.code",
-              "path": "ServiceRequest.code",
-              "min": 1,
-              "mustSupport": true,
-              "binding": {
-                  "strength": "required",
-                  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code"
-              }
-          },
-          {
-              "id": "ServiceRequest.code.coding",
-              "path": "ServiceRequest.code.coding",
-              "min": 1,
-              "max": "1",
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.code.coding.system",
-              "path": "ServiceRequest.code.coding.system",
-              "min": 1,
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.code.coding.code",
-              "path": "ServiceRequest.code.coding.code",
-              "min": 1,
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.orderDetail",
-              "path": "ServiceRequest.orderDetail",
-              "mustSupport": true,
-              "binding": {
-                  "strength": "required",
-                  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-orderDetails"
-              }
-          },
-          {
-              "id": "ServiceRequest.subject",
-              "path": "ServiceRequest.subject",
-              "type": [
-                  {
-                      "code": "Reference",
-                      "targetProfile": [
-                          "http://hl7.org/fhir/StructureDefinition/Patient",
-                          "http://hl7.org/fhir/StructureDefinition/Group",
-                          "http://hl7.org/fhir/StructureDefinition/Location",
-                          "http://hl7.org/fhir/StructureDefinition/Device",
-                          "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert",
-                          "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient"
-                      ]
-                  }
-              ],
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.subject.reference",
-              "path": "ServiceRequest.subject.reference",
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.authoredOn",
-              "path": "ServiceRequest.authoredOn",
-              "min": 1,
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.requester",
-              "path": "ServiceRequest.requester",
-              "type": [
-                  {
-                      "code": "Reference",
-                      "targetProfile": [
-                          "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                          "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                          "http://hl7.org/fhir/StructureDefinition/Organization",
-                          "http://hl7.org/fhir/StructureDefinition/Patient",
-                          "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                          "http://hl7.org/fhir/StructureDefinition/Device",
-                          "http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM",
-                          "http://clinicalsite.org/fhir/StructureDefinition/organizationalunit"
-                      ]
-                  }
-              ],
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.requester.reference",
-              "path": "ServiceRequest.requester.reference",
-              "min": 1,
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.performer",
-              "path": "ServiceRequest.performer",
-              "max": "1",
-              "type": [
-                  {
-                      "code": "Reference",
-                      "targetProfile": [
-                          "http://hl7.org/fhir/StructureDefinition/Practitioner",
-                          "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-                          "http://hl7.org/fhir/StructureDefinition/Organization",
-                          "http://hl7.org/fhir/StructureDefinition/CareTeam",
-                          "http://hl7.org/fhir/StructureDefinition/HealthcareService",
-                          "http://hl7.org/fhir/StructureDefinition/Patient",
-                          "http://hl7.org/fhir/StructureDefinition/Device",
-                          "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
-                          "http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM"
-                      ]
-                  }
-              ],
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.performer.reference",
-              "path": "ServiceRequest.performer.reference",
-              "min": 1,
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.specimen",
-              "path": "ServiceRequest.specimen",
-              "max": "1",
-              "type": [
-                  {
-                      "code": "Reference",
-                      "targetProfile": [
-                          "http://hl7.org/fhir/StructureDefinition/Specimen",
-                          "http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM"
-                      ]
-                  }
-              ],
-              "mustSupport": true
-          },
-          {
-              "id": "ServiceRequest.specimen.reference",
-              "path": "ServiceRequest.specimen.reference",
-              "min": 1,
-              "mustSupport": true
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/statusAbschluss"
+            ]
           }
-      ]
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "fixedCode": "proposal",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.category",
+        "path": "ServiceRequest.category",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-kategorie"
+        }
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code"
+        }
+      },
+      {
+        "id": "ServiceRequest.code.coding",
+        "path": "ServiceRequest.code.coding",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.system",
+        "path": "ServiceRequest.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code.coding.code",
+        "path": "ServiceRequest.code.coding.code",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.orderDetail",
+        "path": "ServiceRequest.orderDetail",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-orderDetails"
+        }
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Group",
+              "http://hl7.org/fhir/StructureDefinition/Location",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert",
+              "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.subject.reference",
+        "path": "ServiceRequest.subject.reference",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM",
+              "http://clinicalsite.org/fhir/StructureDefinition/organizationalunit"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester.reference",
+        "path": "ServiceRequest.requester.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.performer",
+        "path": "ServiceRequest.performer",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Practitioner",
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization",
+              "http://hl7.org/fhir/StructureDefinition/CareTeam",
+              "http://hl7.org/fhir/StructureDefinition/HealthcareService",
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Device",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://uk-koeln.de/fhir/StructureDefinition/Practitioner/nNGM"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.performer.reference",
+        "path": "ServiceRequest.performer.reference",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/Specimen",
+              "http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.specimen.reference",
+        "path": "ServiceRequest.specimen.reference",
+        "min": 1,
+        "mustSupport": true
+      }
+    ]
   }
 }

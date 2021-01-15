@@ -12,7 +12,7 @@
   <differential>
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
-      <fixedUri value="https://simplifier.net/nngm-registrationformr4/tki-resistenz" />
+      <fixedUri value="http://ncit.nci.nih.gov" />
     </element>
     <element id="Observation.code.coding.code">
       <path value="Observation.code.coding.code" />

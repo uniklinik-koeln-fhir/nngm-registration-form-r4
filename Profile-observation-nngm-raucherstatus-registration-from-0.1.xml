@@ -147,7 +147,7 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code" />
+          <path value="code.coding.code" />
         </discriminator>
         <rules value="closed" />
       </slicing>

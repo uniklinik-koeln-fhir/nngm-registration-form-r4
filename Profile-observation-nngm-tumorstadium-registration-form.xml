@@ -53,9 +53,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />
@@ -88,9 +85,6 @@
       <path value="Observation.code" />
       <mustSupport value="true" />
       <binding>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
-          <valueString value="ObservationCode" />
-        </extension>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art" />
       </binding>
@@ -218,7 +212,6 @@
     </element>
     <element id="Observation.value[x].coding.version">
       <path value="Observation.value[x].coding.version" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x].coding.code">
@@ -423,10 +416,6 @@
       <path value="Observation.component.value[x].coding.system" />
       <min value="1" />
     </element>
-    <element id="Observation.component:T.value[x].coding.version">
-      <path value="Observation.component.value[x].coding.version" />
-      <min value="1" />
-    </element>
     <element id="Observation.component:T.value[x].coding.code">
       <path value="Observation.component.value[x].coding.code" />
       <min value="1" />
@@ -511,10 +500,6 @@
       <path value="Observation.component.value[x].coding.system" />
       <min value="1" />
     </element>
-    <element id="Observation.component:N.value[x].coding.version">
-      <path value="Observation.component.value[x].coding.version" />
-      <min value="1" />
-    </element>
     <element id="Observation.component:N.value[x].coding.code">
       <path value="Observation.component.value[x].coding.code" />
       <min value="1" />
@@ -594,10 +579,6 @@
     </element>
     <element id="Observation.component:M.value[x].coding.system">
       <path value="Observation.component.value[x].coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:M.value[x].coding.version">
-      <path value="Observation.component.value[x].coding.version" />
       <min value="1" />
     </element>
     <element id="Observation.component:M.value[x].coding.code">

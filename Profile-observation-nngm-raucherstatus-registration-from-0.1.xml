@@ -15,9 +15,6 @@
   <derivation value="constraint" />
   <differential>
     <element id="Observation.status">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint">
-        <valueString value="default: final" />
-      </extension>
       <path value="Observation.status" />
       <fixedCode value="final" />
       <mustSupport value="true" />
@@ -104,10 +101,6 @@
       <type>
         <code value="CodeableConcept" />
       </type>
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />
-      </binding>
     </element>
     <element id="Observation.value[x].coding">
       <path value="Observation.value[x].coding" />
@@ -124,6 +117,10 @@
       <path value="Observation.value[x].coding.code" />
       <min value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />
+      </binding>
     </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
@@ -194,9 +191,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.value[x].unit">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Observation.component.value[x].unit" />
       <fixedString value="pack years" />
     </element>
@@ -213,9 +207,6 @@
       <sliceName value="nichtraucherSeit" />
       <max value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:nichtraucherSeit.code">
-      <path value="Observation.component.code" />
     </element>
     <element id="Observation.component:nichtraucherSeit.code.coding">
       <path value="Observation.component.code.coding" />

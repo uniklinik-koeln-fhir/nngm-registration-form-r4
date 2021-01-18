@@ -147,9 +147,9 @@
       <slicing>
         <discriminator>
           <type value="pattern" />
-          <path value="code.coding" />
+          <path value="code" />
         </discriminator>
-        <rules value="closed" />
+        <rules value="open" />
       </slicing>
       <mustSupport value="true" />
     </element>
@@ -161,6 +161,11 @@
     </element>
     <element id="Observation.component:packYears.code">
       <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncit.nci.nih.gov" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.code.coding">
@@ -175,11 +180,13 @@
     <element id="Observation.component:packYears.code.coding.system">
       <path value="Observation.component.code.coding.system" />
       <min value="1" />
+      <fixedUri value="http://ncit.nci.nih.gov" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.code.coding.code">
       <path value="Observation.component.code.coding.code" />
       <min value="1" />
+      <patternCode value="C73993" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.value[x]">

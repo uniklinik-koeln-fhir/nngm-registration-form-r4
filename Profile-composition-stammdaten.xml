@@ -115,6 +115,14 @@
         </coding>
       </patternCodeableConcept>
     </element>
+    <element id="Composition.section:stammdaten.code.coding.system">
+      <path value="Composition.section.code.coding.system" />
+      <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+    </element>
+    <element id="Composition.section:stammdaten.code.coding.code">
+      <path value="Composition.section.code.coding.code" />
+      <fixedCode value="stammdaten" />
+    </element>
     <element id="Composition.section:stammdaten.entry">
       <path value="Composition.section.entry" />
       <slicing>

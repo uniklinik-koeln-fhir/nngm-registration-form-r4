@@ -146,6 +146,7 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
+      <min value="2" />
     </element>
     <element id="Composition.section:basisangaben">
       <path value="Composition.section" />
@@ -334,6 +335,7 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.section:biopsie.section:anforderung">
       <path value="Composition.section.section" />

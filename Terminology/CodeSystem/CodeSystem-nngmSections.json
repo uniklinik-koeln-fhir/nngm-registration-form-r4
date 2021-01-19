@@ -20,6 +20,14 @@
   "content": "complete",
   "concept": [
     {
+      "code": "biopsie",
+      "display": "Biopsie"
+    },
+    {
+      "code": "diagnostik",
+      "display": "Diagnostik"
+    },
+    {
       "code": "antrag",
       "display": "Antrag"
     },

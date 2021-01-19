@@ -25,11 +25,11 @@
               ]
           },
           {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
               "concept": [
                   {
-                      "code": "UNK",
-                      "display": "unknown"
+                      "code": "not-applicable",
+                      "display": "Not Applicable"
                   }
               ]
           }
@@ -53,10 +53,10 @@
               "display": "ambulatory"
           },
           {
-              "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+              "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
               "version": "2018-08-12",
-              "code": "UNK",
-              "display": "unknown"
+              "code": "not-applicable",
+              "display": "Not Applicable"
           }
       ]
   }

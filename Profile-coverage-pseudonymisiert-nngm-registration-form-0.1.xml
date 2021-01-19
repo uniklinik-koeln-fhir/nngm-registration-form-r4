@@ -91,8 +91,7 @@
       <path value="Coverage.beneficiary" />
       <type>
         <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -137,9 +136,6 @@
       </type>
     </element>
     <element id="Coverage.payor.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Coverage.payor.display" />
       <mustSupport value="true" />
     </element>

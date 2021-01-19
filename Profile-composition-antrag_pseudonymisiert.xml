@@ -407,7 +407,6 @@
     <element id="Composition.section:biopsie.section:anforderung.entry:pathologie">
       <path value="Composition.section.section.entry" />
       <sliceName value="pathologie" />
-      <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -417,7 +416,6 @@
     </element>
     <element id="Composition.section:biopsie.section:anforderung.entry:pathologie.reference">
       <path value="Composition.section.section.entry.reference" />
-      <min value="1" />
     </element>
     <element id="Composition.section:biopsie.section:anforderung.entry:histoVorbefund">
       <path value="Composition.section.section.entry" />

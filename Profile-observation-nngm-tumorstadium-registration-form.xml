@@ -86,7 +86,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/praefix-ry" />
       </binding>
     </element>
     <element id="Observation.code.coding">
@@ -249,95 +249,6 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:y">
-      <path value="Observation.component" />
-      <sliceName value="y" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:y.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="59479-6" />
-        </coding>
-      </patternCodeableConcept>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:y.code.coding">
-      <path value="Observation.component.code.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Observation.component:y.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:y.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:y.value[x]">
-      <path value="Observation.component.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="boolean" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:y.interpretation">
-      <path value="Observation.component.interpretation" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component:y.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component:r">
-      <path value="Observation.component" />
-      <sliceName value="r" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:r.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="21983-2" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Observation.component:r.code.coding">
-      <path value="Observation.component.code.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Observation.component:r.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:r.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:r.value[x]">
-      <path value="Observation.component.value[x]" />
-      <min value="1" />
-      <type>
-        <code value="boolean" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:r.interpretation">
-      <path value="Observation.component.interpretation" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component:r.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <max value="0" />
-    </element>
     <element id="Observation.component:T">
       <path value="Observation.component" />
       <sliceName value="T" />
@@ -369,6 +280,15 @@
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:T.extension:tnm-art">
+      <path value="Observation.component.extension" />
+      <sliceName value="tnm-art" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -453,6 +373,15 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Observation.component:N.extension:tnm-art">
+      <path value="Observation.component.extension" />
+      <sliceName value="tnm-art" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.component:N.code">
       <path value="Observation.component.code" />
       <patternCodeableConcept>
@@ -530,6 +459,15 @@
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:M.extension:tnm-art">
+      <path value="Observation.component.extension" />
+      <sliceName value="tnm-art" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art" />
       </type>
       <mustSupport value="true" />
     </element>

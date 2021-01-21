@@ -1,0 +1,46 @@
+{
+  "resourceType": "ValueSet",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/praefix-ry",
+  "version": "1.0",
+  "title": "nNGM: ValueSet praefix-ry",
+  "name": "nNGM_ValueSet_praefix-ry",
+  "status": "active",
+  "experimental": false,
+  "date": "2018-10-31",
+  "publisher": "Uniklinik Köln",
+  "description": "Praefix r, y",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept":[
+          {
+            "code": "21983-2",
+            "display": "Recurrence type first episode Cancer"
+          },
+          {
+            "code": "59479-6",
+            "display": "Collaborative staging post treatment extension Cancer"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uni-koeln-work-tnm-praefix-ry",
+    "timestamp": "2018-10-31",
+    "total": 2,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "21983-2",
+        "display": "Recurrence type first episode Cancer"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "59479-6",
+        "display": "Collaborative staging post treatment extension Cancer"
+      }
+    ]
+  }
+}

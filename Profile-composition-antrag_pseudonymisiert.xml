@@ -335,12 +335,10 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
-      <min value="1" />
     </element>
     <element id="Composition.section:biopsie.section:anforderung">
       <path value="Composition.section.section" />
       <sliceName value="anforderung" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
@@ -415,9 +413,6 @@
         <targetProfile value="http://clinicalsite.org/fhir/StructureDefinition/organizationalunit" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:biopsie.section:anforderung.entry:pathologie.reference">
-      <path value="Composition.section.section.entry.reference" />
     </element>
     <element id="Composition.section:biopsie.section:anforderung.entry:histoVorbefund">
       <path value="Composition.section.section.entry" />
@@ -720,9 +715,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:stammdaten.entry:patient.reference">
-      <path value="Composition.section.entry.reference" />
-    </element>
     <element id="Composition.section:stammdaten.entry:coverage">
       <path value="Composition.section.entry" />
       <sliceName value="coverage" />
@@ -732,9 +724,6 @@
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/pseudonymisiert" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:stammdaten.entry:coverage.reference">
-      <path value="Composition.section.entry.reference" />
     </element>
   </differential>
 </StructureDefinition>

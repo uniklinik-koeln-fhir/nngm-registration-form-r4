@@ -335,12 +335,10 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
-      <min value="1" />
     </element>
     <element id="Composition.section:biopsie.section:anforderung">
       <path value="Composition.section.section" />
       <sliceName value="anforderung" />
-      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

@@ -42,12 +42,12 @@
                       "display": "KRAS Gene"
                   },
                   {
-                      "code": "C16885",
-                      "display": "Primärmutation"
-                  },
-                  {
                       "code": "C19391",
                       "display": "Resistance"
+                  },
+                  {
+                      "code": "C16885",
+                      "display": "Mutation"
                   }
               ]
           }
@@ -61,8 +61,8 @@
           {
               "system": "http://ncit.nci.nih.gov",
               "version": "20.02d",
-              "code": "C148329",
-              "display": "GZMM wt Allele"
+              "code": "C18325",
+              "display": "MET Gene"
           },
           {
               "system": "http://ncit.nci.nih.gov",

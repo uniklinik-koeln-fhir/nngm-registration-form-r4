@@ -15,11 +15,11 @@
               "concept": [
                   {
                       "code": "C12434",
-                      "display": "Blutdiagnostik"
+                      "display": "Blood"
                   },
                   {
                       "code": "C12801",
-                      "display": "Gewebediagnostik"
+                      "display": "Tissue"
                   }
               ]
           }

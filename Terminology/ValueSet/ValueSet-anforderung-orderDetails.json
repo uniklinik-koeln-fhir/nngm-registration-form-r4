@@ -15,39 +15,39 @@
               "concept": [
                   {
                       "code": "C128554",
-                      "display": "PD-L1"
+                      "display": "PD-L1 Positive"
                   },
                   {
                       "code": "C38184",
-                      "display": "ALK"
+                      "display": "ALK Gene"
                   },
                   {
-                      "code": "C148329",
-                      "display": "MET1"
+                      "code": "C18325",
+                      "display": "MET Gene"
                   },
                   {
                       "code": "C18399",
-                      "display": "ROS1"
+                      "display": "ROS1 Gene"
                   },
                   {
                       "code": "C18363",
-                      "display": "BRAF"
+                      "display": "BRAF Gene"
                   },
                   {
                       "code": "C17757",
-                      "display": "EGFR"
+                      "display": "EGFR Gene"
                   },
                   {
                       "code": "C25785",
-                      "display": "KRAS"
-                  },
-                  {
-                      "code": "C16885",
-                      "display": "Primärmutation"
+                      "display": "KRAS Gene"
                   },
                   {
                       "code": "C19391",
-                      "display": "Resistenztestung"
+                      "display": "Resistance"
+                  },
+                  {
+                      "code": "C16885",
+                      "display": "Mutation"
                   }
               ]
           }
@@ -61,8 +61,8 @@
           {
               "system": "http://ncit.nci.nih.gov",
               "version": "20.02d",
-              "code": "C148329",
-              "display": "GZMM wt Allele"
+              "code": "C18325",
+              "display": "MET Gene"
           },
           {
               "system": "http://ncit.nci.nih.gov",

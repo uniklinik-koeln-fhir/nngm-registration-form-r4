@@ -5,7 +5,7 @@
             "resource": {
                 "resourceType": "Composition",
                 "title": "nNGM - Antrag Pseudonymisiert",
-                "id": "c462bab3-84d0-4c0e-862b-83f7cd1ce604",
+                "id": "3ccc2fac-f16e-4d29-b8dc-7ef0f2a54b1e",
                 "meta": {
                     "profile": [
                         "http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/Antrag-pseudonymisiert"
@@ -352,7 +352,7 @@
             },
             "request": {
                 "method": "PUT",
-                "url": "Composition/c462bab3-84d0-4c0e-862b-83f7cd1ce604"
+                "url": "Composition/3ccc2fac-f16e-4d29-b8dc-7ef0f2a54b1e"
             }
         },
         {
@@ -1468,7 +1468,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C12801",
-                                "display": "Gewebediagnostik"
+                                "display": "Tissue"
                             }
                         ]
                     }
@@ -1609,7 +1609,8 @@
                     "coding": [
                         {
                             "system": "http://ncit.nci.nih.gov",
-                            "code": "C19165"
+                            "code": "C19165",
+                            "display": "Cancer Histology"
                         }
                     ]
                 },
@@ -2334,7 +2335,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C12434",
-                                "display": "Blutdiagnostik (Liquid Biopsy)"
+                                "display": "Blood"
                             }
                         ]
                     }
@@ -2355,7 +2356,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C19391",
-                                "display": "Resistenztestung"
+                                "display": "Resistance"
                             }
                         ]
                     }
@@ -2498,7 +2499,8 @@
                     "coding": [
                         {
                             "system": "http://ncit.nci.nih.gov",
-                            "code": "C19165"
+                            "code": "C19165",
+                            "display": "Cancer Histology"
                         }
                     ]
                 },
@@ -2517,7 +2519,7 @@
                         {
                             "system": "http://ncit.nci.nih.gov",
                             "code": "C3812",
-                            "display": "CUP"
+                            "display": "Carcinoma of Unknown Primary"
                         }
                     ]
                 },
@@ -2716,7 +2718,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C12801",
-                                "display": "Gewebediagnostik"
+                                "display": "Tissue"
                             }
                         ]
                     }
@@ -2745,7 +2747,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C38184",
-                                "display": "ALK"
+                                "display": "ALK Gene"
                             }
                         ]
                     },
@@ -2753,8 +2755,8 @@
                         "coding": [
                             {
                                 "system": "http://ncit.nci.nih.gov",
-                                "code": "C148329",
-                                "display": "MET1"
+                                "code": "C18325",
+                                "display": "MET1 Gene"
                             }
                         ]
                     },
@@ -2763,7 +2765,7 @@
                             {
                                 "system": "http://ncit.nci.nih.gov",
                                 "code": "C17757",
-                                "display": "EGFR"
+                                "display": "EGFR Gene"
                             }
                         ]
                     }
@@ -2882,7 +2884,8 @@
                     "coding": [
                         {
                             "system": "http://ncit.nci.nih.gov",
-                            "code": "C19165"
+                            "code": "C19165",
+                            "display": "Cancer Histology"
                         }
                     ]
                 },
@@ -3173,6 +3176,6 @@
             }
         }
     ],
-    "id": "2 - Antrag Pseudonymisiert - Example",
+    "id": "fde00e28-81e3-4bf9-8364-8caeee9ef346",
     "type": "transaction"
 }

@@ -249,18 +249,53 @@
       <path value="Composition.section.entry.reference" />
       <min value="1" />
     </element>
-    <element id="Composition.section:basisangaben.entry:patientenMerkmale">
+    <element id="Composition.section:basisangaben.entry:koerpergroesse">
       <path value="Composition.section.entry" />
-      <sliceName value="patientenMerkmale" />
+      <sliceName value="koerpergroesse" />
       <type>
         <code value="Reference" />
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergroesse" />
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:basisangaben.entry:patientenMerkmale.reference">
+    <element id="Composition.section:basisangaben.entry:koerpergroesse.reference">
       <path value="Composition.section.entry.reference" />
-      <min value="1" />
+    </element>
+    <element id="Composition.section:basisangaben.entry:koerpergewicht">
+      <path value="Composition.section.entry" />
+      <sliceName value="koerpergewicht" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:basisangaben.entry:koerpergewicht.reference">
+      <path value="Composition.section.entry.reference" />
+    </element>
+    <element id="Composition.section:basisangaben.entry:ecog">
+      <path value="Composition.section.entry" />
+      <sliceName value="ecog" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:basisangaben.entry:ecog.reference">
+      <path value="Composition.section.entry.reference" />
+    </element>
+    <element id="Composition.section:basisangaben.entry:raucherstatus">
+      <path value="Composition.section.entry" />
+      <sliceName value="raucherstatus" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Composition.section:basisangaben.entry:raucherstatus.reference">
+      <path value="Composition.section.entry.reference" />
     </element>
     <element id="Composition.section:basisangaben.entry:consent">
       <path value="Composition.section.entry" />
@@ -339,6 +374,7 @@
     <element id="Composition.section:biopsie.section:anforderung">
       <path value="Composition.section.section" />
       <sliceName value="anforderung" />
+      <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>

@@ -158,7 +158,7 @@
           "resourceType": "Coverage",
           "meta": {
             "profile": [
-              "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/pseudonymisiert"
+              "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM"
             ]
           },
           "status": "active",
@@ -175,6 +175,21 @@
                 "code": "GKV"
               }
             ]
+          },
+          "identifier": {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                  "code": "GKV"
+                }
+              ]
+            },
+            "system": "http://fhir.de/NamingSystem/gkv/kvid-10",
+            "value": "Versichertennummer",
+            "assigner": {
+              "display": "Krankenkasse"
+            }
           },
           "payor": [
             {

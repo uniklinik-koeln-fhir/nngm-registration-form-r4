@@ -191,6 +191,7 @@
     <element id="Composition.section:stammdaten.entry:patient">
       <path value="Composition.section.entry" />
       <sliceName value="patient" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -204,6 +205,7 @@
     <element id="Composition.section:stammdaten.entry:coverage">
       <path value="Composition.section.entry" />
       <sliceName value="coverage" />
+      <min value="1" />
       <max value="1" />
       <type>
         <code value="Reference" />
@@ -213,6 +215,8 @@
     </element>
     <element id="Composition.section:stammdaten.entry:coverage.reference">
       <path value="Composition.section.entry.reference" />
+      <min value="1" />
+      <max value="1" />
     </element>
   </differential>
 </StructureDefinition>

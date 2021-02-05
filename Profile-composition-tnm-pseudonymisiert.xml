@@ -113,14 +113,36 @@
       <path value="Composition.date" />
       <mustSupport value="true" />
     </element>
+    <element id="Composition.section">
+      <path value="Composition.section" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="closed" />
+      </slicing>
+      <min value="1" />
+    </element>
     <element id="Composition.section:tnm">
       <path value="Composition.section" />
+      <sliceName value="tnm" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:tnm.title">
       <path value="Composition.section.title" />
       <fixedString value="TNM" />
+    </element>
+    <element id="Composition.section:tnm.code">
+      <path value="Composition.section.code" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
+          <code value="tnm" />
+        </coding>
+      </patternCodeableConcept>
     </element>
     <element id="Composition.section:tnm.code.coding.system">
       <path value="Composition.section.code.coding.system" />
@@ -130,7 +152,7 @@
       <path value="Composition.section.code.coding.code" />
       <patternCode value="tnm" />
     </element>
-    <element id="Composition.section:tnm.entry">
+    <element id="Composition.section:tnm.entry:observation">
       <path value="Composition.section.entry" />
       <min value="1" />
       <max value="1" />
@@ -140,7 +162,7 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:tnm.entry.reference">
+    <element id="Composition.section:tnm.entry:observation.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
     </element>

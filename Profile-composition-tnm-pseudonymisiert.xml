@@ -2,7 +2,7 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/TNM" />
   <name value="TNMPseudonymisiert" />
-  <title value="TNM-pseudonymisiert" />
+  <title value="TNM Pseudonymisiert" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -79,13 +79,10 @@
     <element id="Composition.subject.reference">
       <path value="Composition.subject.reference" />
       <min value="1" />
-      <type>
-        <code value="string" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-      </type>
+      <mustSupport value="true" />
     </element>
-    <element id="Composition.subject.reference.identifier">
-      <path value="Composition.subject.reference.identifier" />
+    <element id="Composition.subject.identifier">
+      <path value="Composition.subject.identifier" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -93,27 +90,21 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="Composition.subject.reference.deceased[x]:deceasedDateTime">
-      <path value="Composition.subject.reference.deceased[x]" />
-      <sliceName value="deceasedDateTime" />
-    </element>
-    <element id="Composition.subject.reference">
-      <path value="Composition.subject.reference" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.subject.identifier">
+    <element id="Composition.subject.identifier:Patientenliste-Pseudonym">
       <path value="Composition.subject.identifier" />
+      <sliceName value="Patientenliste-Pseudonym" />
       <min value="1" />
-      <mustSupport value="true" />
     </element>
-    <element id="Composition.subject.identifier.system">
+    <element id="Composition.subject.identifier:Patientenliste-Pseudonym.system">
       <path value="Composition.subject.identifier.system" />
       <min value="1" />
+      <fixedUri value="http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.subject.identifier.value">
+    <element id="Composition.subject.identifier:Patientenliste-Pseudonym.value">
       <path value="Composition.subject.identifier.value" />
       <min value="1" />
       <mustSupport value="true" />
@@ -201,6 +192,8 @@
     </element>
     <element id="Composition.section:stammdaten.entry:patient.reference">
       <path value="Composition.section.entry.reference" />
+      <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:stammdaten.entry:coverage">
       <path value="Composition.section.entry" />

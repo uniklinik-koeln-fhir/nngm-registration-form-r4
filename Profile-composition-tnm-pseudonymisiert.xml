@@ -113,24 +113,24 @@
       <path value="Composition.date" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section">
+    <element id="Composition.section:tnm">
       <path value="Composition.section" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section.title">
+    <element id="Composition.section:tnm.title">
       <path value="Composition.section.title" />
       <fixedString value="TNM" />
     </element>
-    <element id="Composition.section.code.coding.system">
+    <element id="Composition.section:tnm.code.coding.system">
       <path value="Composition.section.code.coding.system" />
       <fixedUri value="http://uk-koeln.de/fhir/CodeSystem/nngm/sections" />
     </element>
-    <element id="Composition.section.code.coding.code">
+    <element id="Composition.section:tnm.code.coding.code">
       <path value="Composition.section.code.coding.code" />
       <patternCode value="tnm" />
     </element>
-    <element id="Composition.section.entry">
+    <element id="Composition.section:tnm.entry">
       <path value="Composition.section.entry" />
       <min value="1" />
       <max value="1" />
@@ -140,11 +140,11 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section.entry.reference">
+    <element id="Composition.section:tnm.entry.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
     </element>
-        <element id="Composition.section:stammdaten">
+    <element id="Composition.section:stammdaten">
       <path value="Composition.section" />
       <sliceName value="stammdaten" />
       <max value="1" />

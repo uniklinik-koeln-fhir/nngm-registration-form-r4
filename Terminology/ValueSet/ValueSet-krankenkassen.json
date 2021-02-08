@@ -2,13 +2,13 @@
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse",
   "version": "1.0",
-  "title": "nNGM ValueSet Consent Policy",
-  "name": "NNGM_ValueSet_Consent-Policy",
+  "title": "nNGM ValueSet Krankenkassen",
+  "name": "NNGM_ValueSet_Krankenkassen",
   "status": "active",
   "experimental": false,
   "date": "2018-10-31",
   "publisher": "Uniklinik Köln",
-  "description": "nNGM Consent Policy",
+  "description": "nNGM Krankenkassen",
   "compose": {
       "include": [
           {
@@ -19,7 +19,7 @@
   "expansion": {
       "identifier": "33296b15-25f7-4b61-840b-7ff9ebfd9434",
       "timestamp": "2020-10-13T08:58:03+00:00",
-      "total": 195,
+      "total": 196,
       "contains": [
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/krankenkasse",
@@ -1190,6 +1190,12 @@
               "version": "1.0",
               "code": "Viactiv Krankenkasse",
               "display": "Viactiv Krankenkasse"
+          },
+          {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/krankenkasse",
+              "version": "1.0",
+              "code": "Unbekannt",
+              "display": "Unbekannt"
           }
       ]
   }

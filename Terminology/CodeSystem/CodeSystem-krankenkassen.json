@@ -797,6 +797,10 @@
     {
       "code": "Viactiv Krankenkasse",
       "display": "Viactiv Krankenkasse"
+    },
+    {
+      "code": "Unbekannt",
+      "display": "Unbekannt"
     }
   ]
 }

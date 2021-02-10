@@ -34,9 +34,6 @@
       <path value="Extension.value[x]" />
       <min value="1" />
       <type>
-        <code value="date" />
-      </type>
-      <type>
         <code value="dateTime" />
       </type>
     </element>

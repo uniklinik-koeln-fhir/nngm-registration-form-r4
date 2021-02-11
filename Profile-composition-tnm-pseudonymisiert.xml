@@ -226,6 +226,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="2" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:stammdaten.entry:patient">
@@ -242,6 +243,7 @@
     <element id="Composition.section:stammdaten.entry:patient.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
+      <max value="1" />
     </element>
     <element id="Composition.section:stammdaten.entry:coverage">
       <path value="Composition.section.entry" />
@@ -257,6 +259,7 @@
     <element id="Composition.section:stammdaten.entry:coverage.reference">
       <path value="Composition.section.entry.reference" />
       <min value="1" />
+      <max value="1" />
     </element>
   </differential>
 </StructureDefinition>

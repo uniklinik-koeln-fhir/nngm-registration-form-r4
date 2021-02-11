@@ -23,13 +23,22 @@
             "display": "Collaborative staging post treatment extension Cancer"
           }
         ]
+      },
+      {
+          "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+          "concept": [
+              {
+                  "code": "not-applicable",
+                  "display": "Not Applicable"
+              }
+          ]
       }
     ]
   },
   "expansion": {
     "identifier": "uni-koeln-work-tnm-praefix-ry",
     "timestamp": "2018-10-31",
-    "total": 2,
+    "total": 3,
     "contains": [
       {
         "system": "http://loinc.org",
@@ -40,6 +49,12 @@
         "system": "http://loinc.org",
         "code": "59479-6",
         "display": "Collaborative staging post treatment extension Cancer"
+      },
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+        "version": "2018-08-12",
+        "code": "not-applicable",
+        "display": "Not Applicable"
       }
     ]
   }

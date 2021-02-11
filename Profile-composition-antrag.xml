@@ -174,6 +174,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="5" />
       <mustSupport value="true" />
     </element>
     <element id="Composition.section:basisangaben.entry:netzwerkZentrum">
@@ -258,9 +259,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:basisangaben.entry:koerpergroesse.reference">
-      <path value="Composition.section.entry.reference" />
-    </element>
     <element id="Composition.section:basisangaben.entry:koerpergewicht">
       <path value="Composition.section.entry" />
       <sliceName value="koerpergewicht" />
@@ -269,9 +267,6 @@
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:basisangaben.entry:koerpergewicht.reference">
-      <path value="Composition.section.entry.reference" />
     </element>
     <element id="Composition.section:basisangaben.entry:ecog">
       <path value="Composition.section.entry" />
@@ -282,9 +277,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Composition.section:basisangaben.entry:ecog.reference">
-      <path value="Composition.section.entry.reference" />
-    </element>
     <element id="Composition.section:basisangaben.entry:raucherstatus">
       <path value="Composition.section.entry" />
       <sliceName value="raucherstatus" />
@@ -293,9 +285,6 @@
         <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:basisangaben.entry:raucherstatus.reference">
-      <path value="Composition.section.entry.reference" />
     </element>
     <element id="Composition.section:basisangaben.entry:consent">
       <path value="Composition.section.entry" />
@@ -450,9 +439,6 @@
         <targetProfile value="http://clinicalsite.org/fhir/StructureDefinition/organizationalunit" />
       </type>
       <mustSupport value="true" />
-    </element>
-    <element id="Composition.section:biopsie.section:anforderung.entry:pathologie.reference">
-      <path value="Composition.section.section.entry.reference" />
     </element>
     <element id="Composition.section:biopsie.section:anforderung.entry:histoVorbefund">
       <path value="Composition.section.section.entry" />

@@ -387,6 +387,7 @@
         </discriminator>
         <rules value="closed" />
       </slicing>
+      <min value="1" />
     </element>
     <element id="Composition.section:biopsie.section:anforderung.entry:anforderungTestung">
       <path value="Composition.section.section.entry" />

@@ -1,0 +1,665 @@
+{
+    "resourceType": "Bundle",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "b9aec98c-7f5c-44a7-bac8-06b5db97da6f",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Composition/nNGM/TNM"
+                    ]
+                },
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/compositions",
+                            "code": "tnm"
+                        }
+                    ]
+                },
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/composition-category",
+                                "code": "idat"
+                            }
+                        ]
+                    }
+                ],
+                "title": "TNM",
+                "status": "final",
+                "subject": {
+                    "reference": "http://localhost:4080/administration/Patient/620c7635-8810-48a7-843e-3b037aa860ae"
+                },
+                "date": "2021-02-05T13:24:34+01:00",
+                "author": [
+                    {
+                        "reference": "https://clinicalsite.org/person/38"
+                    }
+                ],
+                "section": [
+                    {
+                        "title": "TNM",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "tnm"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "http://localhost:4080/administration/Observation/e6bf0193-80f7-4985-80c6-783467c5fd93"
+                            },
+                            {
+                                "identifier": {
+                                    "system": "http://uk-koeln.de/NamingSystem/nNGM/formularId",
+                                    "value": "1"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "title": "TNM",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                                    "code": "tnm"
+                                }
+                            ]
+                        },
+                        "entry": [
+                            {
+                                "reference": "http://localhost:4080/administration/Observation/96f41d85-45b2-4074-8565-6bcaccc7897f"
+                            },
+                            {
+                                "identifier": {
+                                    "system": "http://uk-koeln.de/NamingSystem/nNGM/formularId",
+                                    "value": "2"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "code": {
+                          "coding": [
+                            {
+                              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/sections",
+                              "code": "stammdaten"
+                            }
+                          ]
+                        },
+                        "entry": [
+                          {
+                            "reference": "http://localhost:4080/administration/Patient/620c7635-8810-48a7-843e-3b037aa860ae"
+                          },
+                          {
+                            "reference": "http://localhost:4080/administration/Coverage/bdd7d7de-4326-45f1-9168-8c1adbf5f624"
+                          }
+                        ]
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/b9aec98c-7f5c-44a7-bac8-06b5db97da6f"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium"
+                    ]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "survey"
+                            }
+                        ]
+                    }
+                ],
+                "subject": {
+                    "reference": "http://localhost:4080/administration/Patient/620c7635-8810-48a7-843e-3b037aa860ae"
+                },
+                "extension": [
+                    {
+                        "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-erstdiagnose",
+                        "valueBoolean": true
+                    },
+                    {
+                        "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-kurativ-operabel",
+                        "valueBoolean": false
+                    }
+                ],
+                "effectiveDateTime": "2020-10-10",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "21983-2",
+                            "display": "Recurrence type first episode Cancer"
+                        }
+                    ]
+                },
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "21905-5"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "text": "T slice",
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
+                                    "code": "T0",
+                                    "version": "8. Auflage"
+                                }
+                            ]
+                        },
+                        "extension": [
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu",
+                                "valueCodeableConcept": {
+                                    "text": "T-praefix slice",
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "p - histopathologisch gesichert"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://loinc.org",
+                                            "code": "75621-3",
+                                            "display": "TNM pathologic staging after surgery panel"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-miscy",
+                                "valueCodeableConcept": {
+                                    "text": "T-suffix slice",
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "m - multiple Tumore der gleichen Region"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "21906-3"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "text": "N slice",
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
+                                    "code": "N1",
+                                    "version": "8. Auflage"
+                                }
+                            ]
+                        },
+                        "extension": [
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "p - histopathologisch gesichert"
+                                        }
+                                    ],
+                                    "text": "N-praefix slice"
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://loinc.org",
+                                            "code": "75621-3",
+                                            "display": "TNM pathologic staging after surgery panel"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "21907-1"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "text": "M slice",
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
+                                    "code": "M1b",
+                                    "version": "8. Auflage"
+                                }
+                            ]
+                        },
+                        "extension": [
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "p - histopathologisch gesichert"
+                                        }
+                                    ],
+                                    "text": "M-praefix slice"
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://loinc.org",
+                                            "code": "75621-3",
+                                            "display": "TNM pathologic staging after surgery panel"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "id": "e6bf0193-80f7-4985-80c6-783467c5fd93",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                            "code": "IA2",
+                            "version": "8. Auflage"
+                        }
+                    ]
+                }
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Observation/e6bf0193-80f7-4985-80c6-783467c5fd93"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Observation",
+                "meta": {
+                    "profile": [
+                        "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium"
+                    ]
+                },
+                "status": "final",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://hl7.org/fhir/observation-category",
+                                "code": "survey"
+                            }
+                        ]
+                    }
+                ],
+                "subject": {
+                    "reference": "http://localhost:4080/administration/Patient/620c7635-8810-48a7-843e-3b037aa860ae"
+                },
+                "extension": [
+                    {
+                        "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-erstdiagnose",
+                        "valueBoolean": false
+                    },
+                    {
+                        "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-kurativ-operabel",
+                        "valueBoolean": true
+                    }
+                ],
+                "effectiveDateTime": "2020-12-20",
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "59479-6",
+                            "display": "Collaborative staging post treatment extension Cancer"
+                        }
+                    ]
+                },
+                "component": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "21905-5"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "text": "T slice",
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
+                                    "code": "TX",
+                                    "version": "8. Auflage"
+                                }
+                            ]
+                        },
+                        "extension": [
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu",
+                                "valueCodeableConcept": {
+                                    "text": "T-praefix slice",
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "p - histopathologisch gesichert"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://loinc.org",
+                                            "code": "75621-3",
+                                            "display": "TNM pathologic staging after surgery panel"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-miscy",
+                                "valueCodeableConcept": {
+                                    "text": "T-suffix slice",
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "m - multiple Tumore der gleichen Region"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "21906-3"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "text": "N slice",
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
+                                    "code": "NX",
+                                    "version": "8. Auflage"
+                                }
+                            ]
+                        },
+                        "extension": [
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "p - histopathologisch gesichert"
+                                        }
+                                    ],
+                                    "text": "N-praefix slice"
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://loinc.org",
+                                            "code": "75621-3",
+                                            "display": "TNM pathologic staging after surgery panel"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://loinc.org",
+                                    "code": "21907-1"
+                                }
+                            ]
+                        },
+                        "valueCodeableConcept": {
+                            "text": "M slice",
+                            "coding": [
+                                {
+                                    "system": "urn:oid:2.16.840.1.113883.15.16",
+                                    "code": "M1a",
+                                    "version": "8. Auflage"
+                                }
+                            ]
+                        },
+                        "extension": [
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                                            "code": "u - Ultraschalldiagnostik"
+                                        }
+                                    ],
+                                    "text": "M-praefix slice"
+                                }
+                            },
+                            {
+                                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://loinc.org",
+                                            "code": "75620-5",
+                                            "display": "TNM clinical staging before treatment panel"
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "urn:oid:2.16.840.1.113883.15.16",
+                            "code": "IA3",
+                            "version": "8. Auflage"
+                        }
+                    ]
+                },
+                "id": "96f41d85-45b2-4074-8565-6bcaccc7897f"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Observation/96f41d85-45b2-4074-8565-6bcaccc7897f"
+            }
+        },
+        {
+            "resource": {
+              "resourceType": "Patient",
+              "meta": {
+                "profile": [
+                  "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient"
+                ]
+              },
+              "birthDate": "2021-01-13",
+              "gender": "male",
+              "id": "620c7635-8810-48a7-843e-3b037aa860ae",
+              "deceasedBoolean": true,
+              "name": [
+                  {
+                    "use": "official",
+                    "family": "Chalmers",
+                    "given": [
+                      "Peter",
+                      "James"
+                    ]
+                  },
+                  {
+                    "use": "usual",
+                    "given": [
+                      "Jim"
+                    ]
+                  },
+                  {
+                    "use": "maiden",
+                    "family": "Windsor",
+                    "given": [
+                      "Peter",
+                      "James"
+                    ],
+                    "period": {
+                      "end": "2002"
+                    }
+                  }
+                ],
+              "address": [
+              {
+                  "use": "home",
+                  "type": "both",
+                  "text": "534 Erewhon St PeasantVille, Rainbow, Vic  3999",
+                  "line": [
+                  "534 Erewhon St"
+                  ],
+                  "city": "PleasantVille",
+                  "state": "Vic",
+                  "postalCode": "3999",
+                  "period": {
+                  "start": "1974-12-25"
+                  }
+              }
+              ],
+              "extension": [
+                {
+                  "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+                        "code": "KISS"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "request": {
+              "method": "PUT",
+              "url": "Patient/620c7635-8810-48a7-843e-3b037aa860ae"
+            }
+        },
+        {
+            "resource": {
+              "resourceType": "Coverage",
+              "meta": {
+                "profile": [
+                  "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM"
+                ]
+              },
+              "status": "active",
+              "beneficiary": {
+                "reference": "http://localhost:4080/administration/Patient/620c7635-8810-48a7-843e-3b037aa860ae"
+              },
+              "subscriber": {
+                "reference": "http://localhost:4080/administration/Patient/620c7635-8810-48a7-843e-3b037aa860ae"
+              },
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                    "code": "GKV"
+                  }
+                ]
+              },
+              "identifier": {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                      "code": "GKV"
+                    }
+                  ]
+                },
+                "system": "http://fhir.de/NamingSystem/gkv/kvid-10",
+                "value": "Versichertennummer",
+                "assigner": {
+                  "display": "Krankenkasse"
+                }
+              },
+              "payor": [
+                {
+                  "display": "AOK Bremen/Bremerhaven"
+                }
+              ],
+              "extension": [
+                {
+                  "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung",
+                  "valueBoolean": false
+                }
+              ],
+              "id": "bdd7d7de-4326-45f1-9168-8c1adbf5f624"
+            },
+            "request": {
+              "method": "PUT",
+              "url": "Coverage/bdd7d7de-4326-45f1-9168-8c1adbf5f624"
+            }
+        }
+    ],
+    "id": "5 - TNM - Example",
+    "type": "transaction"
+}

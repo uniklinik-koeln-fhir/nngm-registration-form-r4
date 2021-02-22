@@ -104,7 +104,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://loinc.org/vs/LL529-9" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/ecog" />
       </binding>
     </element>
     <element id="Observation.value[x].coding">

@@ -117,7 +117,6 @@
       <path value="Observation.value[x].coding.system" />
       <min value="1" />
       <mustSupport value="true" />
-      <fixedUri value="urn:oid:1.2.276.0.76.3.1.131.1.5.153" />
     </element>
     <element id="Observation.value[x].coding.code">
       <path value="Observation.value[x].coding.code" />

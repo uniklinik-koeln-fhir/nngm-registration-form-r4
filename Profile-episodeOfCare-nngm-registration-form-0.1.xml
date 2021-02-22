@@ -114,23 +114,6 @@
       </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="EpisodeOfCare.identifier:nngmFallnummer">
-      <path value="EpisodeOfCare.identifier" />
-      <sliceName value="nngmFallnummer" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="EpisodeOfCare.identifier:nngmFallnummer.system">
-      <path value="EpisodeOfCare.identifier.system" />
-      <min value="1" />
-      <fixedUri value="http://uk-koeln.de/NamingSystem/nNGM/fallnummer" />
-      <mustSupport value="true" />
-    </element>
-    <element id="EpisodeOfCare.identifier:nngmFallnummer.value">
-      <path value="EpisodeOfCare.identifier.value" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="EpisodeOfCare.status">
       <path value="EpisodeOfCare.status" />
       <fixedCode value="active" />

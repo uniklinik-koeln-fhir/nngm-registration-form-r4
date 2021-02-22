@@ -109,21 +109,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Composition.subject.identifier">
-      <path value="Composition.subject.identifier" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.subject.identifier.system">
-      <path value="Composition.subject.identifier.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Composition.subject.identifier.value">
-      <path value="Composition.subject.identifier.value" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Composition.date">
       <path value="Composition.date" />
       <mustSupport value="true" />

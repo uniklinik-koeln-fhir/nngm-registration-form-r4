@@ -1978,9 +1978,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "1 Therapie EGFR-TKI"
-                        },
+                        "valueString": "1 Therapie EGFR-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -1997,9 +1995,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "2 Therapie EGFR-TKI"
-                        },
+                        "valueString": "2 Therapie EGFR-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2016,9 +2012,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "3 Therapie EGFR-TKI"
-                        },
+                        "valueString": "3 Therapie EGFR-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2035,9 +2029,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "4 Therapie EGFR-TKI"
-                        },
+                        "valueString": "4 Therapie EGFR-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2094,9 +2086,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "1 Therapie ALK-TKI"
-                        },
+                        "valueString": "1 Therapie ALK-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2113,9 +2103,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "2 Therapie ALK-TKI"
-                        },
+                        "valueString": "2 Therapie ALK-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2132,9 +2120,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "3 Therapie ALK-TKI"
-                        },
+                        "valueString": "3 Therapie ALK-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2151,9 +2137,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "4 Therapie ALK-TKI"
-                        },
+                        "valueString": "4 Therapie ALK-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2221,9 +2205,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "1 Therapie ROS1-TKI"
-                        },
+                        "valueString": "1 Therapie ROS1-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2240,9 +2222,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "2 Therapie ROS1-TKI"
-                        },
+                        "valueString": "2 Therapie ROS1-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2259,9 +2239,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "3 Therapie ROS1-TKI"
-                        },
+                        "valueString": "3 Therapie ROS1-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2278,9 +2256,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "4 Therapie ROS1-TKI"
-                        },
+                        "valueString": "4 Therapie ROS1-TKI",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2612,9 +2588,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "1 Therapie ROS1-TKI Biopsie2"
-                        },
+                        "valueString": "1 Therapie ROS1-TKI Biopsie2",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2631,9 +2605,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "2 Therapie ROS1-TKI Biopsie2"
-                        },
+                        "valueString": "2 Therapie ROS1-TKI Biopsie2",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2650,9 +2622,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "3 Therapie ROS1-TKI Biopsie2"
-                        },
+                        "valueString": "3 Therapie ROS1-TKI Biopsie2",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",
@@ -2669,9 +2639,7 @@
                                 }
                             ]
                         },
-                        "valueCodeableConcept": {
-                            "text": "4 Therapie ROS1-TKI Biopsie2"
-                        },
+                        "valueString": "4 Therapie ROS1-TKI Biopsie2",
                         "extension": [
                             {
                                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/observation-component-order",

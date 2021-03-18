@@ -208,7 +208,7 @@
     <element id="Observation.component:tkiTherapie.value[x]">
       <path value="Observation.component.value[x]" />
       <type>
-        <code value="CodeableConcept" />
+        <code value="string" />
       </type>
     </element>
   </differential>

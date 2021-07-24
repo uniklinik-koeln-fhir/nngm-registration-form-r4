@@ -36,8 +36,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Straße">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Straße" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Straße">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Straße" />
       <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
       <min value="0" />
       <max value="*" />
@@ -45,8 +45,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Ort">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Ort" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Ort">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Ort" />
       <short value="Bei Personen aus Stadtstaaten inklusive des Stadtteils" />
       <min value="0" />
       <max value="*" />
@@ -54,8 +54,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner PLZ">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner PLZ" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.PLZ">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.PLZ" />
       <short value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
       <min value="0" />
       <max value="*" />
@@ -63,8 +63,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Name">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Name" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Name">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Name" />
       <short value="Vor- und Familienname des nNGM-Netzwerkpartner" />
       <min value="0" />
       <max value="*" />
@@ -72,8 +72,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Kontakt">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Kontakt" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Kontakt">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Kontakt" />
       <short value="E-Mail oder Telefonnummer des nNGM-Netzwerkpartner" />
       <min value="0" />
       <max value="*" />
@@ -81,8 +81,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Organisationszugehörigkeit">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Organisationszugehörigkeit" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehörigkeit">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehörigkeit" />
       <short value="Organisation verantwortlich für das nNGM-Anforderungsformular" />
       <min value="0" />
       <max value="*" />
@@ -137,6 +137,230 @@
     <element id="Basisangaben.nNGM-Zentrum.Kontakt">
       <path value="Basisangaben.nNGM-Zentrum.Kontakt" />
       <short value="E-Mail oder Telefonnummer des nNGM-Zentrum" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.EckdatenDerAnforderung">
+      <path value="Basisangaben.EckdatenDerAnforderung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.EckdatenDerAnforderung.Anforderungsdatum">
+      <path value="Basisangaben.EckdatenDerAnforderung.Anforderungsdatum" />
+      <short value="Datum der Einreichung des nNGM-Anforderungsformulars" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.EckdatenDerAnforderung.Fallart">
+      <path value="Basisangaben.EckdatenDerAnforderung.Fallart" />
+      <short value="Fallart des Patienten zur Zeit der Anforderung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett">
+      <path value="Basisangaben.Patientenetikett" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Geschlecht">
+      <path value="Basisangaben.Patientenetikett.Geschlecht" />
+      <short value="Administratives Geschlecht des Patienten" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Nachname">
+      <path value="Basisangaben.Patientenetikett.Nachname" />
+      <short value="Der vollständige Familienname, einschließlich aller Vorsatz- und Zusatzwörter, mit Leerzeichen getrennt." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Vorname">
+      <path value="Basisangaben.Patientenetikett.Vorname" />
+      <short value="Vollständiger Vorname der Person" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Geburtsdatum">
+      <path value="Basisangaben.Patientenetikett.Geburtsdatum" />
+      <short value="Geburtsdatum des Patienten" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Straße">
+      <path value="Basisangaben.Patientenetikett.Straße" />
+      <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.PLZ">
+      <path value="Basisangaben.Patientenetikett.PLZ" />
+      <short value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Wohnort">
+      <path value="Basisangaben.Patientenetikett.Wohnort" />
+      <short value="Bei Personen aus Stadtstaaten inklusive des Stadtteils" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Land">
+      <path value="Basisangaben.Patientenetikett.Land" />
+      <short value="Ländercode nach ISO 3166" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Krankenkasse">
+      <path value="Basisangaben.Krankenkasse" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.Krankenkasse.Name">
+      <path value="Basisangaben.Krankenkasse.Name" />
+      <short value="Name der Krankenkasse" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Krankenkasse.Typ">
+      <path value="Basisangaben.Krankenkasse.Typ" />
+      <short value="PKV/GKV?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Krankenkasse.Kooperationsvereinbarung vorhanden">
+      <path value="Basisangaben.Krankenkasse.Kooperationsvereinbarung vorhanden" />
+      <short value="Besteht mit der Krankenkasse einer Kooperationsvereinbarung innerhalb des nNGM-Projektes" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Krankenkasse.Versicherungsnummer">
+      <path value="Basisangaben.Krankenkasse.Versicherungsnummer" />
+      <short value="Unveränderlicher Teil der Krankenversichertennummer (VersichertenID) bei GKV Patienten. Diese findet sich z.B. auf der Mitgliedskarte der Krankenkasse." />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Krankenkasse.PKV-Tarif">
+      <path value="Basisangaben.Krankenkasse.PKV-Tarif" />
+      <short value="Tarifangabe bei bestehender PKV-Versicherung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Krankenkasse.Abrechnungsinformation">
+      <path value="Basisangaben.Krankenkasse.Abrechnungsinformation" />
+      <short value="Klassifizeriung der nNGM-Anforderung zum Zwecke der Abrechnung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Beobachtungen">
+      <path value="Basisangaben.Beobachtungen" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.Beobachtungen.Gewicht">
+      <path value="Basisangaben.Beobachtungen.Gewicht" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Beobachtungen.Größe">
+      <path value="Basisangaben.Beobachtungen.Größe" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Beobachtungen.Raucherstatus">
+      <path value="Basisangaben.Beobachtungen.Raucherstatus" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Beobachtungen.ECOG">
+      <path value="Basisangaben.Beobachtungen.ECOG" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Einwilligungserklärung">
+      <path value="Basisangaben.Einwilligungserklärung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.Einwilligungserklärung">
+      <path value="Basisangaben.Einwilligungserklärung" />
       <min value="0" />
       <max value="*" />
       <type>

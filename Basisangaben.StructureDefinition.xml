@@ -461,8 +461,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten..Versorgung">
-      <path value="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten..Versorgung" />
+    <element id="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Versorgung">
+      <path value="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Versorgung" />
       <short value="Internes Feld zur Erfassung der Zustimmung zu eimzelnen Punkten des Teil 1a und Teil1b der Einwilligungserklärung" />
       <min value="0" />
       <max value="*" />
@@ -470,8 +470,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten..Forschungszwecke">
-      <path value="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten..Forschungszwecke" />
+    <element id="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Forschungszwecke">
+      <path value="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Forschungszwecke" />
       <short value="Internes Feld zur Erfassung der Zustimmung zu einzelnen Punkten des Teil 2 der Einwilligungserklärung" />
       <min value="0" />
       <max value="*" />

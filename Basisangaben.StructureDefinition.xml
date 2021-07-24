@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="LogicalModelBasisangaben" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/Basisangaben" />
+  <version value="1.0.0" />
+  <name value="LogicalModelBasisangaben" />
+  <title value="LogicalModel - Basisangaben" />
+  <status value="active" />
+  <description value="Logische Repräsentation des nNGM Datensatzes -  Basisangaben" />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/Basisangaben" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="Basisangaben">
+      <path value="Basisangaben" />
+      <min value="0" />
+      <max value="*" />
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner">
+      <path value="Basisangaben.nNGM-Netzwerkpartner" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben..nNGM-Netzwerkpartner.nNGM-Netzwerkpartner-Nr">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner-Nr" />
+      <short value="Mitgliedsnummer im nNGM-Projekt" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Straße">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Straße" />
+      <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Ort">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Ort" />
+      <short value="Bei Personen aus Stadtstaaten inklusive des Stadtteils" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner PLZ">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner PLZ" />
+      <short value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Name">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Name" />
+      <short value="Vor- und Familienname des nNGM-Netzwerkpartner" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Kontakt">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Kontakt" />
+      <short value="E-Mail oder Telefonnummer des nNGM-Netzwerkpartner" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Organisationszugehörigkeit">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner Organisationszugehörigkeit" />
+      <short value="Organisation verantwortlich für das nNGM-Anforderungsformular" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum">
+      <path value="Basisangaben.nNGM-Zentrum" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Name">
+      <path value="Basisangaben.nNGM-Zentrum.Name" />
+      <short value="Name des nNGM-Netzwerkzentrums" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Straße">
+      <path value="Basisangaben.nNGM-Zentrum.Straße" />
+      <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Ort">
+      <path value="Basisangaben.nNGM-Zentrum.Ort" />
+      <short value="Bei Stadtstaaten inklusive des Stadtteils" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.PLZ">
+      <path value="Basisangaben.nNGM-Zentrum.PLZ" />
+      <short value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Kontakt">
+      <path value="Basisangaben.nNGM-Zentrum.Kontakt" />
+      <short value="E-Mail oder Telefonnummer des nNGM-Zentrum" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

@@ -452,8 +452,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung.Tumorboard">
-      <path value="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung.Tumorboard" />
+    <element id="Basisangaben.Einwilligungserklaerung.Tumorboard">
+      <path value="Basisangaben.Einwilligungserklaerung.Tumorboard" />
       <short value="Patient stimmt Vorstellung des Falls innerhalb eines Tumorboard zu" />
       <min value="0" />
       <max value="*" />

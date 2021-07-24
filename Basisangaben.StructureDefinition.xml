@@ -6,7 +6,7 @@
   <name value="LogicalModelBasisangaben" />
   <title value="LogicalModel - Basisangaben" />
   <status value="active" />
-  <description value="Logische Repräsentation des nNGM Datensatzes -  Basisangaben" />
+  <description value="Logische Repraesentation des nNGM Datensatzes -  Basisangaben" />
   <fhirVersion value="4.0.1" />
   <kind value="logical" />
   <abstract value="false" />
@@ -36,9 +36,9 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.Straße">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.Straße" />
-      <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Strasse">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Strasse" />
+      <short value="Strassenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -56,7 +56,7 @@
     </element>
     <element id="Basisangaben.nNGM-Netzwerkpartner.PLZ">
       <path value="Basisangaben.nNGM-Netzwerkpartner.PLZ" />
-      <short value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
+      <short value="Postleitzahl gemaess der im jeweiligen Land gueltigen Konventionen" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -81,9 +81,9 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehörigkeit">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehörigkeit" />
-      <short value="Organisation verantwortlich für das nNGM-Anforderungsformular" />
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit" />
+      <short value="Organisation verantwortlich fuer das nNGM-Anforderungsformular" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -107,9 +107,9 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Zentrum.Straße">
-      <path value="Basisangaben.nNGM-Zentrum.Straße" />
-      <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
+    <element id="Basisangaben.nNGM-Zentrum.Strasse">
+      <path value="Basisangaben.nNGM-Zentrum.Strasse" />
+      <short value="Strassenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -127,7 +127,7 @@
     </element>
     <element id="Basisangaben.nNGM-Zentrum.PLZ">
       <path value="Basisangaben.nNGM-Zentrum.PLZ" />
-      <short value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
+      <short value="Postleitzahl gemaess der im jeweiligen Land gueltigen Konventionen" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -188,7 +188,7 @@
     </element>
     <element id="Basisangaben.Patientenetikett.Nachname">
       <path value="Basisangaben.Patientenetikett.Nachname" />
-      <short value="Der vollständige Familienname, einschließlich aller Vorsatz- und Zusatzwörter, mit Leerzeichen getrennt." />
+      <short value="Der vollstaendige Familienname, einschliesslich aller Vorsatz- und Zusatzwoerter, mit Leerzeichen getrennt." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -197,7 +197,7 @@
     </element>
     <element id="Basisangaben.Patientenetikett.Vorname">
       <path value="Basisangaben.Patientenetikett.Vorname" />
-      <short value="Vollständiger Vorname der Person" />
+      <short value="Vollstaendiger Vorname der Person" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -213,9 +213,9 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Patientenetikett.Straße">
-      <path value="Basisangaben.Patientenetikett.Straße" />
-      <short value="Straßenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
+    <element id="Basisangaben.Patientenetikett.Strasse">
+      <path value="Basisangaben.Patientenetikett.Strasse" />
+      <short value="Strassenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -224,7 +224,7 @@
     </element>
     <element id="Basisangaben.Patientenetikett.PLZ">
       <path value="Basisangaben.Patientenetikett.PLZ" />
-      <short value="Postleitzahl gemäß der im jeweiligen Land gültigen Konventionen" />
+      <short value="Postleitzahl gemaess der im jeweiligen Land gueltigen Konventionen" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -242,7 +242,7 @@
     </element>
     <element id="Basisangaben.Patientenetikett.Land">
       <path value="Basisangaben.Patientenetikett.Land" />
-      <short value="Ländercode nach ISO 3166" />
+      <short value="Laendercode nach ISO 3166" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -286,7 +286,7 @@
     </element>
     <element id="Basisangaben.Krankenkasse.Versicherungsnummer">
       <path value="Basisangaben.Krankenkasse.Versicherungsnummer" />
-      <short value="Unveränderlicher Teil der Krankenversichertennummer (VersichertenID) bei GKV Patienten. Diese findet sich z.B. auf der Mitgliedskarte der Krankenkasse." />
+      <short value="Unveraenderlicher Teil der Krankenversichertennummer (VersichertenID) bei GKV Patienten. Diese findet sich z.B. auf der Mitgliedskarte der Krankenkasse." />
       <min value="0" />
       <max value="*" />
       <type>
@@ -327,8 +327,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Beobachtungen.Größe">
-      <path value="Basisangaben.Beobachtungen.Größe" />
+    <element id="Basisangaben.Beobachtungen.Groesse">
+      <path value="Basisangaben.Beobachtungen.Groesse" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -351,16 +351,16 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklärung">
-      <path value="Basisangaben.Einwilligungserklärung" />
+    <element id="Basisangaben.Einwilligungserklaerung">
+      <path value="Basisangaben.Einwilligungserklaerung" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklärung">
-      <path value="Basisangaben.Einwilligungserklärung" />
+    <element id="Basisangaben.Einwilligungserklaerung">
+      <path value="Basisangaben.Einwilligungserklaerung" />
       <min value="0" />
       <max value="*" />
       <type>

@@ -36,33 +36,6 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.Strasse">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.Strasse" />
-      <short value="Strassenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.Ort">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.Ort" />
-      <short value="Bei Personen aus Stadtstaaten inklusive des Stadtteils" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Basisangaben.nNGM-Netzwerkpartner.PLZ">
-      <path value="Basisangaben.nNGM-Netzwerkpartner.PLZ" />
-      <short value="Postleitzahl gemaess der im jeweiligen Land gueltigen Konventionen" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Basisangaben.nNGM-Netzwerkpartner.Name">
       <path value="Basisangaben.nNGM-Netzwerkpartner.Name" />
       <short value="Vor- und Familienname des nNGM-Netzwerkpartner" />
@@ -83,11 +56,54 @@
     </element>
     <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit">
       <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit" />
-      <short value="Organisation verantwortlich fuer das nNGM-Anforderungsformular" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Abteilung">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Abteilung" />
       <min value="0" />
       <max value="*" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift.Strasse">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift.Strasse" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift.Ort">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift.Ort" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift.PLZ">
+      <path value="Basisangaben.nNGM-Netzwerkpartner.Organisationszugehoerigkeit.Anschrift.PLZ" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
     <element id="Basisangaben.nNGM-Zentrum">
@@ -98,36 +114,9 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Zentrum.Name">
-      <path value="Basisangaben.nNGM-Zentrum.Name" />
+    <element id="Basisangaben.nNGM-Zentrum.Standort">
+      <path value="Basisangaben.nNGM-Zentrum.Standort" />
       <short value="Name des nNGM-Netzwerkzentrums" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Basisangaben.nNGM-Zentrum.Strasse">
-      <path value="Basisangaben.nNGM-Zentrum.Strasse" />
-      <short value="Strassenname mit Hausnummer oder Postfach sowie weitere Angaben zur Zustellung" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Basisangaben.nNGM-Zentrum.Ort">
-      <path value="Basisangaben.nNGM-Zentrum.Ort" />
-      <short value="Bei Stadtstaaten inklusive des Stadtteils" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Basisangaben.nNGM-Zentrum.PLZ">
-      <path value="Basisangaben.nNGM-Zentrum.PLZ" />
-      <short value="Postleitzahl gemaess der im jeweiligen Land gueltigen Konventionen" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -141,6 +130,41 @@
       <max value="*" />
       <type>
         <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Anschrift">
+      <path value="Basisangaben.nNGM-Zentrum.Anschrift" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Anschrift.Strasse">
+      <path value="Basisangaben.nNGM-Zentrum.Anschrift.Strasse" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Anschrift.Ort">
+      <path value="Basisangaben.nNGM-Zentrum.Anschrift.Ort" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Basisangaben.nNGM-Zentrum.Anschrift.PLZ">
+      <path value="Basisangaben.nNGM-Zentrum.Anschrift.PLZ" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
     <element id="Basisangaben.EckdatenDerAnforderung">
@@ -468,6 +492,7 @@
       <max value="*" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.StatusDerEinwilligungserklaerungDesPatienten.Forschung">
@@ -477,6 +502,7 @@
       <max value="*" />
       <type>
         <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
   </differential>

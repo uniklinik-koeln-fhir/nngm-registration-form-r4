@@ -184,8 +184,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.EckdatenDerAnforderung.Fallart">
-      <path value="Basisangaben.EckdatenDerAnforderung.Fallart" />
+    <element id="Basisangaben.EckdatenDerAnforderung.Aufenthaltsart">
+      <path value="Basisangaben.EckdatenDerAnforderung.Aufenthaltsart" />
       <short value="Fallart des Patienten zur Zeit der Anforderung" />
       <min value="0" />
       <max value="*" />

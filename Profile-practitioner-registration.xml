@@ -101,9 +101,5 @@
       <path value="Practitioner.name.prefix" />
       <max value="0" />
     </element>
-    <element id="Practitioner.telecom">
-      <path value="Practitioner.telecom" />
-      <mustSupport value="false" />
-    </element>
   </differential>
 </StructureDefinition>

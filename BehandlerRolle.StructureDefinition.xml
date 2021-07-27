@@ -124,6 +124,9 @@
     <element id="PractitionerRole.telecom:fax">
       <path value="PractitionerRole.telecom" />
       <sliceName value="fax" />
+      <patternContactPoint>
+        <system value="fax" />
+      </patternContactPoint>
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom:fax.system">
@@ -139,6 +142,9 @@
     <element id="PractitionerRole.telecom:funk">
       <path value="PractitionerRole.telecom" />
       <sliceName value="funk" />
+      <patternContactPoint>
+        <system value="pager" />
+      </patternContactPoint>
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom:funk.system">
@@ -154,6 +160,9 @@
     <element id="PractitionerRole.telecom:email">
       <path value="PractitionerRole.telecom" />
       <sliceName value="email" />
+      <patternContactPoint>
+        <system value="email" />
+      </patternContactPoint>
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom:email.system">

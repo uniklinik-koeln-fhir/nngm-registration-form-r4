@@ -36,7 +36,6 @@
         <rules value="open" />
       </slicing>
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name">
@@ -77,6 +76,10 @@
       <patternHumanName>
         <use value="maiden" />
       </patternHumanName>
+    </element>
+    <element id="Practitioner.telecom">
+      <path value="Practitioner.telecom" />
+      <mustSupport value="false" />
     </element>
   </differential>
 </StructureDefinition>

@@ -3,7 +3,7 @@
     "id": "ExampleBehandlerRollePractitionerRole",
     "meta": {
         "profile": [
-            "http://uk-koeln.de/fhir/StructureDefinition/BehandlerRolle/nNGM"
+            "http://uk-koeln.de/fhir/StructureDefinition/PractitionerRole/nNGM"
         ]
     },
     "identifier": [

@@ -62,6 +62,31 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Practitioner.name:Name.family.extension">
+      <path value="Practitioner.name.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Practitioner.name:Name.family.extension:namenszusatz">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:nachname">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="nachname" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.family.extension:vorsatzwort">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="vorsatzwort" />
+      <mustSupport value="true" />
+    </element>
     <element id="Practitioner.name:Name.given">
       <path value="Practitioner.name.given" />
       <min value="1" />
@@ -69,6 +94,21 @@
     </element>
     <element id="Practitioner.name:Name.prefix">
       <path value="Practitioner.name.prefix" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Name.prefix.extension">
+      <path value="Practitioner.name.prefix.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Practitioner.name:Name.prefix.extension:prefix-qualifier">
+      <path value="Practitioner.name.prefix.extension" />
+      <sliceName value="prefix-qualifier" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Geburtsname">
@@ -91,6 +131,31 @@
     <element id="Practitioner.name:Geburtsname.family">
       <path value="Practitioner.name.family" />
       <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Geburtsname.family.extension">
+      <path value="Practitioner.name.family.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Practitioner.name:Geburtsname.family.extension:namenszusatz">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="namenszusatz" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Geburtsname.family.extension:nachname">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="nachname" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Geburtsname.family.extension:vorsatzwort">
+      <path value="Practitioner.name.family.extension" />
+      <sliceName value="vorsatzwort" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Geburtsname.given">

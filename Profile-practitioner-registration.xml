@@ -77,9 +77,5 @@
         <use value="maiden" />
       </patternHumanName>
     </element>
-    <element id="Practitioner.telecom">
-      <path value="Practitioner.telecom" />
-      <mustSupport value="false" />
-    </element>
   </differential>
 </StructureDefinition>

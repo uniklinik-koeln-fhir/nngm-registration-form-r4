@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/nNGM/BehandlerRolle" />
+  <name value="Profile_nNGM_PractitionerRole_BehandlerRolle" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <mapping>
+    <identity value="v2" />
+    <uri value="http://hl7.org/v2" />
+    <name value="HL7 v2 Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="rim" />
+    <uri value="http://hl7.org/v3" />
+    <name value="RIM Mapping" />
+  </mapping>
+  <mapping>
+    <identity value="servd" />
+    <uri value="http://www.omg.org/spec/ServD/1.0/" />
+    <name value="ServD" />
+  </mapping>
+  <mapping>
+    <identity value="w5" />
+    <uri value="http://hl7.org/fhir/fivews" />
+    <name value="FiveWs Pattern Mapping" />
+  </mapping>
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="PractitionerRole" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="PractitionerRole.id">
+      <path value="PractitionerRole.id" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.meta">
+      <path value="PractitionerRole.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.meta.profile">
+      <path value="PractitionerRole.meta.profile" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.identifier">
+      <path value="PractitionerRole.identifier" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.identifier:nngm-netzwerkpartner-nr">
+      <path value="PractitionerRole.identifier" />
+      <sliceName value="nngm-netzwerkpartner-nr" />
+      <max value="1" />
+      <patternIdentifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="DN" />
+          </coding>
+        </type>
+        <system value="http://uk-koeln.de/fhir/sid/nNGM/nngm-netzwerkpartner-nr" />
+      </patternIdentifier>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.identifier:nngm-netzwerkpartner-nr.type">
+      <path value="PractitionerRole.identifier.type" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.identifier:nngm-netzwerkpartner-nr.system">
+      <path value="PractitionerRole.identifier.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.identifier:nngm-netzwerkpartner-nr.value">
+      <path value="PractitionerRole.identifier.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.practitioner">
+      <path value="PractitionerRole.practitioner" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.organization">
+      <path value="PractitionerRole.organization" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom">
+      <path value="PractitionerRole.telecom" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:telefon">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="telefon" />
+      <patternContactPoint>
+        <system value="phone" />
+      </patternContactPoint>
+    </element>
+    <element id="PractitionerRole.telecom:telefon.system">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:telefon.value">
+      <path value="PractitionerRole.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:fax">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="fax" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:fax.system">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:fax.value">
+      <path value="PractitionerRole.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:funk">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="funk" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:funk.system">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:funk.value">
+      <path value="PractitionerRole.telecom.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:email">
+      <path value="PractitionerRole.telecom" />
+      <sliceName value="email" />
+      <mustSupport value="true" />
+    </element>
+    <element id="PractitionerRole.telecom:email.system">
+      <path value="PractitionerRole.telecom.system" />
+      <min value="1" />
+    </element>
+    <element id="PractitionerRole.telecom:email.value">
+      <path value="PractitionerRole.telecom.value" />
+      <min value="1" />
+    </element>
+  </differential>
+</StructureDefinition>

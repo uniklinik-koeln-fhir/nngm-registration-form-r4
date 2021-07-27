@@ -27,7 +27,7 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Basisangaben..nNGM-Netzwerkpartner.nNGM-Netzwerkpartner-Nr">
+    <element id="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner-Nr">
       <path value="Basisangaben.nNGM-Netzwerkpartner.nNGM-Netzwerkpartner-Nr" />
       <short value="Mitgliedsnummer im nNGM-Projekt" />
       <min value="0" />
@@ -275,8 +275,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Krankenkasse.Kooperationsvereinbarung vorhanden">
-      <path value="Basisangaben.Krankenkasse.Kooperationsvereinbarung vorhanden" />
+    <element id="Basisangaben.Krankenkasse.KooperationsvereinbarungVorhanden">
+      <path value="Basisangaben.Krankenkasse.KooperationsvereinbarungVorhanden" />
       <short value="Besteht mit der Krankenkasse einer Kooperationsvereinbarung innerhalb des nNGM-Projektes" />
       <min value="0" />
       <max value="*" />
@@ -416,15 +416,6 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklaerung.Teil2">
-      <path value="Basisangaben.Einwilligungserklaerung.Teil2" />
-      <short value="Forschung im nNGM" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung">
       <path value="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung" />
       <short value="Forschung im nNGM" />
@@ -461,8 +452,17 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Versorgung">
-      <path value="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Versorgung" />
+    <element id="Basisangaben.Einwilligungserklaerung.StatusDerEinwilligungserklaerungDesPatienten">
+      <path value="Basisangaben.Einwilligungserklaerung.StatusDerEinwilligungserklaerungDesPatienten" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/BackboneElement" />
+      </type>
+    </element>
+    <element id="Basisangaben.Einwilligungserklaerung.StatusDerEinwilligungserklaerungDesPatienten.Versorgung">
+      <path value="Basisangaben.Einwilligungserklaerung.StatusDerEinwilligungserklaerungDesPatienten.Versorgung" />
       <short value="Internes Feld zur Erfassung der Zustimmung zu eimzelnen Punkten des Teil 1a und Teil1b der Einwilligungserklärung" />
       <min value="0" />
       <max value="*" />
@@ -470,8 +470,8 @@
         <code value="string" />
       </type>
     </element>
-    <element id="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Forschungszwecke">
-      <path value="Basisangaben.Einwilligungserklaerung.Status der EinwilligungserklärungDesPatienten.Forschungszwecke" />
+    <element id="Basisangaben.Einwilligungserklaerung.StatusDerEinwilligungserklaerungDesPatienten.Forschung">
+      <path value="Basisangaben.Einwilligungserklaerung.StatusDerEinwilligungserklaerungDesPatienten.Forschung" />
       <short value="Internes Feld zur Erfassung der Zustimmung zu einzelnen Punkten des Teil 2 der Einwilligungserklärung" />
       <min value="0" />
       <max value="*" />

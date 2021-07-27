@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/nNGM/BehandlerRolle" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/BehandlerRolle/nNGM" />
   <name value="Profile_nNGM_PractitionerRole_BehandlerRolle" />
   <status value="draft" />
   <fhirVersion value="4.0.1" />

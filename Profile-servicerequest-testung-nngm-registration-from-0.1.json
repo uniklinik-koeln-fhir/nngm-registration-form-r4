@@ -45,11 +45,6 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.extension:aufenthaltsart.value[x]",
-        "path": "ServiceRequest.extension.value[x]",
-        "mustSupport": true
-      },
-      {
         "id": "ServiceRequest.status",
         "path": "ServiceRequest.status",
         "mustSupport": true

@@ -52,6 +52,11 @@
       </patternHumanName>
       <mustSupport value="true" />
     </element>
+    <element id="Practitioner.name:Name.use">
+      <path value="Practitioner.name.use" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Practitioner.name:Name.family">
       <path value="Practitioner.name.family" />
       <min value="1" />
@@ -59,6 +64,7 @@
     </element>
     <element id="Practitioner.name:Name.given">
       <path value="Practitioner.name.given" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Practitioner.name:Name.prefix">
@@ -76,6 +82,28 @@
       <patternHumanName>
         <use value="maiden" />
       </patternHumanName>
+    </element>
+    <element id="Practitioner.name:Geburtsname.use">
+      <path value="Practitioner.name.use" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Geburtsname.family">
+      <path value="Practitioner.name.family" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Practitioner.name:Geburtsname.given">
+      <path value="Practitioner.name.given" />
+      <max value="0" />
+    </element>
+    <element id="Practitioner.name:Geburtsname.prefix">
+      <path value="Practitioner.name.prefix" />
+      <max value="0" />
+    </element>
+    <element id="Practitioner.telecom">
+      <path value="Practitioner.telecom" />
+      <mustSupport value="false" />
     </element>
   </differential>
 </StructureDefinition>

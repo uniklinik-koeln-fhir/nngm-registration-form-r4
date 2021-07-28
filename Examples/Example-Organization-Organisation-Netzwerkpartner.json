@@ -11,7 +11,7 @@
             "coding": [
                 {
                     "system": "http://snomed.info/sct",
-                    "value": "261074009",
+                    "code": "261074009",
                     "display": "External (qualifier value)"
                 }
             ]
@@ -20,7 +20,7 @@
             "coding": [
                 {
                     "system": "http://snomed.info/sct",
-                    "value": "440655000",
+                    "code": "440655000",
                     "display": "Outpatient environment (environment)"
                 }
             ]

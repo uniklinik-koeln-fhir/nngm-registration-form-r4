@@ -11,7 +11,7 @@
             "coding": [
                 {
                     "system": "http://snomed.info/sct",
-                    "value": "260521003",
+                    "code": "260521003",
                     "display": "Internal (qualifier value)"
                 }
             ]
@@ -20,7 +20,7 @@
             "coding": [
                 {
                     "system": "http://snomed.info/sct",
-                    "value": "285201006",
+                    "code": "285201006",
                     "display": "Hospital environment (environment)"
                 }
             ]

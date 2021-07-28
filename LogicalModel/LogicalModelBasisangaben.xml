@@ -167,32 +167,6 @@
         <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
     </element>
-    <element id="Basisangaben.EckdatenDerAnforderung">
-      <path value="Basisangaben.EckdatenDerAnforderung" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="BackboneElement" />
-      </type>
-    </element>
-    <element id="Basisangaben.EckdatenDerAnforderung.Anforderungsdatum">
-      <path value="Basisangaben.EckdatenDerAnforderung.Anforderungsdatum" />
-      <short value="Datum der Einreichung des nNGM-Anforderungsformulars" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
-    <element id="Basisangaben.EckdatenDerAnforderung.Aufenthaltsart">
-      <path value="Basisangaben.EckdatenDerAnforderung.Aufenthaltsart" />
-      <short value="Fallart des Patienten zur Zeit der Anforderung" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-    </element>
     <element id="Basisangaben.Patientenetikett">
       <path value="Basisangaben.Patientenetikett" />
       <min value="0" />

@@ -1,6 +1,6 @@
 {
     "resourceType": "Organization",
-    "id": "ExampleOrganizationOrganisationNetzwerkzentrum",
+    "id": "ExampleOrganizationOrganisationAbteilung",
     "meta": {
         "profile": [
             "http://uk-koeln.de/fhir/StructureDefinition/organisation/nNGM"
@@ -26,7 +26,7 @@
             ]
         }
     ],
-    "name": "Netzwerkpartner Abteilung XYZ",
+    "name": "Netzwerkzentrum Abteilung XYZ",
     "partOf": {
         "reference": "Organization/ExampleOrganizationOrganisationNetzwerkzentrum"
     }

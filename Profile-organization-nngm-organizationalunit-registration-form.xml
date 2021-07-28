@@ -71,8 +71,8 @@
     <sliceName value="ZugehoerigkeitNetzwerkzentrum" />
     <mustSupport value="true" />
     <binding>
-      <strength value="required">
-      <valueSet value="http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM/ZugehoerigkeitNetzwerkzentrum">
+      <strength value="required" />
+      <valueSet value="http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM/ZugehoerigkeitNetzwerkzentrum" />
     </binding>
   </element>
   <element id="Organization.name">

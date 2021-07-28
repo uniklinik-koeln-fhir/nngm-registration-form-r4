@@ -3,7 +3,7 @@
   "id": "ValueSet-nNGM-OrganizationType-ZugehoerigkeitNetzwerkzentrum",
   "url": "http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM/ZugehoerigkeitNetzwerkzentrum",
   "version": "1.0.0",
-  "name": "ValueSet-nNGM-OrganizationType-ZugehoerigkeitNetzwerkzentrum",
+  "name": "ValueSet_nNGM_OrganizationType_ZugehoerigkeitNetzwerkzentrum",
   "title": "ValueSet - nNGM - OrganizationType - Zugehörigkeit Netzwerkzentrum",
   "status": "active",
   "compose": {

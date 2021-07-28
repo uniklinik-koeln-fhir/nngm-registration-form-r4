@@ -69,6 +69,8 @@
   <element id="Organization.type:ZugehoerigkeitNetzwerkzentrum">
     <path value="Organization.type" />
     <sliceName value="ZugehoerigkeitNetzwerkzentrum" />
+    <min value="1" />
+    <max value="1" />
     <mustSupport value="true" />
     <binding>
       <strength value="required" />

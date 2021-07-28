@@ -114,8 +114,8 @@
         <code value="BackboneElement" />
       </type>
     </element>
-    <element id="Basisangaben.nNGM-Zentrum.Standort">
-      <path value="Basisangaben.nNGM-Zentrum.Standort" />
+    <element id="Basisangaben.nNGM-Zentrum.Standortname">
+      <path value="Basisangaben.nNGM-Zentrum.Standortname" />
       <short value="Name des nNGM-Netzwerkzentrums" />
       <min value="0" />
       <max value="*" />

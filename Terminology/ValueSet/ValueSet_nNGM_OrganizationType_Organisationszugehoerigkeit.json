@@ -8,15 +8,19 @@
     "compose": {
         "include": [
             {
-                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "system": "http://snomed.info/sct",
                 "concept": [
                     {
-                        "code": "prov",
-                        "display": "Healthcare Provider"
+                        "code": "285201006",
+                        "display": "Hospital environment (environment)"
                     },
                     {
-                        "code": "dept",
-                        "display": "Hospital Department"
+                        "code": "309912009",
+                        "display": "Medical department (environment)"
+                    },
+                    {
+                        "code": "440655000",
+                        "display": "Outpatient environment (environment)"
                     }
                 ]
             }

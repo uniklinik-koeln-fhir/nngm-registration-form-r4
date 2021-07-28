@@ -1,10 +1,10 @@
 {
     "resourceType": "StructureDefinition",
     "url": "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient",
-    "version": "0.2",
+    "version": "1.0.0",
     "name": "PatientNngm",
     "title": "nNGM: Profil - Patient",
-    "status": "active",
+    "status": "draft",
     "experimental": true,
     "publisher": "Universitätsklinikum Köln",
     "fhirVersion": "4.0.1",

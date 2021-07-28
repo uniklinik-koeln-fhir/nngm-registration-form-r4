@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog" />
-  <version value="0.1" />
+  <version value="1.0.0" />
   <name value="ObservationNngmEcog" />
   <title value="nNGM: Profil - Observation - ECOG" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="ECOG assesment score" />
   <fhirVersion value="4.0.1" />

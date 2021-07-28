@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
-  <version value="1.0" />
+  <version value="1.0.0" />
   <name value="nNGM_Consent_Einwilligungserklärung" />
   <title value="nNGM: Profil - Consent - Einwilligungserklärung" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Date of consent. Link to digital copy of consent form." />
   <fhirVersion value="4.0.1" />

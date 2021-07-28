@@ -1,0 +1,25 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet_nNGM_OrganizationType_Organisationszugehoerigkeit",
+    "url": "http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM",
+    "name": "ValueSet_nNGM_OrganizationType",
+    "title": "ValueSet - nNGM - OrganizationType",
+    "status": "active",
+    "compose": {
+        "include": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "concept": [
+                    {
+                        "code": "prov",
+                        "display": "Healthcare Provider"
+                    },
+                    {
+                        "code": "dept",
+                        "display": "Hospital Department"
+                    }
+                ]
+            }
+        ]
+    }
+}

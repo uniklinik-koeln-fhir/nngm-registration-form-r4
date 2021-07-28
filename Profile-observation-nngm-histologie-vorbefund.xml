@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histo-vorbefund" />
+  <version value="1.0.0" />
   <name value="HistologieVorbefund" />
-  <status value="active" />
+  <status value="draft" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="workflow" />

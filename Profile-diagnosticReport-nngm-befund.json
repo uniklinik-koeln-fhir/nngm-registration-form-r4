@@ -2,8 +2,9 @@
   "resourceType": "StructureDefinition",
   "url": "http://uk-koeln.de/fhir/StructureDefinition/DiagnosticReport/nNGM/befund",
   "name": "Befund",
-  "status": "active",
+  "status": "draft",
   "fhirVersion": "4.0.1",
+  "version": "1.0.0",
   "mapping": [
     {
       "identity": "workflow",

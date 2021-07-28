@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM" />
-  <version value="0.1" />
+  <version value="1.0.0" />
   <name value="SpecimenNngm" />
   <title value="nNGM: Profil - Specimen - Tumormaterial" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Organizational details about the tumor material" />
   <fhirVersion value="4.0.1" />

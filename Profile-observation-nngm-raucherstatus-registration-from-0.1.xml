@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
-  <version value="0.1" />
+  <version value="1.0.0" />
   <name value="ObservationNngmRaucherstatus" />
   <title value="nNGM: Profil - Observation - Raucherstatus" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="false" />
   <description value="Smoking status" />
   <fhirVersion value="4.0.1" />

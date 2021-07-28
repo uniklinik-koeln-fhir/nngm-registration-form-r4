@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
-  <version value="0.1" />
+  <version value="1.0.0" />
   <name value="PatientPseudonimisiertNngm" />
   <title value="nNGM: Profil - Pseudonymisierter Patient" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Patient without any identifiable data elements" />
   <fhirVersion value="4.0.1" />

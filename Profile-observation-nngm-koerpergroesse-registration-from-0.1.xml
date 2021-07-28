@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergroesse" />
+  <version value="1.0.0" />
   <name value="ObservationNngmKoerpergroesse" />
   <title value="nNGM: Profil - Observation - Körpergröße" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Universitätsklinikum Köln" />
   <fhirVersion value="4.0.1" />
   <mapping>

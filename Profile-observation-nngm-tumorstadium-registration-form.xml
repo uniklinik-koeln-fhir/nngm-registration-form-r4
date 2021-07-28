@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tumorstadium" />
-  <version value="0.1" />
+  <version value="1.0.0" />
   <name value="ObservationnNGMTumorstadium" />
   <title value="nNGM: Profil - Observation - Tumorstadium" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <publisher value="Uniklinik Köln" />
   <description value="TNM / UICC" />

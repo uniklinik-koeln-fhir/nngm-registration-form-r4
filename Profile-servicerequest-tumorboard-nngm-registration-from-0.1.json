@@ -4,10 +4,10 @@
     "lastUpdated": "2018-12-27T22:37:54.724+11:00"
   },
   "url": "http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard",
-  "version": "0.1",
+  "version": "1.0.0",
   "name": "ServiceRequestTumorboardNngm",
   "title": "nNGM: Profil - ServiceRequest - Tumorboard",
-  "status": "active",
+  "status": "draft",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "description": "Request external practitioner for a tumorboard review",
   "fhirVersion": "4.0.1",

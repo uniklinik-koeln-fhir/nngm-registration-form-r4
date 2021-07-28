@@ -274,7 +274,7 @@
         <code value="string" />
       </type>
     </element>
-        <element id="Basisangaben.Patientenetikett.InformationsquelleFuerTodesdatum">
+    <element id="Basisangaben.Patientenetikett.InformationsquelleFuerTodesdatum">
       <path value="Basisangaben.Patientenetikett.InformationsquelleFuerTodesdatum" />
       <short value="Quelle für die Meldung des Todes des Patienten" />
       <min value="0" />

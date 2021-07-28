@@ -32,284 +32,294 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Organization" />
   <derivation value="constraint" />
   <differential>
+    <element id="Organization">
+      <path value="Organization" />
+      <constraint>
+        <key value="org-nngm-1" />
+        <severity value="error" />
+        <human value="Falls die Organisation eine Abteilung repräsentiert muss eine Verknüpfung auf die Hauptorganisation vorliegen" />
+        <expression value="type.coding.where(system = 'http://snomed.info/sct' and code = '309912009').exists() implies partOf.exists()" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/organisation/nNGM" />
+      </constraint>
+    </element>
     <element id="Organization.id">
-      <path value="Organization.id" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.meta">
-      <path value="Organization.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.meta.profile">
-      <path value="Organization.meta.profile" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.type">
-      <path value="Organization.type" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.name">
-      <path value="Organization.name" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom">
-      <path value="Organization.telecom" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:telefon">
-      <path value="Organization.telecom" />
-      <sliceName value="telefon" />
-      <patternContactPoint>
-        <system value="phone" />
-      </patternContactPoint>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:telefon.system">
-      <path value="Organization.telecom.system" />
-      <min value="1" />
-    </element>
-    <element id="Organization.telecom:telefon.value">
-      <path value="Organization.telecom.value" />
-      <min value="1" />
-    </element>
-    <element id="Organization.telecom:fax">
-      <path value="Organization.telecom" />
-      <sliceName value="fax" />
-      <patternContactPoint>
-        <system value="fax" />
-      </patternContactPoint>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:fax.system">
-      <path value="Organization.telecom.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:fax.value">
-      <path value="Organization.telecom.value" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:funk">
-      <path value="Organization.telecom" />
-      <sliceName value="funk" />
-      <patternContactPoint>
-        <system value="pager" />
-      </patternContactPoint>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:funk.system">
-      <path value="Organization.telecom.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:funk.value">
-      <path value="Organization.telecom.value" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:email">
-      <path value="Organization.telecom" />
-      <sliceName value="email" />
-      <patternContactPoint>
-        <system value="email" />
-      </patternContactPoint>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:email.system">
-      <path value="Organization.telecom.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.telecom:email.value">
-      <path value="Organization.telecom.value" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address">
-      <path value="Organization.address" />
-      <slicing>
-        <discriminator>
-          <type value="pattern" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift">
-      <path value="Organization.address" />
-      <sliceName value="Strassenanschrift" />
-      <type>
-        <code value="Address" />
-        <profile value="http://fhir.de/StructureDefinition/address-de-basis" />
-      </type>
-      <patternAddress>
-        <type value="both" />
-      </patternAddress>
-    </element>
-    <element id="Organization.address:Strassenanschrift.extension">
-      <path value="Organization.address.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Organization.address:Strassenanschrift.extension:Stadtteil">
-      <path value="Organization.address.extension" />
-      <sliceName value="Stadtteil" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.type">
-      <path value="Organization.address.type" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.line">
-      <path value="Organization.address.line" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.line.extension">
-      <path value="Organization.address.line.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Strasse" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Hausnummer" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Adresszusatz" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.line.extension:Postfach">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Postfach" />
-      <max value="0" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.city">
-      <path value="Organization.address.city" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.postalCode">
-      <path value="Organization.address.postalCode" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Strassenanschrift.country">
-      <path value="Organization.address.country" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach">
-      <path value="Organization.address" />
-      <sliceName value="Postfach" />
-      <type>
-        <code value="Address" />
-        <profile value="http://fhir.de/StructureDefinition/address-de-basis" />
-      </type>
-      <patternAddress>
-        <type value="postal" />
-      </patternAddress>
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.extension">
-      <path value="Organization.address.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Organization.address:Postfach.extension:Stadtteil">
-      <path value="Organization.address.extension" />
-      <sliceName value="Stadtteil" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.type">
-      <path value="Organization.address.type" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.line">
-      <path value="Organization.address.line" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.line.extension">
-      <path value="Organization.address.line.extension" />
-      <slicing>
-        <discriminator>
-          <type value="value" />
-          <path value="url" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
-    </element>
-    <element id="Organization.address:Postfach.line.extension:Strasse">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Strasse" />
-      <max value="0" />
-    </element>
-    <element id="Organization.address:Postfach.line.extension:Hausnummer">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Hausnummer" />
-      <max value="0" />
-    </element>
-    <element id="Organization.address:Postfach.line.extension:Adresszusatz">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Adresszusatz" />
-      <max value="0" />
-    </element>
-    <element id="Organization.address:Postfach.line.extension:Postfach">
-      <path value="Organization.address.line.extension" />
-      <sliceName value="Postfach" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.city">
-      <path value="Organization.address.city" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.postalCode">
-      <path value="Organization.address.postalCode" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.address:Postfach.country">
-      <path value="Organization.address.country" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.partOf">
-      <path value="Organization.partOf" />
-      <mustSupport value="true" />
-    </element>
-  </differential>
+    <path value="Organization.id" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.meta">
+    <path value="Organization.meta" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.meta.profile">
+    <path value="Organization.meta.profile" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.type">
+    <path value="Organization.type" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.name">
+    <path value="Organization.name" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom">
+    <path value="Organization.telecom" />
+    <slicing>
+      <discriminator>
+        <type value="pattern" />
+        <path value="$this" />
+      </discriminator>
+      <rules value="open" />
+    </slicing>
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:telefon">
+    <path value="Organization.telecom" />
+    <sliceName value="telefon" />
+    <patternContactPoint>
+      <system value="phone" />
+    </patternContactPoint>
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:telefon.system">
+    <path value="Organization.telecom.system" />
+    <min value="1" />
+  </element>
+  <element id="Organization.telecom:telefon.value">
+    <path value="Organization.telecom.value" />
+    <min value="1" />
+  </element>
+  <element id="Organization.telecom:fax">
+    <path value="Organization.telecom" />
+    <sliceName value="fax" />
+    <patternContactPoint>
+      <system value="fax" />
+    </patternContactPoint>
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:fax.system">
+    <path value="Organization.telecom.system" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:fax.value">
+    <path value="Organization.telecom.value" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:funk">
+    <path value="Organization.telecom" />
+    <sliceName value="funk" />
+    <patternContactPoint>
+      <system value="pager" />
+    </patternContactPoint>
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:funk.system">
+    <path value="Organization.telecom.system" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:funk.value">
+    <path value="Organization.telecom.value" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:email">
+    <path value="Organization.telecom" />
+    <sliceName value="email" />
+    <patternContactPoint>
+      <system value="email" />
+    </patternContactPoint>
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:email.system">
+    <path value="Organization.telecom.system" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.telecom:email.value">
+    <path value="Organization.telecom.value" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address">
+    <path value="Organization.address" />
+    <slicing>
+      <discriminator>
+        <type value="pattern" />
+        <path value="$this" />
+      </discriminator>
+      <rules value="open" />
+    </slicing>
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift">
+    <path value="Organization.address" />
+    <sliceName value="Strassenanschrift" />
+    <type>
+      <code value="Address" />
+      <profile value="http://fhir.de/StructureDefinition/address-de-basis" />
+    </type>
+    <patternAddress>
+      <type value="both" />
+    </patternAddress>
+  </element>
+  <element id="Organization.address:Strassenanschrift.extension">
+    <path value="Organization.address.extension" />
+    <slicing>
+      <discriminator>
+        <type value="value" />
+        <path value="url" />
+      </discriminator>
+      <rules value="open" />
+    </slicing>
+  </element>
+  <element id="Organization.address:Strassenanschrift.extension:Stadtteil">
+    <path value="Organization.address.extension" />
+    <sliceName value="Stadtteil" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.type">
+    <path value="Organization.address.type" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.line">
+    <path value="Organization.address.line" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.line.extension">
+    <path value="Organization.address.line.extension" />
+    <slicing>
+      <discriminator>
+        <type value="value" />
+        <path value="url" />
+      </discriminator>
+      <rules value="open" />
+    </slicing>
+  </element>
+  <element id="Organization.address:Strassenanschrift.line.extension:Strasse">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Strasse" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.line.extension:Hausnummer">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Hausnummer" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.line.extension:Adresszusatz">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Adresszusatz" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.line.extension:Postfach">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Postfach" />
+    <max value="0" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.city">
+    <path value="Organization.address.city" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.postalCode">
+    <path value="Organization.address.postalCode" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Strassenanschrift.country">
+    <path value="Organization.address.country" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach">
+    <path value="Organization.address" />
+    <sliceName value="Postfach" />
+    <type>
+      <code value="Address" />
+      <profile value="http://fhir.de/StructureDefinition/address-de-basis" />
+    </type>
+    <patternAddress>
+      <type value="postal" />
+    </patternAddress>
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach.extension">
+    <path value="Organization.address.extension" />
+    <slicing>
+      <discriminator>
+        <type value="value" />
+        <path value="url" />
+      </discriminator>
+      <rules value="open" />
+    </slicing>
+  </element>
+  <element id="Organization.address:Postfach.extension:Stadtteil">
+    <path value="Organization.address.extension" />
+    <sliceName value="Stadtteil" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach.type">
+    <path value="Organization.address.type" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach.line">
+    <path value="Organization.address.line" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach.line.extension">
+    <path value="Organization.address.line.extension" />
+    <slicing>
+      <discriminator>
+        <type value="value" />
+        <path value="url" />
+      </discriminator>
+      <rules value="open" />
+    </slicing>
+  </element>
+  <element id="Organization.address:Postfach.line.extension:Strasse">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Strasse" />
+    <max value="0" />
+  </element>
+  <element id="Organization.address:Postfach.line.extension:Hausnummer">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Hausnummer" />
+    <max value="0" />
+  </element>
+  <element id="Organization.address:Postfach.line.extension:Adresszusatz">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Adresszusatz" />
+    <max value="0" />
+  </element>
+  <element id="Organization.address:Postfach.line.extension:Postfach">
+    <path value="Organization.address.line.extension" />
+    <sliceName value="Postfach" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach.city">
+    <path value="Organization.address.city" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach.postalCode">
+    <path value="Organization.address.postalCode" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.address:Postfach.country">
+    <path value="Organization.address.country" />
+    <min value="1" />
+    <mustSupport value="true" />
+  </element>
+  <element id="Organization.partOf">
+    <path value="Organization.partOf" />
+    <mustSupport value="true" />
+  </element>
+</differential>
 </StructureDefinition>

@@ -57,7 +57,23 @@
   </element>
   <element id="Organization.type">
     <path value="Organization.type" />
+    <slicing>
+      <discriminator>
+        <type value="pattern" />
+        <path value="$this" />
+      </discriminator>
+      <rules value="open" />
+    </slicing>
     <mustSupport value="true" />
+  </element>
+  <element id="Organization.type:ZugehoerigkeitNetzwerkzentrum">
+    <path value="Organization.type" />
+    <sliceName value="ZugehoerigkeitNetzwerkzentrum" />
+    <mustSupport value="true" />
+    <binding>
+      <strength value="required">
+      <valueSet value="http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM/ZugehoerigkeitNetzwerkzentrum">
+    </binding>
   </element>
   <element id="Organization.name">
     <path value="Organization.name" />

@@ -247,6 +247,42 @@
         <code value="string" />
       </type>
     </element>
+    <element id="Basisangaben.Patientenetikett.LetzterKontakt">
+      <path value="Basisangaben.Patientenetikett.LetzterKontakt" />
+      <short value="Letzer Kontakt zu Lebzeiten des Patienten" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Vitalstatus">
+      <path value="Basisangaben.Patientenetikett.Vitalstatus" />
+      <short value="Vitalstatus des Patienten" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+    <element id="Basisangaben.Patientenetikett.Todesdatum">
+      <path value="Basisangaben.Patientenetikett.Todesdatum" />
+      <short value="Ungefähre Angabe des Todesdatum" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
+        <element id="Basisangaben.Patientenetikett.InformationsquelleFuerTodesdatum">
+      <path value="Basisangaben.Patientenetikett.InformationsquelleFuerTodesdatum" />
+      <short value="Quelle für die Meldung des Todes des Patienten" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+    </element>
     <element id="Basisangaben.Krankenkasse">
       <path value="Basisangaben.Krankenkasse" />
       <min value="0" />

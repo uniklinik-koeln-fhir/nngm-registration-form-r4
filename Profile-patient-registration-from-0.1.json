@@ -1,12 +1,11 @@
 {
     "resourceType": "StructureDefinition",
+    "id": "Profile-nNGM-Patient-Patient",
     "url": "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient",
     "version": "1.0.0",
-    "name": "PatientNngm",
-    "title": "nNGM: Profil - Patient",
-    "status": "draft",
-    "experimental": true,
-    "publisher": "Universitätsklinikum Köln",
+    "name": "Profile_nNGM_Patient_Patient",
+    "title": "Profile - nNGM - Patient - Patient",
+    "status": "active",
     "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
@@ -15,19 +14,6 @@
     "derivation": "constraint",
     "differential": {
         "element":  [
-            {
-                "id": "Patient.identifier",
-                "path": "Patient.identifier",
-                "slicing": {
-                    "discriminator":  [
-                        {
-                            "type": "value",
-                            "path": "system"
-                        }
-                    ],
-                    "rules": "open"
-                }
-            },
             {
                 "id": "Patient.name",
                 "path": "Patient.name",
@@ -174,16 +160,6 @@
                     "strength": "required",
                     "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/countrycodes"
                 }
-            },
-            {
-                "id": "Patient.contact",
-                "extension":  [
-                    {
-                        "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-                        "valueString": "Contact"
-                    }
-                ],
-                "path": "Patient.contact"
             }
         ]
     }

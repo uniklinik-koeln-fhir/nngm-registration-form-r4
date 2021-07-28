@@ -1,0 +1,47 @@
+{
+    "resourceType": "Organization",
+    "id": "ExampleOrganizationOrganisationPathologie",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/organisation/nNGM"
+        ]
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "261074009",
+                    "display": "External (qualifier value)"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "code": "440655000",
+                    "display": "Outpatient environment (environment)"
+                }
+            ]
+        }
+    ],
+    "name": "Pathologie ABC",
+    "telecom": [
+        {
+            "system": "email",
+            "value": "mail@example.com"
+        }
+    ],
+    "address": [
+        {
+            "type": "both",
+            "line": [
+                "Kerpener Str. 62"
+            ],
+            "city": "Köln",
+            "postalCode": "50937",
+            "country": "DE"
+        }
+    ]
+}

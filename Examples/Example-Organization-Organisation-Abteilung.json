@@ -1,0 +1,33 @@
+{
+    "resourceType": "Organization",
+    "id": "ExampleOrganizationOrganisationNetzwerkzentrum",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/organisation/nNGM"
+        ]
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "value": "260521003",
+                    "display": "Internal (qualifier value)"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "value": "309912009",
+                    "display": "Medical department (environment)"
+                }
+            ]
+        }
+    ],
+    "name": "Netzwerkpartner Abteilung XYZ",
+    "partOf": {
+        "reference": "Organization/ExampleOrganizationOrganisationNetzwerkzentrum"
+    }
+}

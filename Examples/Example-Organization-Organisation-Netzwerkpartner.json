@@ -1,0 +1,47 @@
+{
+    "resourceType": "Organization",
+    "id": "ExampleOrganizationOrganisationNetzwerkzentrum",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/organisation/nNGM"
+        ]
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "value": "261074009",
+                    "display": "External (qualifier value)"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "value": "440655000",
+                    "display": "Outpatient environment (environment)"
+                }
+            ]
+        }
+    ],
+    "name": "Netzwerkpartner Organisation XYZ",
+    "telecom": [
+        {
+            "system": "email",
+            "value": "mail@example.com"
+        }
+    ],
+    "address": [
+        {
+            "type": "both",
+            "line": [
+                "Test Str. 123"
+            ],
+            "city": "Dortmund",
+            "postalCode": "44225",
+            "country": "DE"
+        }
+    ]
+}

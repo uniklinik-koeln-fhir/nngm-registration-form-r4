@@ -1,0 +1,47 @@
+{
+    "resourceType": "Organization",
+    "id": "ExampleOrganizationOrganisationNetzwerkzentrum",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/organisation/nNGM"
+        ]
+    },
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "value": "260521003",
+                    "display": "Internal (qualifier value)"
+                }
+            ]
+        },
+        {
+            "coding": [
+                {
+                    "system": "http://snomed.info/sct",
+                    "value": "285201006",
+                    "display": "Hospital environment (environment)"
+                }
+            ]
+        }
+    ],
+    "name": "nNGM Zentrum Köln",
+    "telecom": [
+        {
+            "system": "email",
+            "value": "mail@example.com"
+        }
+    ],
+    "address": [
+        {
+            "type": "both",
+            "line": [
+                "Kerpener Str. 62"
+            ],
+            "city": "Köln",
+            "postalCode": "50937",
+            "country": "DE"
+        }
+    ]
+}

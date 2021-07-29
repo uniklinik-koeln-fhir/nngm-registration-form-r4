@@ -1,0 +1,15 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-nNGM-Vitalstatus",
+    "url": "http://uk-koeln.de/fhir/ValueSet/Vitalstatus",
+    "version": "1.0.0",
+    "title": "ValueSet - nNGM - Vitalstatus",
+    "name": "ValueSet_nNGM_Vitalstatus",
+    "status": "active",
+    "compose": {
+        "include":  [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/Vitalstatus"
+            }
+        ]
+    }

@@ -232,6 +232,11 @@
                 "mustSupport": true
             },
             {
+                "id": "Patient.deceased[x]",
+                "path": "Patient.deceased[x]",
+                "mustSupport": true
+            },
+            {
                 "id": "Patient.deceasedDateTime",
                 "path": "Patient.deceasedDateTime",
                 "mustSupport": true

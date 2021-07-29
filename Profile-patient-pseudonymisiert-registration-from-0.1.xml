@@ -121,12 +121,12 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Patient.deceaseddateTime">
-      <path value="Patient.deceaseddateTime" />
+    <element id="Patient.deceasedDateTime">
+      <path value="Patient.deceasedDateTime" />
       <mustSupport value="true" />
     </element>
-    <element id="Patient.deceaseddateTime.extension">
-      <path value="Patient.deceaseddateTime.extension" />
+    <element id="Patient.deceasedDateTime.extension">
+      <path value="Patient.deceasedDateTime.extension" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -135,8 +135,8 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Patient.deceaseddateTime.extension:informationsquelleTodesdatum">
-      <path value="Patient.deceaseddateTime.extension" />
+    <element id="Patient.deceasedDateTime.extension:informationsquelleTodesdatum">
+      <path value="Patient.deceasedDateTime.extension" />
       <sliceName value="informationsquelleTodesdatum" />
       <type>
         <code value="Extension" />

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Patient-PatientPseudonymisiert" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
   <version value="1.0.0" />
-  <name value="PatientPseudonimisiertNngm" />
-  <title value="nNGM: Profil - Pseudonymisierter Patient" />
-  <status value="draft" />
+  <name value="Profile_nNGM_Patient_PatientPseudonymisiert" />
+  <title value="Profile - nNGM - Patient - Patient Pseudonymisiert" />
+  <status value="active" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Patient without any identifiable data elements" />
   <fhirVersion value="4.0.1" />
@@ -24,7 +25,6 @@
         <rules value="closed" />
       </slicing>
       <min value="1" />
-      <max value="1" />
     </element>
     <element id="Patient.identifier:Patientenliste-Pseudonym">
       <path value="Patient.identifier" />
@@ -36,7 +36,7 @@
     <element id="Patient.identifier:Patientenliste-Pseudonym.system">
       <path value="Patient.identifier.system" />
       <min value="1" />
-      <fixedUri value="http://uk-koeln.de/fhir/NamingSystem/nNGM/patient-identifier" />
+      <fixedUri value="http://uk-koeln.de/fhir/sid/nNGM/patient-pseudonym" />
       <mustSupport value="true" />
     </element>
     <element id="Patient.identifier:Patientenliste-Pseudonym.value">

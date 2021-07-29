@@ -232,13 +232,13 @@
                 "mustSupport": true
             },
             {
-                "id": "Patient.deceaseddateTime",
-                "path": "Patient.deceaseddateTime",
+                "id": "Patient.deceasedDateTime",
+                "path": "Patient.deceasedDateTime",
                 "mustSupport": true
             },
             {
-                "id": "Patient.deceaseddateTime.extension",
-                "path": "Patient.deceaseddateTime.extension",
+                "id": "Patient.deceasedDateTime.extension",
+                "path": "Patient.deceasedDateTime.extension",
                 "slicing": {
                     "discriminator":  [
                         {
@@ -250,8 +250,8 @@
                 }
             },
             {
-                "id": "Patient.deceaseddateTime.extension:informationsquelleTod",
-                "path": "Patient.deceaseddateTime.extension",
+                "id": "Patient.deceasedDateTime.extension:informationsquelleTod",
+                "path": "Patient.deceasedDateTime.extension",
                 "sliceName": "informationsquelleTod",
                 "type":  [
                     {

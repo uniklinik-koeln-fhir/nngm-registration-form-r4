@@ -15,9 +15,40 @@
     "differential": {
         "element":  [
             {
+                "id": "Patient",
+                "path": "Patient",
+                "constraint":  [
+                    {
+                        "key": "pat-nngm-1",
+                        "severity": "error",
+                        "human": "Falls die Geschlechtsangabe 'other' gewählt wird, muss die amtliche Differenzierung per Extension angegeben werden",
+                        "expression": "gender.exists() and gender='other' implies gender.extension('http://fhir.de/StructureDefinition/gender-amtlich-de').exists()",
+                        "source": "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient"
+                    }
+                ]
+            },
+            {
                 "id": "Patient.name",
                 "path": "Patient.name",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "pattern",
+                            "path": "$this"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "comment": "In order to maintain the differntiations of name parts as given in the VSDM dataset or qualify prefixes as academic titles, vendors can opt to support the extensions specified in the German HumanName Base Profile https://simplifier.net/basisprofil-de-r4/humannamedebasis\nThis is however not required within the scope of this specification.",
                 "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name",
+                "path": "Patient.name",
+                "sliceName": "Name",
+                "min": 1,
+                "max": "1",
                 "type":  [
                     {
                         "code": "HumanName",
@@ -26,17 +57,126 @@
                         ]
                     }
                 ],
+                "patternHumanName": {
+                    "use": "official"
+                },
                 "mustSupport": true
             },
             {
-                "id": "Patient.name.family",
+                "id": "Patient.name:Name.use",
+                "path": "Patient.name.use",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name.family",
                 "path": "Patient.name.family",
+                "min": 1,
                 "mustSupport": true
             },
             {
-                "id": "Patient.name.given",
-                "path": "Patient.name.given",
+                "id": "Patient.name:Name.family.extension",
+                "path": "Patient.name.family.extension",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Patient.name:Name.family.extension:namenszusatz",
+                "path": "Patient.name.family.extension",
+                "sliceName": "namenszusatz",
                 "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name.family.extension:nachname",
+                "path": "Patient.name.family.extension",
+                "sliceName": "nachname",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name.family.extension:vorsatzwort",
+                "path": "Patient.name.family.extension",
+                "sliceName": "vorsatzwort",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name.given",
+                "path": "Patient.name.given",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name.prefix",
+                "path": "Patient.name.prefix",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name.prefix.extension",
+                "path": "Patient.name.prefix.extension",
+                "slicing": {
+                    "discriminator":  [
+                        {
+                            "type": "value",
+                            "path": "url"
+                        }
+                    ],
+                    "rules": "open"
+                }
+            },
+            {
+                "id": "Patient.name:Name.prefix.extension:prefix-qualifier",
+                "path": "Patient.name.prefix.extension",
+                "sliceName": "prefix-qualifier",
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.name:Name.prefix.extension:prefix-qualifier.value[x]",
+                "path": "Patient.name.prefix.extension.value[x]",
+                "fixedCode": "AC"
+            },
+            {
+                "id": "Patient.name:Geburtsname",
+                "path": "Patient.name",
+                "sliceName": "Geburtsname",
+                "max": "1",
+                "type":  [
+                    {
+                        "code": "HumanName",
+                        "profile":  [
+                            "http://fhir.de/StructureDefinition/humanname-de-basis"
+                        ]
+                    }
+                ],
+                "patternHumanName": {
+                    "use": "maiden"
+                }
+            },
+            {
+                "id": "Patient.name:Geburtsname.use",
+                "path": "Patient.name.use",
+                "min": 1
+            },
+            {
+                "id": "Patient.name:Geburtsname.family",
+                "path": "Patient.name.family",
+                "min": 1
+            },
+            {
+                "id": "Patient.name:Geburtsname.given",
+                "path": "Patient.name.given",
+                "max": "0"
+            },
+            {
+                "id": "Patient.name:Geburtsname.prefix",
+                "path": "Patient.name.prefix",
+                "max": "0"
             },
             {
                 "id": "Patient.gender",

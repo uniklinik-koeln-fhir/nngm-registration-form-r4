@@ -1,0 +1,47 @@
+{
+    "resourceType": "Patient",
+    "id": "ExamplePatientPatient",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient"
+        ]
+    },
+    "name": [
+        {
+            "use": "official",
+            "family": "Musterfrau",
+            "given": [
+                "Erika"
+            ]
+        }
+    ],
+    "gender": "female",
+    "birthDate": "1940-12-31",
+    "deceasedDateTime": "2021-01-01",
+    "_deceasedDateTime": {
+        "extension": [
+            {
+                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/izt",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
+                            "code": "Krebsregister"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "address": [
+        {
+            "type": "postal",
+            "line": [
+                "Test Str."
+            ],
+            "city": "Test",
+            "postalCode": "12345",
+            "country": "DE"
+        }
+    ]
+}

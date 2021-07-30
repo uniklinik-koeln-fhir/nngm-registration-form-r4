@@ -173,49 +173,13 @@
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassen-typ" />
       </binding>
     </element>
-    <element id="Coverage.type.coding">
-      <path value="Coverage.type.coding" />
-      <min value="1" />
-    </element>
-    <element id="Coverage.type.coding.system">
-      <path value="Coverage.type.coding.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.type.coding.code">
-      <path value="Coverage.type.coding.code" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Coverage.beneficiary">
       <path value="Coverage.beneficiary" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
-      </type>
       <mustSupport value="true" />
-    </element>
-    <element id="Coverage.beneficiary.reference">
-      <path value="Coverage.beneficiary.reference" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Coverage.dependent">
-      <path value="Coverage.dependent" />
-      <max value="0" />
     </element>
     <element id="Coverage.payor">
       <path value="Coverage.payor" />
       <max value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
-        <targetProfile value="http://fhir.de/StructureDefinition/organization-de-basis/0.2" />
-      </type>
       <mustSupport value="true" />
     </element>
     <element id="Coverage.payor.extension">

@@ -1,14 +1,10 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation",
-  "version": "1.0",
-  "title": "nNGM: ValueSet Abrechnungsinformation",
-  "name": "nNGM_ValueSet_Abrechnungsinformation",
+  "version": "1.0.0",
+  "title": "ValueSet - nNGM - Abrechnungsinformation",
+  "name": "ValueSet_nNGM_Abrechnungsinformation",
   "status": "active",
-  "experimental": false,
-  "date": "2019-02-09",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Abrechnungsinformation im Kontext von nNGM",
   "compose": {
       "include": [
           {

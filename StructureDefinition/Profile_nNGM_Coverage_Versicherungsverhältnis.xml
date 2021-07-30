@@ -100,9 +100,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Coverage.identifier.assigner.display" />
       <min value="1" />
       <mustSupport value="true" />
@@ -145,9 +142,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:PKV-Identifier.assigner.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Coverage.identifier.assigner.display" />
       <min value="1" />
       <mustSupport value="true" />
@@ -162,7 +156,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassen-typ" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassentypen" />
       </binding>
     </element>
     <element id="Coverage.beneficiary">

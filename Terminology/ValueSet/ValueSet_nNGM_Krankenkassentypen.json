@@ -1,14 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassen-typ",
-  "version": "1.0",
-  "title": "nNGM: ValueSet Krankenkassentypen",
-  "name": "nNGM_ValueSet_Krankenkassentypen",
+  "id": "ValueSet-nNGM-Krankenkassentypen",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassentypen",
+  "version": "1.0.0",
+  "title": "ValueSet - nNGM - Krankenkassentypen",
+  "name": "ValueSet_nNGM_Krankenkassentypen",
   "status": "active",
-  "experimental": false,
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Krankenkassentypen",
   "compose": {
       "include": [
           {
@@ -33,13 +30,11 @@
       "contains": [
           {
               "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
-              "version": "0.9.11",
               "code": "GKV",
               "display": "gesetzliche Krankenversicherung"
           },
           {
               "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
-              "version": "0.9.11",
               "code": "PKV",
               "display": "private Krankenversicherung"
           }

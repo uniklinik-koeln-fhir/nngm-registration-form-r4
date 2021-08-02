@@ -178,15 +178,6 @@
       </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:packYears.code.coding">
-      <path value="Observation.component.code.coding" />
-      <min value="1" />
-      <max value="1" />
-      <patternCoding>
-        <system value="http://ncit.nci.nih.gov" />
-        <code value="C73993" />
-      </patternCoding>
-    </element>
     <element id="Observation.component:packYears.value[x]">
       <path value="Observation.component.value[x]" />
       <min value="1" />
@@ -227,6 +218,7 @@
           <code value="C127065" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:nichtraucherSeit.value[x]">
       <path value="Observation.component.value[x]" />

@@ -182,15 +182,21 @@
     </element>
     <element id="Observation.component:packYears.value[x].unit">
       <path value="Observation.component.valueQuantity.unit" />
+      <min value="1" />
       <fixedString value="pack years" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.value[x].system">
       <path value="Observation.component.valueQuantity.system" />
+      <min value="1" />
       <fixedUri value="http://unitsofmeasure.org" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.value[x].code">
       <path value="Observation.component.valueQuantity.code" />
+      <min value="1" />
       <fixedCode value="1{pack years}" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:nichtraucherSeit">
       <path value="Observation.component" />

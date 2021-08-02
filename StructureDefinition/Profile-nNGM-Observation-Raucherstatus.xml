@@ -76,6 +76,7 @@
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effectiveDateTime" />
       <sliceName value="effectiveDateTime" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
@@ -85,11 +86,10 @@
         <code value="CodeableConcept" />
       </type>
     </element>
-    <element id="Observation.value[x].coding">
-      <path value="Observation.value[x].coding" />
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
       <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />

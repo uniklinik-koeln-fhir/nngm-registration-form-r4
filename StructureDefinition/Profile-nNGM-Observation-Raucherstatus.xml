@@ -70,20 +70,23 @@
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
       <min value="1" />
-      <fixedUri value="http://loinc.org" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <min value="1" />
-      <fixedCode value="72166-2" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="72166-2" />
+      </patternCoding>
       <mustSupport value="true" />
     </element>
     <element id="Observation.subject">

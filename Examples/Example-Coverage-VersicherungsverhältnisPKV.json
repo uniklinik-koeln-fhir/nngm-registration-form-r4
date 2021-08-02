@@ -1,0 +1,72 @@
+{
+    "resourceType": "Coverage",
+    "id": "ExampleCoverageVersicherungsverhältnisPKV",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
+                        "code": "voll",
+                        "display": "Vollversichert"
+                    }
+                ]
+            }
+        },
+        {
+            "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung",
+            "valueBoolean": true
+        }
+    ],
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                        "code": "PKV"
+                    }
+                ]
+            },
+            "value": "123456",
+            "assigner": {
+                "display": "Test Krankenkasse"
+            }
+        }
+    ],
+    "status": "active",
+    "type": {
+        "coding": [
+            {
+                "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                "code": "PKV",
+                "display": "private Krankenversicherung"
+            }
+        ]
+    },
+    "beneficiary": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "payor": {
+        "display": "Test Krankenkasse",
+        "extension": [
+            {
+                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+                            "value": "nNGM-BV Fall"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

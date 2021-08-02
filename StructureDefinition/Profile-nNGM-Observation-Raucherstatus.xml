@@ -82,6 +82,7 @@
     </element>
     <element id="Observation.code.coding:loinc">
       <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
       <min value="1" />
       <patternCoding>
         <system value="http://loinc.org" />

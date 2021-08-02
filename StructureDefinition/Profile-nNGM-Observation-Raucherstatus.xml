@@ -81,13 +81,12 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <min value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
-      <path value="Observation.value[x]" />
+      <path value="Observation.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
       <min value="1" />
       <binding>

@@ -119,10 +119,6 @@
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />
       </binding>
     </element>
-    <element id="Observation.dataAbsentReason">
-      <path value="Observation.dataAbsentReason" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
       <max value="0" />

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Observation-Raucherstatus" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
   <version value="1.0.0" />
-  <name value="ObservationNngmRaucherstatus" />
-  <title value="nNGM: Profil - Observation - Raucherstatus" />
-  <status value="draft" />
-  <experimental value="false" />
-  <description value="Smoking status" />
+  <name value="Profile_nNGM_Observation_Raucherstatus" />
+  <title value="Profile - nNGM - Observation - Raucherstatus" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -21,26 +20,26 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Observation.category:social-history">
+      <path value="Observation.category" />
+      <sliceName value="social-history" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding">
-      <path value="Observation.category.coding" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.system">
-      <path value="Observation.category.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/observation-category" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.code">
-      <path value="Observation.category.coding.code" />
-      <min value="1" />
-      <fixedCode value="social-history" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="social-history" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.code">
@@ -68,32 +67,16 @@
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
-      </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.subject.reference">
-      <path value="Observation.subject.reference" />
-      <min value="1" />
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.performer">
-      <path value="Observation.performer" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/RelatedPerson" />
-        <targetProfile value="http://fhir.de/StructureDefinition/organization-de-basis/0.2" />
-        <targetProfile value="http://fhir.de/StructureDefinition/patient-de-basis/0.2" />
-        <targetProfile value="http://fhir.de/StructureDefinition/practitioner-de-basis/0.2" />
-      </type>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effectiveDateTime" />
+      <sliceName value="effectiveDateTime" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
@@ -106,16 +89,6 @@
       <path value="Observation.value[x].coding" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.value[x].coding.system">
-      <path value="Observation.value[x].coding.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.value[x].coding.code">
-      <path value="Observation.value[x].coding.code" />
-      <min value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />

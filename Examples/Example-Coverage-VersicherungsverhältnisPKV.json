@@ -54,7 +54,7 @@
         "reference": "Patient/ExamplePatientPatient"
     },
     "payor": {
-        "display": "Test Krankenkasse",
+        "display": "Unbekannt",
         "extension": [
             {
                 "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation",
@@ -62,7 +62,7 @@
                     "coding": [
                         {
                             "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
-                            "value": "nNGM-BV Fall"
+                            "code": "nNGM-BV Fall"
                         }
                     ]
                 }

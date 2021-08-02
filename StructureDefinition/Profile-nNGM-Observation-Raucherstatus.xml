@@ -187,24 +187,18 @@
         <code value="C73993" />
       </patternCoding>
     </element>
-    <element id="Observation.component:packYears.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://ncit.nci.nih.gov" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:packYears.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <min value="1" />
-      <patternCode value="C73993" />
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.component:packYears.value[x]">
       <path value="Observation.component.value[x]" />
       <min value="1" />
       <type>
         <code value="Quantity" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.value[x]:valueQuantity">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueQuantity" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:packYears.value[x].unit">
@@ -234,26 +228,19 @@
         </coding>
       </patternCodeableConcept>
     </element>
-    <element id="Observation.component:nichtraucherSeit.code.coding">
-      <path value="Observation.component.code.coding" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:nichtraucherSeit.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <fixedUri value="http://ncit.nci.nih.gov" />
-    </element>
-    <element id="Observation.component:nichtraucherSeit.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <patternCode value="C127065" />
-    </element>
     <element id="Observation.component:nichtraucherSeit.value[x]">
       <path value="Observation.component.value[x]" />
       <min value="1" />
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:nichtraucherSeit.value[x]:valueDateTime">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueDateTime" />
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
   </differential>
 </StructureDefinition>

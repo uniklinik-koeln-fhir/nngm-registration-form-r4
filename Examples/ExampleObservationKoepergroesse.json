@@ -1,0 +1,35 @@
+{
+    "resourceType": "Observation",
+    "id": "ExampleObservationKoepergroesse",
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "vital-signs",
+                    "display": "Vital Signs"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "8302-2",
+                "display": "Body height"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "effectiveDateTime": "2021-01-01",
+    "valueQuantity": {
+        "value": "185",
+        "unit": "centimeter",
+        "code": "cm",
+        "system": "http://unitsofmeasure.org"
+    }
+}

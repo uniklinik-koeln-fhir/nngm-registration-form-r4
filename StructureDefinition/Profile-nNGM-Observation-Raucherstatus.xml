@@ -106,10 +106,12 @@
       <type>
         <code value="CodeableConcept" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />

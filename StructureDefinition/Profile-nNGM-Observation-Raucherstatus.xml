@@ -180,6 +180,11 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
+    <element id="Observation.component:packYears.value[x].value">
+      <path value="Observation.component.valueQuantity.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.component:packYears.value[x].unit">
       <path value="Observation.component.valueQuantity.unit" />
       <min value="1" />

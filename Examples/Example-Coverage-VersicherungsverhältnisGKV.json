@@ -1,0 +1,61 @@
+{
+    "resourceType": "Coverage",
+    "id": "ExampleCoverageVersicherungsverhältnisGKV",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung",
+            "valueBoolean": false
+        }
+    ],
+    "identifier": [
+        {
+            "type": {
+                "coding": [
+                    {
+                        "system": "http://fhir.de/CodeSystem/identifier-type-de-basis",
+                        "code": "GKV"
+                    }
+                ]
+            },
+            "system": "http://fhir.de/sid/gkv/kvid-10",
+            "value": "1234567890",
+            "assigner": {
+                "display": "Test Krankenkasse"
+            }
+        }
+    ],
+    "status": "active",
+    "type": {
+        "coding": [
+            {
+                "system": "http://fhir.de/CodeSystem/versicherungsart-de-basis",
+                "code": "GKV",
+                "display": "gesetzliche Krankenversicherung"
+            }
+        ]
+    },
+    "beneficiary": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "payor": {
+        "display": "Unbekannt",
+        "extension": [
+            {
+                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation",
+                "valueCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
+                            "code": "nNGM-BV Fall"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

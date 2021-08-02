@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Observation-Koerpergewicht" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
   <version value="1.0.0" />
-  <name value="ObservationNngmKoerperGewicht" />
-  <title value="nNGM: Profil - Observation - Körpergewicht" />
-  <status value="draft" />
+  <name value="Profile_nNGM_Observation_Koerpergewicht" />
+  <title value="Profile - nNGM - Observation - Körpergewicht" />
+  <status value="active" />
   <publisher value="Universitätsklinikum Köln" />
   <fhirVersion value="4.0.1" />
   <mapping>
@@ -40,48 +41,37 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="Observation" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/bodyweight" />
+  <baseDefinition value="http://fhir.de/StructureDefinition/observation-de-vitalsign-koerpergewicht" />
   <derivation value="constraint" />
   <differential>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
-      <slicing>
-        <description value="coding" />
-        <rules value="open" />
-      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category:vs-cat">
+      <path value="Observation.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
-      </type>
-    </element>
-    <element id="Observation.subject.reference">
-      <path value="Observation.subject.reference" />
-      <min value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
-      <slicing>
-        <description value="quantity" />
-        <rules value="open" />
-      </slicing>
-      <min value="1" />
-    </element>
-    <element id="Observation.value[x]:valueQuantity">
-      <path value="Observation.value[x]" />
-      <sliceName value="valueQuantity" />
-    </element>
-    <element id="Observation.value[x]:valueQuantity.code">
-      <path value="Observation.value[x].code" />
-      <fixedCode value="kg" />
     </element>
   </differential>
 </StructureDefinition>

@@ -13,6 +13,28 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <constraint>
+        <key value="obs-nngm-1" />
+        <severity value="error" />
+        <human value="Falls kein Messwert verfügbar ist, muss eine dataAbsentReason angegeben werden" />
+        <expression value="value.exists().not() implies dataAbsentReason.exists()" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
+      </constraint>
+    </element>
+    <element id="Observation.id">
+      <path value="Observation.id" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.meta">
+      <path value="Observation.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.meta.profile">
+      <path value="Observation.meta.profile" />
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />
@@ -88,7 +110,6 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.valueCodeableConcept" />
       <sliceName value="valueCodeableConcept" />
-      <min value="1" />
       <binding>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />

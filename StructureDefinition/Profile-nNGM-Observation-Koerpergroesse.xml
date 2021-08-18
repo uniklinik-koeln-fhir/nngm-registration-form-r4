@@ -116,9 +116,6 @@
         <description value="this" />
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="Observation.value[x]">
-      <path value="Observation.value[x]" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]:valueQuantity">

@@ -1,6 +1,6 @@
 {
     "resourceType": "Observation",
-    "id": "ExampleObservationRaucherstatusRaucher",
+    "id": "ExampleObservationRaucherstatusExRaucher",
     "meta": {
         "profile": [
             "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus"
@@ -34,23 +34,9 @@
         "coding": [
             {
                 "system": "http://loinc.org",
-                "code": "LA15920-4",
-                "display": "Former smoker"
+                "code": "LA18978-9",
+                "display": "Never smoker"
             }
         ]
-    },
-    "component": [
-        {
-            "code": {
-                "coding": [
-                  {
-                    "system": "http://ncit.nci.nih.gov",
-                    "code": "C124908",
-                    "display": "Refrain from Smoking"
-                  }
-                ]
-              },
-            "valueDateTime": "2010-01-01"
-        }
-    ]
+    }
 }

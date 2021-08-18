@@ -1,6 +1,6 @@
 {
     "resourceType": "Observation",
-    "id": "ExampleObservationRaucherstatusRaucher",
+    "id": "ExampleObservationRaucherstatusNichtRaucher",
     "meta": {
         "profile": [
             "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus"
@@ -34,8 +34,8 @@
         "coding": [
             {
                 "system": "http://loinc.org",
-                "code": "LA18977-1",
-                "display": "Current some day smoker"
+                "code": "LA15920-4",
+                "display": "Former smoker"
             }
         ]
     },
@@ -43,19 +43,14 @@
         {
             "code": {
                 "coding": [
-                    {
-                        "system": "http://ncit.nci.nih.gov",
-                        "code": "C73993",
-                        "display": "Pack Year"
-                    }
+                  {
+                    "system": "http://ncit.nci.nih.gov",
+                    "code": "C124908",
+                    "display": "Refrain from Smoking"
+                  }
                 ]
-            },
-            "valueQuantity": {
-                "value": "10",
-                "unit": "pack years",
-                "system": "http://unitsofmeasure.org",
-                "code": "1{pack years}"
-            }
+              },
+            "valueDateTime": "2010-01-01"
         }
     ]
 }

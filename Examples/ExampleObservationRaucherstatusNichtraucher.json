@@ -1,6 +1,6 @@
 {
     "resourceType": "Observation",
-    "id": "ExampleObservationRaucherstatusRaucher",
+    "id": "ExampleObservationRaucherstatusNichtRaucher",
     "meta": {
         "profile": [
             "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus"

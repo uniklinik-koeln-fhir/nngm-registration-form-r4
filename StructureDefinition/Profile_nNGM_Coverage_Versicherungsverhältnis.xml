@@ -50,14 +50,12 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-      <short value="The primary coverage ID" />
       <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Coverage.identifier:GKV-Identifier">
       <path value="Coverage.identifier" />
       <sliceName value="GKV-Identifier" />
-      <short value="The primary coverage ID" />
       <max value="1" />
       <type>
         <code value="Identifier" />
@@ -188,9 +186,6 @@
       <mustSupport value="true" />
     </element>
     <element id="Coverage.payor.display">
-      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
-        <valueBoolean value="true" />
-      </extension>
       <path value="Coverage.payor.display" />
       <min value="1" />
       <mustSupport value="true" />

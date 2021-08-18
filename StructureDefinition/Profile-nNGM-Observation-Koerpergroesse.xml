@@ -94,7 +94,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/VitalSignDE_Body_Weight_Loinc_Restricted" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/VitalSignDE_Body_Height_Loinc_Restricted" />
       </binding>
     </element>
     <element id="Observation.subject">

@@ -1,6 +1,6 @@
 {
     "resourceType": "Coverage",
-    "id": "ExampleCoverageVersicherungsverhältnisPKV",
+    "id": "ExampleCoverageVersicherungsverhaeltnisPKV",
     "meta": {
         "profile": [
             "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM"

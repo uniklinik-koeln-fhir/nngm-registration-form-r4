@@ -34,9 +34,23 @@
         "coding": [
             {
                 "system": "http://loinc.org",
-                "code": "LA18978-9",
-                "display": "Never smoker"
+                "code": "LA15920-4",
+                "display": "Former smoker"
             }
         ]
-    }
+    },
+    "component": [
+        {
+            "code": {
+                "coding": [
+                  {
+                    "system": "http://ncit.nci.nih.gov",
+                    "code": "C124908",
+                    "display": "Refrain from Smoking"
+                  }
+                ]
+              },
+            "valueDateTime": "2010-01-01"
+        }
+    ]
 }

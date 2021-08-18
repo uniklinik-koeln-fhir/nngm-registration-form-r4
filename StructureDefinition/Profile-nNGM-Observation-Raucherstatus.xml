@@ -214,7 +214,7 @@
       <patternCodeableConcept>
         <coding>
           <system value="http://ncit.nci.nih.gov" />
-          <code value="C127065" />
+          <code value="C124908" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />

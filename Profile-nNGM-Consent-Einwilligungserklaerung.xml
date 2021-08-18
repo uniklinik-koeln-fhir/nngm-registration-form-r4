@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Consent-Einwilligungserklaerung" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
   <version value="1.0.0" />
-  <name value="nNGM_Consent_Einwilligungserklärung" />
-  <title value="nNGM: Profil - Consent - Einwilligungserklärung" />
-  <status value="draft" />
-  <publisher value="Universitätsklinikum Köln" />
-  <description value="Date of consent. Link to digital copy of consent form." />
+  <name value="Profile_nNGM_Consent_Einwilligungserklaerung" />
+  <title value="Profile - nNGM - Consent - Einwilligungserklärung" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />
   <abstract value="false" />
@@ -53,32 +52,23 @@
       <path value="Consent.category.coding" />
       <min value="1" />
     </element>
-    <element id="Consent.category.coding.system">
-      <path value="Consent.category.coding.system" />
+    <element id="Consent.category.coding:loinc">
+      <path value="Consent.category.coding" />
+      <sliceName value="loinc" />
       <min value="1" />
-      <fixedUri value="http://loinc.org" />
-    </element>
-    <element id="Consent.category.coding.code">
-      <path value="Consent.category.coding.code" />
-      <min value="1" />
-      <fixedCode value="59284-0" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="59284-0" />
+      </patternCoding>
     </element>
     <element id="Consent.patient">
       <path value="Consent.patient" />
       <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
-      </type>
       <mustSupport value="true" />
-    </element>
-    <element id="Consent.patient.reference">
-      <path value="Consent.patient.reference" />
-      <min value="1" />
     </element>
     <element id="Consent.dateTime">
       <path value="Consent.dateTime" />
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Consent.policyRule">
@@ -89,18 +79,6 @@
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy" />
       </binding>
-    </element>
-    <element id="Consent.policyRule.coding">
-      <path value="Consent.policyRule.coding" />
-      <min value="1" />
-    </element>
-    <element id="Consent.policyRule.coding.system">
-      <path value="Consent.policyRule.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Consent.policyRule.coding.code">
-      <path value="Consent.policyRule.coding.code" />
-      <min value="1" />
     </element>
     <element id="Consent.provision">
       <path value="Consent.provision" />

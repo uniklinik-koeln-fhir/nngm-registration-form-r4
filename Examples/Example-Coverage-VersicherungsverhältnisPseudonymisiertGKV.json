@@ -1,6 +1,6 @@
 {
     "resourceType": "Coverage",
-    "id": "ExampleCoverageVersicherungsverhältnisGKV",
+    "id": "ExampleCoverageVersicherungsverhaeltnisPseudonymisiertGKV",
     "meta": {
         "profile": [
             "http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/pseudonymisiert"

@@ -70,9 +70,9 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Specimen.type.coding:sct">
+    <element id="Specimen.type.coding:ncit">
       <path value="Specimen.type.coding" />
-      <sliceName value="sct" />
+      <sliceName value="ncit" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />

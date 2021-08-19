@@ -68,7 +68,7 @@
       <min value="1" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl">
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
           <code value="C16213" />
         </coding>
       </patternCodeableConcept>

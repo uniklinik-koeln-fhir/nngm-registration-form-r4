@@ -50,7 +50,7 @@
     </element>
     <element id="Specimen.identifier:biopsieID.system">
       <path value="Specimen.identifier.system" />
-      <fixedUri value="http://uk-koeln.de/NamingSystem/nNGM/biopsienummer" />
+      <fixedUri value="http://uk-koeln.de/fhir/sid/nNGM/biopsieid" />
       <mustSupport value="true" />
     </element>
     <element id="Specimen.type">
@@ -70,29 +70,16 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Specimen.type.coding:snomedGlobalPatientSet">
+    <element id="Specimen.type.coding:sct">
       <path value="Specimen.type.coding" />
-      <sliceName value="snomedGlobalPatientSet" />
+      <sliceName value="sct" />
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
-    </element>
-    <element id="Specimen.type.coding:snomedGlobalPatientSet.system">
-      <path value="Specimen.type.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://snomed.info/sct" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Specimen.type.coding:snomedGlobalPatientSet.version">
-      <path value="Specimen.type.coding.version" />
-      <min value="1" />
-      <fixedString value="http://snomed.info/sct/900000000000207008" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Specimen.type.coding:snomedGlobalPatientSet.code">
-      <path value="Specimen.type.coding.code" />
-      <min value="1" />
-      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/MaterialTyp" />
+      </binding>
     </element>
     <element id="Specimen.subject">
       <path value="Specimen.subject" />

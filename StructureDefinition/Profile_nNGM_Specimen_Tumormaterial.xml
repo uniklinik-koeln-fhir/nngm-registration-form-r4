@@ -36,8 +36,8 @@
       <path value="Specimen.identifier" />
       <slicing>
         <discriminator>
-          <type value="value" />
-          <path value="system" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -46,11 +46,14 @@
     <element id="Specimen.identifier:biopsieID">
       <path value="Specimen.identifier" />
       <sliceName value="biopsieID" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Specimen.identifier:biopsieID.system">
-      <path value="Specimen.identifier.system" />
-      <fixedUri value="http://uk-koeln.de/fhir/sid/nNGM/biopsieid" />
+      <patternIdentifier>
+        <type>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/v2-0203" />
+            <code value="SID" />
+          </coding>
+        </type>
+      </patternIdentifier>
       <mustSupport value="true" />
     </element>
     <element id="Specimen.type">

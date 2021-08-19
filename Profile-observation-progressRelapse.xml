@@ -93,7 +93,7 @@
     <element id="Observation.code.coding.system">
       <path value="Observation.code.coding.system" />
       <min value="1" />
-      <fixedUri value="http://ncit.nci.nih.gov" />
+      <fixedUri value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding.code">

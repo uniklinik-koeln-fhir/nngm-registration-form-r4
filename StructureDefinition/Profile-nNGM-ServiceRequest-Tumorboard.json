@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "Profile_nNGM_ServiceRequest_Tumorboard",
+  "id": "Profile-nNGM-ServiceRequest-Tumorboard",
   "url": "http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard",
   "version": "1.0.0",
   "name": "Profile_nNGM_ServiceRequest_Tumorboard",

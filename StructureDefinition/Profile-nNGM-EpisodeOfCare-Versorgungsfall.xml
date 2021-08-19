@@ -63,6 +63,17 @@
       <fixedCode value="active" />
       <mustSupport value="true" />
     </element>
+    <element id="EpisodeOfCare.type">
+      <path value="EpisodeOfCare.type" />
+      <min value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl">
+          <code value="C16213" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
     <element id="EpisodeOfCare.patient">
       <path value="EpisodeOfCare.patient" />
       <min value="1" />

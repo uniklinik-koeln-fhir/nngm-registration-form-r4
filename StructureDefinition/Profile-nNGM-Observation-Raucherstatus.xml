@@ -175,7 +175,7 @@
       <path value="Observation.component.code" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://ncit.nci.nih.gov" />
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
           <code value="C73993" />
         </coding>
       </patternCodeableConcept>
@@ -228,7 +228,7 @@
       <path value="Observation.component.code" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://ncit.nci.nih.gov" />
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
           <code value="C124908" />
         </coding>
       </patternCodeableConcept>

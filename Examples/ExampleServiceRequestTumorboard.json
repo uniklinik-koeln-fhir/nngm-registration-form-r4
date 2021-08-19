@@ -1,0 +1,30 @@
+{
+    "resourceType": "ServiceRequest",
+    "id": "ExampleServiceRequestTumorboard",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard"
+        ]
+    },
+    "status": "active",
+    "intend": "proposal",
+    "code": {
+        "coding": [
+            {
+                "coding": [
+                    {
+                        "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                        "code": "C93304",
+                        "display": "Tumor Board Review"
+                    }
+                ]
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "requester": {
+        "reference": "PractitionerRole/ExampleBehandlerRollePractitionerRole"
+    }
+}

@@ -50,6 +50,13 @@
     </element>
     <element id="Consent.category.coding">
       <path value="Consent.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <min value="1" />
     </element>
     <element id="Consent.category.coding:loinc">

@@ -63,6 +63,7 @@
       <path value="Consent.category.coding" />
       <sliceName value="loinc" />
       <min value="1" />
+      <max value="1" />
       <patternCoding>
         <system value="http://loinc.org" />
         <code value="59284-0" />

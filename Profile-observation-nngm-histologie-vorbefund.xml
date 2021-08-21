@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histo-vorbefund" />
+  <id value="Profile-nNGM-Observation-Histologie" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie" />
   <version value="1.0.0" />
-  <name value="HistologieVorbefund" />
-  <status value="draft" />
+  <name value="Profile_nNGM_Observation_Histologie" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="workflow" />
@@ -69,23 +70,13 @@
     <element id="Observation.category">
       <path value="Observation.category" />
       <min value="1" />
-      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding">
-      <path value="Observation.category.coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Observation.category.coding.system">
-      <path value="Observation.category.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://terminology.hl7.org/CodeSystem/observation-category" />
-    </element>
-    <element id="Observation.category.coding.code">
-      <path value="Observation.category.coding.code" />
-      <min value="1" />
-      <fixedCode value="laboratory" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
@@ -102,16 +93,6 @@
     <element id="Observation.subject">
       <path value="Observation.subject" />
       <min value="1" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/patient" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.subject.reference">
-      <path value="Observation.subject.reference" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">
@@ -121,7 +102,7 @@
       </type>
       <mustSupport value="true" />
       <binding>
-        <strength value="preferred" />
+        <strength value="extensible" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation" />
       </binding>
     </element>

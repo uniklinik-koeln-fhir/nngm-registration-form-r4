@@ -4,6 +4,7 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/histologie" />
   <version value="1.0.0" />
   <name value="Profile_nNGM_Observation_Histologie" />
+  <title value="Profile - nNGM - Observation - Histologie" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>

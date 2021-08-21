@@ -5,8 +5,7 @@
   "version": "1.0.0",
   "name": "Profile_nNGM_ServiceRequest_AnforderungDerDiagnostik",
   "title": "Profile - nNGM - ServiceRequest - AnforderungDerDiagnostik",
-  "status": "draft",
-  "publisher": "Universitätsklinikum Köln",
+  "status": "active",
   "fhirVersion": "4.0.1",
   "kind": "resource",
   "abstract": false,
@@ -56,17 +55,6 @@
         "mustSupport": true
       },
       {
-        "id": "ServiceRequest.category",
-        "path": "ServiceRequest.category",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-kategorie"
-        }
-      },
-      {
         "id": "ServiceRequest.code",
         "path": "ServiceRequest.code",
         "min": 1,
@@ -80,20 +68,59 @@
         "id": "ServiceRequest.orderDetail",
         "path": "ServiceRequest.orderDetail",
         "mustSupport": true,
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:histologischeAbklaerung",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "histologischeAbklaerung",
+        "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-orderDetails"
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-histologischeAbklaerung"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:molekularpathologie",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "molekularpathologie",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-molekularpathologie"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:ngsPanel",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "ngsPanel",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-ngsPanel"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:fastTrack",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "fastTrack",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-fastTrack"
         }
       },
       {
         "id": "ServiceRequest.subject",
         "path": "ServiceRequest.subject",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.subject.reference",
-        "path": "ServiceRequest.subject.reference",
-        "min": 1,
         "mustSupport": true
       },
       {
@@ -104,33 +131,19 @@
       {
         "id": "ServiceRequest.requester",
         "path": "ServiceRequest.requester",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.requester.reference",
-        "path": "ServiceRequest.requester.reference",
+        "min": "1",
         "mustSupport": true
       },
       {
         "id": "ServiceRequest.performer",
         "path": "ServiceRequest.performer",
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.performer.reference",
-        "path": "ServiceRequest.performer.reference",
+        "min": "1",
         "mustSupport": true
       },
       {
         "id": "ServiceRequest.specimen",
         "path": "ServiceRequest.specimen",
-        "max": "1",
-        "mustSupport": true
-      },
-      {
-        "id": "ServiceRequest.specimen.reference",
-        "path": "ServiceRequest.specimen.reference",
+        "min": "1",
         "mustSupport": true
       }
     ]

@@ -1,0 +1,84 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-Anforderung-HistologischeAbklaerung",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-histologischeAbklaerung",
+    "version": "1.0",
+    "title": "ValueSet - Anforderung - Histologische Abklärung",
+    "name": "ValueSet_Anforderung_HistologischeAbklaerung",
+    "status": "active",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "concept": [
+                    {
+                        "code": "40559-7",
+                        "display": "Cytokeratin 7 Ag [Presence] in Tissue by Immune stain"
+                    },
+                    {
+                        "code": "33055-5",
+                        "display": "Ki-67 nuclear Ag [Presence] in Tissue by Immune stain"
+                    },
+                    {
+                        "code": "10514-8",
+                        "display": "Synaptophysin Ag [Presence] in Tissue by Immune stain"
+                    },
+                    {
+                        "code": "40564-7",
+                        "display": "Thyroid transcription factor 1 Ag [Presence] in Tissue by Immune stainActive"
+                    }
+                ]
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-histologischeAbklaerung-erweiterung",
+                "concept": [
+                    {
+                        "code": "p40",
+                        "display": "P40 Ag [Precense] in Tissue by Immune stain"
+                    },
+                    {
+                        "code": "napsin-a",
+                        "display": "Napsin A Ag [Precense] in Tissue by Immune stain"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "9ce5c132-f7aa-4b47-80d9-128de8cea5d4",
+        "timestamp": "2020-10-15T12:34:08+00:00",
+        "total": 9,
+        "contains": [
+            {
+                "system": "http://loinc.org",
+                "code": "40559-7",
+                "display": "Cytokeratin 7 Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "33055-5",
+                "display": "Ki-67 nuclear Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "10514-8",
+                "display": "Synaptophysin Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "40564-7",
+                "display": "Thyroid transcription factor 1 Ag [Presence] in Tissue by Immune stain"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-histologischeAbklaerung-erweiterung",
+                "code": "p40",
+                "display": "P40 Ag [Precense] in Tissue by Immune stain"
+            },
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-histologischeAbklaerung-erweiterung",
+                "code": "napsin-a",
+                "display": "Napsin A Ag [Precense] in Tissue by Immune stain"
+            }
+        ]
+    }
+}

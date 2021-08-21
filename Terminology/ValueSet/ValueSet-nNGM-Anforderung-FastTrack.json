@@ -30,7 +30,7 @@
   "expansion": {
       "identifier": "9ce5c132-f7aa-4b47-80d9-128de8cea5d4",
       "timestamp": "2020-10-15T12:34:08+00:00",
-      "total": 9,
+      "total": 3,
       "contains": [
           {
               "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",

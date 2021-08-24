@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/nNGM/Anforderung" />
+  <name value="Anforderung" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/nNGM/Anforderung" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="Anforderung">
+      <path value="Anforderung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="Anforderung.EckdatenDerAnforderung">
+      <path value="Anforderung.EckdatenDerAnforderung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.EckdatenDerAnforderung.Anforderungsdatum">
+      <path value="Anforderung.EckdatenDerAnforderung.Anforderungsdatum" />
+      <short value="Datum der Einreichung des nNGM-Anforderungsformulars" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.EckdatenDerAnforderung.Aufenthaltsart">
+      <path value="Anforderung.EckdatenDerAnforderung.Aufenthaltsart" />
+      <short value="Aufenthaltsart / Fallart des Patienten zur Zeit der Anforderung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik">
+      <path value="Anforderung.Diagnostik" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Typ">
+      <path value="Anforderung.Diagnostik.Typ" />
+      <short value="Differenzierung ob eine Gewebediagnostik oder Blutdiagnostik durchgeführt werden soll" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.GewuenschteUntersuchung">
+      <path value="Anforderung.Diagnostik.GewuenschteUntersuchung" />
+      <short value="Differenzierung der Einzeluntersuchungen, falls keine Gesamtdiagnostik durchgeführt werden soll" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.GrundFehlendeBiopsy">
+      <path value="Anforderung.Diagnostik.GrundFehlendeBiopsy" />
+      <short value="Angabe von Gründen falls innerhalb der Anforderung keine Gewebediagnostik aufgelistet ist" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung">
+      <path value="Anforderung.Diagnostik.Resistenztestung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.ErfolgteTherapien">
+      <path value="Anforderung.Diagnostik.Resistenztestung.ErfolgteTherapien" />
+      <short value="Welche TKI-Therapien wurden bereits durchgeführt?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation">
+      <path value="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation.Exon">
+      <path value="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation.Exon" />
+      <short value="Freitext Angaben zur EGFR Mutation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation.HGVS-c">
+      <path value="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation.HGVS-c" />
+      <short value="Freitext Angabe zur Mutation cDNA" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation.HGVS-p">
+      <path value="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation.HGVS-p" />
+      <short value="Freitext Angabe zur Mutation Protein" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.ALK-Fusion">
+      <path value="Anforderung.Diagnostik.Resistenztestung.ALK-Fusion" />
+      <short value="Angabe des Fusionspartners bei einer ALK-Fusion" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.ROS1-Fusion">
+      <path value="Anforderung.Diagnostik.Resistenztestung.ROS1-Fusion" />
+      <short value="Angabe des Fusionspartners bei einer ROS1-Fusion" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.EGFR-TKI">
+      <path value="Anforderung.Diagnostik.Resistenztestung.EGFR-TKI" />
+      <short value="Welche EGFR TKI wurden bereits eingesetzt?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.ALK-TKI">
+      <path value="Anforderung.Diagnostik.Resistenztestung.ALK-TKI" />
+      <short value="Welche ALK TKI wurden bereits eingesetzt?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Diagnostik.Resistenztestung.ROS1-TKI">
+      <path value="Anforderung.Diagnostik.Resistenztestung.ROS1-TKI" />
+      <short value="Welche ROS1 TKI wurden bereits eingesetzt?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumorboard">
+      <path value="Anforderung.Tumorboard" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumorboard.Anmeldung">
+      <path value="Anforderung.Tumorboard.Anmeldung" />
+      <short value="Angabe ob der Diagnostikfall innerhalb eines nNGM Tumorboards besprochen werden soll" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumorboard.PersoenlicheVorstellung">
+      <path value="Anforderung.Tumorboard.PersoenlicheVorstellung" />
+      <short value="Beantragung, dass Behandler persönlich beim Tumroboard teilnimmt" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumorboard.EMailBehandler">
+      <path value="Anforderung.Tumorboard.EMailBehandler" />
+      <short value="E-Mail des Behandlers für die Einladung zum Tumorboard" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterial">
+      <path value="Anforderung.Tumormaterial" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterial.BiopsieId">
+      <path value="Anforderung.Tumormaterial.BiopsieId" />
+      <short value="Eindeutige Proben-Id, kann extern vergeben werden (z.B. durch Pathologie)" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterial.Entnahmedatum">
+      <path value="Anforderung.Tumormaterial.Entnahmedatum" />
+      <short value="Datum der Materialentnahme" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterial.Entnahmekontext">
+      <path value="Anforderung.Tumormaterial.Entnahmekontext" />
+      <short value="Wurde die Materialentnahme in einem stationären oder ambulanten Kontext durchgeführt?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung">
+      <path value="Anforderung.Tumormaterialanforderung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.Datum">
+      <path value="Anforderung.Tumormaterialanforderung.Datum" />
+      <short value="Datum des Versands der Anforderung für das Tumormaterial" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.DatumVersand">
+      <path value="Anforderung.Tumormaterialanforderung.DatumVersand" />
+      <short value="Datum des Versands des Tumormaterials" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.DatumStorno">
+      <path value="Anforderung.Tumormaterialanforderung.DatumStorno" />
+      <short value="Datum der Stornierung der Anforderung für das Tumormaterial" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.Wiederholung">
+      <path value="Anforderung.Tumormaterialanforderung.Wiederholung" />
+      <short value="Angabe wie oft die Anforderung des Tumormaterial wiederholt wurde" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.Pathologie">
+      <path value="Anforderung.Tumormaterialanforderung.Pathologie" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.Pathologie.Name">
+      <path value="Anforderung.Tumormaterialanforderung.Pathologie.Name" />
+      <short value="Angabe des Names der Pathologie welche das Tumormaterial aufbewart" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.Pathologie.Anschrift">
+      <path value="Anforderung.Tumormaterialanforderung.Pathologie.Anschrift" />
+      <short value="Anschrift der Pathologie welche das Tumormaterial aufbewart" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+    <element id="Anforderung.Tumormaterialanforderung.Pathologie.Pathologe">
+      <path value="Anforderung.Tumormaterialanforderung.Pathologie.Pathologe" />
+      <short value="Name des Verantwortlichen innerhalb der Pathologie welche das Tumormaterial aufbewar" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>

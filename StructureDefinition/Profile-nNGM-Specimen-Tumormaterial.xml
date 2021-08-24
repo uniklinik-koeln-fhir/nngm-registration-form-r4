@@ -65,8 +65,8 @@
       <path value="Specimen.type.coding" />
       <slicing>
         <discriminator>
-          <type value="$this" />
-          <path value="pattern" />
+          <type value="pattern" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>

@@ -44,6 +44,22 @@
         "mustSupport": true
       },
       {
+        "id": "ServiceRequest.extension:GrundFehlendeBiopsy",
+        "path": "ServiceRequest.extension",
+        "sliceName": "GrundFehlendeBiopsy",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/GrundFehlendeBiopsy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
         "id": "ServiceRequest.status",
         "path": "ServiceRequest.status",
         "mustSupport": true

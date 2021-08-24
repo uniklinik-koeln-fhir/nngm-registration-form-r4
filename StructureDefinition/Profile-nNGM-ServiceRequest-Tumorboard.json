@@ -1,0 +1,104 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Profile-nNGM-ServiceRequest-Tumorboard",
+  "url": "http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/tumorboard",
+  "version": "1.0.0",
+  "name": "Profile_nNGM_ServiceRequest_Tumorboard",
+  "title": "Profile - nNGM - ServiceRequest - Tumorboard",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "fixedCode": "active",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "fixedCode": "proposal",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "min": 1,
+        "mustSupport": true,
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+              "code": "C93304"
+            }
+          ]
+        }
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "min": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+              "http://hl7.org/fhir/StructureDefinition/Organization"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester.extension",
+        "path": "ServiceRequest.requester.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.requester.extension:persoenlicheTeilnahme",
+        "path": "ServiceRequest.requester.extension",
+        "sliceName": "persoenlicheTeilnahme",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/persoenlicheTeilnahme"
+            ]
+          } 
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.bodySite",
+        "path": "ServiceRequest.bodySite",
+        "max": "0"
+      }
+    ]
+  }
+}

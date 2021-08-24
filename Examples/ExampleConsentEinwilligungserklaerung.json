@@ -1,0 +1,41 @@
+{
+    "resourceType": "Consent",
+    "id": "ExampleConsentEinwilligungserklaerung",
+    "status": "active",
+    "scope": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+                "code": "patient-privacy",
+                "display": "Privacy Consent"
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "59284-0",
+                    "display": "Consent Document"
+                }
+            ]
+        }
+    ],
+    "patient": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "dateTime": "2021-01-01",
+    "policyRule": {
+        "coding": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
+                "code": "1a",
+                "display": "Teil 1a: Molekularpathologische Diagnostik im nNGM"
+            }
+        ]
+    },
+    "provision": {
+        "type": "permit"
+    }
+}

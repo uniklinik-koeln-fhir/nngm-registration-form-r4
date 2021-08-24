@@ -1,0 +1,33 @@
+{
+    "resourceType": "EpisodeOfCare",
+    "id": "ExampleEpisodeOfCareVersorgungsfall",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/EpisodeOfCare/nNGM"
+        ]
+    },
+    "extension": [
+        {
+            "url": "https://simplifier.net/nngm-registration-form/datumprogress",
+            "valueDate": "2021-01-01"
+        },
+        {
+            "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/Erstdiagnose",
+            "valueDate": "2019-06-01"
+        }
+    ],
+    "status": "active",
+    "type": [
+        {
+            "coding": [
+                {
+                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                    "code": "C16213"
+                }
+            ]
+        }
+    ],
+    "patient": {
+        "reference": "Patient/ExamplePatientPatient"
+    }
+}

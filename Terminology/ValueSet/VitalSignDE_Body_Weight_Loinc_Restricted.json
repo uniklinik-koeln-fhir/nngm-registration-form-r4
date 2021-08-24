@@ -1,0 +1,24 @@
+{
+    "resourceType": "ValueSet",
+    "id": "VitalSignDE-Body-Weight-Loinc-Restricted",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/VitalSignDE_Body_Weight_Loinc_Restricted",
+    "version": "1.0.0",
+    "name": "VitalSignDE_Body_Weight_Loinc_Restricted",
+    "title": "VitalSignDE_Body_Weight_Loinc_Restricted",
+    "status": "active",
+    "description": "VitalSignDE_Body_Weight_Loinc enthält Codes zur Kodierung der Messung eines Körpergewichtes",
+    "immutable": false,
+    "compose": {
+        "include":  [
+            {
+                "system": "http://loinc.org",
+                "concept":  [
+                    {
+                        "code": "29463-7",
+                        "display": "Body weight"
+                    }
+                ]
+            }
+        ]
+    }
+}

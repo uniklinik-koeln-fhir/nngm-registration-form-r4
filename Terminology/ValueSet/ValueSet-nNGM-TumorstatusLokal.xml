@@ -1,0 +1,58 @@
+<ValueSet xmlns="http://hl7.org/fhir">
+    <id value="ValueSet-nNGM-TumorstatusLokal" />
+    <url value="http://uk-koeln.de/fhir/ValueSet/nngm/tumorstatus-lokal" />
+    <version value="0.1" />
+    <name value="ValueSet_nNGM_TumorstatusLokal" />
+    <status value="active" />
+    <description value="Lokaler Tumorstatus nach Einheitlicher onkologischer Basisdatensatz." />
+    <compose>
+        <include>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+        </include>
+    </compose>
+    <expansion>
+        <identifier value="uk-koeln-work-tumorstatus-lokal-1" />
+        <timestamp value="2018-10-31" />
+        <total value="8" />
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="K" />
+            <display value="kein Tumor nachweisbar" />
+        </contains>
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="T" />
+            <display value="Tumorreste (Residualtumor)" />
+        </contains>
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="P" />
+            <display value="Tumorreste Residualtumor Progress" />
+        </contains>
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="N" />
+            <display value="Tumorreste Residualtumor No Change" />
+        </contains>
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="R" />
+            <display value="Lokalrezidiv" />
+        </contains>
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="F" />
+            <display value="fraglicher Befund" />
+        </contains>
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="U" />
+            <display value="unbekannt" />
+        </contains>
+        <contains>
+            <system value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+            <code value="X" />
+            <display value="fehlende Angabe" />
+        </contains>
+    </expansion>
+</ValueSet>

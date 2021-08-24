@@ -1,0 +1,41 @@
+{
+    "resourceType": "Observation",
+    "id": "ExampleObservationEcog",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/ecog"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "survey"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "89247-1"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "effectiveDateTime": "2021-01-01",
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "LA9622-7",
+                "display": "Fully active, able to carry on all pre-disease performance without restriction"
+            }
+        ]
+    }
+}

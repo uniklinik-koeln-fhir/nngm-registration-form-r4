@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Consent-Einwilligungserklaerung" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
+  <version value="1.0.0" />
+  <name value="Profile_nNGM_Consent_Einwilligungserklaerung" />
+  <title value="Profile - nNGM - Consent - Einwilligungserklärung" />
+  <status value="active" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Consent" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Consent.status">
+      <path value="Consent.status" />
+      <fixedCode value="active" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.scope">
+      <path value="Consent.scope" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.scope.coding">
+      <path value="Consent.scope.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Consent.scope.coding:patientPrivacy">
+      <path value="Consent.scope.coding" />
+      <sliceName value="patientPrivacy" />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/consentscope" />
+        <code value="patient-privacy" />
+      </patternCoding>
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.category">
+      <path value="Consent.category" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.category.coding">
+      <path value="Consent.category.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+    </element>
+    <element id="Consent.category.coding:loinc">
+      <path value="Consent.category.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <max value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="59284-0" />
+      </patternCoding>
+    </element>
+    <element id="Consent.patient">
+      <path value="Consent.patient" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.dateTime">
+      <path value="Consent.dateTime" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.policyRule">
+      <path value="Consent.policyRule" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy" />
+      </binding>
+    </element>
+    <element id="Consent.provision">
+      <path value="Consent.provision" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Consent.provision.type">
+      <path value="Consent.provision.type" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

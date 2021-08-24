@@ -1,0 +1,145 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Profile-nNGM-ServiceRequest-Anforderung-Tumorblock",
+  "url": "http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/anforderung-tumorblock",
+  "name": "Profile_nNGM_ServiceRequest_Anforderung_Tumorblock",
+  "title": "Profile - nNGM - ServiceRequest - Anforderung Tumorblock",
+  "version": "1.0.0",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.extension:wiederholungAnforderung",
+        "path": "ServiceRequest.extension",
+        "sliceName": "wiederholungAnforderung",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/wiederholungAnforderung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:grundEntfallBlockAnforderung",
+        "path": "ServiceRequest.extension",
+        "sliceName": "grundEntfallBlockAnforderung",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/grundEntfallBlockAnforderung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:versandDatum",
+        "path": "ServiceRequest.extension",
+        "sliceName": "versandDatum",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/versandDatum"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:stornierungBlockAnforderung",
+        "path": "ServiceRequest.extension",
+        "sliceName": "stornierungBlockAnforderung",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/stornierungBlockAnforderung"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "fixedCode": "active",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "fixedCode": "proposal",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code"
+        }
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "min": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "min": "1",
+        "mustSupport": true,
+        "isSummary": true
+      },
+      {
+        "id": "ServiceRequest.performer",
+        "path": "ServiceRequest.performer",
+        "min": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "min": "1",
+        "mustSupport": true,
+        "isSummary": true
+      }
+    ]
+  }
+}

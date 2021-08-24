@@ -5,19 +5,23 @@
     "name": "nNGM_CodeSystem_Anforderungscode",
     "status": "active",
     "experimental": false,
-    "content": "fragment",
+    "content": "complete",
     "concept": [
         {
-            "code": "Komplette Untersuchung",
-            "display": "Komplette Untersuchung"
+            "code": "Komplette Gewebediagnostik",
+            "display": "Komplette Gewebediagnostik"
         },
         {
-            "code": "Einzeluntersuchung",
-            "display": "Einzeluntersuchung"
+            "code": "Einzelgewebediagnostik",
+            "display": "Einzelgewebediagnostik"
         },
         {
             "code": "Liquid Biopsy",
             "display": "Liquid Biopsy"
+        },
+        {
+            "code": "Tumorblock",
+            "display": "Tumorblock"
         }
     ]
 }

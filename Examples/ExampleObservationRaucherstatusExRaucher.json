@@ -1,0 +1,56 @@
+{
+    "resourceType": "Observation",
+    "id": "ExampleObservationRaucherstatusExRaucher",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "social-history"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "72166-2",
+                "display": "Tobacco smoking status"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "effectiveDateTime": "2021-01-01",
+    "valueCodeableConcept": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "LA15920-4",
+                "display": "Former smoker"
+            }
+        ]
+    },
+    "component": [
+        {
+            "code": {
+                "coding": [
+                  {
+                    "system": "http://ncit.nci.nih.gov",
+                    "code": "C124908",
+                    "display": "Refrain from Smoking"
+                  }
+                ]
+              },
+            "valueDateTime": "2010-01-01"
+        }
+    ]
+}

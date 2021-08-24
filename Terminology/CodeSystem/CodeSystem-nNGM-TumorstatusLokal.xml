@@ -1,0 +1,42 @@
+<CodeSystem xmlns="http://hl7.org/fhir">
+    <id value="CodeSystem-nNGM-TumorstatusLokal" />
+    <url value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+    <version value="0.1" />
+    <name value="CodeSystem_nNGM_TumorstatusLokal" />
+    <status value="active" />
+    <caseSensitive value="true" />
+    <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tumorstatus-lokal" />
+    <content value="complete" />
+    <concept>
+        <code value="K" />
+        <display value="kein Tumor nachweisbar" />
+    </concept>
+    <concept>
+        <code value="T" />
+        <display value="Tumorreste (Residualtumor)" />
+    </concept>
+    <concept>
+        <code value="P" />
+        <display value="Tumorreste Residualtumor Progress" />
+    </concept>
+    <concept>
+        <code value="N" />
+        <display value="Tumorreste Residualtumor No Change" />
+    </concept>
+    <concept>
+        <code value="R" />
+        <display value="Lokalrezidiv" />
+    </concept>
+    <concept>
+        <code value="F" />
+        <display value="fraglicher Befund" />
+    </concept>
+    <concept>
+        <code value="U" />
+        <display value="unbekannt" />
+    </concept>
+    <concept>
+        <code value="X" />
+        <display value="fehlende Angabe" />
+    </concept>
+</CodeSystem>

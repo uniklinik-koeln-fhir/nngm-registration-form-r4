@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Observation-Raucherstatus" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
+  <version value="1.0.0" />
+  <name value="Profile_nNGM_Observation_Raucherstatus" />
+  <title value="Profile - nNGM - Observation - Raucherstatus" />
+  <status value="active" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation.id">
+      <path value="Observation.id" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.meta">
+      <path value="Observation.meta" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.meta.profile">
+      <path value="Observation.meta.profile" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <fixedCode value="final" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category">
+      <path value="Observation.category" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category:social-history">
+      <path value="Observation.category" />
+      <sliceName value="social-history" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="social-history" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="72166-2" />
+      </patternCoding>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <type>
+        <code value="Reference" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient" />
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effectiveDateTime" />
+      <sliceName value="effectiveDateTime" />
+      <min value="1" />
+      <constraint>
+        <key value="obs-nngm-1" />
+        <severity value="error" />
+        <human value="If Observation.effective[x] is dateTime and has a value then that value shall be precise to the day" />
+        <expression value="$this.toString().length() &gt;= 8" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />
+      </binding>
+    </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <max value="0" />
+    </element>
+    <element id="Observation.method">
+      <path value="Observation.method" />
+      <max value="0" />
+    </element>
+    <element id="Observation.specimen">
+      <path value="Observation.specimen" />
+      <max value="0" />
+    </element>
+    <element id="Observation.device">
+      <path value="Observation.device" />
+      <max value="0" />
+    </element>
+    <element id="Observation.referenceRange">
+      <path value="Observation.referenceRange" />
+      <max value="0" />
+    </element>
+    <element id="Observation.component">
+      <path value="Observation.component" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears">
+      <path value="Observation.component" />
+      <sliceName value="packYears" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
+          <code value="C73993" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="Quantity" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.value[x]:valueQuantity">
+      <path value="Observation.component.valueQuantity" />
+      <sliceName value="valueQuantity" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.value[x].value">
+      <path value="Observation.component.valueQuantity.value" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.value[x].unit">
+      <path value="Observation.component.valueQuantity.unit" />
+      <min value="1" />
+      <fixedString value="pack years" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.value[x].system">
+      <path value="Observation.component.valueQuantity.system" />
+      <min value="1" />
+      <fixedUri value="http://unitsofmeasure.org" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:packYears.value[x].code">
+      <path value="Observation.component.valueQuantity.code" />
+      <min value="1" />
+      <fixedCode value="1{pack years}" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:nichtraucherSeit">
+      <path value="Observation.component" />
+      <sliceName value="nichtraucherSeit" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:nichtraucherSeit.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
+          <code value="C124908" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:nichtraucherSeit.value[x]">
+      <path value="Observation.component.value[x]" />
+      <min value="1" />
+      <type>
+        <code value="dateTime" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:nichtraucherSeit.value[x]:valueDateTime">
+      <path value="Observation.component.valueDateTime" />
+      <sliceName value="valueDateTime" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

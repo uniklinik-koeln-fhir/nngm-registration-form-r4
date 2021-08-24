@@ -1,0 +1,183 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "Profile-nNGM-ServiceRequest-AnforderungDerDiagnostik",
+  "url": "http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/AnforderungDerDiagnostik",
+  "version": "1.0.0",
+  "name": "Profile_nNGM_ServiceRequest_AnforderungDerDiagnostik",
+  "title": "Profile - nNGM - ServiceRequest - Anforderung der Diagnostik",
+  "status": "active",
+  "fhirVersion": "4.0.1",
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/ServiceRequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest.extension",
+        "path": "ServiceRequest.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.extension:aufenthaltsart",
+        "path": "ServiceRequest.extension",
+        "sliceName": "aufenthaltsart",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.extension:GrundFehlendeBiopsy",
+        "path": "ServiceRequest.extension",
+        "sliceName": "GrundFehlendeBiopsy",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/GrundFehlendeBiopsy"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.status",
+        "path": "ServiceRequest.status",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.intent",
+        "path": "ServiceRequest.intent",
+        "fixedCode": "proposal",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.code",
+        "path": "ServiceRequest.code",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail",
+        "path": "ServiceRequest.orderDetail",
+        "mustSupport": true,
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "pattern",
+              "path": "$this"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:histologischeAbklaerung",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "histologischeAbklaerung",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-histologischeAbklaerung"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:molekularpathologie",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "molekularpathologie",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-molekularpathologie"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:ngsPanel",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "ngsPanel",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-ngsPanel"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:fastTrack",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "fastTrack",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-fastTrack"
+        }
+      },
+      {
+        "id": "ServiceRequest.orderDetail:liquidBiopsy",
+        "path": "ServiceRequest.orderDetail",
+        "sliceName": "liquidBiopsy",
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-liquidBiopsy"
+        }
+      },
+      {
+        "id": "ServiceRequest.subject",
+        "path": "ServiceRequest.subject",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.authoredOn",
+        "path": "ServiceRequest.authoredOn",
+        "min": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.requester",
+        "path": "ServiceRequest.requester",
+        "min": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.performer",
+        "path": "ServiceRequest.performer",
+        "min": "1",
+        "mustSupport": true
+      },
+      {
+        "id": "ServiceRequest.specimen",
+        "path": "ServiceRequest.specimen",
+        "min": "1",
+        "mustSupport": true
+      }
+    ]
+  }
+}

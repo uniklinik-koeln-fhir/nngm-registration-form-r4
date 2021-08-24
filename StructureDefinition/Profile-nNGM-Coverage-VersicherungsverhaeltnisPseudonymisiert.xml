@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Coverage-VersicherungsverhaeltnisPseudonymisiert" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM/pseudonymisiert" />
+  <version value="1.0.0" />
+  <name value="Profile_nNGM_Coverage_VersicherungsverhaeltnisPseudonymisiert" />
+  <title value="Profile - nNGM - Coverage - Versicherungsverhältnis Pseudonymisiert" />
+  <status value="active" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Coverage" />
+  <baseDefinition value="http://fhir.de/StructureDefinition/coverage-de-basis" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Coverage.extension">
+      <path value="Coverage.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.extension:pkvTarifform">
+      <path value="Coverage.extension" />
+      <sliceName value="pkvTarifform" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/pkvTarifform" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.extension:kooperationsvereinbarung">
+      <path value="Coverage.extension" />
+      <sliceName value="kooperationsvereinbarung" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/kooperationsvereinbarung" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.identifier">
+      <path value="Coverage.identifier" />
+      <max value="0" />
+    </element>
+    <element id="Coverage.status">
+      <path value="Coverage.status" />
+      <fixedCode value="active" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.type">
+      <path value="Coverage.type" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassentypen" />
+      </binding>
+    </element>
+    <element id="Coverage.beneficiary">
+      <path value="Coverage.beneficiary" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.dependent">
+      <path value="Coverage.dependent" />
+      <max value="0" />
+    </element>
+    <element id="Coverage.payor">
+      <path value="Coverage.payor" />
+      <max value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor.extension">
+      <path value="Coverage.payor.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+    </element>
+    <element id="Coverage.payor.extension:abrechnungsinformation">
+      <path value="Coverage.payor.extension" />
+      <sliceName value="abrechnungsinformation" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/abrechnungsinformation" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Coverage.payor.display">
+      <path value="Coverage.payor.display" />
+      <min value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

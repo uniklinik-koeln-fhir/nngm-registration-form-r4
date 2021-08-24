@@ -1,10 +1,10 @@
 {
   "resourceType": "ValueSet",
-  "id": "ValueSet-nNGM-Anforderung-Molekularpathologie",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-molekularpathologie",
+  "id": "ValueSet-nNGM-Anforderung-LiquidBiopsy",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-liquidBiopsy",
   "version": "1.0",
-  "title": "ValueSet - nNGM - Anforderung Molekularpathologie",
-  "name": "ValueSet_nNGM_Anforderung_Molekularpathologie",
+  "title": "ValueSet - nNGM - Anforderung Liquid Biopsy",
+  "name": "ValueSet_nNGM_Anforderung_LiquidBiopsy",
   "status": "active",
   "compose": {
       "include": [
@@ -12,20 +12,12 @@
               "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
               "concept": [
                   {
-                      "code": "C128554",
-                      "display": "PD-L1 Positive"
+                      "code": "C41546",
+                      "display": "Resistance Process"
                   },
                   {
-                      "code": "C38184",
-                      "display": "ALK Gene"
-                  },
-                  {
-                      "code": "C18325",
-                      "display": "MET Gene"
-                  },
-                  {
-                      "code": "C18399",
-                      "display": "ROS1 Gene"
+                      "code": "C45576",
+                      "display": "Mutation Abnormality"
                   }
               ]
           }
@@ -34,28 +26,17 @@
   "expansion": {
       "identifier": "9ce5c132-f7aa-4b47-80d9-128de8cea5d4",
       "timestamp": "2020-10-15T12:34:08+00:00",
-      "total": 9,
+      "total": 2,
       "contains": [
           {
               "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-              "code": "C18325",
-              "display": "MET Gene"
+              "code": "C41546",
+              "display": "Resistance Process"
           },
           {
               "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-              "code": "C18399",
-              "display": "ROS1 Gene"
-          },
-          {
-              "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-              "code": "C38184",
-              "display": "ALK Gene"
-          },
-          {
-              "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-              "version": "20.02d",
-              "code": "C128554",
-              "display": "PD-L1 Positive"
+              "code": "C45576",
+              "display": "Mutation Abnormality"
           }
       ]
   }

@@ -1,0 +1,47 @@
+{
+    "resourceType": "ServiceRequest",
+    "id": "ExampleServiceRequestAnforderungDerDiagnostik",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/ServiceRequest/nNGM/AnforderungDerDiagnostik"
+        ]
+    },
+    "extension": [
+        {
+            "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart",
+            "valueCodeableConcept": {
+                "coding": [
+                    {
+                        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                        "code": "AMB",
+                        "display": "ambulatory"
+                    }
+                ]
+            }
+        }
+    ],
+    "status": "active",
+    "intent": "proposal",
+    "code": {
+        "coding": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+                "code": "Komplette Gewebediagnostik",
+                "display": "Komplette Gewebediagnostik"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "authoredOn": "2021-01-01",
+    "requester": {
+        "reference": "PractitionerRole/ExampleBehandlerRollePractitionerRole"
+    },
+    "performer": {
+        "reference": "Organization/ExampleOrganizationOrganisationNetzwerkzentrum"
+    },
+    "specimen": {
+        "reference": "Specimen/ExampleSpecimenTumormaterial"
+    }
+}

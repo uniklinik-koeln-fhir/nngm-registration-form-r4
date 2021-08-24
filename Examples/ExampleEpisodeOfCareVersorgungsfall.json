@@ -22,7 +22,8 @@
             "coding": [
                 {
                     "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-                    "code": "C16213"
+                    "code": "C16213",
+                    "display": "Cancer Diagnosis"
                 }
             ]
         }

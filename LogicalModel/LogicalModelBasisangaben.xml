@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="LogicalModelBasisangaben" />
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/Basisangaben" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/nNGM/Basisangaben" />
   <version value="1.0.0" />
   <name value="LogicalModelBasisangaben" />
   <title value="LogicalModel - Basisangaben" />

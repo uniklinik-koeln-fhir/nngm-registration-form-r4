@@ -1,11 +1,11 @@
 {
   "resourceType": "ValueSet",
-  "id": "ValueSet-nNGM-Anforderung-Molekularpathologie",
+  "id": "ValueSet-nNGM-Anforderung-FastTrack",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-fastTrack",
-  "version": "1.0",
-  "title": "ValueSet - nNGM - Anforderung FastTrack",
+  "version": "1.0.0",
   "name": "ValueSet_nNGM_Anforderung_FastTrack",
-  "status": "draft",
+  "title": "ValueSet - nNGM - Anforderung FastTrack",
+  "status": "active",
   "compose": {
       "include": [
           {

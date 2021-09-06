@@ -1,0 +1,30 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-nNGM-OrganizationType",
+    "url": "http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM/ZugehoerigkeitNetzwerkzentrum",
+    "version": "1.0.0",
+    "name": "ValueSet_nNGM_OrganizationType",
+    "title": "ValueSet - nNGM - OrganizationType",
+    "status": "active",
+    "compose": {
+      "include": [
+        {
+          "system": "http://snomed.info/sct",
+          "concept": [
+            {
+              "code": "440655000",
+              "display": "Outpatient environment (environment)"
+            },
+            {
+              "code": "285201006",
+              "display": "Hospital environment (environment)"
+            },
+            {
+              "code": "309912009",
+              "display": "Medical department (environment)"
+            }
+          ]
+        }
+      ]
+    }
+  }

@@ -1,11 +1,11 @@
 {
     "resourceType": "ValueSet",
-    "id": "ValueSet-Anforderung-HistologischeAbklaerung",
+    "id": "ValueSet-nNGM-Anforderung-HistologischeAbklaerung",
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-histologischeAbklaerung",
     "version": "1.0",
-    "title": "ValueSet - Anforderung - Histologische Abklärung",
-    "name": "ValueSet_Anforderung_HistologischeAbklaerung",
-    "status": "draft",
+    "name": "ValueSet_nNGM_Anforderung_HistologischeAbklaerung",
+    "title": "ValueSet - nNGM - Anforderung Histologische Abklärung",
+    "status": "active",
     "compose": {
         "include": [
             {

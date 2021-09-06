@@ -3,9 +3,9 @@
   "id": "ValueSet-nNGM-PKV-Tarifform",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/pkv-tarifform",
   "version": "1.0",
-  "title": "ValueSet - nNGM - PKV-Tarifform",
   "name": "ValueSet_nNGM_PKV-Tarifform",
-  "status": "draft",
+  "title": "ValueSet - nNGM - PKV-Tarifform",
+  "status": "active",
   "compose": {
       "include": [
           {

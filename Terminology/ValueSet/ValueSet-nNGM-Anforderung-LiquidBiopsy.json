@@ -3,9 +3,9 @@
   "id": "ValueSet-nNGM-Anforderung-LiquidBiopsy",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-liquidBiopsy",
   "version": "1.0",
-  "title": "ValueSet - nNGM - Anforderung Liquid Biopsy",
   "name": "ValueSet_nNGM_Anforderung_LiquidBiopsy",
-  "status": "draft",
+  "title": "ValueSet - nNGM - Anforderung Liquid Biopsy",
+  "status": "active",
   "compose": {
       "include": [
           {

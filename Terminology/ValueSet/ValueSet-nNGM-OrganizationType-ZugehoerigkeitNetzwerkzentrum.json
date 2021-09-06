@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "name": "ValueSet_nNGM_OrganizationType_ZugehoerigkeitNetzwerkzentrum",
   "title": "ValueSet - nNGM - OrganizationType - Zugehörigkeit Netzwerkzentrum",
-  "status": "draft",
+  "status": "active",
   "compose": {
     "include": [
       {

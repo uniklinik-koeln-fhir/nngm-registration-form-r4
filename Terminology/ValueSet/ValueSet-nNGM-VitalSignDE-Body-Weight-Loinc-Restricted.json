@@ -7,15 +7,27 @@
     "title": "ValueSet - nNGM - VitalSignDE Body Weight Loinc Restricted",
     "status": "active",
     "compose": {
-        "include":  [
+        "include": [
             {
                 "system": "http://loinc.org",
-                "concept":  [
+                "concept": [
                     {
                         "code": "29463-7",
                         "display": "Body weight"
                     }
                 ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "c20d9185-9c36-4260-9efd-5b39e5ba1883",
+        "timestamp": "2020-11-12T12:30:04+00:00",
+        "total": 1,
+        "contains": [
+            {
+                "system": "http://loinc.org",
+                "code": "29463-7",
+                "display": "Body weight"
             }
         ]
     }

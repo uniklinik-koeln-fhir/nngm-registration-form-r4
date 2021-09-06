@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "title": "ValueSet - nNGM - Abrechnungsinformation",
   "name": "ValueSet_nNGM_Abrechnungsinformation",
-  "status": "active",
+  "status": "draft",
   "compose": {
       "include": [
           {

@@ -5,7 +5,7 @@
   "version": "1.0",
   "title": "ValueSet - nNGM - MaterialTyp",
   "name": "nNGM_Valueset_Materialtyp",
-  "status": "active",
+  "status": "draft",
   "description": "nNGM MaterialTyp (Gewebe/Blut)",
   "compose": {
       "include": [

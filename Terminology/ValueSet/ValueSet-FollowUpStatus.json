@@ -8,7 +8,7 @@
   "date": "2018-10-31",
   "publisher": "Uniklinik Köln",
   "description": "nNGM FollowUp Status",
-  "status": "active",
+  "status": "draft",
   "compose": {
       "include": [
           {

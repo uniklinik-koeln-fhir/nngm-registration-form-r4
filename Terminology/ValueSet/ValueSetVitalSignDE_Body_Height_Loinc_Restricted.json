@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "name": "ValueSetVitalSignDE_Body_Height_Loinc_Restricted",
     "title": "ValueSetVitalSignDE_Body_Height_Loinc_Restricted",
-    "status": "active",
+    "status": "draft",
     "description": "VitalSignDE_Body_Height_Loinc enthält Codes zur Kodierung der Messung einer Körpergröße",
     "immutable": false,
     "compose": {

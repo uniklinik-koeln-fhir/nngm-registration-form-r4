@@ -3,7 +3,7 @@
     <url value="http://uk-koeln.de/fhir/ValueSet/nngm/tumorstatus-lokal" />
     <version value="0.1" />
     <name value="ValueSet_nNGM_TumorstatusLokal" />
-    <status value="active" />
+    <status value="draft" />
     <description value="Lokaler Tumorstatus nach Einheitlicher onkologischer Basisdatensatz." />
     <compose>
         <include>

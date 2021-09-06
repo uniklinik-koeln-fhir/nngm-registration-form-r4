@@ -3,7 +3,7 @@
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation",
     "title": "nNGM: ValueSet Histologie-Klassifikation",
     "name": "nNGM_ValueSet_Histologie-Klassifikation",
-    "status": "active",
+    "status": "draft",
     "experimental": false,
     "date": "2019-02-09",
     "compose": {

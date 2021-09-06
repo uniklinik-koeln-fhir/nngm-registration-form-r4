@@ -4,7 +4,7 @@
     "name": "ValueSet_nNGM_Informationsquelle_des_Todesdatums",
     "title": "ValueSet - nNGM - Informationsquelle des Todesdatums",
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/izt",
-    "status": "active",
+    "status": "draft",
     "date": "2018-10-31",
     "publisher": "Uniklinik Köln",
     "compose": {

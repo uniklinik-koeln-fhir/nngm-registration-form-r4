@@ -5,7 +5,7 @@
     "version": "1.0.0",
     "name": "VitalSignDE_Body_Weight_Loinc_Restricted",
     "title": "VitalSignDE_Body_Weight_Loinc_Restricted",
-    "status": "active",
+    "status": "draft",
     "description": "VitalSignDE_Body_Weight_Loinc enthält Codes zur Kodierung der Messung eines Körpergewichtes",
     "immutable": false,
     "compose": {

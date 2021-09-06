@@ -4,7 +4,7 @@
     "version": "1.0",
     "title": "nNGM: ValueSet Raucherstatus",
     "name": "nNGM_ValueSet_Raucherstatus",
-    "status": "active",
+    "status": "draft",
     "experimental": false,
     "date": "2019-02-09",
     "publisher": "Universitätsklinikum Köln",

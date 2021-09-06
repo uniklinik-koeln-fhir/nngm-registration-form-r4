@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "title": "ValueSet - nNGM - Krankenkassentypen",
   "name": "ValueSet_nNGM_Krankenkassentypen",
-  "status": "active",
+  "status": "draft",
   "compose": {
       "include": [
           {

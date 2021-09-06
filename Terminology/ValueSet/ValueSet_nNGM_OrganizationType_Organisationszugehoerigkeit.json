@@ -4,7 +4,7 @@
     "url": "http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM",
     "name": "ValueSet_nNGM_OrganizationType",
     "title": "ValueSet - nNGM - OrganizationType",
-    "status": "active",
+    "status": "draft",
     "compose": {
         "include": [
             {

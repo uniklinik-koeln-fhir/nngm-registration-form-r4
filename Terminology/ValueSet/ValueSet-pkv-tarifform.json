@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "title": "ValueSet - nNGM - PKV-Tarifform",
   "name": "ValueSet_nNGM_PKV-Tarifform",
-  "status": "active",
+  "status": "draft",
   "compose": {
       "include": [
           {

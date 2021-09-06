@@ -3,7 +3,7 @@
     "url": "http://uk-koeln.de/fhir/ValueSet/NNGM/statusAbschluss",
     "name": "NNGM_Status_Abschluss",
     "title": "nNGM Status Abschluss",
-    "status": "active",
+    "status": "draft",
     "compose": {
         "include": [
             {

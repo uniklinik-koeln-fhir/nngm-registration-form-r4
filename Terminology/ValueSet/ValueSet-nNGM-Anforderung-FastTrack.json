@@ -5,7 +5,7 @@
   "version": "1.0",
   "title": "ValueSet - nNGM - Anforderung FastTrack",
   "name": "ValueSet_nNGM_Anforderung_FastTrack",
-  "status": "active",
+  "status": "draft",
   "compose": {
       "include": [
           {

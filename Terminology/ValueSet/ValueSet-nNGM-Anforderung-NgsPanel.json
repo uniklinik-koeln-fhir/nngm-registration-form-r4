@@ -5,7 +5,7 @@
     "version": "1.0",
     "title": "ValueSet - nNGM - Anforderung NgsPanel",
     "name": "ValueSet_nNGM_Anforderung_NgsPanel",
-    "status": "active",
+    "status": "draft",
     "compose": {
         "include": [
             {

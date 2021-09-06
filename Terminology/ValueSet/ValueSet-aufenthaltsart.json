@@ -4,7 +4,7 @@
   "version": "1.0",
   "title": "nNGM: ValueSet Aufenthaltsart",
   "name": "nNGM_ValueSet_Aufenthaltsart",
-  "status": "active",
+  "status": "draft",
   "experimental": false,
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",

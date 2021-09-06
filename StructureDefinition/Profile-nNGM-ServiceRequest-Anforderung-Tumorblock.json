@@ -104,9 +104,13 @@
         "path": "ServiceRequest.code",
         "min": 1,
         "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code"
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+              "code": "Tumorblock"
+            }
+          ]
         }
       },
       {

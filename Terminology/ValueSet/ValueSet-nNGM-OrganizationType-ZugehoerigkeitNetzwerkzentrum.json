@@ -22,5 +22,22 @@
         ]
       }
     ]
+  },
+  "expansion": {
+    "identifier": "b0e60188-6f46-4f5b-8f95-7c99a1441854",
+    "timestamp": "2020-10-13T08:57:22+00:00",
+    "total": 10,
+    "contains": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "261074009",
+        "display": "External"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "260521003",
+        "display": "Internal"
+      }
+    ]
   }
 }

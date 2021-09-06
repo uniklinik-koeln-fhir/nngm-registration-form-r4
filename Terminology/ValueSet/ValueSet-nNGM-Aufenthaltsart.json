@@ -1,14 +1,11 @@
 {
   "resourceType": "ValueSet",
+  "id": "ValueSet-nNGM-Aufenthaltsart",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
   "version": "1.0",
-  "title": "nNGM: ValueSet Aufenthaltsart",
-  "name": "nNGM_ValueSet_Aufenthaltsart",
-  "status": "draft",
-  "experimental": false,
-  "date": "2019-02-08",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Art des Aufenthalts",
+  "name": "ValueSet_nNGM_Aufenthaltsart",
+  "title": "ValueSet - nNGM - Aufenthaltsart",
+  "status": "active",
   "compose": {
       "include": [
           {

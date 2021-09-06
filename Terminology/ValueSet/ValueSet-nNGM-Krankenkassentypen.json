@@ -3,9 +3,9 @@
   "id": "ValueSet-nNGM-Krankenkassentypen",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassentypen",
   "version": "1.0.0",
-  "title": "ValueSet - nNGM - Krankenkassentypen",
   "name": "ValueSet_nNGM_Krankenkassentypen",
-  "status": "draft",
+  "title": "ValueSet - nNGM - Krankenkassentypen",
+  "status": "active",
   "compose": {
       "include": [
           {

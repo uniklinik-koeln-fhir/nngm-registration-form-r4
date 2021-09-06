@@ -4,7 +4,7 @@
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz" />
   <version value="1.0.0" />
   <name value="Profile_nNGM_Observation_TkiResistenz" />
-  <title value="Profile -nNGM - Observation - Erfolgte TKI Therapie" />
+  <title value="Profile - nNGM - Observation - Erfolgte TKI Therapie" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />

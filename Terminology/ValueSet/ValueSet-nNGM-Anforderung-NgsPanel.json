@@ -2,10 +2,10 @@
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-Anforderung-NgsPanel",
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-ngsPanel",
-    "version": "1.0",
-    "title": "ValueSet - nNGM - Anforderung NgsPanel",
+    "version": "1.0.0",
     "name": "ValueSet_nNGM_Anforderung_NgsPanel",
-    "status": "draft",
+    "title": "ValueSet - nNGM - Anforderung NgsPanel",
+    "status": "active",
     "compose": {
         "include": [
             {

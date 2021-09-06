@@ -1,8 +1,9 @@
 {
     "resourceType": "CodeSystem",
+    "id": "CodeSystem-nNGM-Anforderungscode",
     "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
-    "title": "nNGM: CodeSystem Anforderungscode",
-    "name": "nNGM_CodeSystem_Anforderungscode",
+    "title": "CodeSystem - nNGM - Anforderungscode",
+    "name": "CodeSystem_nNGM_Anforderungscode",
     "status": "active",
     "experimental": false,
     "content": "complete",

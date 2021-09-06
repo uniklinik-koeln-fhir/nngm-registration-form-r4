@@ -11,16 +11,13 @@
     "code": {
         "coding": [
             {
-                "coding": [
-                    {
-                        "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-                        "code": "C93304",
-                        "display": "Tumor Board Review"
-                    }
-                ]
+                "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                "code": "C93304",
+                "display": "Tumor Board Review"
             }
         ]
     },
+    "authoredOn": "2021-01-01",
     "subject": {
         "reference": "Patient/ExamplePatientPatient"
     },

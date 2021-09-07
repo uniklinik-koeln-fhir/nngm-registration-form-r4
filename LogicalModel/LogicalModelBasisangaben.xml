@@ -176,6 +176,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Geschlecht">
       <path value="Basisangaben.Patientenetikett.Geschlecht" />
@@ -316,6 +317,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Krankenkasse.Name">
       <path value="Basisangaben.Krankenkasse.Name" />
@@ -380,6 +382,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Beobachtungen.Gewicht">
       <path value="Basisangaben.Beobachtungen.Gewicht" />

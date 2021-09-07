@@ -1,7 +1,7 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="CodeSystem-nNGM-TumorstatusLokal" />
     <url value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
-    <version value="0.1" />
+    <version value="1.0.0" />
     <name value="CodeSystem_nNGM_TumorstatusLokal" />
     <title value="CodeSystem - nNGM - TumorstatusLokal" />
     <status value="active" />

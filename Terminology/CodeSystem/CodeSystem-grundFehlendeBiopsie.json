@@ -11,7 +11,7 @@
   "experimental": false,
   "title": "nNGM: CodeSystem GrundFehlendeBiopsie",
   "name": "nNGM_CodeSystem_GrundFehlendeBiopsie",
-  "status": "active",
+  "status": "draft",
   "date": "2019-02-08",
   "publisher": "Universitätsklinikum Köln",
   "description": "Grund für eine fehlende Biopsy (Liquid Biopsy)",

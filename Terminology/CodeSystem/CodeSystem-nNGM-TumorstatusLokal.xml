@@ -3,7 +3,7 @@
     <url value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
     <version value="0.1" />
     <name value="CodeSystem_nNGM_TumorstatusLokal" />
-    <status value="active" />
+    <status value="draft" />
     <caseSensitive value="true" />
     <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tumorstatus-lokal" />
     <content value="complete" />

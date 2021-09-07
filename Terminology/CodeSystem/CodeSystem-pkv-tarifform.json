@@ -11,7 +11,7 @@
   "experimental": false,
   "title": "nNGM: CodeSystem PKV-Tarifform",
   "name": "nNGM_CodeSystem_PKV-Tarifform",
-  "status": "active",
+  "status": "draft",
   "date": "2018-08-24",
   "publisher": "Universitätsklinikum Köln",
   "description": "PKV-Tarifformen",

@@ -11,7 +11,7 @@
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse",
   "version": "1.0",
   "experimental": false,
-  "status": "active",
+  "status": "draft",
   "date": "2018-08-24",
   "publisher": "Universitätsklinikum Köln",
   "compositional": false,

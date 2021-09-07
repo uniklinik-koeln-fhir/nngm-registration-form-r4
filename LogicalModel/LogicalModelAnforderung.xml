@@ -25,6 +25,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.EckdatenDerAnforderung.Anforderungsdatum">
       <path value="Anforderung.EckdatenDerAnforderung.Anforderungsdatum" />
@@ -35,6 +36,7 @@
         <code value="string" />
         <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.EckdatenDerAnforderung.Aufenthaltsart">
       <path value="Anforderung.EckdatenDerAnforderung.Aufenthaltsart" />
@@ -53,6 +55,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.Diagnostik.Typ">
       <path value="Anforderung.Diagnostik.Typ" />
@@ -63,6 +66,7 @@
         <code value="string" />
         <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.Diagnostik.GewuenschteUntersuchung">
       <path value="Anforderung.Diagnostik.GewuenschteUntersuchung" />
@@ -73,6 +77,7 @@
         <code value="string" />
         <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.Diagnostik.GrundFehlendeBiopsy">
       <path value="Anforderung.Diagnostik.GrundFehlendeBiopsy" />
@@ -83,6 +88,7 @@
         <code value="string" />
         <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.Diagnostik.Resistenztestung">
       <path value="Anforderung.Diagnostik.Resistenztestung" />
@@ -91,6 +97,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.Diagnostik.Resistenztestung.ErfolgteTherapien">
       <path value="Anforderung.Diagnostik.Resistenztestung.ErfolgteTherapien" />
@@ -101,6 +108,7 @@
         <code value="string" />
         <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation">
       <path value="Anforderung.Diagnostik.Resistenztestung.EGFR-Mutation" />

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="LogicalModelTumorerkrankung" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/nNGM/Tumorerkrankung" />
   <version value="1.0.0" />
   <name value="Tumorerkrankung" />

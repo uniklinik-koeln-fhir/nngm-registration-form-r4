@@ -2,9 +2,9 @@
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Profile-nNGM-Observation-TkiResistenzAlk" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-alk" />
+  <version value="1.0.0" />
   <name value="Profile_nNGM_Observation_TkiResistenzAlk" />
   <title value="Profile - nNGM - Observation - TKI Resistenz ALK" />
-  <version value="1.0.0" />
   <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="resource" />

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/nNGM/Tumorerkrankung" />
+  <name value="Tumorerkrankung" />
+  <status value="draft" />
+  <fhirVersion value="4.0.1" />
+  <kind value="logical" />
+  <abstract value="false" />
+  <type value="http://uk-koeln.de/fhir/StructureDefinition/LogicalModel/nNGM/Tumorerkrankung" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Element" />
+  <derivation value="specialization" />
+  <differential>
+    <element id="Tumorerkrankung">
+      <path value="Tumorerkrankung" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="Element" />
+      </type>
+    </element>
+    <element id="Tumorerkrankung.Erstdiagnose">
+      <path value="Tumorerkrankung.Erstdiagnose" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.Histologie">
+      <path value="Tumorerkrankung.Histologie" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.Histologie.Klassifikation">
+      <path value="Tumorerkrankung.Histologie.Klassifikation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.Histologie.Lokalisation">
+      <path value="Tumorerkrankung.Histologie.Lokalisation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.Histologie.Grading">
+      <path value="Tumorerkrankung.Histologie.Grading" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.KurativOperabel">
+      <path value="KurativOperabel" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.RezidivProgress">
+      <path value="Tumorerkrankung.RezidivProgress" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.Progressdatum">
+      <path value="Tumorerkrankung.Progressdatum" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM">
+      <path value="Tumorerkrankung.TNM" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.Klassifikation">
+      <path value="Tumorerkrankung.TNM.Klassifikation" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.Praefix">
+      <path value="Tumorerkrankung.TNM.Praefix" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.T">
+      <path value="Tumorerkrankung.TNM.T" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.T-Praefix">
+      <path value="Tumorerkrankung.TNM.T-Praefix" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.T-Suffix">
+      <path value="Tumorerkrankung.TNM.T-Suffix" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.N">
+      <path value="Tumorerkrankung.TNM.N" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.N-Praefix">
+      <path value="Tumorerkrankung.TNM.N-Praefix" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.M">
+      <path value="Tumorerkrankung.TNM.M" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.M-Praefix">
+      <path value="Tumorerkrankung.TNM.M-Praefix" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.TNM.UICC">
+      <path value="Tumorerkrankung.TNM.UICC" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+  </differential>
+</StructureDefinition>

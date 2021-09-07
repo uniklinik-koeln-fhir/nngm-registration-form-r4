@@ -113,6 +113,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.nNGM-Zentrum.Standortname">
       <path value="Basisangaben.nNGM-Zentrum.Standortname" />
@@ -122,6 +123,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.nNGM-Zentrum.Kontakt">
       <path value="Basisangaben.nNGM-Zentrum.Kontakt" />
@@ -183,6 +185,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Nachname">
       <path value="Basisangaben.Patientenetikett.Nachname" />
@@ -255,6 +258,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.DatumProgress">
       <path value="Basisangaben.Patientenetikett.DatumProgress" />
@@ -264,6 +268,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.LetzterKontakt">
       <path value="Basisangaben.Patientenetikett.LetzterKontakt" />
@@ -273,6 +278,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Vitalstatus">
       <path value="Basisangaben.Patientenetikett.Vitalstatus" />
@@ -282,6 +288,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Todesdatum">
       <path value="Basisangaben.Patientenetikett.Todesdatum" />
@@ -291,6 +298,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.InformationsquelleFuerTodesdatum">
       <path value="Basisangaben.Patientenetikett.InformationsquelleFuerTodesdatum" />
@@ -317,6 +325,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Krankenkasse.Typ">
       <path value="Basisangaben.Krankenkasse.Typ" />
@@ -326,6 +335,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Krankenkasse.KooperationsvereinbarungVorhanden">
       <path value="Basisangaben.Krankenkasse.KooperationsvereinbarungVorhanden" />
@@ -396,6 +406,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Beobachtungen.Raucherstatus.Typ">
       <path value="Basisangaben.Beobachtungen.Raucherstatus.Typ" />
@@ -440,6 +451,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.Teil1a">
       <path value="Basisangaben.Einwilligungserklaerung.Teil1a" />
@@ -449,6 +461,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.Teil1b">
       <path value="Basisangaben.Einwilligungserklaerung.Teil1b" />
@@ -458,6 +471,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.Teil2">
       <path value="Basisangaben.Einwilligungserklaerung.Teil2" />
@@ -467,6 +481,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung">
       <path value="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung" />
@@ -476,6 +491,7 @@
       <type>
         <code value="BackboneElement" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung.Teilnahmeerklärung">
       <path value="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung.Teilnahmeerklärung" />
@@ -485,6 +501,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung.Datenschutzerklärung">
       <path value="Basisangaben.Einwilligungserklaerung.PatientenerklärungZurBesonderenVersorgung.Datenschutzerklärung" />
@@ -494,6 +511,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Einwilligungserklaerung.Tumorboard">
       <path value="Basisangaben.Einwilligungserklaerung.Tumorboard" />

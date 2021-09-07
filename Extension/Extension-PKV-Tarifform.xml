@@ -4,7 +4,7 @@
   <version value="1.0" />
   <name value="nNGM_Extension_PkvTarifform" />
   <title value="nNGM: Extension PKV-Tarifform" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Differentiation between different traiff forms for private insurances within nNGM" />
   <fhirVersion value="4.0.1" />

@@ -4,7 +4,7 @@
   <version value="1.0" />
   <name value="nNGM_Extension_PersoenlicheTeilnahme" />
   <title value="nNGM: Extension Persönliche Teilnahme" />
-  <status value="active" />
+  <status value="draft" />
   <description value="Practitioner did request personal attendance in tumor board meeting?" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />

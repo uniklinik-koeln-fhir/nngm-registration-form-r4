@@ -4,7 +4,7 @@
   <version value="1.0" />
   <name value="nNGM_Extension_Kooperationsvereinbarung" />
   <title value="nNGM: Extension Kooperationsvereinbarung" />
-  <status value="active" />
+  <status value="draft" />
   <description value="Presence of Kooperationsvereinbarung" />
   <purpose value="nNGM: Extension Kooperationsvereinbarung" />
   <fhirVersion value="4.0.1" />

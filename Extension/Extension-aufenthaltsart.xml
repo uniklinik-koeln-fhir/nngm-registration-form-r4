@@ -4,7 +4,7 @@
   <version value="1.0" />
   <name value="nNGM_Extension_Aufenthaltsart" />
   <title value="nNGM: Extension Art des Aufenthalts" />
-  <status value="active" />
+  <status value="draft" />
   <publisher value="Universitätsklinikum Köln" />
   <description value="Type of stay for treatment purposes" />
   <fhirVersion value="4.0.1" />

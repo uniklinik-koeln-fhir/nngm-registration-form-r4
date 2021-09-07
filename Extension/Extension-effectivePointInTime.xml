@@ -4,7 +4,7 @@
   <version value="1.0" />
   <name value="nNGM_Extension_EffectivePointInTime" />
   <title value="nNGM: Extension EffectivePointInTime" />
-  <status value="active" />
+  <status value="draft" />
   <experimental value="true" />
   <description value="Coded point in time (diagnose- and treatment prozess)" />
   <fhirVersion value="4.0.1" />

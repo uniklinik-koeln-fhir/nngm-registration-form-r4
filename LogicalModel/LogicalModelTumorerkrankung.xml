@@ -20,6 +20,7 @@
     </element>
     <element id="Tumorerkrankung.Erstdiagnose">
       <path value="Tumorerkrankung.Erstdiagnose" />
+      <short value="Datum der ersten Festellung der Krebsdiagnose" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -39,6 +40,7 @@
     </element>
     <element id="Tumorerkrankung.Histologie.Klassifikation">
       <path value="Tumorerkrankung.Histologie.Klassifikation" />
+      <short value="Klassifikation der Tumorerkrankung nach ICD-O-3, falls nicht verfügbar als Freitext" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -49,6 +51,7 @@
     </element>
     <element id="Tumorerkrankung.Histologie.Lokalisation">
       <path value="Tumorerkrankung.Histologie.Lokalisation" />
+      <short value="Lokalisation des Tumors nach ICD-O-3" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -59,6 +62,7 @@
     </element>
     <element id="Tumorerkrankung.Histologie.Grading">
       <path value="Tumorerkrankung.Histologie.Grading" />
+      <short value="Histopathologische Differenzierung des Tumors" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -69,6 +73,7 @@
     </element>
     <element id="Tumorerkrankung.KurativOperabel">
       <path value="Tumorerkrankung.KurativOperabel" />
+      <short value="Ist der Tumor zum Zeitpunkt der Anforderung operabel?" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -79,6 +84,7 @@
     </element>
     <element id="Tumorerkrankung.RezidivProgress">
       <path value="Tumorerkrankung.RezidivProgress" />
+      <short value="Wird die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert?" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -89,6 +95,7 @@
     </element>
     <element id="Tumorerkrankung.Progressdatum">
       <path value="Tumorerkrankung.Progressdatum" />
+      <short value="Falls die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert wird, Datum des Progress/Rezidivs" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -108,6 +115,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.Klassifikation">
       <path value="Tumorerkrankung.TNM.Klassifikation" />
+      <short value="Angabe der TNM-Edition" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -118,6 +126,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.Praefix">
       <path value="Tumorerkrankung.TNM.Praefix" />
+      <short value="CPU-Präfix für das gesamte TNM" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -128,6 +137,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.T">
       <path value="Tumorerkrankung.TNM.T" />
+      <short value="Dokumentation der Größe und Ausdehnung des Tumors nach TNM-Klassifikation" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -138,6 +148,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.T-Praefix">
       <path value="Tumorerkrankung.TNM.T-Praefix" />
+      <short value="CPU-Präfix bezogen auf die 'T'-Angabe innerhalb des TNM" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -148,6 +159,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.T-Suffix">
       <path value="Tumorerkrankung.TNM.T-Suffix" />
+      <short value="Suffix bezogen auf die 'T'-Angabe innerhalb des TNM" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -158,6 +170,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.N">
       <path value="Tumorerkrankung.TNM.N" />
+      <short value="Dokumentation der Zahl und Lage der befallenen Lymphknoten nach TNM-Klassifikation" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -168,6 +181,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.N-Praefix">
       <path value="Tumorerkrankung.TNM.N-Praefix" />
+      <short value="CPU-Präfix bezogen auf die 'N'-Angabe innerhalb des TNM" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -178,6 +192,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.M">
       <path value="Tumorerkrankung.TNM.M" />
+      <short value="Dokumentation der Abwesenheit oder Vorhandensein von Metastasen nach TNM-Klassifikation" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -188,6 +203,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.M-Praefix">
       <path value="Tumorerkrankung.TNM.M-Praefix" />
+      <short value="CPU-Präfix bezogen auf die 'M'-Angabe innerhalb des TNM" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -198,6 +214,7 @@
     </element>
     <element id="Tumorerkrankung.TNM.UICC">
       <path value="Tumorerkrankung.TNM.UICC" />
+      <short value="Klassifikation des Tumorstadiums nach UICC" />
       <min value="0" />
       <max value="*" />
       <type>

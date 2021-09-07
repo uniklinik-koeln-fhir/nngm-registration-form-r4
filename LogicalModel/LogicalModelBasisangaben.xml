@@ -196,6 +196,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Vorname">
       <path value="Basisangaben.Patientenetikett.Vorname" />
@@ -205,6 +206,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Geburtsdatum">
       <path value="Basisangaben.Patientenetikett.Geburtsdatum" />
@@ -214,6 +216,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Strasse">
       <path value="Basisangaben.Patientenetikett.Strasse" />
@@ -223,6 +226,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.PLZ">
       <path value="Basisangaben.Patientenetikett.PLZ" />
@@ -232,6 +236,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Wohnort">
       <path value="Basisangaben.Patientenetikett.Wohnort" />
@@ -241,6 +246,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Land">
       <path value="Basisangaben.Patientenetikett.Land" />
@@ -250,6 +256,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Patientenetikett.Erstdiagnose">
       <path value="Basisangaben.Patientenetikett.Erstdiagnose" />
@@ -392,6 +399,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Beobachtungen.Groesse">
       <path value="Basisangaben.Beobachtungen.Groesse" />
@@ -401,6 +409,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Beobachtungen.Raucherstatus">
       <path value="Basisangaben.Beobachtungen.Raucherstatus" />

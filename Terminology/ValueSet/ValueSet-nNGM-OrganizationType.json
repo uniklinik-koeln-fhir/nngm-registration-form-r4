@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-OrganizationType",
-  "url": "http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM/OrganizationType",
+  "url": "http://uk-koeln.de/fhir/ValueSet/OrganizationType/nNGM",
   "version": "1.0.0",
   "name": "ValueSet_nNGM_OrganizationType",
   "title": "ValueSet - nNGM - OrganizationType",

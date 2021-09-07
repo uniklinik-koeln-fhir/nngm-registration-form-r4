@@ -3,10 +3,13 @@
     <url value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
     <version value="0.1" />
     <name value="CodeSystem_nNGM_TumorstatusLokal" />
-    <status value="draft" />
+    <title value="CodeSystem - nNGM - TumorstatusLokal" />
+    <status value="active" />
     <caseSensitive value="true" />
+    <compositional value="false" />
     <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tumorstatus-lokal" />
     <content value="complete" />
+    <count value="8" />
     <concept>
         <code value="K" />
         <display value="kein Tumor nachweisbar" />

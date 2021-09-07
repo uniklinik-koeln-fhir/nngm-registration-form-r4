@@ -1,20 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
-  },
+  "id": "CodeSystem-nNGM-Point-In-Time",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time",
-  "version": "1.0",
-  "experimental": false,
-  "title": "nNGM: CodeSystem - Point-In-Time",
-  "name": "nNGM_CodeSystem_Point-In-Time",
+  "version": "1.0.0",
+  "title": "CodeSystem - nNGM - Point-In-Time",
+  "name": "CodeSystem_nNGM_Point_In_Time",
   "status": "active",
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Codes für den Zeitpunkt während des Diagnose- und Behandlungsprozesses",
   "compositional": false, 
   "caseSensitive": true,
   "content": "complete",

@@ -1,20 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
-  },
+  "id": "CodeSystem-nNGM-Behandelbarkeit",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/behandelbarkeit",
-  "version": "1.0",
-  "experimental": false,
-  "title": "nNGM: CodeSystem Behandelbarkeit",
-  "name": "nNGM_CodeSystem_Behandelbarkeit",
-  "status": "draft",
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Behandelbarkeit der Erkrankung",
+  "version": "1.0.0",
+  "title": "CodeSystem - nNGM - Behandelbarkeit",
+  "name": "CodeSystem_nNGM_Behandelbarkeit",
+  "status": "active",
   "compositional": false, 
   "caseSensitive": true,
   "content": "complete",

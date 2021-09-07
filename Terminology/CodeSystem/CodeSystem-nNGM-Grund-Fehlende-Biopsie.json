@@ -1,20 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
-  },
+  "id": "CodeSystem-nNGM-Grund-Fehlende-Biopsie",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/grundfehlendeBiopsie",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundfehlendeBiopsie",
-  "version": "1.0",
-  "experimental": false,
-  "title": "nNGM: CodeSystem GrundFehlendeBiopsie",
-  "name": "nNGM_CodeSystem_GrundFehlendeBiopsie",
-  "status": "draft",
-  "date": "2019-02-08",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Grund für eine fehlende Biopsy (Liquid Biopsy)",
+  "version": "1.0.0",
+  "title": "CodeSystem - nNGM - Grund Fehlende Biopsie",
+  "name": "CodeSystem_Grund_Fehlende_Biopsie",
+  "status": "active",
   "compositional": false,
   "caseSensitive": true,
   "content": "complete",

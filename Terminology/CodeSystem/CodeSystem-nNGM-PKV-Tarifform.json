@@ -1,20 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
-  },
+  "id": "CodeSystem-nNGM-PKV-Tarifform",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/pkv-tarifform",
-  "version": "1.0",
-  "experimental": false,
-  "title": "nNGM: CodeSystem PKV-Tarifform",
-  "name": "nNGM_CodeSystem_PKV-Tarifform",
-  "status": "draft",
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "PKV-Tarifformen",
+  "version": "1.0.0",
+  "title": "CodeSystem - nNGM - PKV Tarifform",
+  "name": "CodeSystem_nNGM_PKV_Tarifform",
+  "status": "active",
   "compositional": false, 
   "caseSensitive": true,
   "content": "complete",

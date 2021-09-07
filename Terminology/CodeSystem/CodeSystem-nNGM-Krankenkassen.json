@@ -1,22 +1,16 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
-  },
-  "name": "nNGM_CodeSystem_Krankenkassen",
-  "title": "nNGM: CodeSystem Krankenkassen",
+  "id": "CodeSystem-nNGM-Krankenkassen",
+  "name": "CodeSystem_nNGM_Krankenkassen",
+  "title": "CodeSystem - nNGM - Krankenkassen",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/krankenkasse",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse",
-  "version": "1.0",
-  "experimental": false,
-  "status": "draft",
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
+  "version": "1.0.0",
+  "status": "active",
   "compositional": false,
   "caseSensitive": true,
   "content": "complete",
+  "count": "201",
   "concept": [
     {
       "code": "actimonda krankenkasse",

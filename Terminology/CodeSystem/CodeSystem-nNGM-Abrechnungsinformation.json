@@ -1,20 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
-  },
+  "id": "CodeSystem-nNGM-Abrechnungsinformation",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation",
-  "version": "1.0",
-  "experimental": false,
-  "title": "nNGM: CodeSystem Abrechnungsinformation",
-  "name": "nNGM_CodeSystem_Abrechnungsinformation",
-  "status": "draft",
-  "date": "2019-02-08",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Abrechnungsinformation im Kontext von nNGM",
+  "version": "1.0.0",
+  "title": "CodeSystem - nNGM - Abrechnungsinformation",
+  "name": "CodeSystem_nNGM_Abrechnungsinformation",
+  "status": "active",
   "compositional": false, 
   "caseSensitive": true,
   "content": "complete",

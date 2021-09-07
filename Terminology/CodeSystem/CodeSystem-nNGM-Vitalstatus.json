@@ -5,10 +5,12 @@
     "version": "1.0.0",
     "name": "CodeSystem_nNGM_Vitalstatus",
     "title": "CodeSystem - nNGM - Vitalstatus",
-    "status": "draft",
+    "status": "active",
     "caseSensitive": true,
+    "compositional": false, 
     "valueSet": "http://uk-koeln.de/fhir/ValueSet/Vitalstatus",
     "content": "complete",
+    "count": 7,
     "concept":  [
         {
             "code": "L",

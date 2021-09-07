@@ -1,18 +1,12 @@
 {
   "resourceType": "CodeSystem",
-  "meta": {
-    "profile": [
-      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
-    ]
-  },
+  "id": "nNGM-CodeSystem-Grund-Entfallene-Tumorblock-Anforderung",
   "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
   "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/grundEntfallBlockAnforderung",
-  "version": "1.0",
-  "title": "nNGM: CodeSystem Grund Entfallene Tumorblock-Anforderung",
-  "name": "nNGM_CodeSystem_Grund_Entfallene-Tumorblock-Anforderung",
-  "status": "draft",
-  "date": "2019-04-07",
-  "publisher": "Universitätsklinikum Köln",
+  "version": "1.0.0",
+  "title": "CodeSystem - nNGM - Grund Entfallene Tumorblock-Anforderung",
+  "name": "nNGM_CodeSystem_Grund_Entfallene_Tumorblock_Anforderung",
+  "status": "active",
   "compositional": false, 
   "caseSensitive": true,
   "content": "complete",

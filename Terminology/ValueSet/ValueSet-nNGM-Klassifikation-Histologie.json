@@ -1,10 +1,10 @@
 {
     "resourceType": "ValueSet",
+    "id": "ValueSet-nNGM-Klassifikation-Histologie",
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation",
-    "title": "nNGM: ValueSet Histologie-Klassifikation",
-    "name": "nNGM_ValueSet_Histologie-Klassifikation",
-    "status": "draft",
-    "experimental": false,
+    "title": "ValueSet - nNGM - Klassifikation (Histologie)",
+    "name": "ValueSet_nNGM_Klassifikation_Histologie",
+    "status": "active",
     "date": "2019-02-09",
     "compose": {
         "include": [
@@ -314,7 +314,7 @@
                 "display": "Epithelial-myoepitheliales Karzinom"
             },
             {
-                "system": "http://ncit.nci.nih.gov",
+                "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
                 "version": "20.02d",
                 "code": "C3812",
                 "display": "Carcinoma of Unknown Primary"

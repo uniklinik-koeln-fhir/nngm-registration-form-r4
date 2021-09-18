@@ -1,0 +1,52 @@
+{
+    "resourceType": "Observation",
+    "id": "ExampleObservationResistenztestungALK",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",
+            "valueReference": {
+                "reference": "EpisodeOfCare/ExampleEpisodeOfCareVersorgungsfall"
+            }
+        }
+    ],
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                    "code": "C1967",
+                    "display": "Tyrosine Kinase Inhibitor"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                "code": "C134501",
+                "display": "ALK Fusion Gene Positive"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "ExamplePatientPatient"
+    },
+    "effectiveDateTime": "2021-01-01",
+    "valueBoolean": "true",
+    "component": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                        "code": "C62721",
+                        "display": "Protein Tyrosine Kinase Inhibitor Therapy"
+                    }
+                ]
+            },
+            "valueString": "Alectinib"
+        }
+    ]
+}

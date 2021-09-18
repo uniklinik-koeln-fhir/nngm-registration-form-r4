@@ -26,7 +26,18 @@
       <min value="0" />
       <max value="*" />
       <type>
-        <code value="BackboneElement" />
+        <code value="string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.DatumProgress">
+      <path value="Tumorerkrankung.DatumProgress" />
+      <short value="Falls die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert wird, Datum des Progress/Rezidivs" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
       </type>
       <mustSupport value="true" />
     </element>
@@ -87,17 +98,6 @@
     <element id="Tumorerkrankung.RezidivProgress">
       <path value="Tumorerkrankung.RezidivProgress" />
       <short value="Wird die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert?" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Tumorerkrankung.Progressdatum">
-      <path value="Tumorerkrankung.Progressdatum" />
-      <short value="Falls die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert wird, Datum des Progress/Rezidivs" />
       <min value="0" />
       <max value="*" />
       <type>

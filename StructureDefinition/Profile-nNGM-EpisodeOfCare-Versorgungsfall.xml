@@ -60,7 +60,6 @@
     </element>
     <element id="EpisodeOfCare.status">
       <path value="EpisodeOfCare.status" />
-      <fixedCode value="active" />
       <mustSupport value="true" />
     </element>
     <element id="EpisodeOfCare.type">

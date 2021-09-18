@@ -258,26 +258,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Basisangaben.Patientenetikett.Erstdiagnose">
-      <path value="Basisangaben.Patientenetikett.Erstdiagnose" />
-      <short value="Datum der ersten nNGM-relevanten Diagnose" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Basisangaben.Patientenetikett.DatumProgress">
-      <path value="Basisangaben.Patientenetikett.DatumProgress" />
-      <short value="Datum des letzten für nNGM-relevanten Progresses" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-      </type>
-      <mustSupport value="true" />
-    </element>
     <element id="Basisangaben.Patientenetikett.LetzterKontakt">
       <path value="Basisangaben.Patientenetikett.LetzterKontakt" />
       <short value="Letzer Kontakt zu Lebzeiten des Patienten" />

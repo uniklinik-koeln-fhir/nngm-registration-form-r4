@@ -1,0 +1,27 @@
+{
+    "resourceType": "ServiceRequest",
+    "id": "ExampleServiceRequestAnforderungTumorblock",
+    "status": "active",
+    "intent": "proposal",
+    "code": {
+        "coding": [
+            {
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-code",
+                "code": "Tumorblock"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "authoredOn": "2021-01-01",
+    "requester": {
+        "reference": "PractitionerRole/ExampleBehandlerRollePractitionerRole"
+    },
+    "performer": {
+        "reference": "Organization/ExampleOrganizationOrganisationNetzwerkzentrum"
+    },
+    "specimen": {
+        "reference": "Specimen/ExampleSpecimenTumormaterial"
+    }
+}

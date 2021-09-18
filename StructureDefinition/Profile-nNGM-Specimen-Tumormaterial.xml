@@ -89,11 +89,6 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Specimen.request">
-      <path value="Specimen.request" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
     <element id="Specimen.collection">
       <path value="Specimen.collection" />
       <mustSupport value="true" />

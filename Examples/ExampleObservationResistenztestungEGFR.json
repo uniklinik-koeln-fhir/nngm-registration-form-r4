@@ -1,6 +1,11 @@
 {
     "resourceType": "Observation",
     "id": "ExampleObservationResistenztestungEGFR",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-egfr"
+        ]
+    },
     "extension": [
         {
             "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",

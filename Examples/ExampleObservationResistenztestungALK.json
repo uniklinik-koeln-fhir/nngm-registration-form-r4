@@ -1,6 +1,11 @@
 {
     "resourceType": "Observation",
     "id": "ExampleObservationResistenztestungALK",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-alk"
+        ]
+    },
     "extension": [
         {
             "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",

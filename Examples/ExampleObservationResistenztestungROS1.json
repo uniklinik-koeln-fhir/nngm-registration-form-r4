@@ -1,6 +1,11 @@
 {
     "resourceType": "Observation",
     "id": "ExampleObservationResistenztestungROS1",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/tki-resistenz-ros1"
+        ]
+    },
     "extension": [
         {
             "url": "http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare",

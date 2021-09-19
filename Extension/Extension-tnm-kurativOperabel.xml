@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-nNGM-TNM-KurativOperabel" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-kurativ-operabel" />
-  <version value="1.0" />
-  <name value="nNGM_Extension_TNM-KurativOperabel" />
-  <title value="nNGM: Extension TNM-Kurativ/Operabel" />
-  <status value="draft" />
+  <version value="1.0.0" />
+  <name value="Extension_nNGM_TNM_KurativOperabel" />
+  <title value="Extension - nNGM - TNM - Kurativ/Operabel" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

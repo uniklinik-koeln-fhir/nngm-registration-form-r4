@@ -40,13 +40,13 @@
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
               "version": "1.0",
               "code": "TE",
-              "display": "Teilnahmeerklärung"
+              "display": "TeilnahmeerklärungBesondereVersorgung"
           },
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
               "version": "1.0",
               "code": "DS",
-              "display": "Datenschutzerklärung"
+              "display": "DatenschutzerklärungBesondereVersorgung"
           },
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",

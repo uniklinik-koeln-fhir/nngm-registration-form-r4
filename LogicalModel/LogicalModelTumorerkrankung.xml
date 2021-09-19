@@ -52,7 +52,7 @@
       <mustSupport value="true" />
     </element>
     <element id="Tumorerkrankung.Rezidiv/Progress.DatumProgress">
-      <path value="Tumorerkrankung.DatumProgress" />
+      <path value="Tumorerkrankung.Rezidiv/Progress.DatumProgress" />
       <short value="Falls die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert wird, Datum des Progress/Rezidiv" />
       <min value="0" />
       <max value="*" />

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time",
-  "version": "1.0",
+  "version": "1.0.0",
   "title": "nNGM: ValueSet Point-In-Time",
   "name": "nNGM_ValueSet_Point-In-Time",
   "status": "draft",

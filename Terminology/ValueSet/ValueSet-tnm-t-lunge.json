@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t-nngm",
-  "version": "1.0",
+  "version": "1.0.0",
   "name": "nNGM_ValueSet_TNM-T-Lunge",
   "title": "nNGM: ValueSet TNM-T-Lunge",
   "status": "draft",

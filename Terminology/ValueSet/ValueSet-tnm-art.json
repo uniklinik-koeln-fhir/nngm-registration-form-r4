@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art",
-  "version": "1.0",
+  "version": "1.0.0",
   "title": "nNGM: ValueSet tnm-art",
   "name": "nNGM_ValueSet_tnm-art",
   "status": "draft",

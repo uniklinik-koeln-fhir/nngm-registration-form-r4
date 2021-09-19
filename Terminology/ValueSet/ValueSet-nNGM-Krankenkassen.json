@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-Krankenkassen",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse",
-  "version": "1.0",
+  "version": "1.0.0",
   "name": "ValueSet_nNGM_Krankenkassen",
   "title": "ValueSet - nNGM - Krankenkassen",
   "status": "active",

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/praefix-ry",
-  "version": "1.0",
+  "version": "1.0.0",
   "title": "nNGM: ValueSet praefix-ry",
   "name": "nNGM_ValueSet_praefix-ry",
   "status": "draft",

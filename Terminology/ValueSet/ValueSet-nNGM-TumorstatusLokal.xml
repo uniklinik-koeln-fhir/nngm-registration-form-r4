@@ -1,7 +1,7 @@
 <ValueSet xmlns="http://hl7.org/fhir">
     <id value="ValueSet-nNGM-TumorstatusLokal" />
     <url value="http://uk-koeln.de/fhir/ValueSet/nngm/tumorstatus-lokal" />
-    <version value="0.1" />
+    <version value="1.0.0" />
     <name value="ValueSet_nNGM_TumorstatusLokal" />
     <status value="draft" />
     <description value="Lokaler Tumorstatus nach Einheitlicher onkologischer Basisdatensatz." />

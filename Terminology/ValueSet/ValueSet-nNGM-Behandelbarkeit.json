@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-Behandelbarkeit",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/behandelbarkeit",
-  "version": "1.0",
+  "version": "1.0.0",
   "title": "ValueSet - nNGM - Behandelbarkeit",
   "name": "ValueSet_nNGM_Behandelbarkeit",
   "status": "active",

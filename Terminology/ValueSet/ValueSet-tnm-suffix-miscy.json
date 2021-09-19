@@ -1,7 +1,7 @@
 {
     "resourceType":"ValueSet",
     "url":"http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-miscy",
-    "version":"1.0",
+    "version":"1.0.0",
     "title":"nNGM: ValueSet TNM-Suffix",
     "name":"nNGM_ValueSet_TNM-Suffix",
     "status": "draft",

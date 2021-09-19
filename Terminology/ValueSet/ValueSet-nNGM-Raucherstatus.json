@@ -2,7 +2,7 @@
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-Raucherstatus",
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus",
-    "version": "1.0",
+    "version": "1.0.0",
     "name": "nNGM_ValueSet_Raucherstatus",
     "title": "ValueSet - nNGM - Raucherstatus",
     "status": "active",

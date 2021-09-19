@@ -2,7 +2,7 @@
     "resourceType": "ValueSet",
     "id": "Valueset-nNGM-MaterialTyp",
     "url": "http://uk-koeln.de/fhir/ValueSet/nngm/MaterialTyp",
-    "version": "1.0",
+    "version": "1.0.0",
     "title": "ValueSet - nNGM - MaterialTyp",
     "name": "nNGM_Valueset_Materialtyp",
     "status": "active",

@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-ConsentPolicy",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
-  "version": "1.0",
+  "version": "1.0.0",
   "name": "ValueSet_nNGM_ConsentPolicy",
   "title": "ValueSet - nNGM - Consent Policy",
   "status": "active",

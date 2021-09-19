@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-nNGM-datumProgress" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/datumProgress" />
-  <name value="DatumProgress" />
-  <status value="draft" />
+  <name value="Extension_nNGM_datumProgress" />
+  <title value="Extension - nNGM - datumProgress" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <mapping>
     <identity value="rim" />

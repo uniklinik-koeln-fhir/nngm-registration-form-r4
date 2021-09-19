@@ -132,6 +132,10 @@
     <element id="Observation.bodySite">
       <path value="Observation.bodySite" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="extensible" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/icd-o-3-topologie" />
+      </binding>
     </element>
   </differential>
 </StructureDefinition>

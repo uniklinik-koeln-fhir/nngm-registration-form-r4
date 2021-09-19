@@ -1,0 +1,23 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ValueSet-nNGM-Topographie",
+  "status": "active",
+  "name": "ValueSet_nNGM_Topographie",
+  "title": "ValueSet - nNGM - Topographie",
+  "version": "1.0.0",
+  "url": "http://uk-koeln.de/fhir/ValueSet/icd-o-3-topologie",
+  "compose": {
+    "include": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/icd-o-3",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "regex",
+            "value": "^C\\S*$"
+          }
+        ]
+      }
+    ]
+  }
+}

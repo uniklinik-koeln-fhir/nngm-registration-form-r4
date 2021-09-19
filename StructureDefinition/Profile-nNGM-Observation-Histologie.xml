@@ -129,5 +129,9 @@
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation" />
       </binding>
     </element>
+    <element id="Observation.bodySite">
+      <path value="Observation.bodySite" />
+      <mustSupport value="true" />
+    </element>
   </differential>
 </StructureDefinition>

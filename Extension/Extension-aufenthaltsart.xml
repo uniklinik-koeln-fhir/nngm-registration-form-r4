@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-nNGM-Aufenhaltsart" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/aufenthaltsart" />
-  <version value="1.0" />
-  <name value="nNGM_Extension_Aufenthaltsart" />
-  <title value="nNGM: Extension Art des Aufenthalts" />
-  <status value="draft" />
-  <publisher value="Universitätsklinikum Köln" />
-  <description value="Type of stay for treatment purposes" />
+  <version value="1.0.0" />
+  <name value="Extension_nNGM_Aufenhaltsart" />
+  <title value="Extension - nNGM - Aufenhaltsart" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

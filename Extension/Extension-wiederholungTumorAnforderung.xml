@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Extension-nNGM-WiederholungAnforderung" />
   <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/wiederholungAnforderung" />
-  <version value="1.0" />
-  <name value="nNGM_Extension_WiederholungAnforderung" />
-  <title value="nNGM: Extension WiederholungAnforderung" />
-  <status value="draft" />
+  <version value="1.0.0" />
+  <name value="Extension_nNGM_WiederholungAnforderung" />
+  <title value="Extension - nNGM - Wiederholung Anforderung" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

@@ -30,9 +30,30 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Tumorerkrankung.DatumProgress">
+    <element id="Tumorerkrankung.KurativOperabel">
+      <path value="Tumorerkrankung.KurativOperabel" />
+      <short value="Ist der Tumor zum Zeitpunkt der Anforderung operabel?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.Rezidiv/Progress">
+      <path value="Tumorerkrankung.Rezidiv/Progress" />
+      <short value="Wird die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert?" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="BackboneElement" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Tumorerkrankung.Rezidiv/Progress.DatumProgress">
       <path value="Tumorerkrankung.DatumProgress" />
-      <short value="Falls die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert wird, Datum des Progress/Rezidivs" />
+      <short value="Falls die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert wird, Datum des Progress/Rezidiv" />
       <min value="0" />
       <max value="*" />
       <type>
@@ -76,28 +97,6 @@
     <element id="Tumorerkrankung.Histologie.Grading">
       <path value="Tumorerkrankung.Histologie.Grading" />
       <short value="Histopathologische Differenzierung des Tumors" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Tumorerkrankung.KurativOperabel">
-      <path value="Tumorerkrankung.KurativOperabel" />
-      <short value="Ist der Tumor zum Zeitpunkt der Anforderung operabel?" />
-      <min value="0" />
-      <max value="*" />
-      <type>
-        <code value="string" />
-        <profile value="http://hl7.org/fhir/StructureDefinition/string" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Tumorerkrankung.RezidivProgress">
-      <path value="Tumorerkrankung.RezidivProgress" />
-      <short value="Wird die Anforderung zum Zwecke der Diagnostik eines Progress/Rezidivs dokumentiert?" />
       <min value="0" />
       <max value="*" />
       <type>

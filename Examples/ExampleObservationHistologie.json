@@ -19,9 +19,9 @@
     ],
     "code": {
         "coding": {
-            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-            "code": "C19165",
-            "display": "Cancer Histology"
+            "system": "http://loinc.org",
+            "code": "59847-4",
+            "display": "Histology and Behavior ICD-O-3 Cancer"
         }
     },
     "subject": {

@@ -83,13 +83,27 @@
       <path value="Observation.code" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
-      <fixedUri value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
-      <fixedCode value="C19165" />
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="59847-4" />
+      </patternCoding>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />
@@ -102,6 +116,14 @@
         <code value="CodeableConcept" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <min value="1" />
       <binding>
         <strength value="extensible" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation" />

@@ -343,6 +343,7 @@
       <type>
         <code value="string" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Basisangaben.Krankenkasse.PKV-Tarif">
       <path value="Basisangaben.Krankenkasse.PKV-Tarif" />

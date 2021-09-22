@@ -46,11 +46,11 @@
                 ]
             },
             {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
                 "concept": [
                     {
-                        "code": "UNK",
-                        "display": "unknown"
+                        "code": "unknown",
+                        "display": "Unknown"
                     }
                 ]
             }
@@ -62,10 +62,10 @@
         "total": 9,
         "contains": [
             {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-NullFlavor",
+                "system": "http://terminology.hl7.org/CodeSystem/data-absent-reason",
                 "version": "2018-08-12",
-                "code": "UNK",
-                "display": "unknown"
+                "code": "unknown",
+                "display": "Unknown"
             },
             {
                 "system": "http://loinc.org/",

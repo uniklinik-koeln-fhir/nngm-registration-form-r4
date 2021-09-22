@@ -49,25 +49,26 @@
     <element id="Observation.category">
       <path value="Observation.category" />
       <min value="1" />
-      <max value="1" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.category.coding">
-      <path value="Observation.category.coding" />
+    <element id="Observation.category:survey">
+      <path value="Observation.category" />
+      <sliceName value="survey" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.system">
-      <path value="Observation.category.coding.system" />
-      <min value="1" />
-      <fixedUri value="http://hl7.org/fhir/observation-category" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.category.coding.code">
-      <path value="Observation.category.coding.code" />
-      <min value="1" />
-      <fixedCode value="survey" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="survey" />
+        </coding>
+      </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.code">
@@ -101,13 +102,6 @@
     </element>
     <element id="Observation.effective[x]">
       <path value="Observation.effective[x]" />
-      <slicing>
-        <discriminator>
-          <type value="type" />
-          <path value="$this" />
-        </discriminator>
-        <rules value="open" />
-      </slicing>
       <type>
         <code value="dateTime" />
       </type>
@@ -119,6 +113,7 @@
       <type>
         <code value="dateTime" />
       </type>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.extension">
       <path value="Observation.effective[x].extension" />
@@ -129,6 +124,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime">
       <path value="Observation.effective[x].extension" />
@@ -138,21 +134,6 @@
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime" />
       </type>
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x]">
-      <path value="Observation.effective[x].extension.value[x]" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x].coding">
-      <path value="Observation.effective[x].extension.value[x].coding" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x].coding.system">
-      <path value="Observation.effective[x].extension.value[x].coding.system" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.effective[x]:effectiveDateTime.extension:effectivePointInTime.value[x].coding.code">
-      <path value="Observation.effective[x].extension.value[x].coding.code" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.value[x]">

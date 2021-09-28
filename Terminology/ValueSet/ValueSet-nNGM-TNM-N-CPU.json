@@ -1,0 +1,52 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-nNGM-TNM-N-CPU",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-n-cpu",
+    "version": "1.0.0",
+    "title": "ValueSet - TNM - N - CPU",
+    "name": "ValueSet_TNM_N_CPU",
+    "status": "active",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "concept": [
+                    {
+                        "code": "21906-3",
+                        "display": "Regional lymph nodes.clinical [Class] Cancer"
+                    },
+                    {
+                        "code": "21900-6",
+                        "display": "Regional lymph nodes.pathology [Class] Cancer"
+                    },
+                    {
+                        "code": "21912-1",
+                        "display": "Regional lymph nodes.other [Class] Cancer"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "eb80feab-b595-43a0-8830-a679fa05db03",
+        "timestamp": "2020-10-15T12:50:41+00:00",
+        "total": 3,
+        "contains": [
+            {
+                "system": "http://loinc.org",
+                "code": "21906-3",
+                "display": "Regional lymph nodes.clinical [Class] Cancer"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "21900-6",
+                "display": "Regional lymph nodes.pathology [Class] Cancer"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "21912-1",
+                "display": "Regional lymph nodes.other [Class] Cancer"
+            }
+        ]
+    }
+}

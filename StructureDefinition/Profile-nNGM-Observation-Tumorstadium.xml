@@ -162,46 +162,6 @@
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/uicc-stage" />
       </binding>
     </element>
-    <element id="Observation.value[x].coding">
-      <path value="Observation.value[x].coding" />
-      <min value="1" />
-      <max value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.value[x].coding.system">
-      <path value="Observation.value[x].coding.system" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.value[x].coding.version">
-      <path value="Observation.value[x].coding.version" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.value[x].coding.code">
-      <path value="Observation.value[x].coding.code" />
-      <min value="1" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.interpretation">
-      <path value="Observation.interpretation" />
-      <max value="1" />
-    </element>
-    <element id="Observation.bodySite">
-      <path value="Observation.bodySite" />
-      <max value="0" />
-    </element>
-    <element id="Observation.specimen">
-      <path value="Observation.specimen" />
-      <type>
-        <code value="Reference" />
-        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen" />
-        <targetProfile value="http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM" />
-      </type>
-    </element>
-    <element id="Observation.referenceRange">
-      <path value="Observation.referenceRange" />
-      <max value="0" />
-    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>

@@ -73,13 +73,12 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <min value="1" />
-      <max value="1" />
+      <max value="*" />
       <slicing>
         <discriminator>
           <type value="pattern" />
@@ -101,7 +100,7 @@
     </element>
     <element id="Observation.code.coding:loinc">
       <path value="Observation.code.coding" />
-      <sliceName value="sct" />
+      <sliceName value="loinc" />
       <min value="1" />
       <mustSupport value="true" />
       <binding>

@@ -13,18 +13,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Practitioner" />
   <derivation value="constraint" />
   <differential>
-    <element id="Practitioner.id">
-      <path value="Practitioner.id" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Practitioner.meta">
-      <path value="Practitioner.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Practitioner.meta.profile">
-      <path value="Practitioner.meta.profile" />
-      <mustSupport value="true" />
-    </element>
     <element id="Practitioner.name">
       <path value="Practitioner.name" />
       <slicing>

@@ -43,18 +43,6 @@
         <source value="http://uk-koeln.de/fhir/StructureDefinition/organisation/nNGM" />
       </constraint>
     </element>
-    <element id="Organization.id">
-      <path value="Organization.id" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.meta">
-      <path value="Organization.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Organization.meta.profile">
-      <path value="Organization.meta.profile" />
-      <mustSupport value="true" />
-    </element>
     <element id="Organization.type">
       <path value="Organization.type" />
       <slicing>

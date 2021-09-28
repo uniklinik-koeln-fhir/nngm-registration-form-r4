@@ -33,18 +33,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/PractitionerRole" />
   <derivation value="constraint" />
   <differential>
-    <element id="PractitionerRole.id">
-      <path value="PractitionerRole.id" />
-      <mustSupport value="true" />
-    </element>
-    <element id="PractitionerRole.meta">
-      <path value="PractitionerRole.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="PractitionerRole.meta.profile">
-      <path value="PractitionerRole.meta.profile" />
-      <mustSupport value="true" />
-    </element>
     <element id="PractitionerRole.identifier">
       <path value="PractitionerRole.identifier" />
       <slicing>

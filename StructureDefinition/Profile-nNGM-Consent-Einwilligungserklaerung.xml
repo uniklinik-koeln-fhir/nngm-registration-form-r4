@@ -13,18 +13,6 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Consent" />
   <derivation value="constraint" />
   <differential>
-    <element id="Consent.id">
-      <path value="Consent.id" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Consent.meta">
-      <path value="Consent.meta" />
-      <mustSupport value="true" />
-    </element>
-    <element id="Consent.meta.profile">
-      <path value="Consent.meta.profile" />
-      <mustSupport value="true" />
-    </element>
     <element id="Consent.status">
       <path value="Consent.status" />
       <fixedCode value="active" />

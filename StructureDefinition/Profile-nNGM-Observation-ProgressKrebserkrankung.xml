@@ -13,6 +13,16 @@
   <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
   <derivation value="constraint" />
   <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <constraint>
+        <key value="obs-nngm-1" />
+        <severity value="error" />
+        <human value="Falls kein Messwert verfügbar ist, muss eine dataAbsentReason angegeben werden" />
+        <expression value="value.exists().not() implies dataAbsentReason.exists()" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
+      </constraint>
+    </element>
     <element id="Observation.extension">
       <path value="Observation.extension" />
       <slicing>
@@ -120,7 +130,6 @@
     </element>
     <element id="Observation.value[x]">
       <path value="Observation.value[x]" />
-      <min value="1" />
       <slicing>
         <discriminator>
           <type value="type" />

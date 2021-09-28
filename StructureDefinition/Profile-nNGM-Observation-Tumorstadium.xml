@@ -162,6 +162,15 @@
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/uicc-stage" />
       </binding>
     </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/uicc-stage" />
+      </binding>
+    </element>
     <element id="Observation.component">
       <path value="Observation.component" />
       <slicing>

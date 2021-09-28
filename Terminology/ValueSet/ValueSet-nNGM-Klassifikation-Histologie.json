@@ -24,6 +24,10 @@
                         "display": "Azinuszell-Zystadenokarzinom"
                     },
                     {
+                        "code": "8255/3",
+                        "display": "Adenokarzinom mit gemischten Subtypen"
+                    }
+                    {
                         "code": "8260/3",
                         "display": "Papilläres Adenokarzinom o.n.A."
                     },

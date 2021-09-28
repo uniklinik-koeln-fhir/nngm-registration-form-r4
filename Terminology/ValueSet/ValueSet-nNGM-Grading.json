@@ -1,0 +1,126 @@
+{
+  "resourceType": "ValueSet",
+  "id": "ValueSet-nNGM-Grading",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/grading",
+  "version": "1.0.0",
+  "name": "ValueSet_nNGM_Grading",
+  "title": "ValueSet - nNGM - Grading",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "concept": [
+          {
+            "code": "GX",
+            "display": "GX"
+          },
+          {
+            "code": "G0",
+            "display": "G0"
+          },
+          {
+            "code": "G1",
+            "display": "G1"
+          },
+          {
+            "code": "G2",
+            "display": "G2"
+          },
+          {
+            "code": "G3",
+            "display": "G3"
+          },
+          {
+            "code": "G4",
+            "display": "G4"
+          },
+          {
+            "code": "GL",
+            "display": "G1-2"
+          },
+          {
+            "code": "GM",
+            "display": "G2-3"
+          },
+          {
+            "code": "GH",
+            "display": "G3-4"
+          },
+          {
+            "code": "GB",
+            "display": "GB"
+          }
+        ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "uk-koeln-work-grading-1",
+    "timestamp": "2018-10-31",
+    "total": 10,
+    "contains": [
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "GX",
+        "display": "GX"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "G0",
+        "display": "G0"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "G1",
+        "display": "G1"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "G2",
+        "display": "G2"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "G3",
+        "display": "G3"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "G4",
+        "display": "G4"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "GL",
+        "display": "G1-2"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "GM",
+        "display": "G2-3"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "GH",
+        "display": "G3-4"
+      },
+      {
+        "system": "urn:oid:2.16.840.1.113883.15.16",
+        "version": "8",
+        "code": "GB",
+        "display": "GB"
+      }
+    ]
+  }
+}

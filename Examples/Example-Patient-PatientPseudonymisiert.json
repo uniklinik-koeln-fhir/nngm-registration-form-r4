@@ -6,6 +6,12 @@
             "http://uk-koeln.de/fhir/StructureDefinition/Patient/nNGM/pseudonymisiert"
         ]
     },
+    "identifier": [
+        {
+            "system": "http://uk-koeln.de/fhir/sid/nNGM/patient-pseudonym",
+            "value": "1234567890"
+        }
+    ],
     "gender": "female",
     "birthDate": "1940-12-31",
     "deceasedDateTime": "2021-01-01",

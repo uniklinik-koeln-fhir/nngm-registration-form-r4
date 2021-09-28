@@ -347,8 +347,18 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:M.extension">
-      <path value="Observation.component.extension" />
+    <element id="Observation.component:M.code">
+      <path value="Observation.component.code" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://snomed.info/sct" />
+          <code value="78873005" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:M.code.coding">
+      <path value="Observation.component.code.coding" />
       <slicing>
         <discriminator>
           <type value="value" />
@@ -356,47 +366,30 @@
         </discriminator>
         <rules value="open" />
       </slicing>
-    </element>
-    <element id="Observation.component:M.extension:praefix-cpu">
-      <path value="Observation.component.extension" />
-      <sliceName value="praefix-cpu" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
-      </type>
+      <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:M.extension:tnm-art">
-      <path value="Observation.component.extension" />
-      <sliceName value="tnm-art" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:M.code">
-      <path value="Observation.component.code" />
-      <patternCodeableConcept>
-        <coding>
-          <system value="http://loinc.org" />
-          <code value="21907-1" />
-        </coding>
-      </patternCodeableConcept>
-    </element>
-    <element id="Observation.component:M.code.coding">
+    <element id="Observation.component:M.code.coding:sct">
       <path value="Observation.component.code.coding" />
+      <sliceName value="sct" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="277208005" />
+      </patternCoding>
       <min value="1" />
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:M.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:M.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <min value="1" />
+    <element id="Observation.component:M.code.coding:loinc">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="loinc" />
+      <min value="0" />
+      <max value="1" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m-cpu" />
+      </binding>
     </element>
     <element id="Observation.component:M.value[x]">
       <path value="Observation.component.value[x]" />
@@ -407,29 +400,8 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m-nngm" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m" />
       </binding>
-    </element>
-    <element id="Observation.component:M.value[x].coding">
-      <path value="Observation.component.value[x].coding" />
-      <min value="1" />
-      <max value="1" />
-    </element>
-    <element id="Observation.component:M.value[x].coding.system">
-      <path value="Observation.component.value[x].coding.system" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:M.value[x].coding.code">
-      <path value="Observation.component.value[x].coding.code" />
-      <min value="1" />
-    </element>
-    <element id="Observation.component:M.interpretation">
-      <path value="Observation.component.interpretation" />
-      <max value="0" />
-    </element>
-    <element id="Observation.component:M.referenceRange">
-      <path value="Observation.component.referenceRange" />
-      <max value="0" />
     </element>
   </differential>
 </StructureDefinition>

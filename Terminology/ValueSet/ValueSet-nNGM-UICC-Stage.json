@@ -1,14 +1,11 @@
 {
   "resourceType": "ValueSet",
+  "id": "ValueSet-nNGM-UICC-Stage",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/uicc-stage",
   "version": "1.0.0",
-  "title": "nNGM: ValueSet UIIC Stage",
-  "name": "nNGM_ValueSet_UICC-Stage",
-  "status": "draft",
-  "experimental": false,
-  "date": "2018-08-10",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "UICC-Klassifikation",
+  "title": "ValueSet - nNGM -  UIIC-Stage",
+  "name": "ValueSet_nNGM_UICC-Stage",
+  "status": "active",
   "compose": {
       "include": [
           {

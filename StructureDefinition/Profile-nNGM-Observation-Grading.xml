@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="Profile-nNGM-Observation-Grading" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/grading" />
+  <version value="1.0.0" />
+  <name value="Profile_nNGM_Observation_Grading" />
+  <title value="Profile - nNGM - Observation - Grading" />
+  <status value="active" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+  <differential>
+    <element id="Observation">
+      <path value="Observation" />
+      <constraint>
+        <key value="obs-nngm-1" />
+        <severity value="error" />
+        <human value="Falls kein Messwert verfügbar ist, muss eine dataAbsentReason angegeben werden" />
+        <expression value="value.exists().not() implies dataAbsentReason.exists()" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
+      </constraint>
+    </element>
+    <element id="Observation.status">
+      <path value="Observation.status" />
+      <fixedCode value="final" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.category:laboratory">
+      <path value="Observation.category" />
+      <sliceName value="laboratory" />
+      <min value="1" />
+      <max value="1" />
+      <patternCodeableConcept>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/observation-category" />
+          <code value="laboratory" />
+        </coding>
+      </patternCodeableConcept>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding">
+      <path value="Observation.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="code" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="loinc" />
+      <min value="1" />
+      <patternCoding>
+        <system value="http://loinc.org" />
+        <code value="59542-1" />
+      </patternCoding>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.subject">
+      <path value="Observation.subject" />
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x]">
+      <path value="Observation.effective[x]" />
+      <slicing>
+        <discriminator>
+          <type value="type" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <min value="1" />
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.effective[x]:effectiveDateTime">
+      <path value="Observation.effectiveDateTime" />
+      <sliceName value="effectiveDateTime" />
+      <min value="1" />
+      <constraint>
+        <key value="obs-nngm-1" />
+        <severity value="error" />
+        <human value="If Observation.effective[x] is dateTime and has a value then that value shall be precise to the day" />
+        <expression value="$this.toString().length() &gt;= 8" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/grading" />
+      </constraint>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]">
+      <path value="Observation.value[x]" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.value[x]:valueCodeableConcept">
+      <path value="Observation.valueCodeableConcept" />
+      <sliceName value="valueCodeableConcept" />
+      <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/grading" />
+      </binding>
+    </element>
+  </differential>
+</StructureDefinition>

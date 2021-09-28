@@ -92,6 +92,7 @@
       <path value="Observation.code.coding" />
       <sliceName value="sct" />
       <min value="1" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="260879005" />
@@ -101,7 +102,7 @@
     <element id="Observation.code.coding:loinc">
       <path value="Observation.code.coding" />
       <sliceName value="loinc" />
-      <min value="1" />
+      <max value="1" />
       <mustSupport value="true" />
       <binding>
         <strength value="required" />

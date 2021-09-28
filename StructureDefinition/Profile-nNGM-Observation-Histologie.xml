@@ -52,6 +52,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.extension:episodeOfCare">
       <path value="Observation.extension" />

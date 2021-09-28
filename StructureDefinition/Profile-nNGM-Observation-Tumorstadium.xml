@@ -195,6 +195,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:T.extension:suffix-t">
       <path value="Observation.component.extension" />

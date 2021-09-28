@@ -196,12 +196,12 @@
         <rules value="open" />
       </slicing>
     </element>
-    <element id="Observation.component:T.extension:suffix-miscy">
+    <element id="Observation.component:T.extension:suffix-t">
       <path value="Observation.component.extension" />
-      <sliceName value="suffix-miscy" />
+      <sliceName value="suffix-t" />
       <type>
         <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-miscy" />
+        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-t" />
       </type>
       <mustSupport value="true" />
     </element>

@@ -28,7 +28,7 @@
         </extension>
         <code value="http://hl7.org/fhirpath/System.String" />
       </type>
-      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-miscy" />
+      <fixedUri value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-t" />
     </element>
     <element id="Extension.value[x]">
       <path value="Extension.value[x]" />
@@ -46,7 +46,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-miscy" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-t" />
       </binding>
     </element>
   </differential>

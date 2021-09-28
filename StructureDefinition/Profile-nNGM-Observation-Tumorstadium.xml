@@ -73,27 +73,41 @@
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
+      <min value="1" />
       <mustSupport value="true" />
-      <binding>
-        <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/praefix-ry" />
-      </binding>
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
       <min value="1" />
       <max value="1" />
+      <slicing>
+        <discriminator>
+          <type value="pattern" />
+          <path value="$this" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code.coding.system">
-      <path value="Observation.code.coding.system" />
+    <element id="Observation.code.coding:sct">
+      <path value="Observation.code.coding" />
+      <sliceName value="sct" />
       <min value="1" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="260879005" />
+      </patternCoding>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.code.coding.code">
-      <path value="Observation.code.coding.code" />
+    <element id="Observation.code.coding:loinc">
+      <path value="Observation.code.coding" />
+      <sliceName value="sct" />
       <min value="1" />
       <mustSupport value="true" />
+      <binding>
+        <strength value="required" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-art" />
+      </binding>
     </element>
     <element id="Observation.subject">
       <path value="Observation.subject" />

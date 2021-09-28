@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-miscy" />
+  <id value="Extension-nNGM-TNM-Suffix-T" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-t" />
   <version value="1.0" />
-  <name value="nNGM_Extension_TNM-Suffix" />
-  <title value="nNGM: Extension TNM-Suffix" />
-  <status value="draft" />
+  <name value="Extension_nNGM_TNM-Suffix-T" />
+  <title value="Extension - nNGM - TNM-Suffix-T" />
+  <status value="active" />
   <fhirVersion value="4.0.1" />
   <kind value="complex-type" />
   <abstract value="false" />

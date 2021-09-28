@@ -127,6 +127,7 @@
       <type>
         <code value="dateTime" />
       </type>
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.extension">

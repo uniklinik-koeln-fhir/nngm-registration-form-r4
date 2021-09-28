@@ -256,6 +256,15 @@
         <code value="CodeableConcept" />
       </type>
       <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:T.value[x]:valueCodeableConcept">
+      <path value="Observation.component.value[x]" />
+      <sliceName value="valueCodeableConcept" />
+      <min value="1" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
+      <mustSupport value="true" />
       <binding>
         <strength value="required" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t" />

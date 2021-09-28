@@ -13,44 +13,52 @@
         "version": "8",
         "concept": [
           {
-            "code": "GX",
-            "display": "GX"
-          },
-          {
             "code": "G0",
-            "display": "G0"
+            "display": "Grading nicht vorgesehen"
           },
           {
             "code": "G1",
-            "display": "G1"
+            "display": "gut differenziert"
           },
           {
             "code": "G2",
-            "display": "G2"
+            "display": "mäßig differenziert"
           },
           {
             "code": "G3",
-            "display": "G3"
+            "display": "schlecht / gering differenziert2"
           },
           {
             "code": "G4",
-            "display": "G4"
+            "display": "undifferenzierter Tumor mit sehr hohem Malignitätsgrad"
+          },
+          {
+            "code": "GX",
+            "display": "nicht bestimmbar"
           },
           {
             "code": "GL",
-            "display": "G1-2"
+            "display": "low grade (G1 oder G2)"
           },
           {
             "code": "GM",
-            "display": "G2-3"
+            "display": "intermediate (G2 oder G3)"
           },
           {
             "code": "GH",
-            "display": "G3-4"
+            "display": "high grade (G3 oder G4)"
           },
           {
-            "code": "GB",
+            "code": "Borderline",
             "display": "GB"
+          },
+          {
+            "code": "U",
+            "display": "unbekannt"
+          },
+          {
+            "code": "T",
+            "display": "trifft nicht zu"
           }
         ]
       }

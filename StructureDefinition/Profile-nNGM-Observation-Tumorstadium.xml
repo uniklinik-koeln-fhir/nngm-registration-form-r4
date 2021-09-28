@@ -106,7 +106,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-art" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art" />
       </binding>
     </element>
     <element id="Observation.subject">

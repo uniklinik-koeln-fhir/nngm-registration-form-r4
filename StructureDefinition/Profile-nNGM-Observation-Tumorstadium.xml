@@ -161,6 +161,9 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
+      <type>
+        <code value="CodeableConcept" />
+      </type>
       <mustSupport value="true" />
       <binding>
         <strength value="required" />

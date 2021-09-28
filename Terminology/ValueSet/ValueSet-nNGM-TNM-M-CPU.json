@@ -1,0 +1,52 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-nNGM-TNM-M-CPU",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m-cpu",
+    "version": "1.0.0",
+    "title": "ValueSet - TNM - M - CPU",
+    "name": "ValueSet_TNM_M_CPU",
+    "status": "active",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "concept": [
+                    {
+                        "code": "21907-1",
+                        "display": "Distant metastases.clinical [Class] Cancer"
+                    },
+                    {
+                        "code": "21901-4",
+                        "display": "Distant metastases.pathology [Class] Cancer"
+                    },
+                    {
+                        "code": "21913-9",
+                        "display": "Distant metastases.other [Class] Cancer"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "eb80feab-b595-43a0-8830-a679fa05db03",
+        "timestamp": "2020-10-15T12:50:41+00:00",
+        "total": 3,
+        "contains": [
+            {
+                "system": "http://loinc.org",
+                "code": "21907-1",
+                "display": "Distant metastases.clinical [Class] Cancer"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "21901-4",
+                "display": "Distant metastases.pathology [Class] Cancer"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "21913-9",
+                "display": "Distant metastases.other [Class] Cancer"
+            }
+        ]
+    }
+}

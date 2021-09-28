@@ -1,0 +1,52 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-nNGM-TNM-T-CPU",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t-cpu",
+    "version": "1.0.0",
+    "title": "ValueSet - TNM - T - CPU",
+    "name": "ValueSet_TNM_T_CPU",
+    "status": "active",
+    "compose": {
+        "include": [
+            {
+                "system": "http://loinc.org",
+                "concept": [
+                    {
+                        "code": "21905-5",
+                        "display": "Primary tumor.clinical [Class] Cancer"
+                    },
+                    {
+                        "code": "21899-0",
+                        "display": "Primary tumor.pathology Cancer"
+                    },
+                    {
+                        "code": "21911-3",
+                        "display": "Primary tumor.other [Class] Cancer"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "eb80feab-b595-43a0-8830-a679fa05db03",
+        "timestamp": "2020-10-15T12:50:41+00:00",
+        "total": 3,
+        "contains": [
+            {
+                "system": "http://loinc.org",
+                "code": "21905-5",
+                "display": "Primary tumor.clinical [Class] Cancer"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "21899-0",
+                "display": "Primary tumor.pathology Cancer"
+            },
+            {
+                "system": "http://loinc.org",
+                "code": "21911-3",
+                "display": "Primary tumor.other [Class] Cancer"
+            }
+        ]
+    }
+}

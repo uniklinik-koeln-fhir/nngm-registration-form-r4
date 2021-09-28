@@ -1,0 +1,34 @@
+{
+    "resourceType": "ValueSet",
+    "id": "ValueSet-nNGM-TNM-r-Praefix",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-r-praefix",
+    "version": "1.0.0",
+    "title": "ValueSet - TNM - r - Präfix",
+    "name": "ValueSet_TNM-r-Praefix",
+    "status": "active",
+    "compose": {
+        "include": [
+            {
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "concept": [
+                    {
+                        "code": "r",
+                        "display": "r"
+                    }
+                ]
+            }
+        ]
+    },
+    "expansion": {
+        "identifier": "eb80feab-b595-43a0-8830-a679fa05db03",
+        "timestamp": "2020-10-15T12:50:41+00:00",
+        "total": 1,
+        "contains": [
+            {
+                "system": "urn:oid:2.16.840.1.113883.15.16",
+                "code": "r",
+                "display": "r"
+            }
+        ]
+    }
+}

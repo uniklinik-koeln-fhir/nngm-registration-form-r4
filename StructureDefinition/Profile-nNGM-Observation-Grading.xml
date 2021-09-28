@@ -23,6 +23,27 @@
         <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
       </constraint>
     </element>
+    <element id="Observation.extension">
+      <path value="Observation.extension" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.extension:episodeOfCare">
+      <path value="Observation.extension" />
+      <sliceName value="episodeOfCare" />
+      <max value="1" />
+      <type>
+        <code value="Extension" />
+        <profile value="http://hl7.org/fhir/StructureDefinition/workflow-episodeOfCare" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Observation.status">
       <path value="Observation.status" />
       <fixedCode value="final" />

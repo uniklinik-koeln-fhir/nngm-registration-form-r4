@@ -1,14 +1,11 @@
 {
   "resourceType": "ValueSet",
+  "id": "ValueSet-nNGM-PointInTime",
   "url": "http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time",
   "version": "1.0.0",
-  "title": "nNGM: ValueSet Point-In-Time",
-  "name": "nNGM_ValueSet_Point-In-Time",
-  "status": "draft",
-  "experimental": false,
-  "date": "2018-08-24",
-  "publisher": "Universitätsklinikum Köln",
-  "description": "Codes für den Zeitpunkt während des Diagnose- und Behandlungsprozesses",
+  "title": "ValueSet - nNGM - Point-In-Time",
+  "name": "ValueSet_nNGM_Point-In-Time",
+  "status": "active",
   "compose": {
       "include": [
           {

@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-ECOG",
-    "url": "http://uk-koeln.de/fhir/ValueSet/ecog",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/ecog",
     "version": "1.0.0",
     "name": "nNGM_ValueSet_ECOG",
     "title": "nNGM: ValueSet ECOG",

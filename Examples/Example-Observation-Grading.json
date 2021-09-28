@@ -1,0 +1,40 @@
+{
+    "resourceType": "Observation",
+    "id": "ExampleObservationGrading",
+    "meta": {
+        "profile": [
+            "http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/grading"
+        ]
+    },
+    "status": "final",
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                    "code": "laboratory"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "59542-1",
+                "display": "Grade pathology value Cancer"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/ExamplePatientPatient"
+    },
+    "effectiveDateTime": "2021-01-01",
+    "valueCodeableConcept": {
+        "coding": {
+            "system": "urn:oid:2.16.840.1.113883.15.16",
+            "code": "G1",
+            "display": "gut differenziert"
+        }
+    }
+}

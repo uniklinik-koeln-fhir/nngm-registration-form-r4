@@ -205,24 +205,6 @@
       </type>
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:T.extension:praefix-cpu">
-      <path value="Observation.component.extension" />
-      <sliceName value="praefix-cpu" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-praefix-cpu" />
-      </type>
-      <mustSupport value="true" />
-    </element>
-    <element id="Observation.component:T.extension:tnm-art">
-      <path value="Observation.component.extension" />
-      <sliceName value="tnm-art" />
-      <type>
-        <code value="Extension" />
-        <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-art" />
-      </type>
-      <mustSupport value="true" />
-    </element>
     <element id="Observation.component:T.code">
       <path value="Observation.component.code" />
       <patternCodeableConcept>
@@ -276,7 +258,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t-nngm" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t" />
       </binding>
     </element>
     <element id="Observation.component:N">

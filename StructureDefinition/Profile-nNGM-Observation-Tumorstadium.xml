@@ -227,24 +227,40 @@
       <path value="Observation.component.code" />
       <patternCodeableConcept>
         <coding>
-          <system value="http://loinc.org" />
-          <code value="21905-5" />
+          <system value="http://snomed.info/sct" />
+          <code value="78873005" />
         </coding>
       </patternCodeableConcept>
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:T.code.coding">
       <path value="Observation.component.code.coding" />
+      <slicing>
+        <discriminator>
+          <type value="value" />
+          <path value="url" />
+        </discriminator>
+        <rules value="open" />
+      </slicing>
+      <mustSupport value="true" />
+    </element>
+    <element id="Observation.component:T.code.coding:sct">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="sct" />
+      <patternCoding>
+        <system value="http://snomed.info/sct" />
+        <code value="78873005" />
+      </patternCoding>
       <min value="1" />
       <max value="1" />
+      <mustSupport value="true" />
     </element>
-    <element id="Observation.component:T.code.coding.system">
-      <path value="Observation.component.code.coding.system" />
+    <element id="Observation.component:T.code.coding:loinc">
+      <path value="Observation.component.code.coding" />
+      <sliceName value="loinc" />
       <min value="1" />
-    </element>
-    <element id="Observation.component:T.code.coding.code">
-      <path value="Observation.component.code.coding.code" />
-      <min value="1" />
+      <max value="1" />
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:T.value[x]">
       <path value="Observation.component.value[x]" />

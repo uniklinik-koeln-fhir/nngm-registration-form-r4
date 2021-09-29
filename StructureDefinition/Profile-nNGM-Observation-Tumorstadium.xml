@@ -310,7 +310,7 @@
       <min value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:T.code.coding:sct">
+    <element id="Observation.component:N.code.coding:sct">
       <path value="Observation.component.code.coding" />
       <sliceName value="sct" />
       <patternCoding>
@@ -321,7 +321,7 @@
       <max value="1" />
       <mustSupport value="true" />
     </element>
-    <element id="Observation.component:T.code.coding:loinc">
+    <element id="Observation.component:N.code.coding:loinc">
       <path value="Observation.component.code.coding" />
       <sliceName value="loinc" />
       <min value="0" />

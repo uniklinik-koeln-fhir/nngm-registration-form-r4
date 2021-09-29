@@ -232,7 +232,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="url" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -303,7 +303,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="url" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>
@@ -374,7 +374,7 @@
       <slicing>
         <discriminator>
           <type value="value" />
-          <path value="url" />
+          <path value="$this" />
         </discriminator>
         <rules value="open" />
       </slicing>

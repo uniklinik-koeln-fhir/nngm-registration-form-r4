@@ -30,7 +30,7 @@
         "coding": [
             {
                 "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-                "code": "C134501",
+                "code": "C142114",
                 "display": "ALK Fusion Gene Positive"
             }
         ]

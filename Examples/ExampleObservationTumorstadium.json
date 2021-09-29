@@ -35,22 +35,6 @@
         "reference": "Patient/ExamplePatientPatient"
     },
     "effectiveDateTime": "2021-01-01",
-    "_effectiveDateTime": {
-        "extension": [
-            {
-                "url": "http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/effectivePointInTime",
-                "valueCodeableConcept": {
-                    "coding": [
-                        {
-                            "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
-                            "code": "ed",
-                            "display": "Erstdiagnose"
-                        }
-                    ]
-                }
-            }
-        ]
-    },
     "valueCodeableConcept": {
         "coding": [
             {

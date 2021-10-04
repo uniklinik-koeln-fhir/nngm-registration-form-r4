@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Profile-nNGM-Coverage-Versicherungsverhaeltnis" />
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Coverage/nNGM" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/nNGM/Coverage" />
   <version value="1.0.0" />
   <name value="Profile_nNGM_Coverage_Versicherungsverhaeltnis" />
   <title value="Profile - nNGM - Coverage - Versicherungsverhaeltnis" />

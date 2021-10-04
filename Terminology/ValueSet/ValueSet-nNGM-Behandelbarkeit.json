@@ -20,13 +20,13 @@
       "contains": [
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
-              "version": "1.0",
+              "version": "1.0.0",
               "code": "ko",
               "display": "kurativ operabel"
           },
           {
               "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
-              "version": "1.0",
+              "version": "1.0.0",
               "code": "nko",
               "display": "nicht kurativ operabel"
           }

@@ -20,61 +20,61 @@
         "contains": [
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Arztbrief",
                 "display": "Arztbrief"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Kontakt Krankenkasse",
                 "display": "Kontakt Krankenkasse"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Kontakt Behandler",
                 "display": "Kontakt Behandler"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Kontakt Angehoerige",
                 "display": "Kontakt Angehoerige"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Internet (Todesanzeigen)",
                 "display": "Internet (Todesanzeigen)"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Krebsregister",
                 "display": "Krebsregister"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Dokumentar",
                 "display": "Dokumentar"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Krankenhausinformationssystem",
                 "display": "Krankenhausinformationssystem"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Kontakt Angehörige",
                 "display": "Kontakt Angehörige"
             },
             {
                 "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/izt",
-                "version": "1.0",
+                "version": "1.0.0",
                 "code": "Andere hausinterne Datenbanken",
                 "display": "Andere hausinterne Datenbanken"
             }

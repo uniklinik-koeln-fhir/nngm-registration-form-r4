@@ -179,7 +179,7 @@
                 "mustSupport": true,
                 "binding": {
                     "strength": "required",
-                    "valueSet": "http://uk-koeln.de/fhir/ValueSet/Vitalstatus"
+                    "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/Vitalstatus"
                 }
             },
             {

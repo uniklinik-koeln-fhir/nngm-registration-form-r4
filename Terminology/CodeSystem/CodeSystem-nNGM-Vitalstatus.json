@@ -1,14 +1,14 @@
 {
     "resourceType": "CodeSystem",
     "id": "CodeSystem-nNGM-Vitalstatus",
-    "url": "http://uk-koeln.de/fhir/CodeSystem/Vitalstatus",
+    "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/Vitalstatus",
     "version": "1.0.0",
     "name": "CodeSystem_nNGM_Vitalstatus",
     "title": "CodeSystem - nNGM - Vitalstatus",
     "status": "active",
     "caseSensitive": true,
     "compositional": false, 
-    "valueSet": "http://uk-koeln.de/fhir/ValueSet/Vitalstatus",
+    "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/Vitalstatus",
     "content": "complete",
     "count": 7,
     "concept":  [

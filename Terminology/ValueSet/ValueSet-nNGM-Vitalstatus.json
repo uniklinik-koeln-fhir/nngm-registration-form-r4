@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-Vitalstatus",
-    "url": "http://uk-koeln.de/fhir/ValueSet/Vitalstatus",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/Vitalstatus",
     "version": "1.0.0",
     "title": "ValueSet - nNGM - Vitalstatus",
     "name": "ValueSet_nNGM_Vitalstatus",

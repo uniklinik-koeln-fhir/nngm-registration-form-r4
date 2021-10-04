@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Extension-nNGM-TNM-Suffix-T" />
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nngm/tnm-suffix-t" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/tnm-suffix-t" />
   <version value="1.0" />
   <name value="Extension_nNGM_TNM-Suffix-T" />
   <title value="Extension - nNGM - TNM-Suffix-T" />

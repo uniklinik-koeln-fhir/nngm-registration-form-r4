@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Profile-nNGM-Consent-Einwilligungserklaerung" />
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Consent/nNGM" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/nNGM/Consent" />
   <version value="1.0.0" />
   <name value="Profile_nNGM_Consent_Einwilligungserklaerung" />
   <title value="Profile - nNGM - Consent - Einwilligungserklärung" />

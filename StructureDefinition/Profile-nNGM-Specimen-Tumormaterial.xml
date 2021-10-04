@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <StructureDefinition xmlns="http://hl7.org/fhir">
   <id value="Profile-nNGM-Specimen-Tumormaterial" />
-  <url value="http://uk-koeln.de/fhir/StructureDefinition/Specimen/nNGM" />
+  <url value="http://uk-koeln.de/fhir/StructureDefinition/nNGM/Specimen" />
   <version value="1.0.0" />
   <name value="Profile_nNGM_Specimen_Tumormaterial" />
   <title value="Profil - nNGM - Specimen - Tumormaterial" />

@@ -1,8 +1,8 @@
 {
   "resourceType": "CodeSystem",
   "id": "CodeSystem-nNGM-NgsPanel",
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-ngsPanel",
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-ngsPanel",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/anforderung-ngsPanel",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-ngsPanel",
   "version": "1.0.0",
   "title": "CodeSystem - nNGM - NgsPanel",
   "name": "CodeSystem_nNGM_NgsPanel",

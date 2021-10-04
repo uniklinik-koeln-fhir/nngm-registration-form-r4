@@ -1,8 +1,8 @@
 {
   "resourceType": "CodeSystem",
   "id": "CodeSystem-nNGM-Abrechnungsinformation",
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/abrechnungsinformation",
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/abrechnungsinformation",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/abrechnungsinformation",
   "version": "1.0.0",
   "title": "CodeSystem - nNGM - Abrechnungsinformation",
   "name": "CodeSystem_nNGM_Abrechnungsinformation",

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-Behandelbarkeit",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/behandelbarkeit",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/behandelbarkeit",
   "version": "1.0.0",
   "title": "ValueSet - nNGM - Behandelbarkeit",
   "name": "ValueSet_nNGM_Behandelbarkeit",
@@ -9,7 +9,7 @@
   "compose": {
       "include": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/behandelbarkeit"
           }
       ]
   },
@@ -19,13 +19,13 @@
       "total": 2,
       "contains": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/behandelbarkeit",
               "version": "1.0.0",
               "code": "ko",
               "display": "kurativ operabel"
           },
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/behandelbarkeit",
               "version": "1.0.0",
               "code": "nko",
               "display": "nicht kurativ operabel"

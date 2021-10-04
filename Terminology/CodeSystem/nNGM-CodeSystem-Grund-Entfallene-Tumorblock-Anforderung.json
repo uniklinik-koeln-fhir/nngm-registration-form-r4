@@ -1,8 +1,8 @@
 {
   "resourceType": "CodeSystem",
   "id": "nNGM-CodeSystem-Grund-Entfallene-Tumorblock-Anforderung",
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/grundEntfallBlockAnforderung",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/grundEntfallBlockAnforderung",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundEntfallBlockAnforderung",
   "version": "1.0.0",
   "title": "CodeSystem - nNGM - Grund Entfallene Tumorblock-Anforderung",
   "name": "nNGM_CodeSystem_Grund_Entfallene_Tumorblock_Anforderung",

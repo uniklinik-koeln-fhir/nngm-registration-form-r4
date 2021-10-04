@@ -1,13 +1,13 @@
 <CodeSystem xmlns="http://hl7.org/fhir">
     <id value="CodeSystem-nNGM-TumorstatusLokal" />
-    <url value="http://uk-koeln.de/fhir/CodeSystem/nngm/tumorstatus-lokal" />
+    <url value="http://uk-koeln.de/fhir/CodeSystem/nNGM/tumorstatus-lokal" />
     <version value="1.0.0" />
     <name value="CodeSystem_nNGM_TumorstatusLokal" />
     <title value="CodeSystem - nNGM - TumorstatusLokal" />
     <status value="active" />
     <caseSensitive value="true" />
     <compositional value="false" />
-    <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tumorstatus-lokal" />
+    <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tumorstatus-lokal" />
     <content value="complete" />
     <count value="8" />
     <concept>

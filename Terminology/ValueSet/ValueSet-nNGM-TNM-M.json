@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-TNM-M",
-    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-m",
     "version": "1.0.0",
     "name": "ValueSet_nNGM_TNM-M",
     "title": "ValueSet - nNGM - TNM-M",

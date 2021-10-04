@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-PKV-Tarifform",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/pkv-tarifform",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/pkv-tarifform",
   "version": "1.0.0",
   "name": "ValueSet_nNGM_PKV-Tarifform",
   "title": "ValueSet - nNGM - PKV-Tarifform",
@@ -9,7 +9,7 @@
   "compose": {
       "include": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/pkv-tarifform"
           }
       ]
   },
@@ -19,19 +19,19 @@
       "total": 3,
       "contains": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/pkv-tarifform",
               "version": "1.0",
               "code": "basis",
               "display": "Basistarif"
           },
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/pkv-tarifform",
               "version": "1.0",
               "code": "standard",
               "display": "Standardtarif"
           },
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/pkv-tarifform",
               "version": "1.0",
               "code": "voll",
               "display": "Vollversichert"

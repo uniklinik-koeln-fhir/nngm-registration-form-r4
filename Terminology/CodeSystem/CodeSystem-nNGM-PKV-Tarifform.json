@@ -1,8 +1,8 @@
 {
   "resourceType": "CodeSystem",
   "id": "CodeSystem-nNGM-PKV-Tarifform",
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/pkv-tarifform",
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/pkv-tarifform",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/pkv-tarifform",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/pkv-tarifform",
   "version": "1.0.0",
   "title": "CodeSystem - nNGM - PKV Tarifform",
   "name": "CodeSystem_nNGM_PKV_Tarifform",

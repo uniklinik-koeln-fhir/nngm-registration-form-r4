@@ -1,8 +1,8 @@
 {
   "resourceType": "CodeSystem",
   "id": "CodeSystem-nNGM-Point-In-Time",
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/point-in-time",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/point-in-time",
   "version": "1.0.0",
   "title": "CodeSystem - nNGM - Point-In-Time",
   "name": "CodeSystem_nNGM_Point_In_Time",

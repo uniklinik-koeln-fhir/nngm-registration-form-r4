@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-Anforderung-Molekularpathologie",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-molekularpathologie",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-molekularpathologie",
   "version": "1.0.0",
   "title": "ValueSet - nNGM - Anforderung Molekularpathologie",
   "name": "ValueSet_nNGM_Anforderung_Molekularpathologie",

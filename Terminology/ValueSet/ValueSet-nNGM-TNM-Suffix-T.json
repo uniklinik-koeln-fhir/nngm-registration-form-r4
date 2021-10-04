@@ -1,7 +1,7 @@
 {
     "resourceType":"ValueSet",
     "id": "ValueSet-nNGM-TNM-Suffix-T",
-    "url":"http://uk-koeln.de/fhir/ValueSet/nngm/tnm-suffix-t",
+    "url":"http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-suffix-t",
     "version":"1.0.0",
     "title":"ValueSet - nNGM - TNM-Suffix-T",
     "name":"ValueSet_nNGM_TNM-Suffix-T",

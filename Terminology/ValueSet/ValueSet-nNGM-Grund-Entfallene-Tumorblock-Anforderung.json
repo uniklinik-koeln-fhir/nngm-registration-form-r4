@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-Grund-Entfallene-Tumorblock-Anforderung",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/grundEntfallBlockAnforderung",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/grundEntfallBlockAnforderung",
   "version": "1.0.0",
   "name": "ValueSet_nNGM_Grund_Entfallene_Tumorblock_Anforderung",
   "title": "ValueSet - nNGM - Grund Entfallene Tumorblock-Anforderung",
@@ -9,7 +9,7 @@
   "compose": {
       "include": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/grundEntfallBlockAnforderung"
           }
       ]
   },
@@ -19,13 +19,13 @@
       "total": 2,
       "contains": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/grundEntfallBlockAnforderung",
               "version": "1.0.0",
               "code": "bereitsUnterwegs",
               "display": "Tumormaterial bereits unterwegs"
           },
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/grundEntfallBlockAnforderung",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/grundEntfallBlockAnforderung",
               "version": "1.0.0",
               "code": "innerePathologie",
               "display": "Antrag interne Pathologie"

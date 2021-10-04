@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-TNM-T-CPU",
-    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t-cpu",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-t-cpu",
     "version": "1.0.0",
     "title": "ValueSet - TNM - T - CPU",
     "name": "ValueSet_TNM_T_CPU",

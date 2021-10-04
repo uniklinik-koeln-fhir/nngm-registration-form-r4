@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-UICC-Stage",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/uicc-stage",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/uicc-stage",
   "version": "1.0.0",
   "title": "ValueSet - nNGM -  UIIC-Stage",
   "name": "ValueSet_nNGM_UICC-Stage",

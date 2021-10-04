@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-PointInTime",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/point-in-time",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/point-in-time",
   "version": "1.0.0",
   "title": "ValueSet - nNGM - Point-In-Time",
   "name": "ValueSet_nNGM_Point-In-Time",
@@ -9,7 +9,7 @@
   "compose": {
       "include": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time"
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/point-in-time"
           }
       ]
   },
@@ -19,13 +19,13 @@
       "total": 2,
       "contains": [
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/point-in-time",
               "version": "1.0",
               "code": "ed",
               "display": "Erstdiagnose"
           },
           {
-              "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/point-in-time",
+              "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/point-in-time",
               "version": "1.0",
               "code": "aktuell",
               "display": "aktuell"

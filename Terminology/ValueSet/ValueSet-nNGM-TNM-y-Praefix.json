@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-TNM-y-Praefix",
-    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-y-praefix",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-y-praefix",
     "version": "1.0.0",
     "title": "ValueSet - TNM - y - Präfix",
     "name": "ValueSet_TNM-y-Praefix",

@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-Aufenthaltsart",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/aufenthaltsart",
   "version": "1.0.0",
   "name": "ValueSet_nNGM_Aufenthaltsart",
   "title": "ValueSet - nNGM - Aufenthaltsart",

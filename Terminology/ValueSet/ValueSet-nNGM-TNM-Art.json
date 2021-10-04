@@ -1,7 +1,7 @@
 {
   "resourceType": "ValueSet",
   "id": "ValueSet-nNGM-TNM-Art",
-  "url": "http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art",
+  "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-art",
   "version": "1.0.0",
   "title": "ValueSet - nNGM - TNM-Art",
   "name": "ValueSet_nNGM_TNM-Art",

@@ -1,8 +1,8 @@
 {
   "resourceType": "CodeSystem",
   "id": "CodeSystem-nNGM-Behandelbarkeit",
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/behandelbarkeit",
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/behandelbarkeit",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/behandelbarkeit",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/behandelbarkeit",
   "version": "1.0.0",
   "title": "CodeSystem - nNGM - Behandelbarkeit",
   "name": "CodeSystem_nNGM_Behandelbarkeit",

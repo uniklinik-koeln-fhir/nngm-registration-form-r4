@@ -1,8 +1,8 @@
 {
   "resourceType": "CodeSystem",
   "id": "CodeSystem-nNGM-Consent-Policy",
-  "url": "http://uk-koeln.de/fhir/CodeSystem/nngm/nngm-consent-policy",
-  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy",
+  "url": "http://uk-koeln.de/fhir/CodeSystem/nNGM/nngm-consent-policy",
+  "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/nngm-consent-policy",
   "version": "1.0.0",
   "experimental": false,
   "title": "CodeSystem - nNGM - Consent Policy",

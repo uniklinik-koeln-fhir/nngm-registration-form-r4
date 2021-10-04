@@ -1,7 +1,7 @@
 {
     "resourceType": "ValueSet",
     "id": "ValueSet-nNGM-Anforderung-HistologischeAbklaerung",
-    "url": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-histologischeAbklaerung",
+    "url": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-histologischeAbklaerung",
     "version": "1.0.0",
     "name": "ValueSet_nNGM_Anforderung_HistologischeAbklaerung",
     "title": "ValueSet - nNGM - Anforderung Histologische Abklärung",
@@ -30,7 +30,7 @@
                 ]
             },
             {
-                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-histologischeAbklaerung-erweiterung",
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/anforderung-histologischeAbklaerung-erweiterung",
                 "concept": [
                     {
                         "code": "p40",
@@ -70,12 +70,12 @@
                 "display": "Thyroid transcription factor 1 Ag [Presence] in Tissue by Immune stain"
             },
             {
-                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-histologischeAbklaerung-erweiterung",
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/anforderung-histologischeAbklaerung-erweiterung",
                 "code": "p40",
                 "display": "P40 Ag [Precense] in Tissue by Immune stain"
             },
             {
-                "system": "http://uk-koeln.de/fhir/CodeSystem/nngm/anforderung-histologischeAbklaerung-erweiterung",
+                "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/anforderung-histologischeAbklaerung-erweiterung",
                 "code": "napsin-a",
                 "display": "Napsin A Ag [Precense] in Tissue by Immune stain"
             }

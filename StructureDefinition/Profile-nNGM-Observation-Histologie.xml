@@ -127,7 +127,7 @@
       <min value="1" />
       <binding>
         <strength value="extensible" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/histologie-klassifikation" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/histologie-klassifikation" />
       </binding>
     </element>
     <element id="Observation.bodySite">

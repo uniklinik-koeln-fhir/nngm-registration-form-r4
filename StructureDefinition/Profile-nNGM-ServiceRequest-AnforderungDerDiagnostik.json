@@ -78,7 +78,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-code"
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-code"
         }
       },
       {
@@ -103,7 +103,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-histologischeAbklaerung"
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-histologischeAbklaerung"
         }
       },
       {
@@ -114,7 +114,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-molekularpathologie"
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-molekularpathologie"
         }
       },
       {
@@ -125,7 +125,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-ngsPanel"
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-ngsPanel"
         }
       },
       {
@@ -136,7 +136,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-fastTrack"
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-fastTrack"
         }
       },
       {
@@ -147,7 +147,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nngm/anforderung-liquidBiopsy"
+          "valueSet": "http://uk-koeln.de/fhir/ValueSet/nNGM/anforderung-liquidBiopsy"
         }
       },
       {

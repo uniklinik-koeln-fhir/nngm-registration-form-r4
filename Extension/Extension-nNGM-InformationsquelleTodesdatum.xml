@@ -41,7 +41,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/izt" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/izt" />
       </binding>
     </element>
   </differential>

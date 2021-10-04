@@ -154,7 +154,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkassentypen" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/krankenkassentypen" />
       </binding>
     </element>
     <element id="Coverage.beneficiary">
@@ -191,7 +191,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/krankenkasse" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/krankenkasse" />
       </binding>
     </element>
   </differential>

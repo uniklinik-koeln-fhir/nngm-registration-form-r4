@@ -126,7 +126,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-art" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-art" />
       </binding>
     </element>
     <element id="Observation.subject">
@@ -187,7 +187,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/uicc-stage" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/uicc-stage" />
       </binding>
     </element>
     <element id="Observation.component">
@@ -267,7 +267,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t-cpu" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-t-cpu" />
       </binding>
     </element>
     <element id="Observation.component:T.value[x]">
@@ -288,7 +288,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-t" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-t" />
       </binding>
     </element>
     <element id="Observation.component:N">
@@ -338,7 +338,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-n-cpu" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-n-cpu" />
       </binding>
     </element>
     <element id="Observation.component:N.value[x]">
@@ -359,7 +359,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-n" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-n" />
       </binding>
     </element>
     <element id="Observation.component:M">
@@ -409,7 +409,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m-cpu" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-m-cpu" />
       </binding>
     </element>
     <element id="Observation.component:M.value[x]">
@@ -430,7 +430,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-m" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-m" />
       </binding>
     </element>
     <element id="Observation.component:y">
@@ -467,7 +467,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-y-praefix" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-y-praefix" />
       </binding>
     </element>
     <element id="Observation.component:r">
@@ -504,7 +504,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/tnm-r-praefix" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/tnm-r-praefix" />
       </binding>
     </element>
   </differential>

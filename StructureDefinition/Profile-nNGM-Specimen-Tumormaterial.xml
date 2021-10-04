@@ -82,7 +82,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/MaterialTyp" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/MaterialTyp" />
       </binding>
     </element>
     <element id="Specimen.subject">

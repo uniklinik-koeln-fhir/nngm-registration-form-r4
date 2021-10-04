@@ -37,7 +37,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/abrechnungsinformation" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/abrechnungsinformation" />
       </binding>
     </element>
   </differential>

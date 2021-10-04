@@ -85,7 +85,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/nngm-consent-policy" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/nngm-consent-policy" />
       </binding>
     </element>
     <element id="Consent.provision">

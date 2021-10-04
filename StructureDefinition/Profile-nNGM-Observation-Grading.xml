@@ -20,7 +20,7 @@
         <severity value="error" />
         <human value="Falls kein Messwert verfügbar ist, muss eine dataAbsentReason angegeben werden" />
         <expression value="value.exists().not() implies dataAbsentReason.exists()" />
-        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/grading" />
       </constraint>
     </element>
     <element id="Observation.extension">

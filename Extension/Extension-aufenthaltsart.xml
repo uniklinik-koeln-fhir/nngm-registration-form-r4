@@ -45,7 +45,7 @@
       <min value="1" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/aufenthaltsart" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/aufenthaltsart" />
       </binding>
     </element>
   </differential>

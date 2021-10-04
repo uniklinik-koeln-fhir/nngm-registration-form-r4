@@ -20,7 +20,7 @@
         <severity value="error" />
         <human value="Falls kein Messwert verfügbar ist, muss eine dataAbsentReason angegeben werden" />
         <expression value="value.exists().not() implies dataAbsentReason.exists()" />
-        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/koerpergewicht" />
+        <source value="http://uk-koeln.de/fhir/StructureDefinition/Observation/nNGM/raucherstatus" />
       </constraint>
     </element>
     <element id="Observation.status">
@@ -127,7 +127,7 @@
       <mustSupport value="true" />
       <binding>
         <strength value="required" />
-        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nngm/raucherstatus" />
+        <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/raucherstatus" />
       </binding>
     </element>
     <element id="Observation.bodySite">

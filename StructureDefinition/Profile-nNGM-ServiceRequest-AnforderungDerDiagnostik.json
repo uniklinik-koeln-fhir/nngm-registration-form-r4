@@ -99,7 +99,6 @@
         "id": "ServiceRequest.orderDetail:histologischeAbklaerung",
         "path": "ServiceRequest.orderDetail",
         "sliceName": "histologischeAbklaerung",
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -110,7 +109,6 @@
         "id": "ServiceRequest.orderDetail:molekularpathologie",
         "path": "ServiceRequest.orderDetail",
         "sliceName": "molekularpathologie",
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -132,7 +130,6 @@
         "id": "ServiceRequest.orderDetail:fastTrack",
         "path": "ServiceRequest.orderDetail",
         "sliceName": "fastTrack",
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
@@ -143,7 +140,6 @@
         "id": "ServiceRequest.orderDetail:liquidBiopsy",
         "path": "ServiceRequest.orderDetail",
         "sliceName": "liquidBiopsy",
-        "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",

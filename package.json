@@ -4,7 +4,7 @@
   "description": "Put a description here",
   "author": null,
   "dependencies": {
-    "de.basisprofil.r4": "1.0.0"
+    "de.basisprofil.r4": "1.1.0"
   },
   "fhirVersions": [
     "4.0.1"

@@ -26,19 +26,14 @@
                     {
                         "code": "40564-7",
                         "display": "Thyroid transcription factor 1 Ag [Presence] in Tissue by Immune stainActive"
-                    }
-                ]
-            },
-            {
-                "system": "http://uk-koeln.de/fhir/CodeSystem/nNGM/anforderung-histologischeAbklaerung-erweiterung",
-                "concept": [
-                    {
-                        "code": "p40",
-                        "display": "P40 Ag [Precense] in Tissue by Immune stain"
                     },
                     {
-                        "code": "napsin-a",
-                        "display": "Napsin A Ag [Precense] in Tissue by Immune stain"
+                        "code": "99085-3",
+                        "display": "Napsin A Ag [Presence] in Tissue by Immune stain"
+                    },
+                    {
+                        "code": "99086-1",
+                        "display": "p40 Ag [Presence] in Tissue by Immune stain"
                     }
                 ]
             }

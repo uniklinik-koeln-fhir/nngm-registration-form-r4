@@ -54,7 +54,7 @@
       {
         "id": "ServiceRequest.requester",
         "path": "ServiceRequest.requester",
-        "min": "1",
+        "min": 1,
         "type": [
           {
             "code": "Reference",

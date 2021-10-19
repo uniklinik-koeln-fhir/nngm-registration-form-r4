@@ -26,7 +26,7 @@
           ],
           "rules": "open"
         },
-        "mustSupport": "true"
+        "mustSupport": true
       },
       {
         "id": "ServiceRequest.extension:wiederholungAnforderung",
@@ -122,26 +122,26 @@
       {
         "id": "ServiceRequest.authoredOn",
         "path": "ServiceRequest.authoredOn",
-        "min": "1",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "ServiceRequest.requester",
         "path": "ServiceRequest.requester",
-        "min": "1",
+        "min": 1,
         "mustSupport": true,
         "isSummary": true
       },
       {
         "id": "ServiceRequest.performer",
         "path": "ServiceRequest.performer",
-        "min": "1",
+        "min": 1,
         "mustSupport": true
       },
       {
         "id": "ServiceRequest.specimen",
         "path": "ServiceRequest.specimen",
-        "min": "1",
+        "min": 1,
         "mustSupport": true,
         "isSummary": true
       }

@@ -121,10 +121,10 @@
     <element id="Observation.value[x]:valueCodeableConcept">
       <path value="Observation.value[x]" />
       <sliceName value="valueCodeableConcept" />
+      <min value="1" />
       <type>
         <code value="CodeableConcept" />
       </type>
-      <min value="1" />
       <binding>
         <strength value="extensible" />
         <valueSet value="http://uk-koeln.de/fhir/ValueSet/nNGM/histologie-klassifikation" />

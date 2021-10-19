@@ -473,7 +473,7 @@
             {
                 "id": "Patient.address:Postfach.line.extension:Postfach",
                 "path": "Patient.address.line.extension",
-                "sliceName": "Postfach",
+                "sliceName": "Postfach"
             },
             {
                 "id": "Patient.address:Postfach.city",

@@ -53,13 +53,13 @@
       <path value="Observation.category" />
       <min value="1" />
       <max value="1" />
-      <mustSupport value="true" />
       <patternCodeableConcept>
         <coding>
           <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
           <code value="C1967" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.code">
       <path value="Observation.code" />
@@ -120,13 +120,13 @@
     </element>
     <element id="Observation.component:tkiTherapie.code">
       <path value="Observation.component.code" />
-      <mustSupport value="true" />
       <patternCodeableConcept>
         <coding>
           <system value="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl" />
           <code value="C62721" />
         </coding>
       </patternCodeableConcept>
+      <mustSupport value="true" />
     </element>
     <element id="Observation.component:tkiTherapie.value[x]">
       <path value="Observation.component.value[x]" />

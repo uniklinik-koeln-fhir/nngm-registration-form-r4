@@ -54,7 +54,7 @@
     </element>
     <element id="Observation.extension:ErstDiagnose">
       <path value="Observation.extension" />
-      <sliceName value="kurativ-operabel" />
+      <sliceName value="ErstDiagnose" />
       <type>
         <code value="Extension" />
         <profile value="http://uk-koeln.de/fhir/StructureDefinition/Extension/nNGM/tnm-erstdiagnose" />
@@ -68,7 +68,6 @@
     </element>
     <element id="Observation.category">
       <path value="Observation.category" />
-      <min value="1" />
       <slicing>
         <discriminator>
           <type value="pattern" />
@@ -76,6 +75,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.category:survey">
@@ -97,8 +97,6 @@
     </element>
     <element id="Observation.code.coding">
       <path value="Observation.code.coding" />
-      <min value="1" />
-      <max value="*" />
       <slicing>
         <discriminator>
           <type value="pattern" />
@@ -106,6 +104,7 @@
         </discriminator>
         <rules value="open" />
       </slicing>
+      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.code.coding:sct">
@@ -144,10 +143,10 @@
     <element id="Observation.effective[x]:effectiveDateTime">
       <path value="Observation.effective[x]" />
       <sliceName value="effectiveDateTime" />
+      <min value="1" />
       <type>
         <code value="dateTime" />
       </type>
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.effective[x]:effectiveDateTime.extension">
@@ -251,12 +250,12 @@
     <element id="Observation.component:T.code.coding:sct">
       <path value="Observation.component.code.coding" />
       <sliceName value="sct" />
+      <min value="1" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="78873005" />
       </patternCoding>
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:T.code.coding:loinc">
@@ -322,12 +321,12 @@
     <element id="Observation.component:N.code.coding:sct">
       <path value="Observation.component.code.coding" />
       <sliceName value="sct" />
+      <min value="1" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="277206009" />
       </patternCoding>
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:N.code.coding:loinc">
@@ -393,12 +392,12 @@
     <element id="Observation.component:M.code.coding:sct">
       <path value="Observation.component.code.coding" />
       <sliceName value="sct" />
+      <min value="1" />
+      <max value="1" />
       <patternCoding>
         <system value="http://snomed.info/sct" />
         <code value="277208005" />
       </patternCoding>
-      <min value="1" />
-      <max value="1" />
       <mustSupport value="true" />
     </element>
     <element id="Observation.component:M.code.coding:loinc">

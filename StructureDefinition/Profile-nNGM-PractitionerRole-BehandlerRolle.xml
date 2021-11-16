@@ -86,7 +86,6 @@
     </element>
     <element id="PractitionerRole.specialty"> 
       <path value="PractitionerRole.specialty" />
-      <min value="1" />
       <mustSupport value="true" />
     </element>
     <element id="PractitionerRole.telecom">

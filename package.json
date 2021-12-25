@@ -1,14 +1,10 @@
 {
   "name": "de.uk-koeln.nngm.registrationform",
-  "version": "0.1.0",
-  "description": "Put a description here",
-  "author": null,
+  "version": "0.3.4",
   "dependencies": {
     "de.basisprofil.r4": "1.1.0"
   },
   "fhirVersions": [
     "4.0.1"
-  ],
-  "devDependencies": null,
-  "canonicals": null
+  ]
 }

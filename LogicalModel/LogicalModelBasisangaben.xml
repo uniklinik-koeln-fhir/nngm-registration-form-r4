@@ -178,6 +178,16 @@
       </type>
       <mustSupport value="true" />
     </element>
+    <element id="Basisangaben.Patientenetikett.Pseudonym-ID">
+      <path value="Basisangaben.Patientenetikett.Pseudonym-ID" />
+      <short value="Pseudonymisierter Identifier für den Patienten" />
+      <min value="0" />
+      <max value="*" />
+      <type>
+        <code value="string" />
+      </type>
+      <mustSupport value="true" />
+    </element>
     <element id="Basisangaben.Patientenetikett.Geschlecht">
       <path value="Basisangaben.Patientenetikett.Geschlecht" />
       <short value="Administratives Geschlecht des Patienten" />
